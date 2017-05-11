@@ -1,0 +1,19 @@
+{
+  "name": "apprentice2017",
+  "version": "1.0.0",
+  "description": "An aggregate of Sparkboxer's reviews of places to eat and drink.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparkbox/appproject2017.git"
+  },
+  "author": "Sparkbox Full Stack Apprenticeship Team 2017",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sparkbox/appproject2017/issues"
+  },
+  "homepage": "https://github.com/sparkbox/appproject2017#readme"
+}
