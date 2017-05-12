@@ -2,7 +2,7 @@
   "name": "apprenticeProject2017",
   "version": "1.0.0",
   "description": "An aggregate of Sparkboxer's reviews of places to eat and drink.",
-  "main": "index.js",
+  "main": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "open index.html",
