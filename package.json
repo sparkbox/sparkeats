@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "open index.html",
-    "sass": "",
+    "sass": "node-sass source/scss/ public/assets/css/main.css",
     "postcc": ""
   },
   "repository": {
