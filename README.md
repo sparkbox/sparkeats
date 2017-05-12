@@ -1,7 +1,7 @@
 # 2017 Apprentice Project
-### An aggregate of Sparkboxer's favorite places to eat and drink.
+### An aggregate of Sparkboxer's personal opinions regarding places to eat, drink and be merry.
 
-#### Dependancies
+#### Dependencies
 * path
 * globby
 * inform
@@ -9,4 +9,4 @@
 * shelljs
 
 #### License
-© 2017 Sparkbox Apprenticeship
+&copy; 2017 Sparkbox Apprenticeship
