@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "open index.html"
+    "start": "open index.html",
+    "sass": "",
+    "postcc": ""
   },
   "repository": {
     "type": "git",
