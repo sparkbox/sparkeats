@@ -3,6 +3,11 @@
 const sass = require('node-sass');
 const shell = require('shelljs');
 
-shell.exec('node-sass source/scss/main.scss public/assets/css/main.css');
+if (process.env.NODE_ENV === 'production'){
+  shell.exec('node-sass --output-style compressed source/scss/main.scss public/assets/css/main.css');
+}
+else {
+  shell.exec('node-sass --output-style expanded source/scss/main.scss public/assets/css/main.css');
+}
 
-// consider NODE_ENV
+// Next thing to consider: When NODE_ENV is empty, the css should be readable and have source maps setup

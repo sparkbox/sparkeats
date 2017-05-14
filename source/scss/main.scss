@@ -1,5 +1,9 @@
+// testing the compilation of Sass to CSS
+
 $color-fun: #aaa;
+$color-fantastic: #bbb;
 
 .party {
   color: $color-fun;
+  background-color: $color-fantastic;
 }

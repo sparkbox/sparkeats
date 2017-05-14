@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "open index.html && npm run sass",
-    "start:production": "",
+    "start:production": "NODE_ENV=production npm run start",
     "sass": "node tasks/sass.js",
     "postcss": ""
   },
