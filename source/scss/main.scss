@@ -1,9 +1,13 @@
-// testing the compilation of Sass to CSS
-
+// testing the compilation of Sass to CSS using color variables
 $color-fun: #aaa;
 $color-fantastic: #bbb;
 
 .party {
   color: $color-fun;
   background-color: $color-fantastic;
+}
+
+// declare class with a property that requires vendor prefixes to test the postcss script in the package.json file
+.prefix-test {
+  display: flex;
 }

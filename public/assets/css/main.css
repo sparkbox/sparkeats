@@ -2,4 +2,9 @@
   color: #aaa;
   background-color: #bbb; }
 
-/*# sourceMappingURL=main.css.map */
+.prefix-test {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NvdXJjZS9zY3NzL21haW4uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFLQTtFQUNFLFlBSmM7RUFLZCx1QkFKb0IsRUFBQTs7QUFPdEI7RUFDRSxxQkFBYTtFQUFiLHFCQUFhO0VBQWIsY0FBYSxFQUFBIiwiZmlsZSI6Im1haW4uY3NzIn0= */
