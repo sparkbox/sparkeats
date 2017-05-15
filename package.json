@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/sparkbox/appproject2017#readme",
   "dependencies": {
+    "autoprefixer": "^7.1.0",
     "node-sass": "^4.5.2",
+    "postcss-cli": "^4.0.0",
     "shelljs": "^0.7.7"
   }
 }
