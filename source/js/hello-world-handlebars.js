@@ -1,23 +1,29 @@
 // Require Handlebars
-var Handlebars = require('handlebars');
+const Handlebars = require('handlebars');
 
 // Require FS
-var fs = require('fs');
+const fs = require('fs');
 
 // Require yamljs
-var YAML = require('yamljs');
+const YAML = require('yamljs');
+
+// Require globby
+const globby = require('globby');
 
 // Define the template
-var template = fs.readFileSync('source/templates/layouts/default.hbs');
+const template = fs.readFileSync('source/templates/layouts/default.hbs');
 
 // Compile the template
-var render = Handlebars.compile(template.toString());
+const render = Handlebars.compile(template.toString());
 
 // Define the data
-var yml = fs.readFileSync('source/data/data.yml');
+const yml = fs.readFileSync('source/data/data.yml');
 
 // Parse the data to a json file
-var data = YAML.parse(yml.toString());
+const data = YAML.parse(yml.toString());
 
 // Rendering the template
 console.log(render(data));
+
+
+//for each readfilesync globby handlebars

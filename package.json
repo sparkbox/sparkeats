@@ -5,10 +5,11 @@
   "main": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "open index.html && npm run sass",
+    "start": "open index.html && npm run sass && npm run html",
     "start:production": "NODE_ENV=production npm run start",
     "sass": "node tasks/sass.js",
-    "postcss": ""
+    "postcss": "",
+    "html": "node source/js/hello-world-handlebars.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/sparkbox/appproject2017#readme",
   "dependencies": {
+    "globby": "^6.1.0",
     "node-sass": "^4.5.2",
     "shelljs": "^0.7.7",
     "yamljs": "^0.2.10"
