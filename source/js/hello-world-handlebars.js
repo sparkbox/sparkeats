@@ -1,3 +1,6 @@
+// Require Handlebars
+var Handlebars = require('handlebars');
+
 // Define the template
 var template = 'Hello, {{foo}}!';
 
