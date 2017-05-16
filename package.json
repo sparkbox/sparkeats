@@ -9,7 +9,7 @@
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
     "styles": "npm run sass && npm run postcss",
-    "html": "node source/js/hello-world-handlebars.js"
+    "html": "node tasks/handlebars.js"
   },
   "repository": {
     "type": "git",
