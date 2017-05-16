@@ -1,5 +1,5 @@
 // testing the compilation of Sass to CSS using color variables
-$color-fun: #abc;
+$color-fun: #fff;
 $color-fantastic: #def;
 
 .party {
@@ -11,5 +11,5 @@ $color-fantastic: #def;
 .prefix-test {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
