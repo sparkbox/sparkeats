@@ -10,4 +10,5 @@ $color-fantastic: #bbb;
 // declare class with a property that requires vendor prefixes to test the postcss script in the package.json file
 .prefix-test {
   display: flex;
+  flex-direction: row;
 }
