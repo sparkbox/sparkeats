@@ -8,7 +8,7 @@
     "start": "open index.html && npm run postsass && npm run html",
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
-    "postsass": "npm run sass && npm run postcss",
+    "styles": "npm run sass && npm run postcss",
     "html": "node source/js/hello-world-handlebars.js"
   },
   "repository": {
