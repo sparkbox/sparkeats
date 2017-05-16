@@ -1,6 +1,7 @@
 'use strict';
 
-const sass = require('node-sass');
+const nodeSass = require('node-sass');
+const sass = require('sass');
 const shell = require('shelljs');
 
 // compile CSS (compressed for production and expanded for development)
