@@ -9,7 +9,7 @@
     "start:production": "NODE_ENV=production npm run start",
     "sass": "node tasks/sass.js",
     "postcss": "",
-    "html": "node source/js/hello-world-handlebars.js"
+    "html": "node tasks/handlebars.js"
   },
   "repository": {
     "type": "git",
