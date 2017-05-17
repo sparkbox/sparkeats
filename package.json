@@ -10,7 +10,7 @@
     "sass": "node tasks/sass.js",
     "postcss": "",
     "html": "node tasks/handlebars.js",
-    "html-watch": "node tasks/watch-handlebars.js"
+    "html-watch": "onchange 'source/templates/pages/*.hbs' -- npm run html"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "yamljs": "^0.2.10"
   },
   "devDependencies": {
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "onchange": "^3.2.1"
   }
 }
