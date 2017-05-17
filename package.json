@@ -15,7 +15,8 @@
     "start:server": "npm-run-all -p watch server",
     "html-watch": "onchange 'source/templates/pages/*.hbs' -- npm run html",
     "watch": "node tasks/watch-sass.js",
-    "server": "node tasks/server.js"
+    "server": "node tasks/server.js",
+    "start:server": "npm-run-all -p watch server"
   },
   "repository": {
     "type": "git",

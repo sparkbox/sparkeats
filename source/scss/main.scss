@@ -1,23 +1,10 @@
 // testing the compilation of Sass to CSS using color variables
-<<<<<<< 784d7fc4891a712a15a2f7faf60825353d340eb4
-<<<<<<< 5ae6042a1708483692faa5b1a1ef1c0c55d99967
 $color-fun: #fff;
 $color-fantastic: #ff0066;
 
 body {
   background-color: $color-fantastic;
 }
-
-h1 {
-  color: $color-fun;
-}
-=======
-$color-fun: #333;
-=======
-$color-fun: #bbbeee;
->>>>>>> feat: add server.js tasks
-$color-fantastic: #ddd;
->>>>>>> feat: add watch script
 
 h1 {
   color: $color-fun;
