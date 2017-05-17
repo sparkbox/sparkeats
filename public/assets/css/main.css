@@ -1,3 +1,4 @@
+<<<<<<< 784d7fc4891a712a15a2f7faf60825353d340eb4
 body {
   background-color: #ff0066; }
 
@@ -10,6 +11,13 @@ h1 {
   background-color: #ff0066; }
 =======
   color: #333;
+=======
+h1 {
+  color: #bbbeee; }
+
+.party {
+  color: #bbbeee;
+>>>>>>> feat: add server.js tasks
   background-color: #ddd; }
 >>>>>>> feat: add watch script
 
@@ -25,4 +33,8 @@ h1 {
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
+<<<<<<< 784d7fc4891a712a15a2f7faf60825353d340eb4
 /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NvdXJjZS9zY3NzL21haW4uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFJQTtFQUNFLDBCQUh1QixFQUFBOztBQU16QjtFQUNFLFlBUmMsRUFBQTs7QUFXaEI7RUFDRSxZQVpjO0VBYWQsMEJBWnVCLEVBQUE7O0FBZ0J6QjtFQUNFLHFCQUFhO0VBQWIscUJBQWE7RUFBYixjQUFhO0VBQ2IsNkJBQXNCO0VBQXRCLDhCQUFzQjtNQUF0QiwyQkFBc0I7VUFBdEIsdUJBQXNCO0VBQ3RCLHNCQUF5QjtNQUF6QixtQkFBeUI7VUFBekIsMEJBQXlCLEVBQUEiLCJmaWxlIjoibWFpbi5jc3MifQ== */
+=======
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NvdXJjZS9zY3NzL21haW4uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFJQTtFQUNFLGVBSmlCLEVBQUE7O0FBT25CO0VBQ0UsZUFSaUI7RUFTakIsdUJBUm9CLEVBQUE7O0FBWXRCO0VBQ0UscUJBQWE7RUFBYixxQkFBYTtFQUFiLGNBQWE7RUFDYiw2QkFBc0I7RUFBdEIsOEJBQXNCO01BQXRCLDJCQUFzQjtVQUF0Qix1QkFBc0I7RUFDdEIsc0JBQXlCO01BQXpCLG1CQUF5QjtVQUF6QiwwQkFBeUIsRUFBQSIsImZpbGUiOiJtYWluLmNzcyJ9 */
+>>>>>>> feat: add server.js tasks
