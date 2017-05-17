@@ -22,10 +22,10 @@ templates.forEach( function(template) {
     // Parse the data to a json file
     const data = YAML.parse(yml.toString());
 
-    // Render the template
-    const renderTemplate = Handlebars.compile(html.toString());
+    // Compile the template
+    const compileTemplate = Handlebars.compile(html.toString());
 
-    // Smoosh together the data and template and generate an html file
+    // Builds the html file using the template and data
     // TODO How do we create a flexible file name? Do we keep the name from the template?
-    const writeFile = fs.writeFileSync('public/assets/html/that.html', renderTemplate(data));
+    const writeFile = fs.writeFileSync('public/assets/html/that.html', compileTemplate(data));
 });
