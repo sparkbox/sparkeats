@@ -1,9 +1,9 @@
 h1 {
-  color: #bbbeee; }
+  color: #fffeee; }
 
 .party {
-  color: #bbbeee;
-  background-color: #ddd; }
+  color: #fffeee;
+  background-color: #dddfff; }
 
 .prefix-test {
   display: -webkit-box;
@@ -17,4 +17,4 @@ h1 {
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NvdXJjZS9zY3NzL21haW4uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFJQTtFQUNFLGVBSmlCLEVBQUE7O0FBT25CO0VBQ0UsZUFSaUI7RUFTakIsdUJBUm9CLEVBQUE7O0FBWXRCO0VBQ0UscUJBQWE7RUFBYixxQkFBYTtFQUFiLGNBQWE7RUFDYiw2QkFBc0I7RUFBdEIsOEJBQXNCO01BQXRCLDJCQUFzQjtVQUF0Qix1QkFBc0I7RUFDdEIsc0JBQXlCO01BQXpCLG1CQUF5QjtVQUF6QiwwQkFBeUIsRUFBQSIsImZpbGUiOiJtYWluLmNzcyJ9 */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NvdXJjZS9zY3NzL21haW4uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFJQTtFQUNFLGVBSmlCLEVBQUE7O0FBT25CO0VBQ0UsZUFSaUI7RUFTakIsMEJBUnVCLEVBQUE7O0FBWXpCO0VBQ0UscUJBQWE7RUFBYixxQkFBYTtFQUFiLGNBQWE7RUFDYiw2QkFBc0I7RUFBdEIsOEJBQXNCO01BQXRCLDJCQUFzQjtVQUF0Qix1QkFBc0I7RUFDdEIsc0JBQXlCO01BQXpCLG1CQUF5QjtVQUF6QiwwQkFBeUIsRUFBQSIsImZpbGUiOiJtYWluLmNzcyJ9 */

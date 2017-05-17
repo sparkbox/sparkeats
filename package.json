@@ -33,6 +33,7 @@
     "autoprefixer": "^7.1.0",
     "browser-sync": "^2.18.11",
     "nodemon": "^1.11.0",
+    "onchange": "^3.2.1",
     "postcss-cli": "^4.0.0",
     "sass": "^0.5.0",
     "shelljs": "^0.7.7",
