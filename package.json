@@ -11,7 +11,8 @@
     "styles": "npm run sass && npm run postcss",
     "html": "node tasks/handlebars.js",
     "html-watch": "node tasks/watch-handlebars.js",
-    "watch": "node tasks/watch-sass.js"
+    "watch": "node tasks/watch-sass.js",
+    "server": "node tasks/server.js"
   },
   "repository": {
     "type": "git",

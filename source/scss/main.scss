@@ -1,6 +1,10 @@
 // testing the compilation of Sass to CSS using color variables
-$color-fun: #333;
+$color-fun: #bbbeee;
 $color-fantastic: #ddd;
+
+h1 {
+  color: $color-fun;
+}
 
 .party {
   color: $color-fun;
