@@ -6,8 +6,9 @@ const globby = require('globby');
 
 // Define the templates
   // Creates an array of file paths (strings)
-  // pulls from pages, layouts, and partials directories
-const templates = globby.sync('source/templates/**/*.hbs');
+  // pulls from the pages directory
+  // TODO will include partials and layouts
+const templates = globby.sync('source/templates/pages/*.hbs');
 
 // Loop through the array of templates
 templates.forEach( function(template) {
@@ -22,8 +23,9 @@ templates.forEach( function(template) {
     const data = YAML.parse(yml.toString());
 
     // Render the template
-    const render = Handlebars.compile(html.toString());
+    const renderTemplate = Handlebars.compile(html.toString());
 
-    // Render the data
-    console.log(render(data));
+    // Smoosh together the data and template and generate an html file
+    // TODO How do we create a flexible file name? Do we keep the name from the template?
+    const writeFile = fs.writeFileSync('public/assets/html/that.html', renderTemplate(data));
 });
