@@ -10,7 +10,8 @@
     "postcss": "node tasks/postcss.js",
     "styles": "npm run sass && npm run postcss",
     "html": "node tasks/handlebars.js",
-    "html-watch": "node tasks/watch-handlebars.js"
+    "html-watch": "node tasks/watch-handlebars.js",
+    "watch": "node tasks/watch-sass.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.0",
+    "browser-sync": "^2.18.11",
+    "nodemon": "^1.11.0",
     "postcss-cli": "^4.0.0",
     "sass": "^0.5.0",
     "shelljs": "^0.7.7",
