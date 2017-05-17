@@ -5,10 +5,10 @@
   "main": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "open index.html && npm run sass && npm run html && npm run html-watch",
-    "start:production": "NODE_ENV=production npm run start",
+    "start": "open index.html && npm run styles && npm run html && npm run html-watch",
     "sass": "node tasks/sass.js",
-    "postcss": "",
+    "postcss": "node tasks/postcss.js",
+    "styles": "npm run sass && npm run postcss",
     "html": "node tasks/handlebars.js",
     "html-watch": "node tasks/watch-handlebars.js"
   },
