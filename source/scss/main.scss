@@ -1,4 +1,5 @@
 // testing the compilation of Sass to CSS using color variables
+<<<<<<< 5ae6042a1708483692faa5b1a1ef1c0c55d99967
 $color-fun: #fff;
 $color-fantastic: #ff0066;
 
@@ -9,6 +10,10 @@ body {
 h1 {
   color: $color-fun;
 }
+=======
+$color-fun: #333;
+$color-fantastic: #ddd;
+>>>>>>> feat: add watch script
 
 .party {
   color: $color-fun;

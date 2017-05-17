@@ -5,8 +5,13 @@ h1 {
   color: #fff; }
 
 .party {
+<<<<<<< 5ae6042a1708483692faa5b1a1ef1c0c55d99967
   color: #fff;
   background-color: #ff0066; }
+=======
+  color: #333;
+  background-color: #ddd; }
+>>>>>>> feat: add watch script
 
 .prefix-test {
   display: -webkit-box;
