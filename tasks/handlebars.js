@@ -2,12 +2,13 @@ const Handlebars = require('handlebars');
 const fs = require('fs');
 const YAML = require('yamljs');
 const globby = require('globby');
+const srxp = require('simple-regexp');
 
 
 // Define the templates
   // Creates an array of file paths (strings)
   // pulls from the pages directory
-  // TODO will include partials and layouts
+  // TODO include partials and layouts
 const templates = globby.sync('source/templates/pages/*.hbs');
 
 // Loop through the array of templates
@@ -25,7 +26,15 @@ templates.forEach( function(template) {
     // Compile the template
     const compileTemplate = Handlebars.compile(html.toString());
 
+    // Change file extension from .hbs to .html
+    const newFileExtension = srxp(template).match('.hbs').replace('.html').text();
+
+    // Change file path to html build directory
+    // Currently only pulls from pages/
+    // TODO include partials and layouts
+    const newFilePath = srxp(newFileExtension).match('source/templates/pages/').replace('dist/html/').text();
+
     // Builds the html file using the template and data
     // TODO How do we create a flexible file name? Do we keep the name from the template?
-    const writeFile = fs.writeFileSync('public/html/this.html', compileTemplate(data));
+    const writeFile = fs.writeFileSync(newFilePath, compileTemplate(data));
 });
