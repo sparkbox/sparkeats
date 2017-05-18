@@ -10,7 +10,7 @@
     "postcss": "node tasks/postcss.js",
     "styles": "npm run sass && npm run postcss",
     "html": "node tasks/handlebars.js",
-    "html-watch": "node tasks/watch-handlebars.js"
+    "html-watch": "onchange 'source/templates/pages/*.hbs' -- npm run html"
   },
   "repository": {
     "type": "git",
