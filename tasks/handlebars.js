@@ -27,5 +27,5 @@ templates.forEach( function(template) {
 
     // Builds the html file using the template and data
     // TODO How do we create a flexible file name? Do we keep the name from the template?
-    const writeFile = fs.writeFileSync('public/assets/html/that.html', compileTemplate(data));
+    const writeFile = fs.writeFileSync('public/html/this.html', compileTemplate(data));
 });
