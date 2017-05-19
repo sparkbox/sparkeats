@@ -28,22 +28,8 @@
   "dependencies": {
     "glob": "^7.1.1",
     "globby": "^6.1.0",
-    "node-sass": "^4.5.2"
-  },
-  "devDependencies": {
-    "autoprefixer": "^7.1.0",
-    "browser-sync": "^2.18.11",
-    "nodemon": "^1.11.0",
-    "npm-run-all": "^4.0.2",
-    "onchange": "^3.2.1",
-    "postcss-cli": "^4.0.0",
-    "sass": "^0.5.0",
-    "shelljs": "^0.7.7",
-    "yamljs": "^0.2.10",
-    "handlebars": "^4.0.8",
-    "simple-regexp": "^0.1.5"
-  },
-  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "watch-run": "^1.2.5",
     "gulp-watch": "^4.3.11"
   }
 }
