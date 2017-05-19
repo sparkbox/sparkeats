@@ -32,7 +32,7 @@ templates.forEach( function(template) {
     // Change file path to html build directory
     // Currently only pulls from pages/
     // TODO include partials and layouts
-    const newFilePath = srxp(newFileExtension).match('source/pages/').replace('public/html/').text();
+    const newFilePath = srxp(newFileExtension).match('source/pages/').replace('public/').text();
 
     // Builds the html file using the template and data
     const writeFile = fs.writeFileSync(newFilePath, compileTemplate(data));
