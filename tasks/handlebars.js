@@ -32,7 +32,7 @@ templates.forEach( function(template) {
     // Change file path to html build directory
     // Currently only pulls from pages/
     // TODO include partials and layouts
-    const newFilePath = srxp(newFileExtension).match('source/templates/pages/').replace('dist/html/').text();
+    const newFilePath = srxp(newFileExtension).match('source/templates/pages/').replace('public/html/').text();
 
     // Builds the html file using the template and data
     // TODO How do we create a flexible file name? Do we keep the name from the template?
