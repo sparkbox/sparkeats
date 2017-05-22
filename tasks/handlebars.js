@@ -14,10 +14,6 @@ const templates = globby.sync('source/pages/*.hbs');
 // Loop through the array of templates
 templates.forEach( function(template) {
 
-    // WHAT IS `template` that requires you to call `toString`?
-    console.log('Type of template: ', typeof template );
-    console.log('Value of template: ', template);
-
 // =================== PREP TEMPLATE =============================
 
     // Define the content
