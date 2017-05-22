@@ -10,6 +10,13 @@ if (process.env.NODE_ENV === 'production'){
   // start production server
   console.log("You have accessed the production server.");
 
+  // process.env.PORT lets the port be set by Heroku
+  const port = process.env.PORT || 5000;
+
+  app.listen(port, function() {
+    console.log("Our app is running on http://localhost:" + port);
+  });
+
 }
 else {
   // start development server to watch and update html and css files
