@@ -9,7 +9,7 @@ const srxp = require('simple-regexp');
   // Creates an array of file paths (strings)
   // pulls from the pages directory
   // TODO include partials and layouts
-const templates = globby.sync('source/templates/pages/*.hbs');
+const templates = globby.sync('source/pages/*.hbs');
 
 // Loop through the array of templates
 templates.forEach( function(template) {
@@ -32,9 +32,8 @@ templates.forEach( function(template) {
     // Change file path to html build directory
     // Currently only pulls from pages/
     // TODO include partials and layouts
-    const newFilePath = srxp(newFileExtension).match('source/templates/pages/').replace('dist/html/').text();
+    const newFilePath = srxp(newFileExtension).match('source/pages/').replace('public/').text();
 
     // Builds the html file using the template and data
-    // TODO How do we create a flexible file name? Do we keep the name from the template?
     const writeFile = fs.writeFileSync(newFilePath, compileTemplate(data));
 });
