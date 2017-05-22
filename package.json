@@ -5,12 +5,15 @@
   "main": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "open index.html && npm run styles && npm run html && npm run watch",
+    "start": "npm-run-all -p watch server styles html watch",
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
     "styles": "npm run sass && npm run postcss",
     "html": "node tasks/handlebars.js",
-    "watch": "node tasks/watch-sass.js tasks/watch-hbs.js tasks/watch-data.js",
+    "watch:hbs": "node tasks/watch-hbs.js",
+    "watch:data": "node tasks/watch-data.js",
+    "watch:css": "node tasks/watch-sass.js",
+    "watch": "npm-run-all -p watch:hbs watch:data watch:css",
     "server": "node tasks/server.js",
     "start:server": "npm-run-all -p watch server"
   },
