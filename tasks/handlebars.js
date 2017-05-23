@@ -3,12 +3,14 @@ const fs = require('fs');
 const path = require('path');
 const Handlebars = require('handlebars');
 const YAML = require('yamljs');
+const registerPartials = require('./register-partials');
 
-// This script compiles Handlebar templates, data
+// This script compiles Handlebar templates, data, and partials
 // and writes a new HTML file in the public/ directory
 // New files are created with the same name as the Handlebar template.
 // Existing files are replaced.
 
+registerPartials('source/partials/*.hbs');
 const data = YAML.load('source/data/data.yml');
 const files = globby.sync('source/pages/*.hbs');
 
