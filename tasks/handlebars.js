@@ -17,10 +17,13 @@ templates.forEach( function(template) {
 // =================== PREP TEMPLATE =============================
 
     // Define the content
-    const html = fs.readFileSync(template.toString());
+    const html = fs.readFileSync(template);
 
     // Compile the template
     const compileTemplate = Handlebars.compile(html.toString());
+
+    console.log('Type of template: ', typeof html.toString());
+    console.log('Value of template: ', html.toString());
 
     // Change file extension from .hbs to .html
     const newFileExtension = srxp(template).match('.hbs').replace('.html').text();

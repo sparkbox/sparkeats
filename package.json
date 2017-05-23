@@ -5,7 +5,7 @@
   "main": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm-run-all -p watch server styles html watch",
+    "start": "npm-run-all -p watch server styles html",
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
     "styles": "npm run sass && npm run postcss",
@@ -44,9 +44,5 @@
     "yamljs": "^0.2.10",
     "handlebars": "^4.0.8",
     "simple-regexp": "^0.1.5",
-    "wait-run": "^1.2.0"
-  },
-  "devDependencies": {
-    "gulp-watch": "^4.3.11"
   }
 }
