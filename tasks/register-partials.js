@@ -5,8 +5,8 @@ const path = require('path');
 
 // This script registers partials using Handlebars
 
-function registerPartials() {
-    const files = globby.sync('source/partials/*.hbs');
+function registerPartials(source) {
+    const files = globby.sync(source);
 
     files.forEach( function(file) {
         const html = fs.readFileSync(file).toString();
