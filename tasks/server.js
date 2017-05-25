@@ -1,7 +1,6 @@
 'use strict';
 
 const shell = require('shelljs');
-//const browser = require('browser-sync');  -- don't need
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -16,6 +15,9 @@ if (process.env.NODE_ENV === 'production'){
   app.listen(port, function() {
     console.log("Our app is running on http://localhost:" + port);
   });
+
+  // make express look in the public directory for assets
+  app.use(express.static(path.join(__dirname, '..')));
 
 }
 else {
