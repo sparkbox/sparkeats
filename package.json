@@ -33,7 +33,8 @@
     "globby": "^6.1.0",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "shelljs": "^0.7.7"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
@@ -43,7 +44,6 @@
     "onchange": "^3.2.1",
     "postcss-cli": "^4.0.0",
     "sass": "^0.5.0",
-    "shelljs": "^0.7.7",
     "yamljs": "^0.2.10",
     "simple-regexp": "^0.1.5",
     "wait-run": "^1.2.0"
