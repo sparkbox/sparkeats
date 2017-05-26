@@ -4,6 +4,7 @@ const shell = require('shelljs');
 const express = require('express');
 const app = express();
 const path = require('path');
+const auth = require('marshmallows');
 
 if (process.env.NODE_ENV === 'production'){
   // start production server
@@ -17,7 +18,7 @@ if (process.env.NODE_ENV === 'production'){
   });
 
   // make express look in the public directory for assets
-  app.use(express.static(path.join(__dirname, '..')));
+  app.use(auth, express.static(path.join(__dirname, '..')));
 
 }
 else {
