@@ -1,13 +1,15 @@
 // testing the compilation of Sass to CSS using color variables
 $color-fun: #fff;
-$color-fantastic: #ff0033;
+$color-fantastic: #3e7e8e;
+$color-sparkbox-light-blue: #d4eef5;
 
 body {
-  background-color: $color-fantastic;
+  background-color: $color-sparkbox-light-blue;
 }
 
 h1 {
   color: $color-fun;
+  font-family: 'Avenir Next', sans-serif;
 }
 
 .party {
