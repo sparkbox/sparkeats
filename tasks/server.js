@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'production'){
 
   // set X-Robots-Tag HTTP response header
   app.get('/', function (req, res) {
-    res.setHeader('X-Robots-Tag', 'noindex');
+    res.set('X-Robots-Tag', 'noindex');
   });
 
   // app.set('X-Robots-Tag', 'robots:noindex');
