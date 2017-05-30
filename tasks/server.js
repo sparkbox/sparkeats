@@ -27,8 +27,8 @@ if (process.env.NODE_ENV === 'production'){
   // });
   // app.set('X-Robots-Tag', 'robots:noindex');
 
-  app.get('/example', function(req, res) {
-    mrRobot(res).noIndex();
+  app.get('/', function(req, res) {
+    mrRobot(res).noIndex('robots');
   });
 
 }
