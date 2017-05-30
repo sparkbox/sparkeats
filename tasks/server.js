@@ -20,6 +20,11 @@ if (process.env.NODE_ENV === 'production'){
   // make express look in the public directory for assets
   app.use(auth, express.static(path.join(__dirname, '..')));
 
+  // set X-Robots-Tag HTTP response header
+  app.get('/', function(req, res) {
+    res.send('X-Robots-Tag', ['robots:noindex']);
+  });
+
 }
 else {
   // start development server to watch and update html and css files
