@@ -6,6 +6,7 @@ const app = express();
 const path = require('path');
 const auth = require('marshmallows');
 const mrRobot = require('mr.robot');
+const noindex = require('./lib/noindex');
 
 if (process.env.NODE_ENV === 'production'){
   // start production server
@@ -19,18 +20,9 @@ if (process.env.NODE_ENV === 'production'){
   });
 
   // make express look in the public directory for assets
-  app.use(auth, express.static(path.join(__dirname, '..')));
-
-  // set X-Robots-Tag HTTP response header
-  app.get('/', function (req, res) {
-    res.set('X-Robots-Tag', 'noindex');
-  });
-
-  // app.set('X-Robots-Tag', 'robots:noindex');
-
-  // app.get('/', function(req, res) {
-  //   mrRobot(res).noIndex('robots');
-  // });
+  app.use(noindex);
+  app.use(auth);
+  app.use(express.static(path.join(__dirname, '..')));
 
 }
 else {
