@@ -19,9 +19,10 @@ if (process.env.NODE_ENV === 'production'){
     console.log("Our app is running on http://localhost:" + port);
   });
 
-  // make express look in the public directory for assets
   app.use(noindex);
   app.use(auth);
+
+  // make express look in the public directory for assets
   app.use(express.static(path.join(__dirname, '..')));
 
 }
