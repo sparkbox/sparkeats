@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production'){
   });
 
   app.use(noindex);
-  //app.use(auth);
+  app.use(auth);
 
   // make express look in the public directory for assets
   app.use(express.static(path.join(__dirname, '..')));
