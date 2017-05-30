@@ -5,7 +5,6 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const auth = require('marshmallows');
-const mrRobot = require('mr.robot');
 const noindex = require('./lib/noindex');
 
 if (process.env.NODE_ENV === 'production'){
@@ -20,7 +19,7 @@ if (process.env.NODE_ENV === 'production'){
   });
 
   app.use(noindex);
-  app.use(auth);
+  //app.use(auth);
 
   // make express look in the public directory for assets
   app.use(express.static(path.join(__dirname, '..')));
