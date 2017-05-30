@@ -21,9 +21,10 @@ if (process.env.NODE_ENV === 'production'){
   app.use(auth, express.static(path.join(__dirname, '..')));
 
   // set X-Robots-Tag HTTP response header
-  app.set('/', function(req, res) {
-    res.set('X-Robots-Tag', ['robots:noindex']);
-  });
+  // app.get('/', function(req, res) {
+  //   res.set('X-Robots-Tag', ['robots:noindex']);
+  // });
+  app.set('X-Robots-Tag', 'robots:noindex');
 
 }
 else {
