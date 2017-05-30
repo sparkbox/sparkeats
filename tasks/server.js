@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const auth = require('marshmallows');
-const mrrobot = require('mr.robot');
+const mrRobot = require('mr.robot');
 
 if (process.env.NODE_ENV === 'production'){
   // start production server
@@ -27,8 +27,8 @@ if (process.env.NODE_ENV === 'production'){
   // });
   // app.set('X-Robots-Tag', 'robots:noindex');
 
-  app.get('/', function(req, res) {
-    mrrobot(res).noIndex().noFollow();
+  app.get('/example', function(req, res) {
+    mrRobot(res).noIndex();
   });
 
 }
