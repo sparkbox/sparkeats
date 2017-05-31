@@ -28,5 +28,5 @@ if (process.env.NODE_ENV === 'production'){
 else {
   // start development server to watch and update html and css files
   console.log("You have accessed the development server.");
-  shell.exec("browser-sync start --server --files 'public/assets/css/*.css, *.html'");
+  shell.exec("browser-sync start --server --index 'public/index.html'  --files 'public/assets/css/*.css, public/*.html'");
 }
