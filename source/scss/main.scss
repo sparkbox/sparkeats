@@ -1,14 +1,15 @@
 // testing the compilation of Sass to CSS using color variables
 $color-fun: #fff;
 $color-fantastic: #3e7e8e;
-$color-sparkbox-light-blue: #d4eef5;
+$color-sparkblue-light: #d4eef5;
+$color-sparkblue-dark: #1C4C55;
 
 body {
-  background-color: $color-sparkbox-light-blue;
+  background-color: $color-sparkblue-light;
 }
 
 h1 {
-  color: $color-fun;
+  color: $color-sparkblue-dark;
   font-family: 'Avenir Next', sans-serif;
 }
 
@@ -22,4 +23,10 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.place-listing--item {
+  background-color: white;
+  height: 30.625em;
+  width: 25em;
 }
