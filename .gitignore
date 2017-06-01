@@ -3,6 +3,8 @@ node_modules/
 .DS_Store
 public/
 dist/
+yarn.lock
+
 
 
 
