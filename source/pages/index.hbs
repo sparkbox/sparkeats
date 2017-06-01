@@ -1,5 +1,9 @@
 ---
 place: Meat Hut
+address: 123 North Main Street
+phone: (222) 333-4444
+url: http://www.meathut.com
+website: www.meathut.com
 ---
 
 <!DOCTYPE html>
@@ -13,7 +17,10 @@ place: Meat Hut
     <h1>Hello Sparkeats!</h1>
     <p>Because food is awesome.</p>
 
-    <section class="place-listing--item">{{> _place-listing--item}}</section>
+    <section class="place-listing--item">
+      {{> _place-listing--item}}
+      {{>_address}}
+    </section>
 
   </body>
 </html>
