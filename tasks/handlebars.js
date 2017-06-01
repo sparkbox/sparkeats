@@ -19,6 +19,7 @@ const files = globby.sync('source/pages/*.hbs');
 files.forEach( function(file) {
     const html = fs.readFileSync(file).toString();
     const content = fm(html);
+    console.log(content);
     const data = YAML.parse(content.frontmatter);
 
     const template = Handlebars.compile(content.body);
