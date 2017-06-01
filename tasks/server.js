@@ -24,6 +24,7 @@ if (process.env.NODE_ENV === 'production'){
   // make express look in the public directory for assets
   app.use(express.static(path.join(__dirname, '..')));
 
+
 }
 else {
   // start development server to watch and update html and css files

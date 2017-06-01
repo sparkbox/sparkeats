@@ -10,20 +10,13 @@ h1 {
   background-color: #3e7e8e; }
 
 .prefix-test {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+  flex-direction: column;
+  justify-content: flex-end; }
 
 .place-listing--item {
   background-color: white;
   height: 30.625em;
   width: 25em; }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NvdXJjZS9zY3NzL21haW4uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFNQTtFQUNFLDBCQUo2QixFQUFBOztBQU8vQjtFQUNFLGVBUDRCO0VBUTVCLHVDQUFzQyxFQUFBOztBQUd4QztFQUNFLFlBZmM7RUFnQmQsMEJBZnVCLEVBQUE7O0FBbUJ6QjtFQUNFLHFCQUFhO0VBQWIscUJBQWE7RUFBYixjQUFhO0VBQ2IsNkJBQXNCO0VBQXRCLDhCQUFzQjtNQUF0QiwyQkFBc0I7VUFBdEIsdUJBQXNCO0VBQ3RCLHNCQUF5QjtNQUF6QixtQkFBeUI7VUFBekIsMEJBQXlCLEVBQUE7O0FBRzNCO0VBQ0Usd0JBQXVCO0VBQ3ZCLGlCQUFnQjtFQUNoQixZQUFXLEVBQUEiLCJmaWxlIjoibWFpbi5jc3MifQ== */
+/*# sourceMappingURL=main.css.map */
