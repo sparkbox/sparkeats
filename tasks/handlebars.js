@@ -1,5 +1,7 @@
+
 const globby = require('globby');
 const fs = require('fs');
+const fm = require('front-matter');
 const path = require('path');
 const Handlebars = require('handlebars');
 const YAML = require('yamljs');
@@ -11,12 +13,15 @@ const registerPartials = require('./register-partials');
 // Existing files are replaced.
 
 registerPartials('source/partials/*.hbs');
-const data = YAML.load('source/data/data.yml');
 const files = globby.sync('source/pages/*.hbs');
+
 
 files.forEach( function(file) {
     const html = fs.readFileSync(file).toString();
-    const template = Handlebars.compile(html);
+    const content = fm(html);
+    const data = YAML.parse(content.frontmatter);
+
+    const template = Handlebars.compile(content.body);
     const fileName = path.basename(file, '.hbs');
     const newFilePath = `public/${fileName}.html`;
 
