@@ -11,6 +11,7 @@ const registerPartials = require('./register-partials');
 // and writes a new HTML file in the public/ directory
 // New files are created with the same name as the Handlebar template.
 // Existing files are replaced.
+// Data is pulled from front-matter
 
 registerPartials('source/partials/*.hbs');
 const files = globby.sync('source/pages/*.hbs');
@@ -19,7 +20,6 @@ const files = globby.sync('source/pages/*.hbs');
 files.forEach( function(file) {
     const html = fs.readFileSync(file).toString();
     const content = fm(html);
-    console.log(content);
     const data = YAML.parse(content.frontmatter);
 
     const template = Handlebars.compile(content.body);
