@@ -1,8 +1,12 @@
 ---
 place: Meat Hut
+city: Pittsburgh
+state: Pennsylvania
 address: 123 North Main Street
+image-alt: A picture at the Meat Hut
+image: http://www.fillmurray.com/200/300
 phone: (222) 333-4444
-url: http://www.meathut.com
+url: https://www.meathut.com
 website: www.meathut.com
 ---
 
@@ -18,9 +22,13 @@ website: www.meathut.com
     <p>Because food is awesome.</p>
 
     <section class="place-listing--item">
+
       {{> _place-listing--item}}
-      {{>_address}}
+      {{> _address}}
     </section>
+
+
+    {{> _place-header}}
 
   </body>
 </html>
