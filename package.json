@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/sparkbox/appproject2017#readme",
   "dependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-sparkbox": "^0.4.0",
     "express": "^4.15.3",
     "glob": "^7.1.1",
     "globby": "^6.1.0",
