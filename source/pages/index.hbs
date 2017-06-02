@@ -1,9 +1,13 @@
 ---
 place: Meat Hut
+city: Pittsburgh
+state: PA
 address: 123 North Main Street
 phone: (222) 333-4444
 url: http://www.meathut.com
 website: www.meathut.com
+review-page-url: #
+number-of-reviews: 3
 ---
 
 <!DOCTYPE html>
@@ -18,8 +22,7 @@ website: www.meathut.com
     <p>Because food is awesome.</p>
 
     <section class="place-listing--item">
-      {{> _place-listing--item}}
-      {{>_address}}
+      {{> _place-card}}
     </section>
 
   </body>
