@@ -18,4 +18,10 @@
     text-transform: uppercase;
     text-align: center;
   }
+  &_address {
+    font-family: $secondary-font;
+    font-size: .938em;
+    color: $color-black;
+    text-align: center;
+  }
 }
