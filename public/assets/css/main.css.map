@@ -1,7 +1,8 @@
 {
 "version": 3,
-"mappings": "AAAA,WAAY;EACV,gBAAgB,ECDJ,OAAO;EDEnB,MAAM,EAAE,QAAQ;EAChB,KAAK,EAAE,IAAI;;AEHb,IAAK;EACH,gBAAgB,EDAM,OAAO;ECC7B,WAAW,EAAE,yBAAyB",
-"sources": ["../../../source/scss/_place-card.scss","../../../source/scss/_colors.scss","../../../source/scss/_layout.scss"],
+"mappings": "AAAA,IAAK;EACH,gBAAgB,ECEM,OAAO;;ACH/B,WAAY;EACV,gBAAgB,EDUJ,IAAI;ECThB,MAAM,EAAE,QAAQ;EAChB,KAAK,EAAE,IAAI;EACX,iBAAQ;IACN,WAAW,ECHA,yBAAyB;IDIpC,WAAW,EAAE,IAAI;IACjB,KAAK,EDHc,OAAO;ICI1B,SAAS,EAAE,KAAK;IAChB,UAAU,EAAE,MAAM;EAEpB,iBAAQ;IACN,WAAW,ECVA,yBAAyB;IDWpC,WAAW,EAAE,IAAI;IACjB,KAAK,EDVc,OAAO;ICW1B,SAAS,EAAE,OAAO;IAClB,cAAc,EAAE,KAAK;IACrB,cAAc,EAAE,SAAS;IACzB,UAAU,EAAE,MAAM",
+"sources": ["../../../source/scss/_layout.scss","../../../source/scss/_colors.scss","../../../source/scss/_place-card.scss","../../../source/scss/_fonts.scss"],
+>>>>>>> feat: place card > place, city, state updates
 "names": [],
 "file": "main.css"
 }

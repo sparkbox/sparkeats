@@ -1,10 +1,21 @@
+body {
+  background-color: #D4EEF5; }
+
 .place-card {
-  background-color: #ffffff;
+  background-color: #FFF;
   height: 30.625em;
   width: 25em; }
-
-body {
-  background-color: #d4eef5;
-  font-family: 'Avenir Next', sans-serif; }
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NvdXJjZS9zY3NzL19wbGFjZS1jYXJkLnNjc3MiLCIuLi8uLi8uLi9zb3VyY2Uvc2Nzcy9fY29sb3JzLnNjc3MiLCIuLi8uLi8uLi9zb3VyY2Uvc2Nzcy9fbGF5b3V0LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwwQkNEbUI7RURFbkIsaUJBQWdCO0VBQ2hCLFlBQVcsRUFBQTs7QUVIYjtFQUNFLDBCREE2QjtFQ0M3Qix1Q0FBc0MsRUFBQSIsImZpbGUiOiJtYWluLmNzcyJ9 */
+  .place-card__name {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: bold;
+    color: #1C4C55;
+    font-size: 2.5em;
+    text-align: center; }
+  .place-card__city {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: bold;
+    color: #1C4C55;
+    font-size: 0.875em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center; }

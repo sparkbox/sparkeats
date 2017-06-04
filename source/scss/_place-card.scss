@@ -2,4 +2,20 @@
   background-color: $color-white;
   height: 30.625em;
   width: 25em;
+  &__name {
+    font-family: $primary-font;
+    font-weight: bold;
+    color: $color-sparkblue-dark;
+    font-size: 2.5em;
+    text-align: center;
+  }
+  &__city {
+    font-family: $primary-font;
+    font-weight: bold;
+    color: $color-sparkblue-dark;
+    font-size: 0.875em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
