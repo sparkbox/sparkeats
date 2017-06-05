@@ -18,10 +18,19 @@
     text-transform: uppercase;
     text-align: center;
   }
-  &_address {
+  &__address {
     font-family: $secondary-font;
     font-size: .938em;
     color: $color-black;
+    font-style: normal;
     text-align: center;
   }
+}
+
+.place-card__img {
+  background-color: $color-sparkblue-dark; // TODO: replace with pattern?
+  // background: url() no-repeat center; TODO: pull image from data
+  text-align: center;
+  height: 9em;
+  background-size: cover;
 }
