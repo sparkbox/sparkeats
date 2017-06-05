@@ -25,5 +25,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../source')));
 } else {
   // start development server (npm run dev) to watch and update html and css files
-  shell.exec("browser-sync start --server --index 'public/index.html'  --files 'public/assets/css/*.css, public/*.html'");
+  console.log("This is the development server.");
+  // shell.exec("browser-sync start --server --index 'public/index.html'  --files 'public/assets/css/*.css, public/*.html'");
+  shell.exec("browser-sync start --server --index 'public/index.html' --serveStatic 'public' 'source'");
 }
