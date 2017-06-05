@@ -9,6 +9,7 @@
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
     "prestart": "npm run build",
+    "postinstall": "npm run build",
     "build": "npm-run-all -s html styles",
     "styles": "npm run sass && npm run postcss",
     "html": "node tasks/handlebars.js",
