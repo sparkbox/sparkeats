@@ -18,11 +18,11 @@ if (process.env.NODE_ENV === 'production') {
   });
 
   app.use(noindex);
-  app.use(auth);
+  // app.use(auth);
   // use express to look to send index.html to server
   app.use(express.static(path.join(__dirname, '../public')));
   // use express to look to send styles and other assets to server
-  app.use(express.static(path.join(__dirname, '..')));
+  app.use(express.static(path.join(__dirname, '../source')));
 } else {
   // start development server to watch and update html and css files
   shell.exec("browser-sync start --server --index 'public/index.html'  --files 'public/assets/css/*.css, public/*.html'");
