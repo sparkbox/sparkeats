@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm-run-all -p watch server styles html",
+    "dev": "npm-run-all -p watch start styles html",
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
     "prestart": "npm run build",

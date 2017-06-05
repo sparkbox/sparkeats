@@ -9,7 +9,7 @@ const auth = require('marshmallows');
 const noindex = require('./lib/noindex');
 
 if (process.env.NODE_ENV === 'production') {
-  // start production server
+  // start production server (NODE_ENV=production npm start)
   // process.env.PORT lets the port be set by Heroku
   const port = process.env.PORT || 5000;
 
@@ -24,6 +24,6 @@ if (process.env.NODE_ENV === 'production') {
   // use express to look to send styles and other assets to server
   app.use(express.static(path.join(__dirname, '../source')));
 } else {
-  // start development server to watch and update html and css files
+  // start development server (npm run dev) to watch and update html and css files
   shell.exec("browser-sync start --server --index 'public/index.html'  --files 'public/assets/css/*.css, public/*.html'");
 }
