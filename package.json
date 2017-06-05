@@ -8,7 +8,7 @@
     "start": "npm-run-all -p watch server styles html",
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
-    "postinstall": "postinstall-build public \"make public\"",
+    "postinstall": "npm run build",
     "build": "npm-run-all -s html sass",
     "styles": "npm run sass && npm run postcss",
     "html": "node tasks/handlebars.js",
