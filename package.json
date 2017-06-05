@@ -9,6 +9,7 @@
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
     "postinstall": "postinstall-build public \"make public\"",
+    "build": "npm-run-all -s html sass",
     "styles": "npm run sass && npm run postcss",
     "html": "node tasks/handlebars.js",
     "watch:hbs": "node tasks/watch-hbs.js",
