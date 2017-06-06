@@ -25,6 +25,20 @@
     font-style: normal;
     text-align: center;
   }
+  &__footer {
+    background-color: $color-fountain-blue;
+    height: 4.125em;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 1.25em;
+  }
+  &__footer a {
+    font-family: $primary-font;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: $color-sparkblue-dark;
+    text-decoration: none;
+  }
 }
 
 .place-card__img {
