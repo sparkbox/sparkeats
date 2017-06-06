@@ -1,3 +1,15 @@
+// GENERAL LAYOUT ELEMENTS
+
 body {
   background-color: $color-sparkblue-light;
+}
+
+.sparkeats-subtitle {
+  color: $color-jellybean-blue;
+  font-family: $primary-font;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
 }
