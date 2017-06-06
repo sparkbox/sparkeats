@@ -2,6 +2,7 @@
   background-color: $color-white;
   height: 30.625em;
   width: 25em;
+  text-align: center;
   &__name {
     font-family: $primary-font;
     font-weight: bold;
@@ -9,7 +10,6 @@
     font-size: 2.5em;
     margin-top: 0.875em;
     margin-bottom: 0;
-    text-align: center;
   }
   &__city {
     font-family: $primary-font;
@@ -18,13 +18,11 @@
     font-size: 0.875em;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    text-align: center;
     margin-top: 0;
   }
   &__footer {
     background-color: $color-fountain-blue;
     height: 4.125em;
-    text-align: center;
     box-sizing: border-box;
     padding-top: 1.25em;
   }
@@ -38,14 +36,12 @@
   &__img {
     // background: url(/source/assets/images/meat-hut.jpg) no-repeat center; // TODO: pull image from data
     background: url(/source/assets/design/sparkeats_pattern_horiz.svg) top center / 14.5em repeat-x $color-sparkblue-dark;
-    text-align: center;
     height: 9em;
   }
   &__star {
     width: 1.125em;
     height: auto;
     &-rating {
-      text-align: center;
     }
   }
 }
