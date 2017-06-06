@@ -13,3 +13,18 @@ body {
   letter-spacing: 0.2em;
   text-align: center;
 }
+
+.sparkeats-address {
+  font-family: $secondary-font;
+  font-size: 0.938em;
+  color: $color-black;
+  font-style: normal;
+  text-align: center;
+  line-height: 0.938em;
+  margin: 2.5em;
+  & a {
+    color: $color-jellybean-blue;
+    text-decoration: none;
+    border-bottom: 0.1em solid $color-jellybean-blue;
+  }
+}

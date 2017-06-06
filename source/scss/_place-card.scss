@@ -21,20 +21,6 @@
     text-align: center;
     margin-top: 0;
   }
-  &__address {
-    font-family: $secondary-font;
-    font-size: 0.938em;
-    color: $color-black;
-    font-style: normal;
-    text-align: center;
-    line-height: 0.938em;
-    margin: 2.5em;
-    & a {
-      color: $color-jellybean-blue;
-      text-decoration: none;
-      border-bottom: 0.1em solid $color-jellybean-blue;
-    }
-  }
   &__footer {
     background-color: $color-fountain-blue;
     height: 4.125em;
