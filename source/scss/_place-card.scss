@@ -50,11 +50,10 @@
     text-decoration: none;
   }
   &__img {
-    background-color: $color-sparkblue-dark; // TODO: replace with pattern?
-    // background: url(data: ) no-repeat center; // TODO: pull image from data
+    background: url(/source/assets/design/sparkeats_pattern_horiz.svg) top center / 14.5em repeat-x $color-sparkblue-dark;
+    // background: url(/source/assets/images/meat-hut.jpg) no-repeat center; // TODO: pull image from data
     text-align: center;
     height: 9em;
-    background-size: cover;
   }
   &__star {
     width: 1.125em;
