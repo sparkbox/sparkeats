@@ -9,5 +9,6 @@ public/*
 *.css
 *.map
 
-# but please keep this folder
+# but please keep these folders so that our project can be built into them
 !public/.keep
+!public/assets/css/.keep
