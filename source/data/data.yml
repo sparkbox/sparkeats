@@ -1,0 +1,14 @@
+sparkeats-logo: source/assets/design/sparkeats-logomark.svg
+sparkeats-pattern-horiz: source/assets/design/sparkeats-pattern-horiz.svg
+header-url: #
+place-card--image-src:
+place-card--image-alt: This is alt-text
+place-name: Meat Hut
+city: Pittsburgh
+state: PA
+address: 123 North Main Street
+phone: (222) 333-4444
+place-url: http://www.meathut.com
+place-website-display: www.meathut.com
+review-page-url: #
+number-of-reviews: 3
