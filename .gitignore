@@ -6,3 +6,5 @@ public/
 # Local development
 *.env
 *.dev
+*.css
+*.map
