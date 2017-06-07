@@ -1,10 +1,13 @@
 node_modules/
 .sass-cache
 .DS_Store
-public/
+public/*
 
 # Local development
 *.env
 *.dev
 *.css
 *.map
+
+# but please keep this folder
+!public/.keep
