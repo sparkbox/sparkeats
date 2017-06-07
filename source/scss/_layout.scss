@@ -22,7 +22,7 @@ body {
   text-align: center;
   line-height: 0.938em;
   margin: 2.5em;
-  & a {
+  &__link {
     color: $color-jellybean-blue;
     text-decoration: none;
     border-bottom: 0.1em solid $color-jellybean-blue;
