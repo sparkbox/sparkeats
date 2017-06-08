@@ -1,7 +1,5 @@
 meat-hut:
   place-name: Meat Hut
-  image-src:
-  image-alt: This is alt-text
   city: Pittsburgh
   state: PA
   address: 123 North Main Street
@@ -13,8 +11,6 @@ meat-hut:
 
 sushi-town:
   place-name: Sushi Town
-  image-src:
-  image-alt: This is Sushi Town
   city: Dayton
   state: OH
   address: 444 Northwest Rd
@@ -23,3 +19,47 @@ sushi-town:
   place-website-display: www.sushitown.co
   review-page-url: public/sushi-town.html
   number-of-reviews: 1
+
+the-other-hut:
+  place-name: The Other Hut
+  city: Dayton
+  state: OH
+  address: 2300 Cable Hill Rd.
+  phone: (222) 333-4444
+  place-url: http://www.otherhut.com
+  place-website-display: www.otherhut.com
+  review-page-url: public/the-other-hut.html
+  number-of-reviews: 4
+
+chicken-shack:
+  place-name: Chicken Shack
+  city: San Francisco
+  state: CA
+  address: 123 Main Street
+  phone: (222) 333-4444
+  place-url: http://www.chickenshack.com
+  place-website-display: www.chickenshack.com
+  review-page-url: public/chicken-shack.html
+  number-of-reviews: 3
+
+noodle-place:
+  place-name: Noodle Place
+  city: Chicago
+  state: IL
+  address: 123 Main Street
+  phone: (222) 333-4444
+  place-url: http://www.noodleplace.com
+  place-website-display: www.noodleplace.com
+  review-page-url: public/noodle-place.html
+  number-of-reviews: 5
+
+italian-house:
+  place-name: Italian House
+  city: Tulsa
+  state: OK
+  address: 123 Main Street
+  phone: (222) 333-4444
+  place-url: http://www.italianhouse.com
+  place-website-display: www.italianhouse.com
+  review-page-url: public/italin-house.html
+  number-of-reviews: 3
