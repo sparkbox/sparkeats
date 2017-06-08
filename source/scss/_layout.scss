@@ -2,6 +2,21 @@
 
 body {
   background-color: $color-sparkblue-light;
+  margin: 0;
+}
+
+.sparkeats-header {
+  width: 100%;
+  height: 8.5em;
+  background: url(/assets/design/sparkeats_pattern_horiz.svg) center bottom / 22em repeat-x rgb(67, 174, 192);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 4.5em 0;
+}
+
+.header-logo {
+  width: 25em;
 }
 
 .sparkeats-subtitle {
