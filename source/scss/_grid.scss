@@ -3,3 +3,18 @@
   overflow: auto;
   min-width: 25em;
 }
+
+.place-card__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 0 1em;
+}
+
+.place-card__list-item {
+  list-style: none;
+  vertical-align: top;
+  margin: 2em 0.5em 0 0.5em;
+  min-width: 25em;
+  width: 32%;
+}
