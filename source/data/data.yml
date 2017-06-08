@@ -63,3 +63,14 @@ italian-house:
   place-website-display: www.italianhouse.com
   review-page-url: public/italin-house.html
   number-of-reviews: 3
+
+pizza-palace:
+  place-name: Super Awesome Pizza Palace
+  city: Atlanta
+  state: GA
+  address: 123 Main Street
+  phone: (222) 333-4444
+  place-url: http://www.superawesomepizzapalace.com
+  place-website-display: www.superawesomepizzapalace.com
+  review-page-url: public/superawesomepizzapalace.html
+  number-of-reviews: 1
