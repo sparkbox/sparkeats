@@ -22,6 +22,14 @@ body {
   height: 5em;
 }
 
+li {
+  list-style: none;
+}
+
+li:not([class]){
+  list-style: disc;
+}
+
 .sparkeats-subtitle {
   color: $color-jellybean-blue;
   @include primary-font();
