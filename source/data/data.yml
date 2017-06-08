@@ -1,14 +1,25 @@
-sparkeats-logo: source/assets/design/sparkeats-logomark.svg
-sparkeats-pattern-horiz: source/assets/design/sparkeats-pattern-horiz.svg
-header-url: #
-place-card--image-src:
-place-card--image-alt: This is alt-text
-place-name: Meat Hut
-city: Pittsburgh
-state: PA
-address: 123 North Main Street
-phone: (222) 333-4444
-place-url: http://www.meathut.com
-place-website-display: www.meathut.com
-review-page-url: #
-number-of-reviews: 3
+meat-hut:
+  place-name: Meat Hut
+  image-src:
+  image-alt: This is alt-text
+  city: Pittsburgh
+  state: PA
+  address: 123 North Main Street
+  phone: (222) 333-4444
+  place-url: http://www.meathut.com
+  place-website-display: www.meathut.com
+  review-page-url: '#'
+  number-of-reviews: 3
+
+sushi-town:
+  place-name: Sushi Town
+  image-src:
+  image-alt: This is Sushi Town
+  city: Dayton
+  state: OH
+  address: 444 Northwest Rd
+  phone: (222) 333-4444
+  place-url: http://www.sushitown.co
+  place-website-display: www.sushitown.co
+  review-page-url: public/sushi-town.html
+  number-of-reviews: 1
