@@ -1,6 +1,21 @@
 // TYPOGRAPHY
 
-$primary-font: "Avenir Next", sans-serif;
+@font-face {
+  font-family: "Avenir Next";
+  src:url("fonts/6fb51c51-e183-4721-9e37-45a2ba8a5641.eot?#iefix");
+  src:url("fonts/6fb51c51-e183-4721-9e37-45a2ba8a5641.eot?#iefix") format("eot"),
+      url("fonts/9ddb7916-058a-4e43-9880-dcb237ef42b6.woff") format("woff"),
+      url("fonts/39e32aa7-13e2-40ab-ac9c-ea669789b9d6.ttf") format("truetype"),
+      url("fonts/4c639ff3-732a-4d7a-b793-b83771f8e94c.svg#4c639ff3-732a-4d7a-b793-b83771f8e94c") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin primary-font() {
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
 
 @mixin secondary-font($weight) {
   font-family: "Whitney A", "Whitney B", "Helvetica", Arial, sans-serif;
