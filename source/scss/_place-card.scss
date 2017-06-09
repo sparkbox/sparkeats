@@ -1,14 +1,21 @@
 .place-card {
   background-color: $color-white;
-  height: 30.625em;
-  max-width: 25em;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  max-width: 19em;
   text-align: center;
+  @media (min-width: 30em) {
+    max-width: 25em;
+  }
   &__name {
     @include primary-font();
     color: $color-sparkblue-dark;
     font-size: 2.5em;
     margin-top: 0.875em;
     margin-bottom: 0;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
   }
   &__city {
     @include primary-font();
@@ -23,6 +30,7 @@
     height: 4.125em;
     box-sizing: border-box;
     padding-top: 1.25em;
+    bottom: -6em;
     &-link {
       @include primary-font();
       font-size: 1.25em;
@@ -31,7 +39,7 @@
     }
   }
   &__img {
-    // background: url(/assets/images/meat-hut.jpg) no-repeat center; // TODO: pull image from data
+    // background: url(/source/assets/images/meat-hut.jpg) no-repeat center;
     background: url(/assets/design/sparkeats_pattern_horiz.svg) top center / 14.5em repeat-x $color-sparkblue-dark;
     height: 9em;
   }

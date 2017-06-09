@@ -4,6 +4,8 @@ meat-hut:
   state: PA
   address: 123 North Main Street
   phone: (222) 333-4444
+  place-image: url(/source/assets/images/meat-hut.jpg) no-repeat center
+  place-image-alt: Meat Hut
   place-url: http://www.meathut.com
   place-website-display: www.meathut.com
   review-page-url: '#'
@@ -15,6 +17,7 @@ sushi-town:
   state: OH
   address: 444 Northwest Rd
   phone: (222) 333-4444
+  place-image: url(/assets/design/sparkeats_pattern_horiz.svg) top center / 14.5em repeat-x $color-sparkblue-dark
   place-url: http://www.sushitown.co
   place-website-display: www.sushitown.co
   review-page-url: public/sushi-town.html
@@ -30,6 +33,17 @@ the-other-hut:
   place-website-display: www.otherhut.com
   review-page-url: public/the-other-hut.html
   number-of-reviews: 4
+
+the-other-pizza-palace:
+  place-name: Super Awesome Pizza Palace II
+  city: Dayton
+  state: OH
+  address: 123 Main Street
+  phone: (222) 333-4444
+  place-url: http://www.superawesomepizzapalace.com
+  place-website-display: www.superawesomepizzapalace.com
+  review-page-url: public/superawesomepizzapalace.html
+  number-of-reviews: 1
 
 chicken-shack:
   place-name: Chicken Shack

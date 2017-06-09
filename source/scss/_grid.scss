@@ -1,20 +1,17 @@
 .place-card__container {
-  margin: 1em;
-  overflow: auto;
-  min-width: 25em;
+  min-width: 18em;
+  display: flex;
 }
 
 .place-card__list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  margin: 0 1em;
+  justify-content: center;
 }
 
 .place-card__list-item {
   list-style: none;
   vertical-align: top;
-  margin: 2em 0.5em 0 0.5em;
+  margin: 2.5em 1.25em 0 1.25em;
   min-width: 25em;
-  width: 32%;
 }
