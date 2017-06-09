@@ -1,6 +1,13 @@
 // TYPOGRAPHY
 
 $primary-font: "Avenir Next", sans-serif;
-$secondary-font: "Whitney", sans-serif;
 
-// TODO: upload Whitney
+@mixin secondary-font($weight) {
+  font-family: "Whitney A", "Whitney B", "Helvetica", Arial, sans-serif;
+  font-style: normal;
+  @if $weight == 'bold' {
+    font-weight: 700;
+  } @else {
+    font-weight: 500;
+  }
+}
