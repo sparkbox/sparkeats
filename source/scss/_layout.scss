@@ -16,7 +16,10 @@ body {
 }
 
 .header-logo {
+  display: flex;
+  background: url(/assets/design/sparkeats_logomark.svg) center no-repeat;
   width: 25em;
+  height: 5em;
 }
 
 .sparkeats-subtitle {
