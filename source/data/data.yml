@@ -18,6 +18,7 @@ sushi-town:
   address: 444 Northwest Rd
   phone: (222) 333-4444
   place-image: /source/assets/images/sushi-town.jpg
+  place-image-alt: Sushi Town
   place-url: http://www.sushitown.co
   place-website-display: www.sushitown.co
   review-page-url: public/sushi-town.html
@@ -30,6 +31,7 @@ the-other-hut:
   address: 2300 Cable Hill Rd.
   phone: (222) 333-4444
   place-image:
+  place-image-alt:
   place-url: http://www.otherhut.com
   place-website-display: www.otherhut.com
   review-page-url: public/the-other-hut.html
@@ -42,6 +44,7 @@ the-other-pizza-palace:
   address: 123 Main Street
   phone: (222) 333-4444
   place-image:
+  place-image-alt:
   place-url: http://www.superawesomepizzapalace.com
   place-website-display: www.superawesomepizzapalace.com
   review-page-url: public/superawesomepizzapalace.html
@@ -54,6 +57,7 @@ chicken-shack:
   address: 123 Main Street
   phone: (222) 333-4444
   place-image: /source/assets/images/chicken-shack.jpg
+  place-image-alt: Chicken Shack
   place-url: http://www.chickenshack.com
   place-website-display: www.chickenshack.com
   review-page-url: public/chicken-shack.html
@@ -66,6 +70,7 @@ noodle-place:
   address: 123 Main Street
   phone: (222) 333-4444
   place-image: /source/assets/images/noodle-place.jpg
+  place-image-alt: Noodle Place
   place-url: http://www.noodleplace.com
   place-website-display: www.noodleplace.com
   review-page-url: public/noodle-place.html
@@ -78,6 +83,7 @@ italian-house:
   address: 123 Main Street
   phone: (222) 333-4444
   place-image: /source/assets/images/italian-house.jpg
+  place-image-alt: Italian House
   place-url: http://www.italianhouse.com
   place-website-display: www.italianhouse.com
   review-page-url: public/italin-house.html
@@ -90,6 +96,7 @@ pizza-palace:
   address: 123 Main Street
   phone: (222) 333-4444
   place-image:
+  place-image-alt: 
   place-url: http://www.superawesomepizzapalace.com
   place-website-display: www.superawesomepizzapalace.com
   review-page-url: public/superawesomepizzapalace.html
