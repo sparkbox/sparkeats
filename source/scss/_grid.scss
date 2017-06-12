@@ -7,11 +7,10 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-}
-
-.place-card__list-item {
-  list-style: none;
-  vertical-align: top;
-  margin: 2.5em 1.25em 0 1.25em;
-  min-width: 25em;
+  &-item {
+    list-style: none;
+    vertical-align: top;
+    margin: 2.5em 1.25em 0 1.25em;
+    min-width: 25em;
+  }
 }
