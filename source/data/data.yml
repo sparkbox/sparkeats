@@ -4,7 +4,7 @@ meat-hut:
   state: PA
   address: 123 North Main Street
   phone: (222) 333-4444
-  place-image: /source/assets/images/meat-hut.jpg
+  place-image: /assets/images/meat-hut.jpg
   place-image-alt: Meat Hut
   place-url: http://www.meathut.com
   place-website-display: www.meathut.com
@@ -17,7 +17,7 @@ sushi-town:
   state: OH
   address: 444 Northwest Rd
   phone: (222) 333-4444
-  place-image: /source/assets/images/sushi-town.jpg
+  place-image: /assets/images/sushi-town.jpg
   place-image-alt: Sushi Town
   place-url: http://www.sushitown.co
   place-website-display: www.sushitown.co
@@ -56,7 +56,7 @@ chicken-shack:
   state: CA
   address: 123 Main Street
   phone: (222) 333-4444
-  place-image: /source/assets/images/chicken-shack.jpg
+  place-image: /assets/images/chicken-shack.jpg
   place-image-alt: Chicken Shack
   place-url: http://www.chickenshack.com
   place-website-display: www.chickenshack.com
@@ -69,7 +69,7 @@ noodle-place:
   state: IL
   address: 123 Main Street
   phone: (222) 333-4444
-  place-image: /source/assets/images/noodle-place.jpg
+  place-image: /assets/images/noodle-place.jpg
   place-image-alt: Noodle Place
   place-url: http://www.noodleplace.com
   place-website-display: www.noodleplace.com
@@ -82,7 +82,7 @@ italian-house:
   state: OK
   address: 123 Main Street
   phone: (222) 333-4444
-  place-image: /source/assets/images/italian-house.jpg
+  place-image: /assets/images/italian-house.jpg
   place-image-alt: Italian House
   place-url: http://www.italianhouse.com
   place-website-display: www.italianhouse.com
@@ -96,7 +96,7 @@ pizza-palace:
   address: 123 Main Street
   phone: (222) 333-4444
   place-image:
-  place-image-alt: 
+  place-image-alt:
   place-url: http://www.superawesomepizzapalace.com
   place-website-display: www.superawesomepizzapalace.com
   review-page-url: public/superawesomepizzapalace.html
