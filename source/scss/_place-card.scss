@@ -38,10 +38,16 @@
       text-decoration: none;
     }
   }
-  &__img {
-    // background: url(/source/assets/images/meat-hut.jpg) no-repeat center;
+  &__header {
     background: url(/assets/design/sparkeats_pattern_horiz.svg) top center / 14.5em repeat-x $color-sparkblue-dark;
     height: 9em;
+  }
+  &__image {
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    clip: rect(0, 25em, 9em, 0);
   }
   &__star {
     width: 1.125em;
