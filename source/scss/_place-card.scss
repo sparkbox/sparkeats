@@ -1,17 +1,11 @@
 .place-card {
   background-color: $color-white;
-  margin: 0;
-  padding: 0;
   position: relative;
-  //width: 25em;
+  min-width: 18em;
+  width: 25em;
+  max-width: 100%;
   height: auto;
-  min-width: 17em;
-  //max-width: 100%;
-  max-width: 25em;
   text-align: center;
-  // @media (min-width: 30em) {
-  //   max-width: 25em;
-  // }
   &__name {
     @include primary-font();
     color: $color-sparkblue-dark;
