@@ -59,26 +59,46 @@ li:not([class]){
 
 .sparkeats-footer {
   background-color: $color-sparkblue-dark;
+  @include primary-font();
   &__intro {
-
+    color: $color-seagull-blue;
+    font-weight: bold;
+    font-size: 0.875em;
+    letter-spacing: 0.188em;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 3.625em;
   }
   &__wordmark {
 
   }
   &__description {
-
+    color: $color-seagull-blue;
+    font-weight: normal;
+    font-size: 1.3em;
+    line-height: 2.125em;
+    text-align: center;
+    margin: 0 25%;
   }
   &__copy {
-
+    color: $color-white;
+    @include secondary-font(500);
   }
   &__link {
-
+    color: $color-seagull-blue;
+    @include secondary-font(500);
   }
 }
 
 .sparkeats-column {
+  &__container {
+    margin: 0 15%;
+  }
   &__heading {
-    
+    color: $color-seagull-blue;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    letter-spacing: 0.25em;
   }
   &__onethird {
 
