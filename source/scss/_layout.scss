@@ -130,11 +130,17 @@ li:not([class]){
     margin: 0.5em 0;
   }
   &__onethird {
-    float: left;
-    width: 38%;
+    display: block;
+    @media (min-width: 42.25em){
+      float: left;
+      width: 38%;
+    }
   }
   &__twothirds {
-    float: right;
-    width: 58%;
+    display: block;
+    @media (min-width: 42.25em) {
+      float: right;
+      width: 58%;
+    }
   }
 }
