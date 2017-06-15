@@ -5,8 +5,6 @@ body {
   margin: 0;
 }
 
-// list
-
 li {
   list-style: none;
 }
@@ -24,14 +22,23 @@ li:not([class]){
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 4.5em 0;
+  margin: 0 0 2em 0;
+  @media (min-width: 27em) {
+    margin: 0 0 3.25em 0;
+  }
 }
 
 .header-logo {
-  display: flex;
   background: url(/assets/design/sparkeats_logomark.svg) center no-repeat;
-  width: 25em;
+  width: 18.5em;
+  max-width: 100%;
   height: 5em;
+  @media (min-width: 23em) {
+    width: 20em;
+  }
+  @media (min-width: 27em) {
+    width: 25em;
+  }
 }
 
 .sparkeats-subtitle {
@@ -40,7 +47,11 @@ li:not([class]){
   font-size: 1.25em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  margin: 0 3%;
   text-align: center;
+  @media (min-width: 27em) {
+    margin: 0 auto;
+  }
 }
 
 .sparkeats-address {
