@@ -47,8 +47,12 @@ li:not([class]){
   line-height: 0.938em;
   margin: 2.5em;
   &__link {
+    font-size: 0.85em;
     color: $color-jellybean-blue;
     text-decoration: none;
     border-bottom: 0.1em solid $color-jellybean-blue;
+    @media (min-width: 21.13em) {
+      font-size: 0.938em;
+    }
   }
 }

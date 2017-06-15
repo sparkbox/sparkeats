@@ -15,7 +15,7 @@
   display: block;
   margin: 2em 0;
   padding: 0;
-  @media (min-width: 25em) {
+  @media (min-width: 28.25em) {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -23,11 +23,11 @@
   &-item {
     list-style: none;
     vertical-align: top;
-    margin: 2em;
+    margin: 2em 1em;
     min-width: 18em;
     max-width: 25em;
-    @media (min-width: 25em) {
-      margin: 1.25em;
+    @media (min-width: 28.25em) {
+      margin: 2em;
     }
   }
 }
