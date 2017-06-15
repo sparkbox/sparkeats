@@ -175,6 +175,10 @@ li:not([class]){
 }
 
 .sparkeats__footer-pins {
-  background: url();
+  background: url(/assets/design/sparkeats_footer-pins.svg) repeat-x;
   width: 100%;
+  max-width: 100%; 
+  height: 5em;
+  margin-top: 3.5em;
+  margin-bottom: 1.5em;
 }
