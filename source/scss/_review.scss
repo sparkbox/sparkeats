@@ -1,0 +1,41 @@
+// ALL ELEMENTS RELATED TO THE REVIEW CARD
+
+.review {
+  background-color: $color-white;
+  &__header {
+    background: $color-sparkblue-dark;
+    margin: 0 auto;
+    height: 20em;  // estimated
+    width: 58.5em;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-title {
+      background: $color-white;
+      height: 7.813em;
+      width: 23.5em;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    &-name {
+      @include primary-font();
+      color: $color-sparkblue-dark;
+      font-size: 2.5em;
+      // margin-top: 0.875em;
+      margin-bottom: 0;
+      // padding-left: 0.25em;
+      // padding-right: 0.25em;
+    }
+    &-city {
+      @include primary-font();
+      color: $color-sparkblue-dark;
+      font-size: 0.875em;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+  }
+}
