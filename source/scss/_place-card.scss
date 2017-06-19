@@ -47,7 +47,8 @@
     max-width: 100%;
     position: absolute;
     left: 0;
-    clip: rect(0, 25em, 9em, 0);
+    // TODO: look at using clip-path
+    clip: rect(0, 25em, 9em, 0);  // oh no! this has been deprecated
   }
   &__star {
     width: 1.125em;
