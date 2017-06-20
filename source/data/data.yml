@@ -1,3 +1,10 @@
+test-place:
+  place-name: Test Place
+  city: Gem City
+  state:  Oz
+  address: 123 Test Street
+  phone: (555) 222-3333
+
 meat-hut:
   place-name: Meat Hut
   city: Pittsburgh
