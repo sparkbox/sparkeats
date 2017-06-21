@@ -9,6 +9,7 @@ const auth = require('marshmallows');
 const noindex = require('./lib/noindex');
 
 require('dotenv').config(path.join(__dirname, '/.env'));
+// require('dotenv').config();
 
 if (process.env.NODE_ENV === 'production') {
   console.log('USER is ' + process.env.USER);
