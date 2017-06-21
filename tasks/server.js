@@ -11,8 +11,8 @@ const noindex = require('./lib/noindex');
 require('dotenv').config(path.join(__dirname, '/.env'));
 
 if (process.env.NODE_ENV === 'production') {
-  console.log('PASS is ' + process.env.USER);
-  console.log('USER is ' + process.env.PASS);
+  console.log('USER is ' + process.env.USER);
+  console.log('PASS is ' + process.env.PASS);
 
   // start production server (NODE_ENV=production npm start)
   // process.env.PORT lets the port be set by Heroku
