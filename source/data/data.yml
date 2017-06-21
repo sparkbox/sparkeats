@@ -101,3 +101,16 @@ pizza-palace:
   place-website-display: www.superawesomepizzapalace.com
   review-page-url: public/superawesomepizzapalace.html
   number-of-reviews: 1
+  
+marvelous-macarons:
+  place-name: Magically Marvelous Macarons
+  city: Troy
+  state: OH
+  address: 123 Main Street
+  phone: (555) 555-5555
+  place-image:
+  place-image-alt:
+  place-url: http://www.marvelousmacarons.com
+  place-website-display: www.marvelousmacarons.com
+  review-page-url: public/marvelousmacarons.html
+  number-of-reviews: 1
