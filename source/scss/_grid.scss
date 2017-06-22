@@ -7,19 +7,28 @@
   padding: 0;
   @media (min-width: 35em) {
     min-width: 18em;
+    margin: 0 3%;
   }
 }
 
 .place-card__list {
   display: block;
   margin: 0;
+  margin: 0 auto;
   padding: 0;
   @media (min-width: 28.25em) {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    flex: 1 0 18em;
-    position: relative; // test
+    @supports (display: flex) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex: 1 0 18em;
+      margin: 0 auto;
+    }
+  }
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
   }
   &-item {
     list-style: none;
@@ -28,9 +37,11 @@
     min-width: 18em;
     max-width: 25em;
     @media (min-width: 28.25em) {
-      margin: 2em;
-      // flex: grow shrink basis; default is 0 1 auto
-      flex: 1 0 18em;
+      @supports (display: flex) {
+        margin: 2em;
+        flex: 1 0 18em;
+      }
+      float: left;
     }
   }
 }
