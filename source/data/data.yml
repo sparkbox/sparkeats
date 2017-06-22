@@ -108,7 +108,7 @@ marvelous-macarons:
   state: OH
   address: 123 Main Street
   phone: (555) 555-5555
-  place-image:
+  place-image: /assets/images/magically-marvelous-macarons.jpg
   place-image-alt:
   place-url: http://www.marvelousmacarons.com
   place-website-display: www.marvelousmacarons.com
