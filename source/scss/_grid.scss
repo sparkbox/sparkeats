@@ -7,7 +7,6 @@
   padding: 0;
   @media (min-width: 35em) {
     min-width: 18em;
-    //display: flex;
   }
 }
 
@@ -15,16 +14,12 @@
   display: block;
   margin: 0;
   padding: 0;
-  //max-width: 25em; // test
   @media (min-width: 28.25em) {
     display: flex;
     flex-flow: row wrap;
-    // flex-flow: wrap;
-    // flex-direction: row;
     justify-content: center;
     flex: 1 0 18em;
     position: relative; // test
-    // max-width: 100%; // test
   }
   &-item {
     list-style: none;
@@ -34,7 +29,7 @@
     max-width: 25em;
     @media (min-width: 28.25em) {
       margin: 2em;
-      // flex: flex grow flex shrink flex basis; default is 0 1 auto
+      // flex: grow shrink basis; default is 0 1 auto
       flex: 1 0 18em;
     }
   }
