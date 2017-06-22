@@ -41,6 +41,7 @@
         margin: 2em;
         flex: 1 0 18em;
       }
+      // use float for browsers and devices that do not support flexbox
       float: left;
     }
   }
