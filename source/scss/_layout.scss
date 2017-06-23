@@ -18,11 +18,11 @@ li:not([class]){
 .sparkeats-header {
   width: 100%;
   height: 8.5em;
-  background-color: $color-fountain-blue; // fallback background color for Android 4.* devices
-  background: url(/assets/design/sparkeats_pattern_horiz.svg) $color-fountain-blue;
-
-  // android devices 4.* devices will not render the url below
-  background: url(/assets/design/sparkeats_pattern_horiz.svg) center bottom / 22em repeat-x $color-fountain-blue;
+  background-color: $color-fountain-blue;
+  background-image: url(/assets/design/sparkeats_pattern_horiz.svg);
+  background-repeat: repeat-x;
+  background-size: 22em;
+  background-position: center bottom;
   display: flex;
   justify-content: center;
   margin: 0 0 2em 0;
