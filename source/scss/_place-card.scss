@@ -38,7 +38,11 @@
     }
   }
   &__header {
-    background: url(/assets/design/sparkeats_pattern_horiz.svg) top center / 14.5em repeat-x $color-sparkblue-dark;
+    background-color: $color-sparkblue-dark;
+    background-image: url(/assets/design/sparkeats_pattern_horiz.svg);
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-size: 15em;
     height: 9em;
     max-width: 100%;
   }
