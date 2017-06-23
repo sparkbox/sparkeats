@@ -101,3 +101,16 @@ pizza-palace:
   place-website-display: www.superawesomepizzapalace.com
   review-page-url: public/superawesomepizzapalace.html
   number-of-reviews: 1
+
+pizza-palace:
+  place-name: Magically Marvelous Macarons
+  city: Dayton
+  state: OH
+  address: 123 Main Street
+  phone: (222) 333-4444
+  place-image: /assets/images/magically-marvelous-macarons.jpg
+  place-image-alt: Magically Marvelous Macarons
+  place-url: http://www.magicmacarons.com
+  place-website-display: www.magicmacarons.com
+  review-page-url: public/magicmacarons.html
+  number-of-reviews: 0
