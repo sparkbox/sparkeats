@@ -33,9 +33,9 @@ li:not([class]){
   &__logo {
     display: block; //
     background: url(/assets/design/sparkeats_logomark.svg) center no-repeat;
-    margin: 0 auto;
     padding: 1.75em;
     width: 15.5em;
+    text-align: center;
     @media (min-width: 23em) {
       width: 18em;
     }
