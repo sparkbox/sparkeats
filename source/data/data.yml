@@ -30,7 +30,7 @@ the-other-hut:
   state: OH
   address: 2300 Cable Hill Rd.
   phone: (222) 333-4444
-  place-image:
+  place-image: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
   place-image-alt:
   place-url: http://www.otherhut.com
   place-website-display: www.otherhut.com
