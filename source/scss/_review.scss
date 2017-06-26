@@ -1,16 +1,27 @@
-// ALL ELEMENTS RELATED TO THE REVIEW CARD
+// ALL ELEMENTS RELATED TO THE REVIEW CONTAINER
 
 .review {
   background-color: $color-white;
   max-width: 100%;
-  &__container {
+  &-container {
     display: block;
     padding: 0;
     max-width: 58.5em;
     width: 100%;
     margin: 0 auto;
   }
-  &__header {
+  &-overview {
+    background-color: $color-soft-gray;
+    width: 20.5em;
+    height: 18.25em;
+    &__stars {
+
+    }
+    &__address {
+      background-color: $color-white;
+    }
+  }
+  &-header {
     background: $color-sparkblue-dark;
     height: 40%;
     display: flex;
@@ -20,13 +31,13 @@
     width: 100%;
     text-align: center;
     overflow: hidden;
-    &-image {
+    &__image {
       width: 100%;
       left: 0;
       top: -50%;
       position: absolute;
     }
-    &-title {
+    &__title {
       background: $color-white;
       width: 70%;
       max-width: 100%;
@@ -38,7 +49,7 @@
         max-width: 23.5em;
       }
     }
-    &-name {
+    &__name {
       @include primary-font();
       color: $color-sparkblue-dark;
       font-size: 2.5em;
@@ -46,7 +57,7 @@
       margin: 0;
       padding: 0;
     }
-    &-city {
+    &__city {
       @include primary-font();
       color: $color-sparkblue-dark;
       font-size: 0.875em;
