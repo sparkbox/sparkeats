@@ -4,15 +4,10 @@
   background-color: $color-white;
   position: relative;
   min-width: 18em;
-  // min-height: 31.25em;
-  // height: 34.688em; // test
   width: 25em;
   max-width: 100%;
   text-align: center;
   padding-bottom: 4.125em; // height of footer
-  &__holder {
-    // min-height: 31.25em; //
-  }
   &__name {
     @include primary-font();
     color: $color-sparkblue-dark;
@@ -36,10 +31,10 @@
     box-sizing: border-box;
     padding-top: 1.25em;
     bottom: -6em;
-    position: absolute; //
-    left: 0; //
-    right: 0; //
-    bottom: 0; //
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; 
     &-link {
       @include primary-font();
       font-size: 1.25em;
