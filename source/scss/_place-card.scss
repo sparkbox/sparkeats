@@ -45,8 +45,6 @@
     background-size: 15em;
     height: 9em;
     max-width: 100%;
-
-    // TODO: Because this uses flexbox, test to see if this displays properly in Safari 7 & Android 4 devices
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +58,6 @@
     max-width: 100%;
     position: absolute;
     left: 0;
-    // clip: rect(0, 25em, 9em, 0);  // Deprecated. Replaced with flexbox. See note above.
     top: -20%;
   }
   &__star {
