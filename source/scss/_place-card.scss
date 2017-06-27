@@ -21,7 +21,7 @@
     @include primary-font();
     color: $color-sparkblue-dark;
     font-size: 0.875em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     margin-top: 0;
   }
@@ -34,7 +34,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0; 
+    bottom: 0;
     &-link {
       @include primary-font();
       font-size: 1.25em;
@@ -66,9 +66,7 @@
     top: -20%;
   }
   &__star {
-    width: 1.125em;
-    height: auto;
-    &-rating {
-    }
+    width: 1.1875em;
+    padding: 0 0.1875em;
   }
 }
