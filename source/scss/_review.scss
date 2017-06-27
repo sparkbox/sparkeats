@@ -10,26 +10,31 @@
     width: 100%;
     margin: 0 auto;
   }
+  // TODO: media query for positioning (inline-block, floats, etc. to be determined)
   &-overview {
     background-color: $color-soft-gray;
-    width: 20.5em;
-    //height: 18.25em;
+    width: 100%;
+    max-width: 20.5em;
     text-align: center;
     margin: 2em auto;
     padding: 0.625em;
     &__num-reviews {
       background-color: $color-white;
-      //height: 7.438em;
       width: 100%;
       margin: 0 auto;
+      padding: 1.5em 0;
     }
-    &__star {
-      width: 1.125em;
-      //height: auto;
-      margin-top: 1em;
+    &__title {
+      @include primary-font();
+      font-size: 0.875em;
+      text-transform: uppercase;
+      color: $color-sparkblue-dark;
+      letter-spacing: 0.25em;
+      margin: 0;
+      margin-bottom: 0.75em;
     }
     &__address {
-
+      line-height: 1.875em;
     }
   }
   &-header {

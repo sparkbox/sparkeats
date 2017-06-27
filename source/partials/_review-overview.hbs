@@ -1,12 +1,9 @@
 <div class="review-overview">
   <div class="review-overview__num-reviews">
-    <img class="review-overview__star" src="assets/design/sparkeats_star.svg" alt="full star">
-    <img class="review-overview__star" src="assets/design/sparkeats_star.svg" alt="full star">
-    <img class="review-overview__star" src="assets/design/sparkeats_star.svg" alt="full star">
-    <img class="review-overview__star" src="assets/design/sparkeats_star_half.svg" alt="half star">
-    <img class="review-overview__star" src="assets/design/sparkeats_star_empty.svg" alt="empty star">
+    <p class="review-overview__title">{{number-of-reviews}} Reviews</p>
+    {{> _star-rating}}
   </div>
   <div class="review-overview__address">
-    {{> _address meat-hut}}
+    {{> _address}}
   </div>
 </div>
