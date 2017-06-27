@@ -13,12 +13,23 @@
   &-overview {
     background-color: $color-soft-gray;
     width: 20.5em;
-    height: 18.25em;
-    &__stars {
-
+    //height: 18.25em;
+    text-align: center;
+    margin: 2em auto;
+    padding: 0.625em;
+    &__num-reviews {
+      background-color: $color-white;
+      //height: 7.438em;
+      width: 100%;
+      margin: 0 auto;
+    }
+    &__star {
+      width: 1.125em;
+      //height: auto;
+      margin-top: 1em;
     }
     &__address {
-      background-color: $color-white;
+
     }
   }
   &-header {
