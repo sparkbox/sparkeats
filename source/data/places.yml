@@ -8,13 +8,6 @@ meat-hut:
   place-image-alt: Meat Hut
   place-url: http://www.meathut.com
   place-website-display: www.meathut.com
-<<<<<<< HEAD:source/data/places.yml
-=======
-  review-page-url: '#'
-  number-of-reviews: 1
-  reviewer: Rob Harr
-  review: A popular method of cooking chicken in recent years both in Barbeque contests as well as backyard bbqs is the beer-can chicken. Cooking a beer-can chicken couldn't be any easier but the results are worthwhile. This is a technique that delivers a moist, succulent chicken and flavorful chicken. It's also a bit of a showstopper and makes a lively conversation starter as well. Is it chicken in a beer can? Close, but try beer can in a chicken. The beer is used to both keep the bird flavorful and moise, and the cook happy. By the time the bird is ready to eat, the chef will not be the only one with a beer belly!
->>>>>>> :racehorse: feat: Add sample review data:source/data/data.yml
 
 sushi-town:
   place-name: Sushi Town
