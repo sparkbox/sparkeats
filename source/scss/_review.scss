@@ -9,15 +9,26 @@
     max-width: 58.5em;
     width: 100%;
     margin: 0 auto;
+    &:after {
+      content: "";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+    }
   }
-  // TODO: media query for positioning (inline-block, floats, etc. to be determined)
   &-overview {
     background-color: $color-soft-gray;
+    box-sizing: border-box;
     width: 100%;
     max-width: 20.5em;
     text-align: center;
     margin: 2em auto;
     padding: 0.625em;
+    // estimated breaking point at which elements should begin to float
+    @media (min-width: 53.5em) {
+      float: right;
+    }
     &__num-reviews {
       background-color: $color-white;
       width: 100%;
@@ -47,6 +58,9 @@
     width: 100%;
     text-align: center;
     overflow: hidden;
+    @media (min-width: 95em) {
+      max-height: 25%;
+    }
     &__image {
       width: 100%;
       left: 0;
