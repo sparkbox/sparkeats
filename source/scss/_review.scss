@@ -17,6 +17,36 @@
       clear: both;
     }
   }
+  &-submission {
+    background-color: $color-soft-gray;
+    margin-top: 2em;
+    float: left;
+    width: 55%;
+    padding: 2em;
+
+    &__reviewer {
+      @include primary-font();
+      color: $color-sparkblue-dark;
+      font-size: 2em;
+      padding: 0;
+      margin: 0;
+  }
+
+   &__title {
+     @include primary-font();
+     font-size: 0.875em;
+     text-transform: uppercase;
+     color: $color-sparkblue-dark;
+     letter-spacing: 0.25em;
+     margin: 2.75em 0 0.75em;
+  }
+    &__review {
+     @include primary-font();
+     line-height: 1.875em;
+     font-weight: normal;
+   }
+}
+
   &-overview {
     background-color: $color-soft-gray;
     box-sizing: border-box;
