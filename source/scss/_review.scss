@@ -19,10 +19,15 @@
   }
   &-submission {
     background-color: $color-soft-gray;
-    margin-top: 2em;
-    float: left;
-    width: 55%;
+    box-sizing: border-box;
+    margin: 2em auto;
     padding: 2em;
+    width: 90%;
+    // estimated breaking point at which elements should begin to float
+    @media (min-width: 53.5em) {
+      width: 60%;
+      float: left;
+    }
 
     &__reviewer {
       @include primary-font();
@@ -31,7 +36,6 @@
       padding: 0;
       margin: 0;
   }
-
    &__title {
      @include primary-font();
      font-size: 0.875em;
@@ -44,20 +48,23 @@
      @include primary-font();
      line-height: 1.875em;
      font-weight: normal;
+     letter-spacing: 0.025em;
    }
 }
 
   &-overview {
     background-color: $color-soft-gray;
     box-sizing: border-box;
-    width: 100%;
-    max-width: 20.5em;
+    width: 90%;
     text-align: center;
     margin: 2em auto;
     padding: 0.625em;
     // estimated breaking point at which elements should begin to float
     @media (min-width: 53.5em) {
       float: right;
+      width: 100%;
+      max-width: 20.5em;
+      margin: 2em auto;
     }
     &__num-reviews {
       background-color: $color-white;
@@ -76,6 +83,7 @@
     }
     &__address {
       line-height: 1.875em;
+      letter-spacing: 0.025em;
     }
   }
   &-header {
