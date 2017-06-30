@@ -101,3 +101,56 @@ pizza-palace:
   place-website-display: www.superawesomepizzapalace.com
   review-page-url: public/superawesomepizzapalace.html
   number-of-reviews: 1
+  
+  
+table-33:
+  place-name: Table 33
+  city: Dayton
+  state: OH
+  address: 130 W. Second St.
+  phone: (937) 999-3070
+  place-image:
+  place-image-alt:
+  place-url: http://www.table33dayton.com/
+  place-website-display: www.table33dayton.com
+  review-page-url:
+  number-of-reviews:
+  
+bareburger:
+  place-name: Bareburger
+  city: Columbus
+  state: OH
+  address: 463 N. High St.
+  phone: 
+  place-image:
+  place-image-alt:
+  place-url: https://bareburger.com/
+  place-website-display: bareburger.com
+  review-page-url:
+  number-of-reviews:
+  
+sleepy-bee-cafe:
+  place-name: Sleepy Bee Cafe
+  city: Cincinnati
+  state: OH
+  address: 3098 Madison Rd.
+  phone: 
+  place-image:
+  place-image-alt:
+  place-url: http://sleepybeecafe.com/
+  place-website-display: sleepybeecafe.com
+  review-page-url:
+  number-of-reviews:
+  
+bagger-daves:
+  place-name: Bagger Dave's Burger Tavern
+  city: Centerville
+  state: OH
+  address: 5299 Cornerstone North Blvd
+  phone: 
+  place-image:
+  place-image-alt:
+  place-url: https://www.baggerdaves.com/
+  place-website-display: www.baggerdaves.com
+  review-page-url:
+  number-of-reviews:
