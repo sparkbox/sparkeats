@@ -27,9 +27,6 @@ li:not([class]){
   justify-content: center;
   margin: 0 0 2em 0;
   max-width: 100%;
-  @media (min-width: 27em) {
-    margin: 0 0 3.25em 0;
-  }
   &__logo {
     display: block; //
     background: url(/assets/design/sparkeats_logomark.svg) center no-repeat;

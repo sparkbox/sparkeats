@@ -7,8 +7,11 @@
     display: block;
     padding: 0;
     max-width: 58.5em;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
+    @media (min-width: 65.5em) {
+      margin: 0 auto;
+    }
     &:after {
       content: "";
       visibility: hidden;
@@ -21,49 +24,71 @@
     background-color: $color-soft-gray;
     box-sizing: border-box;
     margin: 2em auto;
-    padding: 2em;
-    width: 90%;
-    // estimated breaking point at which elements should begin to float
-    @media (min-width: 53.5em) {
-      width: 60%;
+    padding: 2em 2em 1em 2em;
+    width: 100%;
+    @media (min-width: 48em) {
       float: left;
+      max-width: 66.5%;
     }
-
     &__reviewer {
       @include primary-font();
       color: $color-sparkblue-dark;
       font-size: 2em;
       padding: 0;
       margin: 0;
-  }
-   &__title {
-     @include primary-font();
-     font-size: 0.875em;
-     text-transform: uppercase;
-     color: $color-sparkblue-dark;
-     letter-spacing: 0.25em;
-     margin: 2.75em 0 0.75em;
-  }
+    }
+    &__title {
+      @include primary-font();
+      font-size: 0.875em;
+      text-transform: uppercase;
+      color: $color-sparkblue-dark;
+      letter-spacing: 0.25em;
+      margin: 2.75em 0 0.75em;
+    }
     &__review {
-     @include primary-font();
+     @include secondary-font(500);
      line-height: 1.875em;
      font-weight: normal;
      letter-spacing: 0.025em;
-   }
-}
+     padding-bottom: 1em;
+    }
+    &__image-container {
+      display: inline-block;
+      height: 13em;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 1.25em;
+      margin-right: 1.25em;
+      @media(min-width: 28em) {
+        height: 10em;
+        width: 44%;
+      }
+      @media(min-width: 57.5em) {
+        height: 15.625em;
+        width: 45%;
+      }
+    }
+    &__image {
+      max-height: 100%;
+      margin: auto;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+  }
   &-overview {
     background-color: $color-soft-gray;
     box-sizing: border-box;
-    width: 90%;
+    width: 100%;
     text-align: center;
     margin: 2em auto;
     padding: 0.625em;
-    // estimated breaking point at which elements should begin to float
-    @media (min-width: 53.5em) {
+    @media (min-width: 48em) {
       float: right;
-      width: 100%;
+      width: 30%;
       max-width: 20.5em;
-      margin: 2em auto;
     }
     &__num-reviews {
       background-color: $color-white;
@@ -81,13 +106,13 @@
       margin-bottom: 0.75em;
     }
     &__address {
-      line-height: 1.875em;
+      line-height: 1.25em;
       letter-spacing: 0.025em;
     }
   }
   &-header {
-    background: $color-sparkblue-dark;
-    height: 40%;
+    height: 20em;
+    min-height: 18%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,9 +120,6 @@
     width: 100%;
     text-align: center;
     overflow: hidden;
-    @media (min-width: 95em) {
-      max-height: 25%;
-    }
     &__image {
       width: 100%;
       left: 0;
@@ -109,7 +131,7 @@
       width: 70%;
       max-width: 100%;
       margin: 0;
-      padding: 2em 0;
+      padding: 1.5em 0;
       text-align: center;
       position: relative;
       @media (min-width: 25em) {

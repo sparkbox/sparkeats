@@ -1,6 +1,11 @@
 <article class="review-submission">
-  <h1 class="review-submission__reviewer">{{reviewer}}</h1>
+  <h1 class="review-submission__reviewer">{{reviewer-name}}</h1>
   {{> _star-rating}}
   <h2 class="review-submission__title">Comments</h2>
-  <p class="review-submission__review">{{review}}</p>
+  <p class="review-submission__review">{{review-text}}</p>
+  {{#each pictures}}
+    <div class="review-submission__image-container">
+      <img class="review-submission__image" src="{{link}}">
+    </div>
+  {{/each}} 
 </article>
