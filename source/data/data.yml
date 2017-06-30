@@ -101,3 +101,16 @@ pizza-palace:
   place-website-display: www.superawesomepizzapalace.com
   review-page-url: public/superawesomepizzapalace.html
   number-of-reviews: 1
+  
+chocolate-shop:
+  place-name: Chocolate Shop
+  city: Atlanta
+  state: GA
+  address: 123 Main Street
+  phone: (222) 333-4444
+  place-image: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
+  place-image-alt:chocolate shop
+  place-url: http://www.chocolateshop.com
+  place-website-display: www.chocolateshop.com
+  review-page-url: '#'
+  number-of-reviews: 1
