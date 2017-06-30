@@ -101,3 +101,30 @@ pizza-palace:
   place-website-display: www.superawesomepizzapalace.com
   review-page-url: public/superawesomepizzapalace.html
   number-of-reviews: 1
+  
+cherry-republic:
+  place-name: Cherry Republic                     
+  city: Glen Arbor
+  state: MI
+  address: 6026 S Lake St
+  phone: (231) 226-3014
+  place-image: /assets/images/cherry-republic.jpg
+  place-image-alt: cherry-republic
+  place-url: https://www.cherryrepublic.com/locations/glen-arbor/
+  place-website-display: www.cherryrepublic.com
+  review-page-url: '#'
+  number-of-reviews: 0
+  
+village-cheese-shanty:
+  place-name: Village Cheese Shanty                     
+  city: Leland
+  state: MI
+  address: 199 W River St
+  phone: (231) 256-9141
+  place-image: /assets/images/village-cheese-shanty.jpg
+  place-image-alt: village-cheese-shanty
+  place-url: http://www.villagecheeseshanty.com/
+  place-website-display: www.villagecheeseshanty.com
+  review-page-url: '#'
+  number-of-reviews: 0
+
