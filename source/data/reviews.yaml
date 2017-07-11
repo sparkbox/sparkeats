@@ -1,0 +1,103 @@
+meat-hut:
+  review-text: none
+  reviewer-name: Carol Danvers
+  number-of-stars: 3
+  dates-visited:
+    - date1
+    - date2
+    - date3
+  pictures:
+    - picture-link1
+    - picture-link2
+    - piture-link3
+
+sushi-town:
+  review-text: none
+  reviewer-name: Diana Prince
+  number-of-stars: 3
+  dates-visited:
+    - date1
+    - date2
+    - date3
+  pictures:
+    - picture-link1
+    - picture-link2
+    - piture-link3
+
+the-other-hut:
+  review-text: none
+  reviewer-name: Doreen Green
+  number-of-stars: 3
+  dates-visited:
+    - date1
+    - date2
+    - date3
+  pictures:
+    - picture-link1
+    - picture-link2
+    - piture-link3
+
+the-other-pizza-palace:
+  review-text: none
+  reviewer-name: Barbara Gordon
+  number-of-stars: 3
+  dates-visited:
+    - date1
+    - date2
+    - date3
+  pictures:
+    - picture-link1
+    - picture-link2
+    - piture-link3
+
+chicken-shack:
+  review-text: none
+  reviewer-name: Kara Danvers
+  number-of-stars: 3
+  dates-visited:
+    - date1
+    - date2
+    - date3
+  pictures:
+    - picture-link1
+    - picture-link2
+    - piture-link3
+
+noodle-place:
+  review-text: none
+  reviewer-name: Riri Williams
+  number-of-stars: 3
+  dates-visited:
+    - date1
+    - date2
+    - date3
+  pictures:
+    - picture-link1
+    - picture-link2
+    - piture-link3
+
+italian-house:
+  review-text: none
+  reviewer-name: Jessica Jones
+  number-of-stars: 3
+  dates-visited:
+    - date1
+    - date2
+    - date3
+  pictures:
+    - picture-link1
+    - picture-link2
+    - piture-link3
+
+pizza-palace:
+  review-text: none
+  reviewer-name: Patsy Walker
+  number-of-stars: 3
+  dates-visited:
+    - date1
+    - date2
+    - date3
+  pictures:
+    - picture-link1
+    - picture-link2
+    - piture-link3
