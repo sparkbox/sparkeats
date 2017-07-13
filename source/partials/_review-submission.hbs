@@ -3,9 +3,9 @@
   {{> _star-rating}}
   <h2 class="review-submission__title">Comments</h2>
   <p class="review-submission__review">{{review-text}}</p>
-  {{#each pictures}}
+  {{#each picture-file-name}}
     <div class="review-submission__image-container">
-      <img class="review-submission__image" src="{{link}}">
+      <img class="review-submission__image" src="{{getReviewImageLocation this}}">
     </div>
-  {{/each}} 
+  {{/each}}
 </article>
