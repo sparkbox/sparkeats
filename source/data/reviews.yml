@@ -1,103 +1,32 @@
-meat-hut:
-    review-text: Super awesome text about how absolutely delicious meat hut is. Yada yada yada.
-    reviewer-name: Carol Danvers
-    number-of-stars: 3
-    dates-visited:
-      - date1
-      - date2
-      - date3
-    pictures:
-      - link: /assets/images/meat-hut.jpg
-      - link: /assets/images/chicken-shack.jpg
-      - link: /assets/images/noodle-place.jpg
+table-33:
+  review-text: This is one of the most gluten-free-friendly restaurants in the Dayton region. Everything they bake in-house is gluten free (including their brownies and muffins, which are delicious), although they do bring in regular bread and buns for their sandwiches and burgers. I highly recommend the Chicken and Waffles and the Quiche.
+  reviewer-name: Katy Bowman
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+    - 04/29/2017
+    - 07/10/2017
+    - 07/12/2017
+  picture-file-name:
+    - table-33-1.jpg
 
-sushi-town:
-  review-text: none
-  reviewer-name: Diana Prince
-  number-of-stars: 3
-  dates-visited:
-    - date1
-    - date2
-    - date3
-  pictures:
-    - picture-link1
-    - picture-link2
-    - piture-link3
+bareburger:
+  review-text: Bareburger is basically a burger, fries, and shakes kind of place, although they do offer salads and other sandwiches. They have a list of specialty burgers to choose from or you can build your own. You can get burgers made from beef, bison, black beans, duck, elk, quinoa, grilled lemon chicken, sesame ginger beef, sweet potato and wild rice, turkey, or wild boar. All except the black bean and quinoa are gluten free. For your bun, to keep it gluten free you can choose to have your burger on a tapioca bun, with no bun, served on a lettuce bed, or wrapped with a collard. Their french fries and sweet potato fries are fried separately and kept gluten free. Other gluten free items are listed clearly on the menu. Beyond their burgers and fries, I also highly recommend trying their milkshakes. My personal favorite is the Mexican Chocolate, made with chocolate ice cream, cayenne, cinnamon, and a “torched marshmallow.” Just thinking about it makes me want one.
+  reviewer-name: Katy Bowman
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  picture-file-name:
 
-the-other-hut:
-  review-text: none
-  reviewer-name: Doreen Green
+sleepy-bee-cafe:
+  review-text: The Sleepy Bee Cafe in Oakley, near Cincinnati (they also have a location in Blue Ash), is a very cute little restaurant. I visited on a Friday morning around 9:30 and the place was almost full. The food was delicious, I had the gluten free Bee Cakes—made with almond, quinoa, and buckwheat flour—and bacon and while the pancakes were heavier than normal pancakes, they weren't gritty at all. The only drawback was the space got very loud and it became difficult to have a conversation.
+  reviewer-name: Katy Bowman
   number-of-stars: 3
-  dates-visited:
-    - date1
-    - date2
-    - date3
-  pictures:
-    - picture-link1
-    - picture-link2
-    - piture-link3
+  dates-visited: #mm/dd/yyyy
+    - 06/16/2017
+  picture-file-name:
 
-the-other-pizza-palace:
-  review-text: none
-  reviewer-name: Barbara Gordon
-  number-of-stars: 3
-  dates-visited:
-    - date1
-    - date2
-    - date3
-  pictures:
-    - picture-link1
-    - picture-link2
-    - piture-link3
-
-chicken-shack:
-  review-text: none
-  reviewer-name: Kara Danvers
-  number-of-stars: 3
-  dates-visited:
-    - date1
-    - date2
-    - date3
-  pictures:
-    - picture-link1
-    - picture-link2
-    - piture-link3
-
-noodle-place:
-  review-text: none
-  reviewer-name: Riri Williams
-  number-of-stars: 3
-  dates-visited:
-    - date1
-    - date2
-    - date3
-  pictures:
-    - picture-link1
-    - picture-link2
-    - piture-link3
-
-italian-house:
-  review-text: none
-  reviewer-name: Jessica Jones
-  number-of-stars: 3
-  dates-visited:
-    - date1
-    - date2
-    - date3
-  pictures:
-    - picture-link1
-    - picture-link2
-    - piture-link3
-
-pizza-palace:
-  review-text: none
-  reviewer-name: Patsy Walker
-  number-of-stars: 3
-  dates-visited:
-    - date1
-    - date2
-    - date3
-  pictures:
-    - picture-link1
-    - picture-link2
-    - piture-link3
+bagger-daves:
+  review-text: I found out about Bagger Dave's through the Gluten Free Ohio blog (glutenfreeohio.com). It has since become a favorite. I love that I can just get a burger without a bun and that the french fries and sweet potato chips are fried in separate friers and kept gluten free. My favorites are the Bacon BBQ Burger and the Saucy Sicilian Pizza Burger.
+  reviewer-name: Katy Bowman
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  picture-file-name:
