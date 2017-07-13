@@ -6,6 +6,7 @@ const path = require('path');
 const Handlebars = require('handlebars');
 const YAML = require('yamljs');
 const registerPartials = require('./register-partials');
+const helpers = require('./lib/sparkeats-handlebars-helpers');
 
 const readFile = (file) => fs.readFileSync(file, 'utf8');
 const ymlName = (filePath) => path.basename(filePath, '.yml');
@@ -17,7 +18,7 @@ const ymlName = (filePath) => path.basename(filePath, '.yml');
 
 const getData = () => {
   let dataFiles = 'data/*';
-  let dataFilePaths = path.join('source/', `${ dataFiles }.yml`);
+  let dataFilePaths = path.join('source/', `${dataFiles}.yml`);
   let glob = globby.sync(dataFilePaths);
   return glob.reduce((data, file) => {
     let key = ymlName(file);
@@ -28,7 +29,8 @@ const getData = () => {
 };
 
 registerPartials('source/partials/*.hbs');
-const data = getData;
+helpers.register(Handlebars);
+
 const files = globby.sync('source/pages/*.hbs');
 
 files.forEach(function (file) {
