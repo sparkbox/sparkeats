@@ -1,87 +1,65 @@
-meat-hut:
-  place-name: Meat Hut
-  city: Pittsburgh
-  state: PA
-  address: 123 North Main Street
-  phone: (222) 333-4444
-  place-image: /assets/images/meat-hut.jpg
-  place-image-alt: Meat Hut
-  place-url: http://www.meathut.com
-  place-website-display: www.meathut.com
+cherry-republic:
+  place-name: Cherry Republic
+  city: Glen Arbor
+  state: MI
+  address: 6026 S Lake St
+  phone: (231) 226-3014
+  place-image: cherry-republic.jpg
+  place-image-alt: Cherry Republic
+  place-url: https://www.cherryrepublic.com/locations/glen-arbor/
+  place-website-display: www.cherryrepublic.com
 
-sushi-town:
-  place-name: Sushi Town
+village-cheese-shanty:
+  place-name: Village Cheese Shanty
+  city: Leland
+  state: MI
+  address: 199 W River St
+  phone: (231) 256-9141
+  place-image: village-cheese-shanty.jpg
+  place-image-alt: Village Cheese Shanty
+  place-url: http://www.villagecheeseshanty.com/
+  place-website-display: www.villagecheeseshanty.com
+
+table-33:
+  place-name: Table 33
   city: Dayton
   state: OH
-  address: 444 Northwest Rd
-  phone: (222) 333-4444
-  place-image: /assets/images/sushi-town.jpg
-  place-image-alt: Sushi Town
-  place-url: http://www.sushitown.co
-  place-website-display: www.sushitown.co
+  address: 130 W. Second St.
+  phone: (937) 999-3070
+  place-image: table-33.jpg
+  place-image-alt: Table 33
+  place-url: http://www.table33dayton.com/
+  place-website-display: www.table33dayton.com
 
-the-other-hut:
-  place-name: The Other Hut
-  city: Dayton
+bareburger:
+  place-name: Bareburger
+  city: Columbus
   state: OH
-  address: 2300 Cable Hill Rd.
-  phone: (222) 333-4444
-  place-image: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
-  place-image-alt:
-  place-url: http://www.otherhut.com
-  place-website-display: www.otherhut.com
+  address: 463 N. High St.
+  phone:
+  place-image: bareburger.jpg
+  place-image-alt: Bareburger
+  place-url: https://bareburger.com/
+  place-website-display: bareburger.com
 
-the-other-pizza-palace:
-  place-name: Super Awesome Pizza Palace II
-  city: Dayton
+sleepy-bee-cafe:
+  place-name: Sleepy Bee Cafe
+  city: Cincinnati
   state: OH
-  address: 123 Main Street
-  phone: (222) 333-4444
-  place-image: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
-  place-image-alt:
-  place-url: http://www.superawesomepizzapalace.com
-  place-website-display: www.superawesomepizzapalace.com
+  address: 3098 Madison Rd.
+  phone:
+  place-image: sleepy-bee-cafe.jpg
+  place-image-alt: Sleepy Bee Cafe
+  place-url: http://sleepybeecafe.com/
+  place-website-display: sleepybeecafe.com
 
-chicken-shack:
-  place-name: Chicken Shack
-  city: San Francisco
-  state: CA
-  address: 123 Main Street
-  phone: (222) 333-4444
-  place-image: /assets/images/chicken-shack.jpg
-  place-image-alt: Chicken Shack
-  place-url: http://www.chickenshack.com
-  place-website-display: www.chickenshack.com
-
-noodle-place:
-  place-name: Noodle Place
-  city: Chicago
-  state: IL
-  address: 123 Main Street
-  phone: (222) 333-4444
-  place-image: /assets/images/noodle-place.jpg
-  place-image-alt: Noodle Place
-  place-url: http://www.noodleplace.com
-  place-website-display: www.noodleplace.com
-
-italian-house:
-  place-name: Italian House
-  city: Tulsa
-  state: OK
-  address: 123 Main Street
-  phone: (222) 333-4444
-  place-image: /assets/images/italian-house.jpg
-  place-image-alt: Italian House
-  place-url: http://www.italianhouse.com
-  place-website-display: www.italianhouse.com
-
-pizza-palace:
-  place-name: Super Awesome Pizza Palace
-  city: Atlanta
-  state: GA
-  address: 123 Main Street
-  phone: (222) 333-4444
-  place-image: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
-  place-image-alt:
-  place-url: http://www.superawesomepizzapalace.com
-  place-website-display: www.superawesomepizzapalace.com
+bagger-daves:
+  place-name: Bagger Dave's Burger Tavern
+  city: Centerville
+  state: OH
+  address: 5299 Cornerstone North Blvd
+  phone: (937) 310-1247
+  place-image: bagger-daves.jpg
+  place-image-alt: Bagger Dave's Burger Tavern
+  place-url: https://www.baggerdaves.com/
+  place-website-display: www.baggerdaves.com
