@@ -1,6 +1,9 @@
 {
   "name": "apprenticeProject2017",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.11.1"
+  },
   "description": "An aggregate of Sparkboxer's reviews of places to eat and drink.",
   "main": "server.js",
   "scripts": {
