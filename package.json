@@ -12,14 +12,16 @@
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
     "postinstall": "npm run build",
-    "build": "npm-run-all -s html styles",
+    "build": "npm-run-all -s html styles webpack",
     "styles": "npm run sass && npm run postcss",
     "html": "node tasks/handlebars.js",
     "watch:hbs": "node tasks/watch-hbs.js",
     "watch:data": "node tasks/watch-data.js",
     "watch:css": "node tasks/watch-sass.js",
-    "watch": "npm-run-all -p watch:hbs watch:data watch:css",
-    "start": "node tasks/server.js"
+    "watch": "npm-run-all -p watch:hbs watch:data watch:css watch:webpack",
+    "start": "node tasks/server.js",
+    "webpack": "node tasks/webpack.js",
+    "watch:webpack": "node tasks/watch-webpack.js"
   },
   "repository": {
     "type": "git",
@@ -52,7 +54,12 @@
     "yamljs": "^0.2.10"
   },
   "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.18.12",
-    "onchange": "^3.2.1"
+    "onchange": "^3.2.1",
+    "webpack": "^3.3.0"
   }
 }
