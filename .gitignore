@@ -8,3 +8,4 @@ node_modules/
 *.css
 *.map
 *.html
+/public/assets/js/*.js
