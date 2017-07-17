@@ -24,7 +24,8 @@
     "watch:webpack": "node tasks/watch-webpack.js",
     "clean:html": "rm -rf public/*.html",
     "clean:js": "rm -rf public/assets/js/*",
-    "clean": "npm-run-all -p clean:html clean:js"
+    "clean:css": "rm -rf public/assets/css/*.css && rm -rf public/assets/css/*.map",
+    "clean": "npm-run-all -p clean:html clean:js clean:css"
   },
   "repository": {
     "type": "git",
