@@ -8,11 +8,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm-run-all -p watch start styles html webpack",
+    "dev": "npm run clean && npm-run-all -p watch start styles html webpack",
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
     "postinstall": "npm run build",
-    "build": "npm-run-all -s html styles webpack",
+    "build": "npm-run-all -s clean html styles webpack",
     "styles": "npm run sass && npm run postcss",
     "html": "node tasks/handlebars.js",
     "watch:hbs": "node tasks/watch-hbs.js",
@@ -21,7 +21,10 @@
     "watch": "npm-run-all -p watch:hbs watch:data watch:css watch:webpack",
     "start": "node tasks/server.js",
     "webpack": "node tasks/webpack.js",
-    "watch:webpack": "node tasks/watch-webpack.js"
+    "watch:webpack": "node tasks/watch-webpack.js",
+    "clean:html": "rm -rf public/*.html",
+    "clean:js": "rm -rf public/assets/js/*",
+    "clean": "npm-run-all -p clean:html clean:js"
   },
   "repository": {
     "type": "git",
