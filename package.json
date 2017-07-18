@@ -8,7 +8,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm-run-all -p watch start styles html",
+    "dev": "npm-run-all -p watch start styles html webpack",
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
     "postinstall": "npm run build",
