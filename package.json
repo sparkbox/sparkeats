@@ -7,7 +7,7 @@
   "description": "An aggregate of Sparkboxer's reviews of places to eat and drink.",
   "main": "server.js",
   "scripts": {
-    "test": "mocha 'tasks/lib/sparkeats-handlebars-helpers.spec.js'",
+    "test": "mocha 'tasks/lib/sparkeats-handlebars-helpers.spec.js' && mocha 'tasks/lib/validate-data.spec.js'",
     "dev": "npm-run-all -s clean webpack html styles -p start watch",
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
@@ -22,7 +22,8 @@
     "start": "node tasks/server.js",
     "webpack": "node tasks/webpack.js",
     "watch:webpack": "node tasks/watch-webpack.js",
-    "clean": "rimraf ./dist && mkdir dist"
+    "clean": "rimraf ./dist && mkdir dist",
+    "validate-data": "node tasks/lib/validate-data.js"
   },
   "repository": {
     "type": "git",
@@ -67,6 +68,7 @@
     "browser-sync": "^2.18.12",
     "onchange": "^3.2.1",
     "stylelint": "^8.0.0",
-    "stylelint-scss": "^1.5.1"
+    "stylelint-scss": "^1.5.1",
+    "themis": "^1.1.6"
   }
 }

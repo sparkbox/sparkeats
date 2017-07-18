@@ -9,3 +9,6 @@ dist/
 *.css
 *.map
 *.html
+
+# Validation files
+source/data/*.json

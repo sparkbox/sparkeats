@@ -1,0 +1,79 @@
+{
+  "cherry-republic": {
+    "place-name": "Cherry Republic",
+    "city": "Glen Arbor",
+    "state": "MI",
+    "address": "6026 S Lake St",
+    "phone": "(231) 226-3014",
+    "place-image": "cherry-republic.jpg",
+    "place-image-alt": "Cherry Republic",
+    "place-url": "https://www.cherryrepublic.com/locations/glen-arbor/",
+    "place-website-display": "www.cherryrepublic.com"
+  },
+  "village-cheese-shanty": {
+    "place-name": "Village Cheese Shanty",
+    "city": "Leland",
+    "state": "MI",
+    "address": "199 W River St",
+    "phone": "(231) 256-9141",
+    "place-image": "village-cheese-shanty.jpg",
+    "place-image-alt": "Village Cheese Shanty",
+    "place-url": "http://www.villagecheeseshanty.com/",
+    "place-website-display": "www.villagecheeseshanty.com"
+  },
+  "table-33": {
+    "place-name": "Table 33",
+    "city": "Dayton",
+    "state": "OH",
+    "address": "130 W. Second St.",
+    "phone": "(937) 999-3070",
+    "place-image": "table-33.jpg",
+    "place-image-alt": "Table 33",
+    "place-url": "http://www.table33dayton.com/",
+    "place-website-display": "www.table33dayton.com"
+  },
+  "bareburger": {
+    "place-name": "Bareburger",
+    "city": "Columbus",
+    "state": "OH",
+    "address": "463 N. High St.",
+    "phone": null,
+    "place-image": "bareburger.jpg",
+    "place-image-alt": "Bareburger",
+    "place-url": "https://bareburger.com/",
+    "place-website-display": "www.bareburger.com"
+  },
+  "sleepy-bee-cafe": {
+    "place-name": "Sleepy Bee Cafe",
+    "city": "Cincinnati",
+    "state": "OH",
+    "address": "3098 Madison Rd.",
+    "phone": null,
+    "place-image": "sleepy-bee-cafe.jpg",
+    "place-image-alt": "Sleepy Bee Cafe",
+    "place-url": "http://sleepybeecafe.com/",
+    "place-website-display": "www.sleepybeecafe.com"
+  },
+  "bagger-daves": {
+    "place-name": "Bagger Dave's Burger Tavern",
+    "city": "Centerville",
+    "state": "OH",
+    "address": "5299 Cornerstone North Blvd",
+    "phone": "(937) 310-1247",
+    "place-image": "bagger-daves.jpg",
+    "place-image-alt": "Bagger Dave's Burger Tavern",
+    "place-url": "https://www.baggerdaves.com/",
+    "place-website-display": "www.baggerdaves.com"
+  },
+  "gaucho": {
+    "place-name": "Gaucho",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "address": "1601 Penn Ave",
+    "phone": "(412) 709-6622",
+    "place-image": "gaucho-heather-1.jpeg",
+    "place-image-alt": "Gaucho Parrilla Argentina",
+    "place-url": "https://www.eatgaucho.com/",
+    "place-website-display": "www.eatgaucho.com"
+  }
+}

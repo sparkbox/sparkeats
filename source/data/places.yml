@@ -40,7 +40,7 @@ bareburger:
   place-image: bareburger.jpg
   place-image-alt: Bareburger
   place-url: https://bareburger.com/
-  place-website-display: bareburger.com
+  place-website-display: www.bareburger.com
 
 sleepy-bee-cafe:
   place-name: Sleepy Bee Cafe
@@ -51,7 +51,7 @@ sleepy-bee-cafe:
   place-image: sleepy-bee-cafe.jpg
   place-image-alt: Sleepy Bee Cafe
   place-url: http://sleepybeecafe.com/
-  place-website-display: sleepybeecafe.com
+  place-website-display: www.sleepybeecafe.com
 
 bagger-daves:
   place-name: Bagger Dave's Burger Tavern
