@@ -7,7 +7,7 @@
   "description": "An aggregate of Sparkboxer's reviews of places to eat and drink.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha 'tasks/lib/sparkeats-handlebars-helpers.spec.js'",
     "dev": "npm run clean && npm-run-all -p watch start styles html webpack",
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
@@ -64,6 +64,8 @@
     "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.18.12",
     "onchange": "^3.2.1",
-    "webpack": "^3.3.0"
+    "webpack": "^3.3.0",
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
   }
 }
