@@ -8,11 +8,11 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha 'tasks/lib/sparkeats-handlebars-helpers.spec.js'",
-    "dev": "npm run clean && npm-run-all -p watch start styles html webpack",
+    "dev": "npm-run-all -s clean webpack html styles -p start watch",
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",
     "postinstall": "npm run build",
-    "build": "npm-run-all -s clean html styles webpack",
+    "build": "npm-run-all -s clean webpack html styles",
     "styles": "npm run sass && npm run postcss",
     "html": "node tasks/handlebars.js",
     "watch:hbs": "node tasks/watch-hbs.js",
@@ -22,10 +22,7 @@
     "start": "node tasks/server.js",
     "webpack": "node tasks/webpack.js",
     "watch:webpack": "node tasks/watch-webpack.js",
-    "clean:html": "rm -rf public/*.html",
-    "clean:js": "rm -rf public/assets/js/*",
-    "clean:css": "rm -rf public/assets/css/*.css && rm -rf public/assets/css/*.map",
-    "clean": "npm-run-all -p clean:html clean:js clean:css"
+    "clean": "rm -r dist/"
   },
   "repository": {
     "type": "git",
