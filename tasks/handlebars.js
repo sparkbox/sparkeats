@@ -37,7 +37,7 @@ files.forEach(function (file) {
   const html = fs.readFileSync(file).toString();
   const template = Handlebars.compile(html);
   const fileName = path.basename(file, '.hbs');
-  const newFilePath = `public/${fileName}.html`;
+  const newFilePath = `dist/${fileName}.html`;
 
   const writeFile = fs.writeFileSync(newFilePath, template(getData()));
 });
