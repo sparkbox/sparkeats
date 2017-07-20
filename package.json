@@ -56,14 +56,14 @@
     "postcss-cli": "^4.0.0",
     "sass": "^0.5.0",
     "shelljs": "^0.7.7",
-    "webpack": "^3.3.0",
-    "yamljs": "^0.2.10"
+    "yamljs": "^0.2.10",
+    "rimraf": "^2.6.1",
+    "webpack": "^3.3.0"
   },
   "devDependencies": {
     "browser-sync": "^2.18.12",
-    "chai": "^4.1.0",
-    "mocha": "^3.4.2",
     "onchange": "^3.2.1",
-    "rimraf": "^2.6.1"
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
   }
 }
