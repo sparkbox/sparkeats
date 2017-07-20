@@ -63,3 +63,14 @@ bagger-daves:
   place-image-alt: Bagger Dave's Burger Tavern
   place-url: https://www.baggerdaves.com/
   place-website-display: www.baggerdaves.com
+
+gaucho:
+  place-name: Gaucho
+  city: Pittsburgh
+  state: PA
+  address: 1601 Penn Ave
+  phone: (412) 709-6622
+  place-image: gaucho-heather-1.jpeg
+  place-image-alt: Gaucho Parrilla Argentina
+  place-url: https://www.eatgaucho.com/
+  place-website-display: www.eatgaucho.com
