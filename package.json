@@ -64,6 +64,8 @@
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "onchange": "^3.2.1",
+    "stylelint": "^8.0.0",
+    "stylelint-scss": "^1.5.1",
     "chai": "^4.1.0",
     "mocha": "^3.4.2"
   }
