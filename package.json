@@ -22,7 +22,7 @@
     "start": "node tasks/server.js",
     "webpack": "node tasks/webpack.js",
     "watch:webpack": "node tasks/watch-webpack.js",
-    "clean": "rm -r dist/"
+    "clean": "rm -rf dist/**"
   },
   "repository": {
     "type": "git",
