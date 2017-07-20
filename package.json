@@ -54,6 +54,7 @@
     "npm-run-all": "^4.0.2",
     "path": "^0.12.7",
     "postcss-cli": "^4.0.0",
+    "rimraf": "^2.6.1",
     "sass": "^0.5.0",
     "shelljs": "^0.7.7",
     "yamljs": "^0.2.10",
