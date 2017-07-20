@@ -22,7 +22,7 @@
     "start": "node tasks/server.js",
     "webpack": "node tasks/webpack.js",
     "watch:webpack": "node tasks/watch-webpack.js",
-    "clean": "rm -rf dist/**"
+    "clean": "rimraf ./dist && mkdir dist"
   },
   "repository": {
     "type": "git",
@@ -63,6 +63,7 @@
     "browser-sync": "^2.18.12",
     "chai": "^4.1.0",
     "mocha": "^3.4.2",
-    "onchange": "^3.2.1"
+    "onchange": "^3.2.1",
+    "rimraf": "^2.6.1"
   }
 }
