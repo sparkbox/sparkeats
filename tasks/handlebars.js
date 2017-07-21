@@ -6,6 +6,9 @@ const YAML = require('yamljs');
 const registerPartials = require('./register-partials');
 const helpers = require('./lib/sparkeats-handlebars-helpers');
 
+registerPartials('source/partials/*.hbs');
+helpers.register(Handlebars);
+
 const createTemplate = (file) => {
   const html = fs.readFileSync(file).toString();
   return Handlebars.compile(html);
@@ -57,9 +60,6 @@ const createReviewsPages = () => {
     const writeFile = fs.writeFileSync(newFilePath, reviewsPageTemplate(individualPlaceData));
   });
 };
-
-registerPartials('source/partials/*.hbs');
-helpers.register(Handlebars);
 
 createIndexPage();
 createReviewsPages();
