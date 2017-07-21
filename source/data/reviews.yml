@@ -1,4 +1,5 @@
-table-33:
+katy-table-33:
+  place-id: table-33
   review-text: This is one of the most gluten-free-friendly restaurants in the Dayton region. Everything they bake in-house is gluten free (including their brownies and muffins, which are delicious), although they do bring in regular bread and buns for their sandwiches and burgers. I highly recommend the Chicken and Waffles and the Quiche.
   reviewer-name: Katy Bowman
   number-of-stars: 4
@@ -9,7 +10,8 @@ table-33:
   picture-file-name:
     - table-33-1.jpg
 
-table-33:
+heather-table-33:
+  place-id: table-33
   review-text: I'm in love with Table 33! Upon my first visit I tried the quiche, which was wonderfully delicious. The light, flaky crust was an absolute delight. My second visit was even better! I chose the gluten-free Bananas Foster Waffles. They were A.M.A.Z.I.N.G!!! Brown sugar syrup, bananas and blueberries layered on top of a perfectly browned waffle. The menu also listed an amazing selection of gluten-free baked goods. I'm looking forward to my next visit!
   reviewer-name: Heather Taylor
   number-of-stars: 5
@@ -19,14 +21,16 @@ table-33:
   picture-file-name:
     - table-33-heather-1.jpeg
 
-bareburger:
+katy-bareburger:
+  place-id: bareburger
   review-text: Bareburger is basically a burger, fries, and shakes kind of place, although they do offer salads and other sandwiches. They have a list of specialty burgers to choose from or you can build your own. You can get burgers made from beef, bison, black beans, duck, elk, quinoa, grilled lemon chicken, sesame ginger beef, sweet potato and wild rice, turkey, or wild boar. All except the black bean and quinoa are gluten free. For your bun, to keep it gluten free you can choose to have your burger on a tapioca bun, with no bun, served on a lettuce bed, or wrapped with a collard. Their french fries and sweet potato fries are fried separately and kept gluten free. Other gluten free items are listed clearly on the menu. Beyond their burgers and fries, I also highly recommend trying their milkshakes. My personal favorite is the Mexican Chocolate, made with chocolate ice cream, cayenne, cinnamon, and a “torched marshmallow.” Just thinking about it makes me want one.
   reviewer-name: Katy Bowman
   number-of-stars: 5
   dates-visited: #mm/dd/yyyy
   picture-file-name:
 
-sleepy-bee-cafe:
+katy-sleepy-bee-cafe:
+  place-id: sleepy-bee-cafe
   review-text: The Sleepy Bee Cafe in Oakley, near Cincinnati (they also have a location in Blue Ash), is a very cute little restaurant. I visited on a Friday morning around 9:30 and the place was almost full. The food was delicious, I had the gluten free Bee Cakes—made with almond, quinoa, and buckwheat flour—and bacon and while the pancakes were heavier than normal pancakes, they weren't gritty at all. The only drawback was the space got very loud and it became difficult to have a conversation.
   reviewer-name: Katy Bowman
   number-of-stars: 3
@@ -34,14 +38,16 @@ sleepy-bee-cafe:
     - 06/16/2017
   picture-file-name:
 
-bagger-daves:
+katy-bagger-daves:
+  place-id: bagger-daves
   review-text: I found out about Bagger Dave's through the Gluten Free Ohio blog (glutenfreeohio.com). It has since become a favorite. I love that I can just get a burger without a bun and that the french fries and sweet potato chips are fried in separate friers and kept gluten free. My favorites are the Bacon BBQ Burger and the Saucy Sicilian Pizza Burger.
   reviewer-name: Katy Bowman
   number-of-stars: 4
   dates-visited: #mm/dd/yyyy
   picture-file-name:
 
-gaucho:
+heather-gaucho:
+  place-id: gaucho
   review-text: Affectionately known as 'the meat hut' in the Sparkbox offices, I knew that my first visit to Pittsburgh would require a visit to Gaucho. Friends from Pittsburgh recommended sharing the Parrillada Mixta featuring over a pound of New York strip steak, grilled chicken breast and sweet -or- spicy chorizo paired with a side of Papas al Horno (oven roasted red potatoes with whole garlic cloves and fresh rosemary). It was fantastic! A word of warning when visiting Gaucho, be prepared to wait. Don't worry, it's worth it!
   reviewer-name: Heather Taylor
   number-of-stars: 4.5
