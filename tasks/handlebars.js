@@ -5,6 +5,7 @@ const Handlebars = require('handlebars');
 const YAML = require('yamljs');
 const registerPartials = require('./register-partials');
 const helpers = require('./lib/sparkeats-handlebars-helpers');
+const mkdirp = require('mkdirp');
 
 registerPartials('source/partials/*.hbs');
 helpers.register(Handlebars);
@@ -45,7 +46,7 @@ const prepareData = () => {
 
 const createIndexPage = () => {
   const indexPageTemplate = createTemplate('source/pages/index.hbs');
-  const newFilePath = 'public/index.html';
+  const newFilePath = 'dist/index.html';
   const writeFile = fs.writeFileSync(newFilePath, indexPageTemplate(prepareData()));
 };
 
@@ -54,9 +55,14 @@ const createReviewsPages = () => {
   const places = YAML.load('source/data/places.yml');
   const keys = Object.keys(places);
   keys.forEach((key) => {
-    const newFilePath = `public/reviews/${key}.html`;
+    const newFilePath = `dist/reviews/${key}.html`;
     const data = prepareData();
     const individualPlaceData = data[key];
+    mkdirp('dist/reviews', (err) => {
+      if (err) {
+        console.error(err);
+      }
+    });
     const writeFile = fs.writeFileSync(newFilePath, reviewsPageTemplate(individualPlaceData));
   });
 };
