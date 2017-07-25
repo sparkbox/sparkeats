@@ -76,3 +76,18 @@ describe('getReviewPageLink', () => {
     expect(result('pasha')).to.include('/pasha.html');
   });
 });
+
+// test for star rating given by an individual reviewer for a single place
+describe('getNumberOfStars', () => {
+  before(() => {
+    html = '{{getNumberOfStars star}}';
+    template = Handlebars.compile(html);
+  });
+  describe('if there is a star rating of 1', () => {
+    it('should return 1 filled star and 4 empty stars', () => {
+      let star = { star: 1 };
+      let result = template(star);
+      expect(result).to.equal('one star');
+    });
+  });
+});

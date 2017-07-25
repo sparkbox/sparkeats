@@ -20,4 +20,15 @@ module.exports.register = function (Handlebars) {
   Handlebars.registerHelper('getReviewPageLink', (placeId) => {
     return `/reviews/${placeId}.html`;
   });
+
+  Handlebars.registerHelper('getNumberOfStars', (numberOfStars) => {
+    console.log(`Number of Stars: ${numberOfStars}`);
+    if (numberOfStars === 1) {
+      return 'one star';
+    } else if (numberOfStars === 2) {
+      return 'two stars';
+    } else {
+      return 'no stars';
+    }
+  });
 };
