@@ -10,13 +10,13 @@ const mkdirp = require('mkdirp');
 registerPartials('source/partials/*.hbs');
 helpers.register(Handlebars);
 
-const createTemplate = (file) => {
+function createTemplate(file) {
   const html = fs.readFileSync(file).toString();
   return Handlebars.compile(html);
-};
+}
 
-const prepareReviewsPageData = (placeKey) => {
-  const reviews = YAML.load('source/data/reviews.yml');
+function prepareReviewsPageData(placeKey, reviewsDataPath) {
+  const reviews = YAML.load(reviewsDataPath);
   const keys = Object.keys(reviews);
   const placeReviews = {};
   keys.forEach((key) => {
@@ -27,45 +27,46 @@ const prepareReviewsPageData = (placeKey) => {
     }
   });
   return placeReviews;
-};
+}
 
-const prepareData = () => {
-  const places = YAML.load('source/data/places.yml');
+function prepareData(placesDataPath, reviewsDataPath) {
+  const places = YAML.load(placesDataPath);
   const keys = Object.keys(places);
   const data = {};
   keys.forEach((key) => {
     const place = places[key];
-    const reviews = prepareReviewsPageData(key);
+    const reviews = prepareReviewsPageData(key, reviewsDataPath);
+    const numberOfReviews = Object.keys(reviews).length;
     data[key] = {
       'place': place,
-      'reviews': reviews
+      'reviews': reviews,
+      'numberOfReviews': numberOfReviews
     };
   });
   return data;
-};
+}
 
-const createIndexPage = () => {
-  const indexPageTemplate = createTemplate('source/pages/index.hbs');
-  const newFilePath = 'dist/index.html';
-  const writeFile = fs.writeFileSync(newFilePath, indexPageTemplate(prepareData()));
-};
+function createIndexPage(templatePath, newFilePath, placesDataPath, reviewsDataPath) {
+  const indexPageTemplate = createTemplate(templatePath);
+  const filePath = `${newFilePath}/index.html`;
+  const writeFile = fs.writeFileSync(filePath, indexPageTemplate(prepareData(placesDataPath, reviewsDataPath)));
+}
 
-const createReviewsPages = () => {
-  const reviewsPageTemplate = createTemplate('source/pages/review.hbs');
-  const places = YAML.load('source/data/places.yml');
-  const keys = Object.keys(places);
+function createReviewsPages(templatePath, newFilePath, placesDataPath, reviewsDataPath) {
+  const reviewsPageTemplate = createTemplate(templatePath);
+  const keys = Object.keys(YAML.load(placesDataPath));
+  const data = prepareData(placesDataPath, reviewsDataPath);
   keys.forEach((key) => {
-    const newFilePath = `dist/reviews/${key}.html`;
-    const data = prepareData();
+    const filePath = `${newFilePath}/${key}.html`;
     const individualPlaceData = data[key];
-    mkdirp('dist/reviews', (err) => {
+    mkdirp(newFilePath, (err) => {
       if (err) {
         console.error(err);
       }
     });
-    const writeFile = fs.writeFileSync(newFilePath, reviewsPageTemplate(individualPlaceData));
+    const writeFile = fs.writeFileSync(filePath, reviewsPageTemplate(individualPlaceData));
   });
-};
+}
 
-createIndexPage();
-createReviewsPages();
+createIndexPage('source/pages/index.hbs', 'dist', 'source/data/places.yml', 'source/data/reviews.yml');
+createReviewsPages('source/pages/review.hbs', 'dist/reviews', 'source/data/places.yml', 'source/data/reviews.yml');
