@@ -14,4 +14,11 @@ module.exports.register = function (Handlebars) {
     }
     return `/assets/images/reviews/${imageFileName}`;
   });
+
+  Handlebars.registerHelper('getReviewOrReviews', (reviewCount) => {
+    if (reviewCount === 1) {
+      return `${reviewCount} Review`;
+    }
+    return `${reviewCount} Reviews`;
+  });
 };
