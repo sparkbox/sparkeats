@@ -39,16 +39,12 @@ describe('getReviewImageLocation', () => {
   });
   describe('if there is no image file name', () => {
     it('should return an empty string', () => {
-      let imgName = { imgName: '' };
-      let result = template(imgName);
-      expect(result).to.equal('');
+      expect(template({ imgName: '' })).to.equal('');
     });
   });
   describe('if there is an image file name', () => {
     it('should return the path to the image location in the reviews folder', () => {
-      let imgName = { imgName: 'test.jpg' };
-      let result = template(imgName);
-      expect(result).to.equal('/assets/images/reviews/test.jpg');
+      expect(template({ imgName: 'test.jpg' })).to.equal('/assets/images/reviews/test.jpg');
     });
   });
 });
@@ -60,23 +56,17 @@ describe('getReviewOrReviews', () => {
   });
   describe('if there are zero reviews', () => {
     it('should return "0 Reviews"', () => {
-      let reviewCount = { reviewCount: 0 };
-      let result = template(reviewCount);
-      expect(result).to.equal('0 Reviews');
+      expect(template({ reviewCount: 0 })).to.equal('0 Reviews');
     });
   });
   describe('if there is one review', () => {
     it('should return "1 Review"', () => {
-      let reviewCount = { reviewCount: 1 };
-      let result = template(reviewCount);
-      expect(result).to.equal('1 Review');
+      expect(template({ reviewCount: 1 })).to.equal('1 Review');
     });
   });
   describe('if there is more than one review', () => {
     it('should return "x Reviews"', () => {
-      let reviewCount = { reviewCount: 3 };
-      let result = template(reviewCount);
-      expect(result).to.equal('3 Reviews');
+      expect(template({ reviewCount: 3 })).to.equal('3 Reviews');
     });
   });
 });
