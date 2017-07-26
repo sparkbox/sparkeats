@@ -60,21 +60,21 @@ describe('getReviewOrReviews', () => {
   });
   describe('if there are zero reviews', () => {
     it('should return "0 Reviews"', () => {
-      let reviewCount = { reviewCount: '0' };
+      let reviewCount = { reviewCount: 0 };
       let result = template(reviewCount);
       expect(result).to.equal('0 Reviews');
     });
   });
   describe('if there is one review', () => {
     it('should return "1 Review"', () => {
-      let reviewCount = { reviewCount: '1' };
+      let reviewCount = { reviewCount: 1 };
       let result = template(reviewCount);
       expect(result).to.equal('1 Review');
     });
   });
   describe('if there is more than one review', () => {
     it('should return "x Reviews"', () => {
-      let reviewCount = { reviewCount: '3' };
+      let reviewCount = { reviewCount: 3 };
       let result = template(reviewCount);
       expect(result).to.equal('3 Reviews');
     });
