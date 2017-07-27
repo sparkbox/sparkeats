@@ -38,6 +38,7 @@ function prepareData(placesDataPath, reviewsDataPath) {
     const reviews = prepareReviewsPageData(key, reviewsDataPath);
     const numberOfReviews = Object.keys(reviews).length;
     data[key] = {
+      'place-id': key,
       'place': place,
       'reviews': reviews,
       'numberOfReviews': numberOfReviews
