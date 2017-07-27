@@ -1,11 +1,7 @@
 <section class="place-card__container">
   <ul class="place-card__list">
-    {{> _place-card cherry-republic}}
-    {{> _place-card village-cheese-shanty}}
-    {{> _place-card table-33}}
-    {{> _place-card bareburger}}
-    {{> _place-card sleepy-bee-cafe}}
-    {{> _place-card bagger-daves}}
-    {{> _place-card gaucho}}
+    {{#each this}}
+      {{> _place-card}}
+    {{/each}}
   </ul>
 </section>

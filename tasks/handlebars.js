@@ -6,6 +6,7 @@ const YAML = require('yamljs');
 const registerPartials = require('./register-partials');
 const helpers = require('./lib/sparkeats-handlebars-helpers');
 const mkdirp = require('mkdirp');
+const sortingData = require('./lib/sorting-data');
 
 registerPartials('source/partials/*.hbs');
 helpers.register(Handlebars);
@@ -32,17 +33,19 @@ function prepareReviewsPageData(placeKey, reviewsDataPath) {
 function prepareData(placesDataPath, reviewsDataPath) {
   const places = YAML.load(placesDataPath);
   const keys = Object.keys(places);
-  const data = {};
-  keys.forEach((key) => {
+  const data = [];
+  const sortedKeys = sortingData.sortKeysByLocationAndPlace(places, keys);
+  sortedKeys.forEach((key) => {
     const place = places[key];
     const reviews = prepareReviewsPageData(key, reviewsDataPath);
     const numberOfReviews = Object.keys(reviews).length;
-    data[key] = {
+    const placeData = {
       'place-id': key,
       'place': place,
       'reviews': reviews,
       'numberOfReviews': numberOfReviews
     };
+    data.push(placeData);
   });
   return data;
 }
@@ -58,14 +61,19 @@ function createReviewsPages(templatePath, newFilePath, placesDataPath, reviewsDa
   const keys = Object.keys(YAML.load(placesDataPath));
   const data = prepareData(placesDataPath, reviewsDataPath);
   keys.forEach((key) => {
-    const filePath = `${newFilePath}/${key}.html`;
-    const individualPlaceData = data[key];
-    mkdirp(newFilePath, (err) => {
-      if (err) {
-        console.error(err);
+    for (let i = 0; i < data.length; i += 1) {
+      if (data[i]['place-id'] === key) {
+        const filePath = `${newFilePath}/${key}.html`;
+        const individualPlaceData = data[i];
+        mkdirp(newFilePath, (err) => {
+          if (err) {
+            console.error(err);
+          }
+        });
+        const writeFile = fs.writeFileSync(filePath,
+        reviewsPageTemplate(individualPlaceData));
       }
-    });
-    const writeFile = fs.writeFileSync(filePath, reviewsPageTemplate(individualPlaceData));
+    }
   });
 }
 
