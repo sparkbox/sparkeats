@@ -22,13 +22,38 @@ module.exports.register = function (Handlebars) {
   });
 
   Handlebars.registerHelper('getNumberOfStars', (numberOfStars) => {
-    console.log(`Number of Stars: ${numberOfStars}`);
-    if (numberOfStars === 1) {
-      return 'one star';
-    } else if (numberOfStars === 2) {
-      return 'two stars';
-    } else {
-      return 'no stars';
+    const filledStar = '<img class="place-card__star" src="/assets/design/sparkeats_star.svg" alt="review star">';
+    const halfStar = '<img class="place-card__star" src="/assets/design/sparkeats_star_half.svg" alt="review star">';
+    const emptyStar = '<img class="place-card__star" src="/assets/design/sparkeats_star_empty.svg" alt="review star">';
+
+    let result = '';
+    let balanceOfStars = numberOfStars;
+
+    // if there is a half star, subtract it's value from balanceOfStars
+    // this will leave balanceOfStars as the number of filled stars
+    if ((numberOfStars - 0.5) === Math.floor(numberOfStars)) {
+      balanceOfStars -= 0.5;
     }
+
+    if (numberOfStars > 0 && numberOfStars <= 5) {
+      for (let count = 0; count < balanceOfStars; count += 1) {
+        result += filledStar;
+      }
+
+      if ((numberOfStars - 0.5) === Math.floor(numberOfStars)) {
+        result += halfStar;
+        // because a half star fills the 'space' of a whole star, add 1.0 to the balanceOfStars
+        // to determine the number of empty stars to display
+        balanceOfStars += 1.0;
+      }
+
+      for (let count = 0; count < (5 - balanceOfStars); count += 1) {
+        result += emptyStar;
+      }
+    } else {
+      return result;
+    }
+
+    return new Handlebars.SafeString(result);
   });
 };
