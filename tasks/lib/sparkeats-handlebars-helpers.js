@@ -21,4 +21,8 @@ module.exports.register = function (Handlebars) {
     }
     return `${reviewCount} Reviews`;
   });
+
+  Handlebars.registerHelper('getReviewPageLink', (placeId) => {
+    return `/reviews/${placeId}.html`;
+  });
 };
