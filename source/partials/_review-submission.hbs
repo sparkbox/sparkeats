@@ -6,7 +6,7 @@
     <p class="review-submission__review">{{review-text}}</p>
     {{#each picture-file-name}}
       <div class="review-submission__image-container">
-        <img class="review-submission__image" src="{{getReviewImageLocation this}}">
+        <img class="review-submission__image" src="{{getImageLocation this "review"}}">
       </div>
     {{/each}}
   </article>
