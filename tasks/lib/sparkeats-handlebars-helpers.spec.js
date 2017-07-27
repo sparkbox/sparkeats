@@ -12,39 +12,28 @@ let result;
 
 sparkeatsHelpers.register(Handlebars);
 
-describe('getPlaceImageLocation', () => {
+describe('getImageLocation', () => {
   before(() => {
-    html = '{{getPlaceImageLocation name}}';
+    html = '{{getImageLocation name placeOrReview}}';
     template = Handlebars.compile(html);
-    result = imgName => template({ name: imgName });
+    result = (imgName, placeOrReview) => template({ name: imgName, placeOrReview: placeOrReview });
   });
   describe('if there is no image file name', () => {
     it('should return default background image', () => {
-      expect(result('')).to.equal('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
+      expect(result('', '')).to.equal('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
     });
   });
   describe('if there is an image file name', () => {
-    it('should return the path to the image location in the places folder', () => {
-      expect(result('test.jpg')).to.equal('/assets/images/places/test.jpg');
+    describe('if it is a place image', () => {
+      it('should return the path to the image location in the places folder', () => {
+        expect(result('test.jpg', 'place')).to.equal('/assets/images/places/test.jpg');
+      });
     });
-  });
-});
-
-describe('getReviewImageLocation', () => {
-  before(() => {
-    html = '{{getReviewImageLocation name}}';
-    template = Handlebars.compile(html);
-    result = imgName => template({ name: imgName });
-  });
-  describe('if there is no image file name', () => {
-    it('should return an empty string', () => {
-      expect(result('')).to.equal('');
-    });
-  });
-  describe('if there is an image file name', () => {
-    it('should return the path to the image location in the reviews folder', () => {
-      expect(result('test.jpg')).to.equal('/assets/images/reviews/test.jpg');
-    });
+    describe('if it is a reviews image', () => {
+      it('should return the path to the image location in the reviews folder', () => {
+        expect(result('test.jpg', 'review')).to.equal('/assets/images/reviews/test.jpg');
+      });
+    })
   });
 });
 
