@@ -70,3 +70,20 @@ describe('getReviewOrReviews', () => {
     });
   });
 });
+
+describe('getReviewPageLink', () => {
+  before(() => {
+    html = '{{getReviewPageLink place-id}}';
+    template = Handlebars.compile(html);
+    result = placeId => template({ 'place-id': placeId });
+  });
+  it('should return the link as a string', () => {
+    expect(result('pasha')).to.be.a('string');
+  });
+  it('should return a link that points to the reviews folder', () => {
+    expect(result('pasha')).to.include('/reviews/');
+  });
+  it('should return a link to a file with the same name as the place-id', () => {
+    expect(result('pasha')).to.include('/pasha.html');
+  });
+});
