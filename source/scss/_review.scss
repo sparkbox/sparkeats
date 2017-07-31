@@ -166,6 +166,7 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
+  text-align: center;
   @media (min-width: 48em) {
     display: block;
     max-width: 66.5%;
@@ -177,11 +178,6 @@
     width: 37%;
     padding: 1em;
     text-align: center;
-    @media (min-width: 48em) {
-      &-span {
-        margin: 0 1em 0 0;
-      }
-    }
   }
   &__link {
     @include primary-font();
