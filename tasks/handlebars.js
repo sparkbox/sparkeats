@@ -69,5 +69,5 @@ function createReviewsPages(templatePath, newFilePath, placesDataPath, reviewsDa
   });
 }
 
-createIndexPage('source/pages/index.hbs', 'dist', 'source/data/places.yml', 'source/data/reviews.yml');
-createReviewsPages('source/pages/review.hbs', 'dist/reviews', 'source/data/places.yml', 'source/data/reviews.yml');
+createIndexPage('source/pages/index.hbs', 'dist', 'public/data/places.yml', 'public/data/reviews.yml');
+createReviewsPages('source/pages/review.hbs', 'dist/reviews', 'public/data/places.yml', 'public/data/reviews.yml');
