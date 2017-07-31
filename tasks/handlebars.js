@@ -64,14 +64,16 @@ function prepareData(placesDataPath, reviewsDataPath) {
     const reviews = prepareReviewsPageData(key, reviewsDataPath);
     const averageStars = prepareAverageStars(key, reviewsDataPath);
     const numberOfReviews = Object.keys(reviews).length;
-    const placeData = {
-      'place-id': key,
-      'place': place,
-      'reviews': reviews,
-      'numberOfReviews': numberOfReviews,
-      'averageStars': averageStars,
-    };
-    data.push(placeData);
+    if (numberOfReviews > 0) {
+      const placeData = {
+        'place-id': key,
+        'place': place,
+        'reviews': reviews,
+        'numberOfReviews': numberOfReviews,
+        'averageStars': averageStars,
+      };
+      data.push(placeData);
+    }
   });
   return data;
 }
@@ -84,8 +86,8 @@ function createIndexPage(templatePath, newFilePath, placesDataPath, reviewsDataP
 
 function createReviewsPages(templatePath, newFilePath, placesDataPath, reviewsDataPath) {
   const reviewsPageTemplate = createTemplate(templatePath);
-  const keys = Object.keys(YAML.load(placesDataPath));
   const data = prepareData(placesDataPath, reviewsDataPath);
+  const keys = Object.keys(data);
   keys.forEach((key) => {
     for (let i = 0; i < data.length; i += 1) {
       if (data[i]['place-id'] === key) {
