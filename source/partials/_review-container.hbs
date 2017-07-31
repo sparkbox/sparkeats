@@ -1,6 +1,15 @@
-<section class="review-container">
-  {{> _review-header }}
-  {{> _review-submission }}
-  {{> _review-overview }}
-  {{> _review-nav}}
-</section>
+<div class="review-container">
+  {{#each reviews }}
+    <article class="review-submission">
+      <h1 class="review-submission__reviewer">{{reviewer-name}}</h1>
+      <!--{{> _star-rating}}-->
+      <h2 class="review-submission__title">Comments</h2>
+      <p class="review-submission__review">{{review-text}}</p>
+      {{#each picture-file-name}}
+        <div class="review-submission__image-container">
+          <img class="review-submission__image" src="{{getImageLocation this "review"}}">
+        </div>
+      {{/each}}
+    </article>
+  {{/each}}
+</div>

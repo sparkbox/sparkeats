@@ -3,7 +3,7 @@
 .review {
   background-color: $color-white;
   max-width: 100%;
-  &-container {
+  &-page {
     display: block;
     padding: 0;
     max-width: 58.5em;
@@ -20,16 +20,21 @@
       clear: both;
     }
   }
-  &-submission {
-    background-color: $color-soft-gray;
-    box-sizing: border-box;
-    margin: 2em auto;
-    padding: 2em 2em 1em 2em;
+
+  &-container {
     width: 100%;
     @media (min-width: 48em) {
       float: left;
       max-width: 66.5%;
     }
+  }
+
+  &-submission {
+    background-color: $color-soft-gray;
+    box-sizing: border-box;
+    margin: 2em auto;
+    padding: 2em 2em 1em 2em;
+
     &__reviewer {
       @include primary-font();
       color: $color-sparkblue-dark;
