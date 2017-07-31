@@ -6,8 +6,8 @@ const shell = require('shelljs');
 shell.exec('yaml2json --pretty --save source/data/');
 
 // require json data files
-const placeData = require('../../source/data/places.json');
-const reviewData = require('../../source/data/reviews.json');
+const placeData = require('../../public/data/places.json');
+const reviewData = require('../../public/data/reviews.json');
 
 // create validation custom formats
 // places custom formats
