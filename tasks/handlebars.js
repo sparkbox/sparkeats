@@ -30,6 +30,27 @@ function prepareReviewsPageData(placeKey, reviewsDataPath) {
   return placeReviews;
 }
 
+function prepareAverageStars(placeKey, reviewsDataPath) {
+  const reviews = YAML.load(reviewsDataPath);
+  const keys = Object.keys(reviews);
+  const ratings = [];
+  let averageStars;
+  keys.forEach((key) => {
+    const review = reviews[key];
+    const placeId = review['place-id'];
+    const numStars = review['number-of-stars'];
+    if (placeId === placeKey) {
+      ratings.push(numStars);
+      const ratingsSum = ratings.reduce((total, num) => {
+        return total + num;
+      }, 0);
+      averageStars = ratingsSum / (ratings.length);
+      averageStars = (Math.round(averageStars * 2) / 2).toFixed(1);
+    }
+  });
+  return averageStars;
+}
+
 function prepareData(placesDataPath, reviewsDataPath) {
   const places = YAML.load(placesDataPath);
   const keys = Object.keys(places);
@@ -38,12 +59,14 @@ function prepareData(placesDataPath, reviewsDataPath) {
   sortedKeys.forEach((key) => {
     const place = places[key];
     const reviews = prepareReviewsPageData(key, reviewsDataPath);
+    const averageStars = prepareAverageStars(key, reviewsDataPath);
     const numberOfReviews = Object.keys(reviews).length;
     const placeData = {
       'place-id': key,
       'place': place,
       'reviews': reviews,
-      'numberOfReviews': numberOfReviews
+      'numberOfReviews': numberOfReviews,
+      'averageStars': averageStars,
     };
     data.push(placeData);
   });
