@@ -130,7 +130,6 @@ describe('getNumberOfStars', () => {
       expect(result(4)).to.equal(fourStars);
     });
   });
-// add 4.5 stars
   describe('if there is a star rating of 4.5', () => {
     it('should return 4 filled stars and 1 half star', () => {
       const fourPointFiveStars = filledStar + filledStar + filledStar + filledStar + halfStar;
@@ -185,5 +184,19 @@ describe('getReviewImageAlt', () => {
     it('should return the second image-alt string', () => {
       expect(result('image2.jpg', myFavoriteRestaurant['my-favorite-restaurant'])).to.equal('image2 alt');
     });
+  });
+});
+
+describe('getImageAltTag', () => {
+  before(() => {
+    html = '{{getImageAltTag place-image-alt place-name}}';
+    template = Handlebars.compile(html);
+    result = (placeImageAlt, placeName) => template({ 'place-image-alt': placeImageAlt, 'place-name': placeName });
+  });
+  it('should return as a string', () => {
+    expect(result('text alt description')).to.be.a('string');
+  });
+  it('should not be empty', () => {
+    expect(result('text alt description II')).to.not.be.empty;
   });
 });

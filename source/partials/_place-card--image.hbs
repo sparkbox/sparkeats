@@ -1,5 +1,5 @@
 <header class="place-card__header">
   <a href="{{getReviewPageLink place-id}}">
-    <img class="place-card__image" src={{getImageLocation place.place-image 'place'}} alt="{{place.place-image-alt}}"/>
+    <img class="place-card__image" src={{getImageLocation place.place-image 'place'}} alt="{{getImageAltTag place.place-image-alt place.place-name}}"/>
   </a>
 </header>

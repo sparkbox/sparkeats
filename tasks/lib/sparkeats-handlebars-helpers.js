@@ -64,4 +64,11 @@ module.exports.register = function (Handlebars) {
     const reviewImageIndex = reviewImageArray.indexOf(reviewImageFileName);
     return review['review-image-alt'][reviewImageIndex];
   });
+
+  Handlebars.registerHelper('getImageAltTag', (placeImageAlt, placeName) => {
+    if (!placeImageAlt) {
+      return `${placeName}`;
+    }
+    return `${placeImageAlt}`;
+  });
 };
