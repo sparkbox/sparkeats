@@ -173,7 +173,7 @@ const schema = [
             },
           ],
         },
-        'picture-file-name': {
+        'review-image-file-name': {
           oneOf: [
             {
               type: 'array',
