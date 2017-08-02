@@ -30,24 +30,27 @@ function prepareReviewsPageData(placeKey, reviewsDataPath) {
   return placeReviews;
 }
 
-function prepareAverageStars(placeKey, reviewsDataPath) {
+function prepareAverageStars(reviewKey, reviewsDataPath) {
   const reviews = YAML.load(reviewsDataPath);
   const keys = Object.keys(reviews);
   const ratings = [];
   let averageStars;
+  let ratingsSum;
   keys.forEach((key) => {
     const review = reviews[key];
-    const placeId = review['place-id'];
+    const reviewId = review['place-id'];
     const numStars = review['number-of-stars'];
-    if (placeId === placeKey) {
+    if (reviewId === reviewKey) {
       ratings.push(numStars);
-      const ratingsSum = ratings.reduce((total, num) => {
+      // block stmt is best in the scenerio below, error on arrow body style disabled
+      // eslint-disable-next-line
+      ratingsSum = ratings.reduce((total, num) => {
         return total + num;
       }, 0);
-      averageStars = ratingsSum / (ratings.length);
-      averageStars = (Math.round(averageStars * 2) / 2).toFixed(1);
     }
   });
+  averageStars = ratingsSum / (ratings.length);
+  averageStars = (Math.round(averageStars * 2) / 2).toFixed(1);
   return averageStars;
 }
 
