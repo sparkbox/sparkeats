@@ -1,5 +1,7 @@
 'use strict';
 
+const YAML = require('yamljs');
+
 module.exports.register = function (Handlebars) {
   Handlebars.registerHelper('getImageLocation', (imageFileName, placeOrReview) => {
     if (!imageFileName) {
@@ -55,5 +57,11 @@ module.exports.register = function (Handlebars) {
     }
 
     return new Handlebars.SafeString(result);
+  });
+
+  Handlebars.registerHelper('getReviewImageAlt', (reviewImageFileName, review) => {
+    const reviewImageArray = review['review-image-file-name'];
+    const reviewImageIndex = reviewImageArray.indexOf(reviewImageFileName);
+    return review['review-image-alt'][reviewImageIndex];
   });
 };

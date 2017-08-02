@@ -150,3 +150,40 @@ describe('getNumberOfStars', () => {
     });
   });
 });
+
+describe('getReviewImageAlt', () => {
+  const myFavoriteRestaurant =
+    {
+      'my-favorite-restaurant': {
+        'review-image-file-name': [
+          'image1.jpg',
+          'image2.jpg',
+        ],
+        'review-image-alt': [
+          'image1 alt',
+          'image2 alt',
+        ],
+      },
+    };
+  before(() => {
+    html = '{{getReviewImageAlt reviewImageName review}}';
+    template = Handlebars.compile(html);
+    result = (reviewImageName, review) => template({ reviewImageName, review });
+  });
+  describe('if the reviewImageName is the first image in the list', () => {
+    it('should return a string', () => {
+      expect(result('image1.jpg', myFavoriteRestaurant['my-favorite-restaurant'])).to.be.a('string');
+    });
+    it('should return the first image-alt string', () => {
+      expect(result('image1.jpg', myFavoriteRestaurant['my-favorite-restaurant'])).to.equal('image1 alt');
+    });
+  });
+  describe('if the review image is the second image in the list', () => {
+    it('should return a string', () => {
+      expect(result('image2.jpg', myFavoriteRestaurant['my-favorite-restaurant'])).to.be.a('string');
+    });
+    it('should return the second image-alt string', () => {
+      expect(result('image2.jpg', myFavoriteRestaurant['my-favorite-restaurant'])).to.equal('image2 alt');
+    });
+  });
+});

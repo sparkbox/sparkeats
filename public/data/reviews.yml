@@ -7,8 +7,10 @@ katy-table-33:
     - 04/29/2017
     - 07/10/2017
     - 07/12/2017
-  picture-file-name:
-    - table-33-1.jpg
+  review-image-file-name:
+    - table-33-katy-1.jpg
+  review-image-alt:
+    - Quiche with dressed greens
 
 heather-table-33:
   place-id: table-33
@@ -18,8 +20,10 @@ heather-table-33:
   dates-visited: #mm/dd/yyyy
     - 04/25/2017
     - 07/10/2017
-  picture-file-name:
+  review-image-file-name:
     - table-33-heather-1.jpeg
+  review-image-alt:
+    - Bananas Foster Waffles
 
 katy-bareburger:
   place-id: bareburger
@@ -27,7 +31,8 @@ katy-bareburger:
   reviewer-name: Katy Bowman
   number-of-stars: 5
   dates-visited: #mm/dd/yyyy
-  picture-file-name:
+  review-image-file-name:
+  review-image-alt:
 
 katy-sleepy-bee-cafe:
   place-id: sleepy-bee-cafe
@@ -36,7 +41,8 @@ katy-sleepy-bee-cafe:
   number-of-stars: 3
   dates-visited: #mm/dd/yyyy
     - 06/16/2017
-  picture-file-name:
+  review-image-file-name:
+  review-image-alt:
 
 katy-bagger-daves:
   place-id: bagger-daves
@@ -44,7 +50,8 @@ katy-bagger-daves:
   reviewer-name: Katy Bowman
   number-of-stars: 4
   dates-visited: #mm/dd/yyyy
-  picture-file-name:
+  review-image-file-name:
+  review-image-alt:
 
 heather-gaucho:
   place-id: gaucho
@@ -53,4 +60,5 @@ heather-gaucho:
   number-of-stars: 5
   dates-visited: #mm/dd/yyyy
     - 05/23/2017
-  picture-file-name:
+  review-image-file-name:
+  review-image-alt:
