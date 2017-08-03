@@ -187,16 +187,22 @@ describe('getReviewImageAlt', () => {
   });
 });
 
-describe('getImageAltTag', () => {
+describe('getPlaceImageAlt', () => {
   before(() => {
-    html = '{{getImageAltTag place-image-alt place-name}}';
+    html = '{{getPlaceImageAlt place-image-alt place-name}}';
     template = Handlebars.compile(html);
     result = (placeImageAlt, placeName) => template({ 'place-image-alt': placeImageAlt, 'place-name': placeName });
   });
   it('should return as a string', () => {
-    expect(result('text alt description')).to.be.a('string');
+    expect(result('text alt description', 'place-name value')).to.be.a('string');
   });
   it('should not be empty', () => {
-    expect(result('text alt description II')).to.not.be.empty;
+    expect(result('text alt description II', 'place-name value')).to.not.be.empty;
+  });
+  it('should return the place-name value if a place-image-alt value does not exist', () => {
+    expect(result(null, 'place-name value')).to.equal('place-name value');
+  });
+  it('should return the place-image-alt value when it has been given', () => {
+    expect(result('place-image-alt description', 'place-name value')).to.equal('place-image-alt description');
   });
 });

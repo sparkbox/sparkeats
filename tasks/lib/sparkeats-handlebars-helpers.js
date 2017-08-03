@@ -65,7 +65,7 @@ module.exports.register = function (Handlebars) {
     return review['review-image-alt'][reviewImageIndex];
   });
 
-  Handlebars.registerHelper('getImageAltTag', (placeImageAlt, placeName) => {
+  Handlebars.registerHelper('getPlaceImageAlt', (placeImageAlt, placeName) => {
     if (!placeImageAlt) {
       return `${placeName}`;
     }
