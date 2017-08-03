@@ -2,7 +2,7 @@
   {{#each reviews }}
     <article class="review-submission">
       <h1 class="review-submission__reviewer">{{reviewer-name}}</h1>
-      <!--{{> _star-rating}}-->
+      {{> _star-rating}}
       <h2 class="review-submission__title">Comments</h2>
       <p class="review-submission__review">{{review-text}}</p>
       {{#each review-image-file-name}}
