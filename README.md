@@ -23,9 +23,8 @@ If it is not, you will need to add some information about your place as well: [h
 
 Once you are done adding your information, review, and any images you want to add ([https://github.com/sparkbox/sparkeats/wiki/Adding-Images](https://github.com/sparkbox/sparkeats/wiki/Adding-Images)), you will need to submit a pull request:
 1. From the main repository page, click **New Pull Request**
-2. **Click `New Pull Request`**
-3. Add any additional information you think is necessary and click **Create Pull Request**
-5. **Add Assignees**: Heather Taylor and Katy Bowman.
+2. Add any additional information you think is necessary and click **Create Pull Request**
+3. **Add Assignees**: Heather Taylor and Katy Bowman.
 
 Thanks for your help!
 
