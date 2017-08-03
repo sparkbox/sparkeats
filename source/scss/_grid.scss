@@ -5,9 +5,10 @@
   display: block;
   margin: 0 auto;
   padding: 0;
-  @media (min-width: 35em) {
+  @media (min-width: 65em) {
     min-width: 18em;
-    margin: 0 3%;
+    max-width: 70%;
+    margin: 0 auto;
   }
 }
 
@@ -40,11 +41,10 @@
     @media (min-width: 28.25em) {
       @supports (display: flex) {
         margin: 2em;
-        flex: 1 0 18em;
       }
       // use inline-block for browsers and devices that do not support flexbox
       display: inline-block;
-      width: 32%;
+      width: 100%;
     }
   }
 }
