@@ -12,7 +12,7 @@ Are you a sparkboxer who wants to add a review? Great! The first thing you need 
 1. Click the dropdown button at the top of the page that says **Branch: master**.
 2. In the box where it says "Find or create a branch...", enter a name for your branch.
     * Your branch name should include your name and the name of the place you are reviewing. For example *jane-magically-marvelous-macarons*
-3. You can either hit <enter>/<return> or click on the **Create Branch** button that has appeared below.
+3. You can either hit enter/return or click on the **Create Branch** button that has appeared below.
 4. The dropdown button at the top of the page should now read **Branch: jane-magically-marvelous-macarons**.
 
 Then, go to the Sparkeats site ([http://eats.seesparkbox.com/](http://eats.seesparkbox.com/)) and see if the place you want to review is already listed there.
