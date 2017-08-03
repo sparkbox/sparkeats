@@ -44,7 +44,7 @@
       }
       // use inline-block for browsers and devices that do not support flexbox
       display: inline-block;
-      width: 100%;
+      max-width: 32%;
     }
   }
 }
