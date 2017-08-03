@@ -89,19 +89,14 @@ function createReviewsPages(templatePath, newFilePath, placesDataPath, reviewsDa
   const data = prepareData(placesDataPath, reviewsDataPath);
   const keys = Object.keys(data);
   keys.forEach((key) => {
-    for (let i = 0; i < data.length; i += 1) {
-      if (data[i]['place-id'] === key) {
-        const filePath = `${newFilePath}/${key}.html`;
-        const individualPlaceData = data[i];
-        mkdirp(newFilePath, (err) => {
-          if (err) {
-            console.error(err);
-          }
-        });
-        const writeFile = fs.writeFileSync(filePath,
-        reviewsPageTemplate(individualPlaceData));
+    const filePath = `${newFilePath}/${data[key]['place-id']}.html`;
+    const individualPlaceData = data[key];
+    mkdirp(newFilePath, (err) => {
+      if (err) {
+        console.error(err);
       }
-    }
+    });
+    const writeFile = fs.writeFileSync(filePath, reviewsPageTemplate(individualPlaceData));
   });
 }
 
