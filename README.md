@@ -15,7 +15,7 @@ Are you a sparkboxer who wants to add a review? Great! The first thing you need 
 3. You can either hit enter/return or click on the **Create Branch** button that has appeared below.
 4. The dropdown button at the top of the page should now read **Branch: jane-magically-marvelous-macarons**.
 
-Then, go to the Sparkeats site ([http://eats.seesparkbox.com/](http://eats.seesparkbox.com/)) and see if the place you want to review is already listed there.
+Then, go to the Sparkeats site ([http://eats.seesparkbox.com/](http://eats.seesparkbox.com/)) and see if the place you want to review is already listed there (the username and password are saved in 1Password, search for "eats").
 
 If it is, all you need to do is add your review! You can find the instructions for adding a review here: [https://github.com/sparkbox/sparkeats/wiki/Adding-a-Review](https://github.com/sparkbox/sparkeats/wiki/Adding-a-Review)
 
