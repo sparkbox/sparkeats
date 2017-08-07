@@ -62,3 +62,13 @@ heather-gaucho:
     - 05/23/2017
   review-image-file-name:
   review-image-alt:
+
+drew-canal-street-arcade-and-deli:
+  place-id: canal-street-arcade-and-deli
+  review-text: The sandwiches are as good as the owner is grumpy. It's a nice walk down 1st street from the Dayton Sparkbox office. I suggest the South Paw or a Breakfast sandwich, which is served all day.
+  reviewer-name: Drew Clemens
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 08/01/2017
+  review-image-file-name:
+  review-image-alt:
