@@ -1,8 +1,7 @@
 'use strict';
 
 const chai = require('chai');
-const handlebarsjs = require('./handlebars.js');
-const mock = require('mock-fs');
+const handlebarsjs = require('../tasks/handlebars.js');
 
 const expect = chai.expect;
 

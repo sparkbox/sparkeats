@@ -2,7 +2,7 @@
 
 const chai = require('chai');
 const Handlebars = require('handlebars');
-const sparkeatsHelpers = require('./sparkeats-handlebars-helpers.js');
+const sparkeatsHelpers = require('../tasks/lib/sparkeats-handlebars-helpers.js');
 
 const expect = chai.expect;
 

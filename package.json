@@ -7,7 +7,7 @@
   "description": "An aggregate of Sparkboxer's reviews of places to eat and drink.",
   "main": "server.js",
   "scripts": {
-    "test": "mocha **/**.spec.js",
+    "test": "mocha test",
     "dev": "npm-run-all -s clean webpack html styles -p start watch",
     "sass": "node tasks/sass.js",
     "postcss": "node tasks/postcss.js",

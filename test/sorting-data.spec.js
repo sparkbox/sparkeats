@@ -1,7 +1,7 @@
 'use strict';
 
 const chai = require('chai');
-const sortingData = require('./sorting-data');
+const sortingData = require('../tasks/lib/sorting-data');
 
 const expect = chai.expect;
 
