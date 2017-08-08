@@ -40,27 +40,6 @@ const fakeReviews = {
 };
 
 describe('handlebars.js', () => {
-  before(() => {
-    mock({
-      'dist': {
-        'index': {},
-      },
-      'template': {
-        'fakeTemplate.hbs': '{{#each place}}<h1>{{place.place-name}}</h1>',
-      },
-    });
-  });
-  after(() => {
-    mock.restore();
-  });
-
-  describe('createTemplate', () => {
-    it('returns a function', () => {
-      const result = handlebarsjs.createTemplate('template/fakeTemplate.hbs');
-      expect(result).to.be.a('function');
-    });
-  });
-
   describe('prepareReviewsPageData', () => {
     describe('when correctly formatted data is provided', () => {
       const placeKeys = 'katys-kimchi';
