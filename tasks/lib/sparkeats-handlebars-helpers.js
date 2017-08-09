@@ -71,4 +71,20 @@ module.exports.register = function (Handlebars) {
     }
     return `${placeImageAlt}`;
   });
+
+  Handlebars.registerHelper('getLocationDropdownList', (data) => {
+    const locationSet = new Set();
+    let locationListHtml = '';
+    for (let i = 0; i < data.length; i += 1) {
+      const location = data[i].place.city;
+      locationSet.add(location);
+    }
+    locationSet.forEach((location) => {
+      locationListHtml += `
+        <button id="location-dropdown__${location}" class="location-dropdown__list-button">
+          ${location}
+        </button>`;
+    });
+    return new Handlebars.SafeString(locationListHtml);
+  });
 };
