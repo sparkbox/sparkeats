@@ -185,3 +185,98 @@ li:not([class]){
   margin-top: 3.5em;
   margin-bottom: 1.5em;
 }
+
+.location-dropdown {
+  display: block;
+  text-align: center;
+  margin: 0 auto 1em auto;
+  width: 80%;
+  h1 {
+    @include primary-font();
+    color: $color-sparkblue-dark;
+    font-size: 2em;
+    margin-top: 0.875em;
+    margin-bottom: 0;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+  }
+  &__button {
+    width: 100%;
+    border: 2px solid $color-fountain-blue;
+    padding: 0.5em;
+    padding-left: 1em;
+    @include secondary-font(500);
+    font-size: 1.2em;
+    color: $color-black;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: $color-sparkblue-light;
+    text-align: left;
+    margin-top: 0.5em;
+    @media (min-width: 23em) {
+      width: 80%;
+    }
+    @media (min-width: 30em) {
+      width: 50%;
+    }
+    @media (min-width: 50em) {
+      width: 30%;
+    }
+    &:hover {
+      background-color: $color-white;
+    }
+    &-text {
+      display: inline-block;
+      float: left;
+    }
+    &-arrow {
+      display: inline-block;
+      float: right;
+      margin-top: 0.5em;
+      margin-right: 0.25em;
+      width: 0;
+      height: 0;
+      border-left: 0.45em solid transparent;
+      border-right: 0.45em solid transparent;
+      border-top: 0.45em solid $color-jellybean-blue;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+  }
+  &__list {
+    display:none;
+    box-sizing: border-box;
+    border: 2px solid $color-fountain-blue;
+    border-top: none;
+    background-color: $color-sparkblue-light;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin: 0 auto;
+    @media (min-width: 23em) {
+      width: 80%;
+    }
+    @media (min-width: 30em) {
+      width: 50%;
+    }
+    @media (min-width: 50em) {
+      width: 30%;
+    }
+
+    &-button {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $color-fountain-blue;
+      background-color: $color-sparkblue-light;
+      display: block;
+      padding: 0.5em 0;
+      padding-left: 1em;
+      @include secondary-font(500);
+      font-size: 1.2em;
+      color: $color-black;
+      text-align: left;
+      &:hover{
+        background-color: $color-white;
+      }
+    }
+  }
+}
