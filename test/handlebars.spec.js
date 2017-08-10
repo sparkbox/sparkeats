@@ -125,7 +125,10 @@ describe('handlebars.js', () => {
     describe('when there is no review data for a place', () => {
       const result = handlebarsjs.prepareData(fakePlaces, fakeReviews);
       it('returns an object without data for that place', () => {
+        expect(result.length).to.not.equal(3);
         expect(result.length).to.equal(2);
+        expect(result[0]['place-id']).to.not.equal('cats-cabbage-rolls');
+        expect(result[1]['place-id']).to.not.equal('cats-cabbage-rolls');
       });
     });
   });

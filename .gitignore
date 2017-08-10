@@ -11,4 +11,4 @@ dist/
 *.html
 
 # Validation files
-source/data/*.json
+public/data/*.json

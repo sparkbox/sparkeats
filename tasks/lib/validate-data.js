@@ -3,7 +3,7 @@ const util = require('util');
 const shell = require('shelljs');
 
 // prepare for validation - convert yaml files to json files
-shell.exec('yaml2json --pretty --save source/data/');
+shell.exec('yaml2json --pretty --save public/data/');
 
 // require json data files
 const placeData = require('../../public/data/places.json');
