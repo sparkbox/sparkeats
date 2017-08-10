@@ -1,10 +1,10 @@
 <div class="location-dropdown">
   <h1>Pick a Location</h1>
-  <button onClick="openDropdown()" class="location-dropdown__button">
+  <button id="location-dropdown__button-main" class="location-dropdown__button">
     <div class="location-dropdown__button-text">All Places</div>
     <div class="location-dropdown__button-arrow"></div>
   </button>
-  <div id="location-dropdown__list" class="location-dropdown__list">
+  <div id="location-list" class="location-dropdown__list">
     {{getLocationDropdownList this}}
   </div>
 </div>
