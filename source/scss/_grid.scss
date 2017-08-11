@@ -46,5 +46,8 @@
       display: inline-block;
       max-width: 32%;
     }
+    &-hidden {
+      display: none;
+    }
   }
 }

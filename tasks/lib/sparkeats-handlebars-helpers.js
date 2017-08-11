@@ -81,7 +81,7 @@ module.exports.register = function (Handlebars) {
     }
     locationSet.forEach((location) => {
       locationListHtml += `
-        <button id="location-dropdown__${location}" class="location-dropdown__list-button">
+        <button id="${location}" class="location-dropdown__list-button">
           ${location}
         </button>`;
     });
