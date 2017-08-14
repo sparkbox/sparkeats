@@ -4,6 +4,15 @@ function toggleDropdown() {
   document.getElementById('location-list').classList.toggle('location-dropdown__list-open');
 }
 
+function hideOrShowCard(city, location, hasHiddenClass) {
+  if (city !== location && !hasHiddenClass) {
+    return 'hide';
+  } else if (city === location && hasHiddenClass) {
+    return 'show';
+  }
+  return '';
+}
+
 function selectLocation() {
   const location = this.id;
   const allCards = document.getElementsByClassName('place-card__list-item');
@@ -12,9 +21,10 @@ function selectLocation() {
     const cityAndState = card.getElementsByClassName('place-card__city')[0].innerHTML;
     const city = cityAndState.split(',')[0];
     const hasHiddenClass = card.classList.contains('place-card__list-item-hidden');
-    if (city !== location && !hasHiddenClass) {
+    const hideOrShow = hideOrShowCard(city, location, hasHiddenClass);
+    if (hideOrShow === 'hide') {
       card.classList.add('place-card__list-item-hidden');
-    } else if (city === location && hasHiddenClass) {
+    } else if (hideOrShow === 'show') {
       card.classList.remove('place-card__list-item-hidden');
     }
   }
@@ -26,5 +36,6 @@ function addSelectionListener(element) {
 
 module.exports = {
   toggleDropdown,
+  hideOrShowCard,
   addSelectionListener,
 };
