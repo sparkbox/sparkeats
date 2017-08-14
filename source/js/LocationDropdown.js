@@ -5,10 +5,10 @@ function toggleDropdown() {
 }
 
 function hideOrShowCard(city, location, hasHiddenClass) {
-  if (city !== location && !hasHiddenClass) {
-    return 'hide';
-  } else if (city === location && hasHiddenClass) {
+  if ((city === location || city === 'All Places') && hasHiddenClass) {
     return 'show';
+  } else if ((city !== location && city !== 'All Places') && !hasHiddenClass) {
+    return 'hide';
   }
   return '';
 }
