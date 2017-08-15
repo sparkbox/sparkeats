@@ -1,6 +1,6 @@
 'use strict';
 
-const locationDropdown = require('./LocationDropdown');
+const locationDropdown = require('./location-dropdown');
 
 const dropdownButton = document.getElementById('location-dropdown__button-main');
 const dropdownOptions = document.getElementsByClassName('location-dropdown__list-button');
