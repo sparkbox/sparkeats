@@ -74,16 +74,24 @@ module.exports.register = function (Handlebars) {
 
   Handlebars.registerHelper('getLocationDropdownList', (data) => {
     const locationSet = new Set();
+    locationSet.add('All Places');
     let locationListHtml = '';
     for (let i = 0; i < data.length; i += 1) {
       const location = data[i].place.city;
       locationSet.add(location);
     }
     locationSet.forEach((location) => {
-      locationListHtml += `
-        <button id="${location}" class="location-dropdown__list-button">
-          ${location}
-        </button>`;
+      if (location === 'All Places') {
+        locationListHtml += `
+          <button id="${location}" class="location-dropdown__list-button hidden">
+            ${location}
+          </button>`;
+      } else {
+        locationListHtml += `
+          <button id="${location}" class="location-dropdown__list-button">
+            ${location}
+          </button>`;
+      }
     });
     return new Handlebars.SafeString(locationListHtml);
   });
