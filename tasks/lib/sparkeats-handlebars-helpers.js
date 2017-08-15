@@ -83,14 +83,14 @@ module.exports.register = function (Handlebars) {
     locationSet.forEach((location) => {
       if (location === 'All Places') {
         locationListHtml += `
-          <button id="${location}" class="location-dropdown__list-button hidden">
+          <li><button id="${location}" class="location-dropdown__list-button hidden">
             ${location}
-          </button>`;
+          </button></li>`;
       } else {
         locationListHtml += `
-          <button id="${location}" class="location-dropdown__list-button">
+          <li><button id="${location}" class="location-dropdown__list-button">
             ${location}
-          </button>`;
+          </button></li>`;
       }
     });
     return new Handlebars.SafeString(locationListHtml);
