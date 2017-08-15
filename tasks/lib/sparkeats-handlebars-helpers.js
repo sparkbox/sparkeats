@@ -60,28 +60,21 @@ module.exports.register = function (Handlebars) {
   });
 
 Handlebars.registerHelper('getReviewImageAlt', (reviewImageFileName, data) => {
-  const dataValues = Object.keys(data).map((key) => {
-    return data[key];
-  });
-  // console.log(dataValues);
-  const reviews = dataValues[2];
-  const numberOfReviews = dataValues[3];
-  const reviewsValues = Object.keys(reviews).map((key) => {
-    return reviews[key];
-  });
-  let reviewImageAltTag = dataValues[1]['place-name'];
+  const numberOfReviews = data.numberOfReviews;
+  let reviewImageAltTag = data.place['place-name'];
 
-  for (let reviewsCount = 0; reviewsCount < numberOfReviews; reviewsCount += 1) {
-    if (reviewsValues[reviewsCount]['review-image-alt']) {
-      const altTagArray = reviewsValues[reviewsCount]['review-image-alt'];
+  for (let count = 0; count < numberOfReviews; count += 1) {
+    const review = data.reviews[Object.keys(data.reviews)[count]];
+    if (review['review-image-alt']) {
+      const altTagArray = review['review-image-alt'];
       const numberOfAltTags = altTagArray.length;
       for (let imageCount = 0; imageCount < numberOfAltTags; imageCount += 1) {
-        if (reviewImageFileName === reviewsValues[reviewsCount]['review-image-file-name'][imageCount]) {
-          reviewImageAltTag = reviewsValues[reviewsCount]['review-image-alt'][imageCount];
+        if (reviewImageFileName === review['review-image-file-name'][imageCount]) {
+          reviewImageAltTag = review['review-image-alt'][imageCount];
         }
       }
     } else {
-      reviewImageAltTag = dataValues[1]['place-name'];
+      reviewImageAltTag = data.place['place-name'];
     }
   }
   return reviewImageAltTag;
