@@ -59,11 +59,33 @@ module.exports.register = function (Handlebars) {
     return new Handlebars.SafeString(result);
   });
 
-  Handlebars.registerHelper('getReviewImageAlt', (reviewImageFileName, review) => {
-    const reviewImageArray = review['review-image-file-name'];
-    const reviewImageIndex = reviewImageArray.indexOf(reviewImageFileName);
-    return review['review-image-alt'][reviewImageIndex];
+Handlebars.registerHelper('getReviewImageAlt', (reviewImageFileName, data) => {
+  const dataValues = Object.keys(data).map((key) => {
+    return data[key];
   });
+  // console.log(dataValues);
+  const reviews = dataValues[2];
+  const numberOfReviews = dataValues[3];
+  const reviewsValues = Object.keys(reviews).map((key) => {
+    return reviews[key];
+  });
+  let reviewImageAltTag = dataValues[1]['place-name'];
+
+  for (let reviewsCount = 0; reviewsCount < numberOfReviews; reviewsCount += 1) {
+    if (reviewsValues[reviewsCount]['review-image-alt']) {
+      const altTagArray = reviewsValues[reviewsCount]['review-image-alt'];
+      const numberOfAltTags = altTagArray.length;
+      for (let imageCount = 0; imageCount < numberOfAltTags; imageCount += 1) {
+        if (reviewImageFileName === reviewsValues[reviewsCount]['review-image-file-name'][imageCount]) {
+          reviewImageAltTag = reviewsValues[reviewsCount]['review-image-alt'][imageCount];
+        }
+      }
+    } else {
+      reviewImageAltTag = dataValues[1]['place-name'];
+    }
+  }
+  return reviewImageAltTag;
+});
 
   Handlebars.registerHelper('getPlaceImageAlt', (placeImageAlt, placeName) => {
     if (!placeImageAlt) {
