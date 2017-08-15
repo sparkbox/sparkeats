@@ -219,11 +219,14 @@ li:not([class]){
     @media (min-width: 30em) {
       width: 50%;
     }
-    @media (min-width: 50em) {
+    @media (min-width: 70em) {
       width: 30%;
     }
     &:hover {
       background-color: $color-white;
+    }
+    &:focus {
+      outline: 0;
     }
     &-text {
       display: inline-block;
@@ -246,11 +249,6 @@ li:not([class]){
   &__list {
     display:none;
     box-sizing: border-box;
-    border: 2px solid $color-fountain-blue;
-    border-top: none;
-    background-color: $color-sparkblue-light;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
     margin: 0 auto;
     @media (min-width: 23em) {
       width: 80%;
@@ -258,8 +256,32 @@ li:not([class]){
     @media (min-width: 30em) {
       width: 50%;
     }
-    @media (min-width: 50em) {
+    @media (min-width: 70em) {
       width: 30%;
+    }
+
+    & ul {
+      box-sizing: border-box;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      border: 2px solid $color-fountain-blue;
+      border-top: none;
+      background-color: $color-sparkblue-light;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      z-index: 1;
+      @media (min-width: 70em) {
+        position: absolute;
+        left: 0; top: 100%;
+        width: 100%;
+      }
+
+      & li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
     }
 
     &-button {
@@ -280,6 +302,7 @@ li:not([class]){
     }
     &-open {
       display:block;
+      position: relative;
     }
   }
 }
