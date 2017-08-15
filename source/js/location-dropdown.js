@@ -24,16 +24,20 @@ function hideOrShowLocation(location, elementId, hasHiddenClass) {
   return '';
 }
 
+function addOrRemoveHiddenClass(element, hideOrShow) {
+  if (hideOrShow === 'hide') {
+    element.classList.add('hidden');
+  } else if (hideOrShow === 'show') {
+    element.classList.remove('hidden');
+  }
+}
+
 function hideLocationInDropdown(location, locationListElements) {
   Array.from(locationListElements).forEach((element) => {
     const elementId = element.id;
     const hasHiddenClass = element.classList.contains('hidden');
     const hideOrShow = hideOrShowLocation(location, elementId, hasHiddenClass);
-    if (hideOrShow === 'hide') {
-      element.classList.add('hidden');
-    } else if (hideOrShow === 'show') {
-      element.classList.remove('hidden');
-    }
+    addOrRemoveHiddenClass(element, hideOrShow);
   });
 }
 
@@ -43,13 +47,8 @@ function selectLocation(allCards, location) {
       .innerHTML;
     const city = cityAndState.split(',')[0];
     const hasHiddenClass = card.classList.contains('hidden');
-    console.log(card.classList);
     const hideOrShow = hideOrShowCard(city, location, hasHiddenClass);
-    if (hideOrShow === 'hide') {
-      card.classList.add('hidden');
-    } else if (hideOrShow === 'show') {
-      card.classList.remove('hidden');
-    }
+    addOrRemoveHiddenClass(card, hideOrShow);
   });
 }
 
