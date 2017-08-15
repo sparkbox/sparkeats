@@ -7,7 +7,7 @@
       <p class="review-submission__review">{{review-text}}</p>
       {{#each review-image-file-name}}
         <div class="review-submission__image-container">
-          <img class="review-submission__image" src="{{getImageLocation this "review"}}" alt="{{getReviewImageAlt this ../this}}">
+          <img class="review-submission__image" src="{{getImageLocation this "review"}}" alt="{{getReviewImageAlt this ../../this}}">
         </div>
       {{/each}}
     </article>

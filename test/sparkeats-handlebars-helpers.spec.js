@@ -169,20 +169,34 @@ describe('getReviewImageAlt', () => {
     template = Handlebars.compile(html);
     result = (reviewImageName, review) => template({ reviewImageName, review });
   });
-  describe('if the reviewImageName is the first image in the list', () => {
+  // first review, first image
+  describe('if the first image in the first review has a review image alt tag value', () => {
     it('should return a string', () => {
-      expect(result('image1.jpg', myFavoriteRestaurant['my-favorite-restaurant'])).to.be.a('string');
+      expect(result('katy-image1.jpg', sampleData)).to.be.a.string;
     });
     it('should return the first image-alt string', () => {
-      expect(result('image1.jpg', myFavoriteRestaurant['my-favorite-restaurant'])).to.equal('image1 alt');
+      expect(result('katy-image1.jpg', sampleData)).to.equal('katy-image1 alt');
     });
   });
-  describe('if the review image is the second image in the list', () => {
+  // second review, second image
+  describe('if the second image in the second review has a review image alt tag value', () => {
     it('should return a string', () => {
       expect(result('image2.jpg', myFavoriteRestaurant['my-favorite-restaurant'])).to.be.a('string');
     });
     it('should return the second image-alt string', () => {
-      expect(result('image2.jpg', myFavoriteRestaurant['my-favorite-restaurant'])).to.equal('image2 alt');
+      expect(result('heather-image2.jpg', sampleData)).to.equal('heather-image2 alt');
+    });
+  });
+  // no image alt tags
+  describe('if an image in the review data does not have an image alt tag value', () => {
+    it('should return a string', () => {
+      expect(result('katy-image3.jpg', sampleData)).to.be.a('string');
+    });
+    it('should return a string matching the value of place-name from the place data', () => {
+      expect(result('katy-image3.jpg', sampleData)).to.equal('My Favorite Restaurant');
+    });
+    it('should return the value of place-name from the place data', () => {
+      expect(result('katy-image3.jpg', sampleData)).to.equal(sampleData.place['place-name']);
     });
   });
 });
