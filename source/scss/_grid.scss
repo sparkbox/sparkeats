@@ -1,3 +1,10 @@
+//media breakpoints
+$bp-very-large-screen: 90em;
+$bp-large-screen: 80em;
+$bp-laptop-screen: 50em;
+$bp-tablet: 28.25em;
+
+
 // PLACE CARD GRID STYLES
 
 .place-card__container {
@@ -5,10 +12,16 @@
   display: block;
   margin: 0 auto;
   padding: 0;
-  @media (min-width: 65em) {
-    min-width: 18em;
-    max-width: 70%;
+  @media (min-width: $bp-laptop-screen) {
+    //min-width: 18em;
+    max-width: 90%;
     margin: 0 auto;
+  }
+  @media (min-width: $bp-large-screen) {
+    max-width: 85%;
+  }
+  @media (min-width: $bp-very-large-screen) {
+    max-width: 70%;
   }
 }
 
@@ -17,7 +30,7 @@
   margin: 0;
   margin: 0 auto;
   padding: 0;
-  @media (min-width: 28.25em) {
+  @media (min-width: $bp-tablet) {
     @supports (display: flex) {
       display: flex;
       flex-wrap: wrap;
@@ -35,10 +48,9 @@
   &-item {
     list-style: none;
     vertical-align: top;
-    margin: 2em 1em;
-    min-width: 18em;
-    max-width: 25em;
-    @media (min-width: 28.25em) {
+    margin: 2em auto;
+    width: 18em;
+    @media (min-width: $bp-tablet) {
       @supports (display: flex) {
         margin: 2em;
       }
