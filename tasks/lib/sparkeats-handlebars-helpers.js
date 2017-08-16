@@ -63,14 +63,14 @@ Handlebars.registerHelper('getReviewImageAlt', (reviewImageFileName, data) => {
   const numberOfReviews = data.numberOfReviews;
   let reviewImageAltTag = data.place['place-name'];
 
-  for (let count = 0; count < numberOfReviews; count += 1) {
-    const review = data.reviews[Object.keys(data.reviews)[count]];
+  for (let i = 0; i < numberOfReviews; i += 1) {
+    const review = data.reviews[Object.keys(data.reviews)[i]];
     if (review['review-image-alt']) {
       const altTagArray = review['review-image-alt'];
       const numberOfAltTags = altTagArray.length;
-      for (let imageCount = 0; imageCount < numberOfAltTags; imageCount += 1) {
-        if (reviewImageFileName === review['review-image-file-name'][imageCount]) {
-          reviewImageAltTag = review['review-image-alt'][imageCount];
+      for (let j = 0; j < numberOfAltTags; j += 1) {
+        if (reviewImageFileName === review['review-image-file-name'][j]) {
+          reviewImageAltTag = review['review-image-alt'][j];
         }
       }
     } else {

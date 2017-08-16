@@ -180,18 +180,12 @@ describe('getReviewImageAlt', () => {
   });
   // second review, second image
   describe('if the second image in the second review has a review image alt tag value', () => {
-    it('should return a string', () => {
-      expect(result('image2.jpg', myFavoriteRestaurant['my-favorite-restaurant'])).to.be.a('string');
-    });
     it('should return the second image-alt string', () => {
       expect(result('heather-image2.jpg', sampleData)).to.equal('heather-image2 alt');
     });
   });
   // no image alt tags
   describe('if an image in the review data does not have an image alt tag value', () => {
-    it('should return a string', () => {
-      expect(result('katy-image3.jpg', sampleData)).to.be.a('string');
-    });
     it('should return a string matching the value of place-name from the place data', () => {
       expect(result('katy-image3.jpg', sampleData)).to.equal('My Favorite Restaurant');
     });
