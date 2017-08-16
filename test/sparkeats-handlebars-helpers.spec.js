@@ -151,19 +151,41 @@ describe('getNumberOfStars', () => {
 });
 
 describe('getReviewImageAlt', () => {
-  const myFavoriteRestaurant =
+  const sampleData = {
+    'my-favorite-restaurant': 'my-favorite-restaurant',
+    place:
     {
-      'my-favorite-restaurant': {
+      'place-name': 'My Favorite Restaurant',
+    },
+    reviews:
+    {
+      'katy-my-favorite-restaurant':
+      {
         'review-image-file-name': [
-          'image1.jpg',
-          'image2.jpg',
+          'katy-image1.jpg',
+          'katy-image2.jpg',
+          'katy-image3.jpg',
         ],
         'review-image-alt': [
-          'image1 alt',
-          'image2 alt',
+          'katy-image1 alt',
+          'katy-image2 alt',
         ],
       },
-    };
+      'Heather-my-favorite-restaurant':
+      {
+        'review-image-file-name': [
+          'heather-image1.jpg',
+          'heather-image2.jpg',
+        ],
+        'review-image-alt': [
+          'heather-image1 alt',
+          'heather-image2 alt',
+        ],
+      },
+    },
+    numberOfReviews: 2,
+  };
+  
   before(() => {
     html = '{{getReviewImageAlt reviewImageName review}}';
     template = Handlebars.compile(html);
