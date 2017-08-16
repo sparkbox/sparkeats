@@ -125,11 +125,15 @@
     width: 100%;
     text-align: center;
     overflow: hidden;
-    &__image {
+    &__backdrop {
       width: 100%;
-      left: 0;
-      top: -50%;
       position: absolute;
+      left: 0;
+      top: -20%;
+      &-image {
+        min-width: 100%;
+        width: 58.5em;
+      }
     }
     &__title {
       background: $color-white;

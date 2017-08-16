@@ -7,7 +7,7 @@
   width: 25em;
   max-width: 100%;
   text-align: center;
-  padding-bottom: 4.125em; // height of footer
+  padding-bottom: 4.125em;
   &__name {
     @include primary-font();
     color: $color-sparkblue-dark;
@@ -60,9 +60,8 @@
   }
   &__image {
     width: 100%;
+    min-width: 20em;
     max-width: 100%;
-    left: 0;
-    top: -20%;
   }
   &__star {
     width: 1.1875em;
