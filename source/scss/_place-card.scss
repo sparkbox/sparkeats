@@ -10,12 +10,16 @@
   padding-bottom: 4.125em;
   &__name {
     @include primary-font();
-    color: $color-sparkblue-dark;
-    font-size: 2.5em;
+    font-size: 1.75em;
+    line-height: 1.35em;
     margin-top: 0.875em;
     margin-bottom: 0;
     padding-left: 0.25em;
     padding-right: 0.25em;
+    &-link {
+      color: $color-sparkblue-dark;
+      text-decoration: none;
+    }
   }
   &__city {
     @include primary-font();
@@ -23,23 +27,26 @@
     font-size: 0.875em;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    margin-top: 0;
+    margin: 0.5em 0.75em;
+    padding-bottom: 0.2em;
   }
-  &__footer {
+  &__footer-link {
+    @include primary-font();
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.25em;
+    color: $color-sparkblue-dark;
+    text-decoration: none;
     background-color: $color-fountain-blue;
-    height: 4.125em;
     box-sizing: border-box;
-    padding-top: 1.25em;
-    bottom: -6em;
-    position: absolute;
+    padding: 1em;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    &-link {
-      @include primary-font();
-      font-size: 1.25em;
-      color: $color-sparkblue-dark;
-      text-decoration: none;
+    position: absolute;
+    transition: all 500ms cubic-bezier(0,1.08,.65,.98);
+    &:hover{
+      color: $color-sparkblue-light;
+      background-color: darken($color-fountain-blue, 20%);
     }
   }
   &__header {

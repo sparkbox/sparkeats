@@ -1,4 +1,4 @@
-// ALL ELEMENTS RELATED TO THE REVIEW CONTAINER
+// ALL ELEMENTS RELATED TO THE REVIEWS CONTAINER
 
 .review {
   background-color: $color-white;
@@ -34,7 +34,6 @@
     box-sizing: border-box;
     margin: 2em auto;
     padding: 2em 2em 1em 2em;
-
     &__reviewer {
       @include primary-font();
       color: $color-sparkblue-dark;
@@ -56,6 +55,9 @@
      font-weight: normal;
      letter-spacing: 0.025em;
      padding-bottom: 1em;
+     @media(min-width: 40em) {
+       font-size: 1.125em;
+     }
     }
     &__image-container {
       display: inline-block;
