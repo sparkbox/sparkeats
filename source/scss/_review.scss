@@ -20,7 +20,6 @@
       clear: both;
     }
   }
-
   &-container {
     width: 100%;
     @media (min-width: 48em) {
@@ -28,7 +27,6 @@
       max-width: 66.5%;
     }
   }
-
   &-submission {
     background-color: $color-soft-gray;
     box-sizing: border-box;
@@ -143,20 +141,24 @@
       width: 70%;
       max-width: 100%;
       margin: 0;
-      padding: 1.5em 0;
+      padding: 1.75em 1em;
       text-align: center;
       position: relative;
       @media (min-width: 25em) {
         max-width: 23.5em;
+        padding: 1.5em 1em;
       }
     }
     &__name {
       @include primary-font();
       color: $color-sparkblue-dark;
-      font-size: 2.5em;
+      font-size: 2.25em;
       margin-bottom: 0;
       margin: 0;
-      padding: 0;
+      padding: 0em;
+      @media (min-width: 25em) {
+        font-size: 2.5em;
+      }
     }
     &__city {
       @include primary-font();
