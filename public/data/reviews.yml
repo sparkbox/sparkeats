@@ -236,10 +236,24 @@ leah-jeet-india:
   review-image-alt:
 
 julie-mad-mex:
-  place-id: mad-mnex
+  place-id: mad-mex
   review-text: Mad Mex is the Pennsylvanian interpretation of California Mexican. They have tomato-free guacamole and pineapple habanero salsa and tasty margaritas (I like The Hamilton). I usually order the Buffalo wing tacos with a side of waffle fries, because who wouldn't?
   reviewer-name: Julie Young
   number-of-stars: 4
   dates-visited: #mm/dd/yyyy
   review-image-file-name:
   review-image-alt:
+
+andrew-press:
+  place-id: press
+  review-text: Arguably some of the best coffee in the area. Press has a great selection of high-quality espresso drinks, coffee, teas, and seasonal sodas. While they are known for their espresso, they also carry a small selection of baked goods. I highly recommend Press for your Dayton caffeine fix. The only issue is their wifi is not very good so this is not a good place to go and get work done. Otherwise, the atmosphere is great for chatting. Parking along the street or in a vacant lot across the road. The Oregon District, library, riverfront, Sparkbox office, and other Dayton attractions are within walking distance.
+  reviewer-name: Andrew Spencer
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 07/17/17
+    - 08/08/17
+    - 08/20/17
+  review-image-file-name:
+    - press-andrew-1.jpg
+  review-image-alt:
+    - Espresso from Press

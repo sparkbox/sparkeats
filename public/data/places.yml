@@ -163,7 +163,7 @@ lilys-bistro:
   place-url: http://lilysbistro.com
   place-website-display: www.lilysbistro.com
 
-mad-mnex:
+mad-mex:
   place-name: Mad Mex
   city: Pittsburgh
   state: PA
@@ -250,3 +250,14 @@ zombie-dogz:
   place-image-alt:
   place-url: https://www.zombiedogzdayton.com
   place-website-display: www.zombiedogzdayton.com
+
+press:
+  place-name: Press
+  city: Dayton
+  state: OH
+  address: 257 Wayne Ave
+  phone: (937) 286-4585
+  place-image: press.jpg
+  place-image-alt: Press
+  place-url: http://www.pressdayton.com/
+  place-website-display: www.pressdayton.com
