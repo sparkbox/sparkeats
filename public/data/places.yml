@@ -101,8 +101,8 @@ gus-fried-chicken:
   place-name: Gus's Fried Chicken
   city: Memphis
   state: TN
-  address:
-  phone:
+  address: 310 S Front Street
+  phone: (901) 527-4877
   place-image:
   place-image-alt:
   place-url: http://gusfriedchicken.com
@@ -167,8 +167,8 @@ mad-mnex:
   place-name: Mad Mex
   city: Pittsburgh
   state: PA
-  address:
-  phone:
+  address: 220 South Highland Avenue
+  phone: (412) 345-0185
   place-image:
   place-image-alt:
   place-url: http://madmex.com
