@@ -25,6 +25,42 @@ heather-table-33:
   review-image-alt:
     - Bananas Foster Waffles
 
+heather-zombie-dogz:
+  place-id: zombie-dogz
+  review-text: My first experience with Zombie Dogz was at an event catered by their food truck. I had the Killer Gauge dog with slow cooked buffalo chicken topped with blue cheese crumbles, celery bits and drizzled in ranch dressing. It was pretty amazing. I was extremely excited to learn that they offer gluten free hot dog buns. WINNER! Recently I visited their location on Brown Street and tried the Juan of Dead featuring slow cooked bbq pulled pork topped with shredded swiss cheese, diced dill pickles and drizzled with yellow mustard. It was good, but not as good as the Killer Gauge.
+  reviewer-name: Heather Taylor
+  number-of-stars: 3
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+heather-basils:
+  place-id: basils-on-market
+  review-text: I prefer the lunch menu versus the dinner menu at Basil's. There are more gluten free options available during lunch. The open faced caprese (minus the bread) and the market toss salad are my favorites! The truffle fries are also pretty aweseme! Basil's has two locations, one in Dayton and the original in Troy. I have always found the service and the food better at the Troy location. The Dayton location has a great view of the river and a fantastic outdoor patio.
+  reviewer-name: Heather Taylor
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+heather-bourbon-street-grill:
+  place-id: bourbon-street-grill
+  review-text: The chicken and potatoes are sweet and spicy deliciousness! I could seriously eat here a couple times a week. The Bourbon Street Grill is a simple, down-to-earth cafe. Nothing fancy, but oh so good.
+  reviewer-name: Heather Taylor
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+heather-2nd-street-market:
+  place-id: 2nd-street-market
+  review-text: Crepe Boheme at the 2nd Street Public Market has become my go-to for lunch on Thursdays. I've never had a crepe there that I didn't love! The teriyaki chicken at Isaan Baan Thai Noi is my second favorite choice for lunch. For a delicious treat, I highly recommend Sweet P's Handcrafted Ice Pops or the Extreme Toffee coffee from Caffeine Carl's.
+  reviewer-name: Heather Taylor
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
 katy-bareburger:
   place-id: bareburger
   review-text: Bareburger is basically a burger, fries, and shakes kind of place, although they do offer salads and other sandwiches. They have a list of specialty burgers to choose from or you can build your own. You can get burgers made from beef, bison, black beans, duck, elk, quinoa, grilled lemon chicken, sesame ginger beef, sweet potato and wild rice, turkey, or wild boar. All except the black bean and quinoa are gluten free. For your bun, to keep it gluten free you can choose to have your burger on a tapioca bun, with no bun, served on a lettuce bed, or wrapped with a collard. Their french fries and sweet potato fries are fried separately and kept gluten free. Other gluten free items are listed clearly on the menu. Beyond their burgers and fries, I also highly recommend trying their milkshakes. My personal favorite is the Mexican Chocolate, made with chocolate ice cream, cayenne, cinnamon, and a “torched marshmallow.” Just thinking about it makes me want one.
@@ -70,5 +106,140 @@ drew-canal-street-arcade-and-deli:
   number-of-stars: 5
   dates-visited: #mm/dd/yyyy
     - 08/01/2017
+  review-image-file-name:
+  review-image-alt:
+
+emily-sky-asian:
+  place-id: sky-asian
+  review-text: Big perk - they deliver sushi (but probably not downtown)! They also have several standard Thai and other cooked dishes for parties looking for variety. And it's consistently delicious. Their actual speed can be slightly hit or miss, so make sure you have time to wait if needed. They've been generous the few times it's been slow, though.
+  reviewer-name: Emily Gray
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+emily-thai-9:
+  place-id: thai-9
+  review-text: Always enjoy the food here, and it tends to please crowds.
+  reviewer-name: Emily Gray
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+emily-2nd-street-market:
+  place-id: 2nd-street-market
+  review-text: Right by our Dayton office and lots of variety. Only open Thursday - Saturday.
+  reviewer-name: Emily Gray
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-lilys-bistro:
+  place-id: lilys-bistro
+  review-text: Lily's is my favorite place to eat in Dayton! While a little pricey (Croftcheck and I don't get out of there under $60), everything on their menu is good. Everything. EVERYTHING. Try it out for weekend brunch, but call ahead! Every Wednesday is punch night!
+  reviewer-name: Catherine Meade
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-ginger-and-spice:
+  place-id: ginger-and-spice
+  review-text: I LOVE Ginger and Spice. They have awesome brown sugar bubble tea, dumplings, and robust seafood options. Their lo mein is more like spaghetti, fyi. Get the Ginger & Spice chicken! Online ordering works well, too.
+  reviewer-name: Catherine Meade
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-thai-9:
+  place-id: thai-9
+  review-text: Immediate loss of a star for not being open on Saturdays at lunch. Thai 9 is consistant, has a short wait, beautiful space, and excellent takeout. My food is never messed up! I almost always order mango curry, with pork, at a 3. Pineapple fried rice is also great. And Crab Rangoon.
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-zombie-dogz:
+  place-id: zombie-dogz
+  review-text: Zombie Dogz was a hot dog food truck turned into a hot dog restaurant on Brown Street. They are pretty cheap ($3-$6 for a giant hot dog). Also pretty good. My favorite things to get are the Chicago Dog or just a plain hotdog with mustard and relish. They have tator tots!
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-bourbon-street-grill:
+  place-id: bourbon-street-grill
+  review-text: This place is a no-frills kind of takeout. Rice, potatoes, and sweet bourbon chicken. The bags leak pretty hard, but the food is sooooo good.
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-basils:
+  place-id: basils-on-market
+  review-text: I have been to Basil's ... 5 or so times now, and I've never been wholly impressed. Their space is beautiful, I love the Peach Mojito and their fries. I had a fantastic salmon salad. Everything else? Kinda meh. A little to pricey for the quality. Also, they always give me Diet Coke when I ask for regular.
+  reviewer-name: Catherine Meade
+  number-of-stars: 3
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-jimmy-johns:
+  place-id: jimmy-johns
+  review-text: Too much mayonnaise.
+  reviewer-name: Catherine Meade
+  number-of-stars: 1
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+masten-gus-fried-chicken:
+  place-id: gus-fried-chicken
+  review-text: One of my favs is Gus' World Famous Fried Chicken. The originals are in the Memphis Area but it looks like there are some franchises sprinkled around the country. My favorite location in Memphis is a converted old southern house. Great chicken, very good sides and an extremely local atmosphere.
+  reviewer-name: Masten Worley
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+leah-la-colombiana:
+  place-id: la-colombiana
+  review-text: The people working there made this food for their families for years, and then decided to open up shop to share the goodness with everyone.
+  reviewer-name: Leah Kelley
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+leah-linhs-bistro:
+  place-id: linhs-bistro
+  review-text: In my opinion, Linh's has the best pho in the Dayton area. Atmosphere is a little "meh," service from the waitresses is definitely a "meh," but I'll put up with anything for a good bowl of pho.
+  reviewer-name: Leah Kelley
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+leah-jeet-india:
+  place-id: jeet-india
+  review-text: I'd highly recommend Jeet for it's weekday lunch buffet.
+  reviewer-name: Leah Kelley
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+julie-mad-mex:
+  place-id: mad-mnex
+  review-text: Mad Mex is the Pennsylvanian interpretation of California Mexican. They have tomato-free guacamole and pineapple habanero salsa and tasty margaritas (I like The Hamilton). I usually order the Buffalo wing tacos with a side of waffle fries, because who wouldn't?
+  reviewer-name: Julie Young
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
   review-image-file-name:
   review-image-alt:

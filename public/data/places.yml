@@ -1,57 +1,13 @@
-cherry-republic:
-  place-name: Cherry Republic
-  city: Glen Arbor
-  state: MI
-  address: 6026 S Lake St
-  phone: (231) 226-3014
-  place-image: cherry-republic.jpg
-  place-image-alt: Cherry Republic
-  place-url: https://www.cherryrepublic.com/locations/glen-arbor/
-  place-website-display: www.cherryrepublic.com
-
-village-cheese-shanty:
-  place-name: Village Cheese Shanty
-  city: Leland
-  state: MI
-  address: 199 W River St
-  phone: (231) 256-9141
-  place-image: village-cheese-shanty.jpg
-  place-image-alt: Village Cheese Shanty
-  place-url: http://www.villagecheeseshanty.com/
-  place-website-display: www.villagecheeseshanty.com
-
-table-33:
-  place-name: Table 33
+2nd-street-market:
+  place-name: 2nd Street Market
   city: Dayton
   state: OH
-  address: 130 W. Second St.
-  phone: (937) 999-3070
-  place-image: table-33.jpg
-  place-image-alt: Table 33
-  place-url: http://www.table33dayton.com/
-  place-website-display: www.table33dayton.com
-
-bareburger:
-  place-name: Bareburger
-  city: Columbus
-  state: OH
-  address: 463 N. High St.
-  phone:
-  place-image: bareburger.jpg
-  place-image-alt: Bareburger
-  place-url: https://bareburger.com/
-  place-website-display: www.bareburger.com
-
-sleepy-bee-cafe:
-  place-name: Sleepy Bee Cafe
-  city: Cincinnati
-  state: OH
-  address: 3098 Madison Rd.
-  phone:
-  place-image: sleepy-bee-cafe.jpg
-  place-image-alt: Sleepy Bee Cafe
-  place-url: http://sleepybeecafe.com/
-  place-website-display: www.sleepybeecafe.com
+  address: 600 E. Second Street
+  phone: (937) 228-2088
+  place-image:
+  place-image-alt:
+  place-url: https://www.metroparks.org/places-to-go/2nd-street-market/
+  place-website-display: www.metroparks.org
 
 bagger-daves:
   place-name: Bagger Dave's Burger Tavern
@@ -64,17 +20,38 @@ bagger-daves:
   place-url: https://www.baggerdaves.com/
   place-website-display: www.baggerdaves.com
 
-gaucho:
-  place-name: Gaucho
-  city: Pittsburgh
-  state: PA
-  address: 1601 Penn Ave
-  phone: (412) 709-6622
-  place-image: gaucho-heather-1.jpeg
-  place-image-alt: Gaucho Parrilla Argentina
-  place-url: https://www.eatgaucho.com/
-  place-website-display: www.eatgaucho.com
+bareburger:
+  place-name: Bareburger
+  city: Columbus
+  state: OH
+  address: 463 N. High St.
+  phone:
+  place-image: bareburger.jpg
+  place-image-alt: Bareburger
+  place-url: https://bareburger.com/
+  place-website-display: www.bareburger.com
 
+basils-on-market:
+  place-name: Basil's on Market
+  city: Dayton
+  state: OH
+  address: 312 N Patterson Blvd
+  phone: (937) 818-4390
+  place-image:
+  place-image-alt:
+  place-url: http://www.basilsonmarket.com
+  place-website-display: www.basilsonmarket.com
+
+bourbon-street-grill:
+  place-name: Bourbon Street Grill
+  city: Dayton
+  state: OH
+  address: 1043 Brown Street
+  phone: (937) 610-0083
+  place-image:
+  place-image-alt:
+  place-url: https://www.facebook.com/BourbonSyreetGrillandCafe1043/
+  place-website-display: www.facebook.com/BourbonSyreetGrillandCafe1043
 
 canal-street-arcade-and-deli:
   place-name: Canal Street Arcade and Deli
@@ -86,3 +63,190 @@ canal-street-arcade-and-deli:
   place-image-alt: Canal Street Deli
   place-url: https://www.facebook.com/Canal-Street-Arcade-and-Deli-1752274581651410/
   place-website-display: www.facebook.com/Canal-Street-Arcade-and-Deli-1752274581651410
+
+cherry-republic:
+  place-name: Cherry Republic
+  city: Glen Arbor
+  state: MI
+  address: 6026 S Lake St
+  phone: (231) 226-3014
+  place-image: cherry-republic.jpg
+  place-image-alt: Cherry Republic
+  place-url: https://www.cherryrepublic.com/locations/glen-arbor/
+  place-website-display: www.cherryrepublic.com
+
+gaucho:
+  place-name: Gaucho
+  city: Pittsburgh
+  state: PA
+  address: 1601 Penn Ave
+  phone: (412) 709-6622
+  place-image: gaucho-heather-1.jpeg
+  place-image-alt: Gaucho Parrilla Argentina
+  place-url: https://www.eatgaucho.com/
+  place-website-display: www.eatgaucho.com
+
+ginger-and-spice:
+  place-name: Ginger & Spice
+  city: Dayton
+  state: OH
+  address: 1105 Brown Street
+  phone: (937) 716-1298
+  place-image:
+  place-image-alt:
+  place-url: http://mygingerandspice.com
+  place-website-display: www.gingerandspice.com
+
+gus-fried-chicken:
+  place-name: Gus's Fried Chicken
+  city: Memphis
+  state: TN
+  address:
+  phone:
+  place-image:
+  place-image-alt:
+  place-url: http://gusfriedchicken.com
+  place-website-display: www.gusfriedchicken.com
+
+jeet-india:
+  place-name: Jeet India
+  city: Dayton
+  state: OH
+  address: 2750 North Fairfield Road
+  phone: (937) 431-8881
+  place-image:
+  place-image-alt:
+  place-url: http://www.jeetindiadayton.com
+  place-website-display: www.jeetindiadayton.com
+
+jimmy-johns:
+  place-name: Jimmy Johns
+  city: Dayton
+  state: OH
+  address: 1157 Brown Street
+  phone: (937) 226-2600
+  place-image:
+  place-image-alt:
+  place-url: https://www.jimmyjohns.com
+  place-website-display: www.jimmyjohns.com
+
+la-colombiana:
+  place-name: La Colombiana
+  city: Dayton
+  state: OH
+  address: 2495 Commons Boulevard
+  phone: (937) 306-8096
+  place-image:
+  place-image-alt:
+  place-url: http://lacolombiana.us
+  place-website-display: www.lacolombiana.us
+
+linhs-bistro:
+  place-name: Linh's Bistro
+  city: Dayton
+  state: OH
+  address: 5532 Airway Road
+  phone: (937) 252-1857
+  place-image:
+  place-image-alt:
+  place-url: http://www.linhsbistro.com
+  place-website-display: www.linhsbistro.com
+
+lilys-bistro:
+  place-name: Lily's Bistro
+  city: Dayton
+  state: OH
+  address: 329 E Fifth Street
+  phone: (937) 723-7637
+  place-image:
+  place-image-alt:
+  place-url: http://lilysbistro.com
+  place-website-display: www.lilysbistro.com
+
+mad-mnex:
+  place-name: Mad Mex
+  city: Pittsburgh
+  state: PA
+  address:
+  phone:
+  place-image:
+  place-image-alt:
+  place-url: http://madmex.com
+  place-website-display: www.madmex.com
+
+pasha-grill:
+  place-name: Pasha Grill
+  city: Dayton
+  state: OH
+  address: 72 Plum Street
+  phone: (937) 429-9000
+  place-image:
+  place-image-alt:
+  place-url: https://www.pashagrill.com
+  place-website-display:  www.pashagrill.com
+
+sky-asian:
+  place-name: Sky Asian Cuisine
+  city: Dayton
+  state: OH
+  address: 4090 Wilmington Pike
+  phone: (937) 949-9883
+  place-image:
+  place-image-alt:
+  place-url: http://www.skyasiancuisine.com
+  place-website-display:  www.skyasiancuisine.com
+
+sleepy-bee-cafe:
+  place-name: Sleepy Bee Cafe
+  city: Cincinnati
+  state: OH
+  address: 3098 Madison Rd.
+  phone:
+  place-image: sleepy-bee-cafe.jpg
+  place-image-alt: Sleepy Bee Cafe
+  place-url: http://sleepybeecafe.com/
+  place-website-display: www.sleepybeecafe.com
+
+table-33:
+  place-name: Table 33
+  city: Dayton
+  state: OH
+  address: 130 W. Second St.
+  phone: (937) 999-3070
+  place-image: table-33.jpg
+  place-image-alt: Table 33
+  place-url: http://www.table33dayton.com/
+  place-website-display: www.table33dayton.com
+
+thai-9:
+  place-name: Thai 9
+  city: Dayton
+  state: OH
+  address: 11 Brown Street
+  phone: (937) 222-3227
+  place-image:
+  place-image-alt:
+  place-url: http://www.thai9restaurant.com
+  place-website-display: www.thai9restaurant.com
+
+village-cheese-shanty:
+  place-name: Village Cheese Shanty
+  city: Leland
+  state: MI
+  address: 199 W River St
+  phone: (231) 256-9141
+  place-image: village-cheese-shanty.jpg
+  place-image-alt: Village Cheese Shanty
+  place-url: http://www.villagecheeseshanty.com/
+  place-website-display: www.villagecheeseshanty.com
+
+zombie-dogz:
+  place-name: Zombie Dogz
+  city: Dayton
+  state: OH
+  address: 1200 Brown Street
+  phone: (937) 951-2942
+  place-image:
+  place-image-alt:
+  place-url: https://www.zombiedogzdayton.com
+  place-website-display: www.zombiedogzdayton.com
