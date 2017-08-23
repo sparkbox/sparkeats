@@ -259,10 +259,26 @@ andrew-press:
     - Espresso from Press
 
 anastasia-smoke:
-  place-id: smoke                   
+  place-id: smoke
   review-text: Smoke is by far one of my favorite restaurants. You should go to this place if you like soft tacos... and booze. The Brisket, Rib, Pork and Chicken Apple tacos are my favorites. Their queso starter and fresh chips are addicting. They have burgers on Tuesday, so be warned if you're coming in for tacos. They also make these very yummy Auga Fresca drinks.
   reviewer-name: Anastasia Lanz
   number-of-stars: 5
   dates-visited: #mm/dd/yyyy
   review-image-file-name:
   review-image-alt:
+
+lindsay-spice-island:
+  place-id: spice-island
+  review-text: Spice Island is one of my favorite restaurants in Pittsburgh. Their food is phenomenal, and encompasses flavors from Thailand to Malaysia. One of my favorite dishes to get here is either the Panang Style Curry or the Malaysian Beef Rendang. If you're looking to try something particularly interesting, I would recommend the Tea Leaf Salad. The service is also remarkably fast, so stop by if you're in the mood for a quick and amazing meal!
+  reviewer-name: Lindsay Silver
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 06/15/2017
+
+lindsay-colangelos:
+  place-id: colangelos
+  review-text: While Colangelo's offers many different types of foods, which range from pastries to pizzas to paninis, I am here to extoll the virtues of their chocolate chip cookies. These chocolate chip cookies are some of the best out there—soft, very generously sized, and they have lots of chocolate. Whether this is a lunch cookie, or a cookie you enjoy as a snack for a few days, I highly recommend Colangelo's chocolate chip cookies!
+  reviewer-name: Lindsay Silver
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 08/17/2017

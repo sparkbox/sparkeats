@@ -261,9 +261,9 @@ press:
   place-image-alt: Press
   place-url: http://www.pressdayton.com/
   place-website-display: www.pressdayton.com
-  
+
 smoke:
-  place-name: Smoke                     
+  place-name: Smoke
   city: Pittsburgh
   state: PA
   address: 4115 Butler Street
@@ -272,3 +272,23 @@ smoke:
   place-image-alt:
   place-url: https://smokepgh.com
   place-website-display: www.smokepgh.com
+
+spice-island:
+  place-name: Spice Island
+  city: Pittsburgh
+  state: PA
+  address: 253 Atwood St
+  phone: (412) 687-8821
+  place-image: spice-island.jpg
+  place-image-alt: Spice Island Restaurant
+  place-url: http://www.spiceislandteahouse.com/
+  place-website-display: www.spiceislandteahouse.com
+
+colangelos:
+  place-name: Colangelo's
+  city: Pittsburgh
+  state: PA
+  address: 207 21st St
+  phone: (412) 281-7080
+  place-image: colangelos.jpg
+  place-image-alt: Colangelos Cafe
