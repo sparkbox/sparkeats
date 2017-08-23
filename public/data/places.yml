@@ -261,3 +261,14 @@ press:
   place-image-alt: Press
   place-url: http://www.pressdayton.com/
   place-website-display: www.pressdayton.com
+  
+smoke:
+  place-name: Smoke                     
+  city: Pittsburgh
+  state: PA
+  address: 4115 Butler Street
+  phone: (412) 224-2070
+  place-image:
+  place-image-alt:
+  place-url: https://smokepgh.com
+  place-website-display: smokepgh.com
