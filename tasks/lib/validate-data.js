@@ -35,10 +35,6 @@ Themis.registerFormat('place-url-format', function (str) {
   return /^http/.test(str);
 });
 
-Themis.registerFormat('website-display-format', function (str) {
-  return /^www/.test(str);
-});
-
 // reviews custom formats
 Themis.registerFormat('dates-format', function (str) {
   return /(^((((0[13578])|([13578])|(1[02]))[/](([1-9])|([0-2][0-9])|(3[01])))|(((0[469])|([469])|(11))[/](([1-9])|([0-2][0-9])|(30)))|((2|02)[/](([1-9])|([0-2][0-9]))))[/]\d{4}$|^\d{4}$)/.test(str);
@@ -127,7 +123,6 @@ const schema = [
           oneOf: [
             {
               type: 'string',
-              format: 'website-display-format',
             },
             {
               type: 'null',
