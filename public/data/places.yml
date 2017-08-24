@@ -304,3 +304,14 @@ arsenal-cider:
   place-image-alt:
   place-url: http://www.arsenalciderhouse.com/
   place-website-display: www.arsenalciderhouse.com
+
+thai-gourmet:
+  place-name: Thai Gourmet
+  city: Pittsburgh
+  state: PA
+  address: 4505 Liberty Ave.
+  phone: (412) 681-4373
+  place-image:
+  place-image-alt:
+  place-url: http://www.facebook.com/ThaiGourmetPittsburgh/
+  place-website-display: www.facebook.com/ThaiGourmetPittsburgh/
