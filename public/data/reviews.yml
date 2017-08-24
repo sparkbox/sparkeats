@@ -292,9 +292,9 @@ anastasia-arsenal-cider:
   dates-visited: #mm/dd/yyyy
   review-image-file-name:
   review-image-alt:
-  
+
 anastasia-gaucho:
-  place-id: gaucho                
+  place-id: gaucho
   review-text: Gaucho is an Argentinian restaurant in the Strip District that has the best tasting meats and chimichurri sauce. When you order at Guacho, you'll probably end up sharing your plate. They also have these little meat pockets called empanadas. My top picks would be the steak burger or any of the steak plates (sirloin, flank, ribeye). I love meat!
   reviewer-name: Anastasia Lanz
   number-of-stars: 5
@@ -305,4 +305,3 @@ anastasia-gaucho:
     - 07/07/2017
   review-image-file-name:
   review-image-alt:
-
