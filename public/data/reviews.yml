@@ -333,3 +333,43 @@ julie-thai-9:
   dates-visited: #mm/dd/yyyy
   review-image-file-name:
   review-image-alt:
+   
+julie-casellula:
+  place-id: casellula
+  review-text: Locally sourced with a focus on small plates and cheeses. Little pricey, but the tip is included in the price and they have a strong fair treatment of workers ethos. You're eating in the Alphabet City bookstore, so if you like books and want a nice dinner out, this place is for you!   
+  reviewer-name: Julie Young
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+     - 08/04/2017
+  review-image-file-name:
+  review-image-alt:
+
+julie-the-yard:
+  place-id: the-yard
+  review-text: A restaurant that features grilled cheese sandwiches! You get a giant portion, so be hungry. The Market Squre location is right by Industrious.    
+  reviewer-name: Julie Young
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+     - 07/25/2017
+  review-image-file-name:
+  review-image-alt:
+  
+julie-bluebird-kitchen:
+  place-id: bluebird-kitchen
+  review-text: Great lunch spot by the Pittsburgh office. Try the confit chicken salad on a croissant! Skip the donuts, though - overly greasy.      
+  reviewer-name: Julie Young
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+     - 08/11/2017
+  review-image-file-name:
+  review-image-alt:
+  
+julie-earth-inspired:
+  place-id: earth-inspired
+  review-text: Also known as Salads, Salads, Salads!, this place has a lot of salads. You can create your own or go with one of their presets. I recommend romaine with edamame, carrots, corn, and sesame soba noodles with ginger dressing. Near the office!         
+  reviewer-name: Julie Young
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+     - 08/10/2017
+  review-image-file-name:
+  review-image-alt:
