@@ -282,3 +282,12 @@ lindsay-colangelos:
   number-of-stars: 5
   dates-visited: #mm/dd/yyyy
     - 08/17/2017
+
+anastasia-arsenal-cider:
+  place-id: arsenal-cider
+  review-text: Arsenal Cider House is a small civil war themed winery located in Lawrenceville that makes hard ciders and mead. A few of their ciders use different fruits like raspberry, blueberry, and pear. They also have a neat outdoor area where they sometimes have food trucks and live music. Pick up a growler and be fancy at your next tailgate!
+  reviewer-name: Anastasia Lanz
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
