@@ -293,3 +293,14 @@ colangelos:
   place-image: colangelos.jpg
   place-image-alt: Colangelos Cafe
   place-url: https://www.facebook.com/Colangelos-Bakery-Cafe-147232655431232/
+
+arsenal-cider:
+  place-name: Arsenal Cider House
+  city: Pittsburgh
+  state: PA
+  address: 300 39th Street
+  phone: (412) 682-7699
+  place-image:
+  place-image-alt:
+  place-url: http://www.arsenalciderhouse.com/
+  place-website-display: www.arsenalciderhouse.com
