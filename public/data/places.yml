@@ -315,3 +315,47 @@ thai-gourmet:
   place-image-alt:
   place-url: http://www.facebook.com/ThaiGourmetPittsburgh/
   place-website-display: www.facebook.com/ThaiGourmetPittsburgh/
+  
+casellula:
+  place-name: Casellula @ Alphabet City 
+  city: Pittsburgh
+  state: PA
+  address: 40 W. North Ave.
+  phone: (412) 226-9740
+  place-image: 
+  place-image-alt: 
+  place-url: https://www.casellulapgh.com/
+  place-website-display: www.casellulapgh.com
+  
+the-yard:
+  place-name: The Yard - Market Square
+  city: Pittsburgh
+  state: PA
+  address: 100 Fifth Ave.
+  phone: (412) 291-8182
+  place-image: 
+  place-image-alt: 
+  place-url: https://theyardpgh.com/market-square/
+  place-website-display: https://theyardpgh.com/market-square/
+  
+bluebird-kitchen
+  place-name: Bluebird Kitchen
+  city: Pittsburgh
+  state: PA
+  address: 11 Stanwix St. 
+  phone: (412) 281-4422
+  place-image: 
+  place-image-alt: 
+  place-url: http://www.bluebirdkitchen.com/
+  place-website-display: www.bluebirdkitchen.com
+  
+earth-inspired
+  place-name: Earth Inspired Salads
+  city: Pittsburgh
+  state: PA
+  address: 218 Fifth Ave.
+  phone: (412) 281-1113
+  place-image: 
+  place-image-alt: 
+  place-url: http://www.earthinspiredsalads.com/
+  place-website-display: www.earthinspiredsalads.com
