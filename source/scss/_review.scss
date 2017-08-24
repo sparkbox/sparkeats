@@ -177,30 +177,21 @@
 }
 
 .review-nav {
-  padding-left: 0;
-  margin: 0 auto;
   max-width: 58.5em;
   width: 100%;
   display: flex;
   justify-content: space-around;
   text-align: center;
   @media (min-width: 48em) {
-    display: block;
     max-width: 66.5%;
-    float: left;
-  }
-  &__button {
-    display: inline-block;
-    background-color: $color-fountain-blue;
-    width: 37%;
-    padding: 1em;
-    text-align: center;
   }
   &__link {
     @include primary-font();
+    background-color: $color-fountain-blue;
     color: $color-sparkblue-dark;
     text-decoration: none;
     font-size: 1.25em;
+    padding: 0.75em 5em;
     &:visited {
       color: $color-white;
     }
