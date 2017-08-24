@@ -303,5 +303,15 @@ anastasia-gaucho:
     - 05/23/2017
     - 07/06/2017
     - 07/07/2017
+
+julie-gaucho:
+  place-id: gaucho
+  review-text: This place gets a 3 for customer experience. The menu is written on a board on a wall (NOT ergonomic to read) and the text uses frequent, unexplained abbreviations. You generally have to wait in line, and then you have to eat quick and get out of there because lingering over a meal is frowned upon. It's also noisy and has bad lighting. I still haven't found the thing worth going back for, other than the carrots with goat cheese. Get those! You can't go wrong with ordering a steak. Some of the sandwiches are messy and overwhelming. The burger is probably your best bet if you go that direction. A lot of hype!
+  reviewer-name: Julie Young
+  number-of-stars: 3
+  dates-visited: #mm/dd/yyyy
+    - 05/01/2017
+    - 05/23/2017
+    - 07/06/2017
   review-image-file-name:
   review-image-alt:
