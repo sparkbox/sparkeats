@@ -23,6 +23,14 @@ module.exports.register = function (Handlebars) {
     return `/reviews/${placeId}.html`;
   });
 
+  Handlebars.registerHelper('getPhoneNumber', (phoneNumber) => {
+    let result;
+    if (phoneNumber) {
+      result = phoneNumber.match(/\d+/g).join([]);
+    }
+    return result;
+  });
+
   Handlebars.registerHelper('getNumberOfStars', (numberOfStars) => {
     const filledStar = '<img class="place-card__star" src="/assets/design/sparkeats_star.svg" alt="review star">';
     const halfStar = '<img class="place-card__star" src="/assets/design/sparkeats_star_half.svg" alt="review star">';

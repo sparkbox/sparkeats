@@ -77,6 +77,22 @@ describe('getReviewPageLink', () => {
   });
 });
 
+describe('getPhoneNumber', () => {
+  before(() => {
+    html = '{{getPhoneNumber phoneNumber}}';
+    template = Handlebars.compile(html);
+    result = phoneNumber => template({ phoneNumber });
+  });
+  describe('if there is a phone number', () => {
+    it ('should return a string of digits', () => {
+      expect(parseInt("result('(937) 555-5555')", 10)).to.be.a('number');
+    });
+    it ('should return the phone number as a string of numbers without the parentheses, space or dash', () => {
+      expect(result('(937) 555-5555')).to.equal('9375555555');
+    });
+  });
+});
+
 describe('getNumberOfStars', () => {
 
   const filledStar = '<img class="place-card__star" src="/assets/design/sparkeats_star.svg" alt="review star">';
@@ -185,7 +201,7 @@ describe('getReviewImageAlt', () => {
     },
     numberOfReviews: 2,
   };
-  
+
   before(() => {
     html = '{{getReviewImageAlt reviewImageName review}}';
     template = Handlebars.compile(html);
