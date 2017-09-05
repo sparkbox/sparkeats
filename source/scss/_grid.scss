@@ -6,22 +6,18 @@
   margin: 0 auto;
   padding: 0;
   @media (min-width: $bp-med-screen) {
-    //min-width: 18em;
-    max-width: 90%;
+    max-width: 95%;
     margin: 0 auto;
   }
-  @media (min-width: $bp-large-screen) {
-    max-width: 85%;
-  }
   @media (min-width: $bp-xlarge-screen) {
-    max-width: 70%;
+    max-width: 90%;
   }
 }
 
 .place-card__list {
   display: block;
   margin: 0;
-  margin: 0 auto;
+  margin: 0 1em;
   padding: 0;
   @media (min-width: $bp-small-screen) {
     @supports (display: flex) {
@@ -42,7 +38,9 @@
     list-style: none;
     vertical-align: top;
     margin: 2em auto;
-    width: 18em;
+    min-width: 18em;
+    width: 23em;
+    max-width: 100%;
     @media (min-width: $bp-small-screen) {
       @supports (display: flex) {
         margin: 2em;
