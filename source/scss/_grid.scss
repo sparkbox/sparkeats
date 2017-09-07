@@ -43,6 +43,7 @@
     max-width: 100%;
     @media (min-width: $bp-small-screen) {
       @supports (display: flex) {
+        display: flex;
         margin: 2em;
       }
       // use inline-block for browsers and devices that do not support flexbox
