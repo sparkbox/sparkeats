@@ -45,7 +45,8 @@ li:not([class]){
   letter-spacing: 0.2em;
   margin: 0 3%;
   text-align: center;
-  @media (min-width: 27em) {
+  @media (min-width: $bp-small-screen) {
+    width: 80%;
     margin: 0 auto;
   }
 }
@@ -61,7 +62,7 @@ li:not([class]){
     text-decoration: none;
     color: $color-jellybean-blue;
     border-bottom: 0.1em solid $color-jellybean-blue;
-    @media (min-width: 27em) {
+    @media (min-width: $bp-small-screen) {
       color: $color-black;
       border-bottom: none;
     }
@@ -79,7 +80,7 @@ li:not([class]){
     line-height: 1.5em;
     padding: 0.5em 1em;
     transition: all 500ms cubic-bezier(0,1.08,.65,.98);
-    @media (min-width: 21.13em) {
+    @media (min-width: $bp-small-screen) {
       font-size: 0.938em;
     }
     &:hover {
@@ -102,7 +103,7 @@ li:not([class]){
     text-align: center;
     padding-top: 3.625em;
     margin: 0.5em;
-    @media (min-width: 25em){
+    @media (min-width: $bp-small-screen){
       margin: 1em;
     }
   }
@@ -113,7 +114,7 @@ li:not([class]){
     width: 18em;
     max-width: 100%;
     height: 5em;
-    @media (min-width: 25em) {
+    @media (min-width: $bp-small-screen) {
       margin-bottom: 1em;
       width: 25em;
     }
@@ -126,9 +127,9 @@ li:not([class]){
     letter-spacing: 0.025em;
     text-align: center;
     margin: 0 13%;
-    @media (min-width: 25em) {
+    @media (min-width: $bp-small-screen) {
       font-size: 1.3em;
-      @media (min-width: 47em){
+      @media (min-width: $bp-med-screen){
         margin: 0 24%;
       }
     }
@@ -177,14 +178,14 @@ li:not([class]){
   }
   &__onethird {
     display: block;
-    @media (min-width: 42.25em){
+    @media (min-width: $bp-med-screen){
       float: left;
       width: 38%;
     }
   }
   &__twothirds {
     display: block;
-    @media (min-width: 42.25em) {
+    @media (min-width: $bp-med-screen) {
       float: right;
       width: 58%;
     }
@@ -227,13 +228,13 @@ li:not([class]){
     background-color: $color-sparkblue-light;
     text-align: left;
     margin-top: 0.5em;
-    @media (min-width: 23em) {
+    @media (min-width: $bp-small-screen) {
       width: 80%;
     }
-    @media (min-width: 30em) {
+    @media (min-width: $bp-med-screen) {
       width: 50%;
     }
-    @media (min-width: 70em) {
+    @media (min-width: $bp-large-screen) {
       width: 30%;
     }
     &:hover {
@@ -264,13 +265,13 @@ li:not([class]){
     display:none;
     box-sizing: border-box;
     margin: 0 auto;
-    @media (min-width: 23em) {
+    @media (min-width: $bp-small-screen) {
       width: 80%;
     }
-    @media (min-width: 30em) {
+    @media (min-width: $bp-med-screen) {
       width: 50%;
     }
-    @media (min-width: 70em) {
+    @media (min-width: $bp-large-screen) {
       width: 30%;
     }
 
@@ -285,7 +286,7 @@ li:not([class]){
       border-bottom-right-radius: 3px;
       border-bottom-left-radius: 3px;
       z-index: 1;
-      @media (min-width: 70em) {
+      @media (min-width: $bp-med-screen) {
         position: absolute;
         left: 0; top: 100%;
         width: 100%;
