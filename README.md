@@ -25,6 +25,7 @@ Once you are done adding your information, review, and any images you want to ad
 1. From the main repository page, click **New Pull Request**
 2. Add any additional information you think is necessary and click **Create Pull Request**
 3. **Add Assignees**: Heather Taylor and Katy Bowman.
+4. You can preview your PR on Heroku at ([https://dashboard.heroku.com/pipelines/93f65033-0319-48ac-a12b-90f092211fd8](https://dashboard.heroku.com/pipelines/93f65033-0319-48ac-a12b-90f092211fd8))
 
 Thanks for your help!
 
