@@ -258,6 +258,26 @@ andrew-press:
   review-image-alt:
     - Espresso from Press
 
+andrew-old-scratch:
+  place-id: old-scratch
+  review-text: Great neapolitan style pizza with a good selection of beers. Casual and trendy place with some nice outdoor seating for warm days. Try the Angry Beekeeper, a pizza with red sauce, mozzarella, basil, spicy salame, and honey.
+  reviewer-name: Andrew Spencer
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 03/25/2017
+  review-image-file-name:
+    - old-scratch-andrew-1.jpeg
+  review-image-alt:
+    - The Old Scratch building
+
+andrew-peace-love-and-little-donuts:
+  place-id: peace-love-and-little-donuts
+  review-text: Little donuts with all sorts of toppings in a hole-in-the-wall shop in The Strip District plus other locations around Pittsburgh and a few other cities. They have three categories of donuts from average to far our varieties like Maple Bacon or Raspberry Lemonade. You'll definitely want more than one.
+  reviewer-name: Andrew Spencer
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+    - 07/23/2017
+
 anastasia-smoke:
   place-id: smoke
   review-text: Smoke is by far one of my favorite restaurants. You should go to this place if you like soft tacos... and booze. The Brisket, Rib, Pork and Chicken Apple tacos are my favorites. Their queso starter and fresh chips are addicting. They have burgers on Tuesday, so be warned if you're coming in for tacos. They also make these very yummy Auga Fresca drinks.
@@ -318,25 +338,25 @@ julie-gaucho:
 
 julie-thai-gourmet:
   place-id: thai-gourmet
-  review-text: Great Thai food, shockingly inexpensive, friendly people. Everything is good. If you're there for dinner, get the Emerald Noodles. It's green curry, tempura vegetables, rice noodles, and salad. Yum. I also like the Nam Prik and the Chang Mai Noodles. You can't go wrong, actually. BYOB. Not to be confused with Thai Cuisine a few doors up. 
+  review-text: Great Thai food, shockingly inexpensive, friendly people. Everything is good. If you're there for dinner, get the Emerald Noodles. It's green curry, tempura vegetables, rice noodles, and salad. Yum. I also like the Nam Prik and the Chang Mai Noodles. You can't go wrong, actually. BYOB. Not to be confused with Thai Cuisine a few doors up.
   reviewer-name: Julie Young
   number-of-stars: 5
   dates-visited: #mm/dd/yyyy
   review-image-file-name:
   review-image-alt:
-  
+
 julie-thai-9:
   place-id: thai-9
-  review-text: I've eaten here three times - it's great if you're in Dayton and staying in the Oregon District, and it has a bar with a decent bottle selection. 
+  review-text: I've eaten here three times - it's great if you're in Dayton and staying in the Oregon District, and it has a bar with a decent bottle selection.
   reviewer-name: Julie Young
   number-of-stars: 4
   dates-visited: #mm/dd/yyyy
   review-image-file-name:
   review-image-alt:
-   
+
 julie-casellula:
   place-id: casellula
-  review-text: Locally sourced with a focus on small plates and cheeses. Little pricey, but the tip is included in the price and they have a strong fair treatment of workers ethos. You're eating in the Alphabet City bookstore, so if you like books and want a nice dinner out, this place is for you!   
+  review-text: Locally sourced with a focus on small plates and cheeses. Little pricey, but the tip is included in the price and they have a strong fair treatment of workers ethos. You're eating in the Alphabet City bookstore, so if you like books and want a nice dinner out, this place is for you!
   reviewer-name: Julie Young
   number-of-stars: 5
   dates-visited: #mm/dd/yyyy
@@ -346,34 +366,34 @@ julie-casellula:
 
 julie-the-yard:
   place-id: the-yard
-  review-text: A restaurant that features grilled cheese sandwiches! You get a giant portion, so be hungry. The Market Squre location is right by Industrious.    
+  review-text: A restaurant that features grilled cheese sandwiches! You get a giant portion, so be hungry. The Market Squre location is right by Industrious.
   reviewer-name: Julie Young
   number-of-stars: 4
   dates-visited: #mm/dd/yyyy
      - 07/25/2017
   review-image-file-name:
   review-image-alt:
-  
+
 julie-bluebird-kitchen:
   place-id: bluebird-kitchen
-  review-text: Great lunch spot by the Pittsburgh office. Try the confit chicken salad on a croissant! Skip the donuts, though - overly greasy.      
+  review-text: Great lunch spot by the Pittsburgh office. Try the confit chicken salad on a croissant! Skip the donuts, though - overly greasy.
   reviewer-name: Julie Young
   number-of-stars: 4
   dates-visited: #mm/dd/yyyy
      - 08/11/2017
   review-image-file-name:
   review-image-alt:
-  
+
 julie-earth-inspired:
   place-id: earth-inspired
-  review-text: Also known as Salads, Salads, Salads!, this place has a lot of salads. You can create your own or go with one of their presets. I recommend romaine with edamame, carrots, corn, and sesame soba noodles with ginger dressing. Near the office!         
+  review-text: Also known as Salads, Salads, Salads!, this place has a lot of salads. You can create your own or go with one of their presets. I recommend romaine with edamame, carrots, corn, and sesame soba noodles with ginger dressing. Near the office!
   reviewer-name: Julie Young
   number-of-stars: 5
   dates-visited: #mm/dd/yyyy
      - 08/10/2017
   review-image-file-name:
   review-image-alt:
-  
+
 anastasia-otb:
   place-id: otb
   review-text: This is one of my favorite places to eat. It's a bicycle themed bar and all of the burgers have bike related names. Lots of vegan and gluten free options too. Good beer selection and A+ pretzels and beer cheese. Get the burger called "The Banana Seat" with bacon and peanut butter wrapped bananas.
