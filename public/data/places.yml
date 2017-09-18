@@ -37,8 +37,8 @@ basils-on-market:
   state: OH
   address: 312 N Patterson Blvd
   phone: (937) 818-4390
-  place-image:
-  place-image-alt:
+  place-image: basils-on-market.jpg
+  place-image-alt: Basil's Cocktail
   place-url: http://www.basilsonmarket.com
   place-website-display: www.basilsonmarket.com
 
@@ -75,6 +75,17 @@ cherry-republic:
   place-url: https://www.cherryrepublic.com/locations/glen-arbor/
   place-website-display: www.cherryrepublic.com
 
+cocos-bistro:
+  place-name: Coco's Bistro
+  city: Dayton
+  state: OH
+  address: 250 Warren St
+  phone: (937) 228-2626
+  place-image: cocos-bistro.jpg
+  place-image-alt: Coco's Bistro
+  place-url: http://www.228coco.com/
+  place-website-display: www.228coco.com
+
 gaucho:
   place-name: Gaucho
   city: Pittsburgh
@@ -92,8 +103,8 @@ ginger-and-spice:
   state: OH
   address: 1105 Brown Street
   phone: (937) 716-1298
-  place-image:
-  place-image-alt:
+  place-image: ginger-and-spice.jpg
+  place-image-alt: Ginger & Spice Chicken
   place-url: http://mygingerandspice.com
   place-website-display: www.gingerandspice.com
 
@@ -114,8 +125,8 @@ jeet-india:
   state: OH
   address: 2750 North Fairfield Road
   phone: (937) 431-8881
-  place-image:
-  place-image-alt:
+  place-image: jeet-india.jpg
+  place-image-alt: Jeet India
   place-url: http://www.jeetindiadayton.com
   place-website-display: www.jeetindiadayton.com
 
@@ -129,6 +140,17 @@ jimmy-johns:
   place-image-alt:
   place-url: https://www.jimmyjohns.com
   place-website-display: www.jimmyjohns.com
+
+kaminskys-dessert-cafe:
+  place-name: Kaminsky's Dessert Cafe
+  city: Columbia
+  state: SC
+  address: 930 Gervais Street
+  phone: (803) 550-9979
+  place-image: kaminskys-dessert-cafe.jpg
+  place-image-alt: Kaminsky's Dessert Cafe
+  place-url: http://www.kaminskys.com/home
+  place-website-display: www.kaminskys.com
 
 la-colombiana:
   place-name: La Colombiana
@@ -158,8 +180,8 @@ lilys-bistro:
   state: OH
   address: 329 E Fifth Street
   phone: (937) 723-7637
-  place-image:
-  place-image-alt:
+  place-image: lilys-bistro.jpg
+  place-image-alt: Lily's fried chicken
   place-url: http://lilysbistro.com
   place-website-display: www.lilysbistro.com
 
@@ -207,6 +229,28 @@ peace-love-and-little-donuts:
   place-image-alt: Donuts from Peace Love and Little Donuts
   place-url: https://www.peaceloveandlittledonuts.com/
   place-website-display:  peaceloveandlittledonuts.com
+
+pho-mi:
+  place-name: Pho Mi
+  city: Dayton
+  state: OH
+  address: 8990 Kingsridge Dr
+  phone: (937) 433-7388
+  place-image: pho-mi.jpg
+  place-image-alt: Pho at Pho Mi
+  place-url: http://www.pho-mi.com/1.html
+  place-website-display:  pho-mi.com
+
+press:
+  place-name: Press
+  city: Dayton
+  state: OH
+  address: 257 Wayne Ave
+  phone: (937) 286-4585
+  place-image: press.jpg
+  place-image-alt: Press
+  place-url: http://www.pressdayton.com/
+  place-website-display: www.pressdayton.com
 
 sky-asian:
   place-name: Sky Asian Cuisine
@@ -263,6 +307,17 @@ village-cheese-shanty:
   place-url: http://www.villagecheeseshanty.com/
   place-website-display: www.villagecheeseshanty.com
 
+yellow-cab-food-truck-rally:
+  place-name: Yellow Cab Food Truck Rally
+  city: Dayton
+  state: OH
+  address: 700 E 4th St
+  phone:
+  place-image: yellow-cab-food-truck-rally.jpg
+  place-image-alt: Yello Cab - The Drunken Waffle
+  place-url: https://www.facebook.com/yellowcabfoodtrucks/
+  place-website-display: facebook.com/yellowcabfoodtrucks
+
 zombie-dogz:
   place-name: Zombie Dogz
   city: Dayton
@@ -273,17 +328,6 @@ zombie-dogz:
   place-image-alt:
   place-url: https://www.zombiedogzdayton.com
   place-website-display: www.zombiedogzdayton.com
-
-press:
-  place-name: Press
-  city: Dayton
-  state: OH
-  address: 257 Wayne Ave
-  phone: (937) 286-4585
-  place-image: press.jpg
-  place-image-alt: Press
-  place-url: http://www.pressdayton.com/
-  place-website-display: www.pressdayton.com
 
 smoke:
   place-name: Smoke
@@ -393,3 +437,14 @@ otb:
   place-image-alt:
   place-url: http://www.otbbicyclecafe.com
   place-website-display: www.otbbicyclecafe.com
+
+shake-shack:
+  place-name: Shake Shack
+  city: Boston
+  state: MA
+  address: 234 Newbury St
+  phone: (617) 933-5050
+  place-image: shake-shack.jpg
+  place-image-alt: Shake Shack
+  place-url: https://www.shakeshack.com/location/newbury-street-boston-ma/
+  place-website-display: www.shakeshack.com

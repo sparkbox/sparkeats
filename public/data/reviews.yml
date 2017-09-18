@@ -136,6 +136,64 @@ emily-2nd-street-market:
   review-image-file-name:
   review-image-alt:
 
+catherine-cocos-bistro:
+  place-id: cocos-bistro
+  review-text: Cocos is the defacto place for the Sparkbox Holiday Party. It's a bit pricey, but the food is always good. I enjoy the romantic atmosphere, and you do get a large portion.
+  reviewer-name: Catherine Meade
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - cocos-bistro-catherine-1.jpg
+  review-image-alt:
+    - A big steak at Cocos
+
+catherine-shake-shack:
+  place-id: shake-shack
+  review-text: All of the Shake Shacks are pretty great. It's a small burger (I could eat two, easy), but their shakes are top notch, and cheese fries are yum. This image is from Washington, D.C., and I've put the location as Boston, because I think that is where folks are most likely to end up.
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+    - 04/14/2017
+  review-image-file-name:
+    - shake-shack-catherine-1.jpg
+  review-image-alt:
+    - Shake Shack
+
+catherine-yellow-cab-food-truck-rally:
+  place-id: yellow-cab-food-truck-rally
+  review-text: Food truck rallys happen once a month at the Old Yellow Cab building downtown. The trucks change, and there isn't much seating. It is a fun thing to do on a Friday for dinner, and if the Ramen Rickshaw is there, don't miss!
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - yellow-cab-food-truck-rally-catherine-1.jpg
+  review-image-alt:
+    - The Drunken Waffle
+
+catherine-kaminskys:
+  place-id: kaminskys-dessert-cafe
+  review-text: While at ConvergeSE, I went to Kaminsky's three days in a row. The only true 5 star I can give.
+  reviewer-name: Catherine Meade
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - kaminskys-dessert-cafe-catherine-1.jpg
+    - kaminskys-dessert-cafe-catherine-2.jpg
+  review-image-alt:
+    - Berry Cake at Kaminsys
+    - Coffee at Kaminskys
+
+catherine-pho-mi:
+  place-id: pho-mi
+  review-text: Pho Mi is by the Dayton Mall, and pretty good for Pho, but not as good as the other pho places in the area. You're probably better to go to What-da-Pho or Lihn's Bistro, but Pho Mi still hits that pho spot.
+  reviewer-name: Catherine Meade
+  number-of-stars: 3
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - pho-mi-catherine-1.jpg
+  review-image-alt:
+    - Spicy Pho
+
 catherine-lilys-bistro:
   place-id: lilys-bistro
   review-text: Lily's is my favorite place to eat in Dayton! While a little pricey (Croftcheck and I don't get out of there under $60), everything on their menu is good. Everything. EVERYTHING. Try it out for weekend brunch, but call ahead! Every Wednesday is punch night!
@@ -143,7 +201,9 @@ catherine-lilys-bistro:
   number-of-stars: 5
   dates-visited: #mm/dd/yyyy
   review-image-file-name:
+    - lilys-bistro-catherine-1.jpg
   review-image-alt:
+    - Punch Night at Lily's
 
 catherine-ginger-and-spice:
   place-id: ginger-and-spice
@@ -152,7 +212,20 @@ catherine-ginger-and-spice:
   number-of-stars: 5
   dates-visited: #mm/dd/yyyy
   review-image-file-name:
+    - ginger-and-spice-catherine-1.jpg
   review-image-alt:
+    - Bubble Tea!
+
+catherine-jeet-india:
+  place-id: jeet-india
+  review-text: Finally, good Indian food in the Dayton area! The wait staff are extremely polite, and they'll bring you more rice for free (even just to take home).
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - jeet-india-catherine-1.jpg
+  review-image-alt:
+    - Jeet India
 
 catherine-thai-9:
   place-id: thai-9
@@ -181,14 +254,16 @@ catherine-bourbon-street-grill:
   review-image-file-name:
   review-image-alt:
 
-catherine-basils:
+catherine-basils-on-market:
   place-id: basils-on-market
   review-text: I have been to Basil's ... 5 or so times now, and I've never been wholly impressed. Their space is beautiful, I love the Peach Mojito and their fries. I had a fantastic salmon salad. Everything else? Kinda meh. A little to pricey for the quality. Also, they always give me Diet Coke when I ask for regular.
   reviewer-name: Catherine Meade
   number-of-stars: 3
   dates-visited: #mm/dd/yyyy
   review-image-file-name:
+    - basils-on-market-catherine-1.jpg
   review-image-alt:
+    - Happy Hour apps at Basils
 
 catherine-jimmy-johns:
   place-id: jimmy-johns
