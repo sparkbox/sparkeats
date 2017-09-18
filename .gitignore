@@ -6,7 +6,6 @@ dist/
 # Local development
 *.env
 *.dev
-*.css
 *.map
 *.html
 
