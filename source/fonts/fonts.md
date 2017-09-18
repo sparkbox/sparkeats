@@ -1,3 +1,0 @@
-# Font sources
-
-typography.com
