@@ -51,6 +51,7 @@
     "glob": "^7.1.1",
     "globby": "^6.1.0",
     "handlebars": "^4.0.8",
+    "heroku-ssl-redirect": "^0.0.4",
     "marshmallows": "^0.1.1",
     "mkdirp": "^0.5.1",
     "mocha": "^3.4.2",
