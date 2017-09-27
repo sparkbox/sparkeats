@@ -41,7 +41,9 @@ heather-basils:
   number-of-stars: 4
   dates-visited: #mm/dd/yyyy
   review-image-file-name:
+    - basils-heather.png
   review-image-alt:
+    - Basil's Market Toss Salad
 
 heather-bourbon-street-grill:
   place-id: bourbon-street-grill
