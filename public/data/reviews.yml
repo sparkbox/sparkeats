@@ -274,6 +274,20 @@ catherine-jimmy-johns:
   review-image-file-name:
   review-image-alt:
 
+catherine-linhs-bistro:
+  place-id: linhs-bistro
+  review-text: Linh's is just okay. Their pho was very hot, and came out fast, but tasted kind of like plain beef broth. They didn't serve it with basil or lemongrass, like most pho places, and their service was garbage. The iced coffee was good! They have a very full Chinese menu, as well. It's acceptable for downtown, but I'll probably make the drive to What Da Pho in Beavercreek if I really want Pho.
+  reviewer-name: Catherine Meade
+  number-of-stars: 3
+  dates-visited: #mm/dd/yyyy
+    - 09/21/2017
+  review-image-file-name:
+    - linhs-bistro-catherine-1.jpg
+    - linhs-bistro-catherine-2.jpg
+  review-image-alt:
+    - A bowl of spicy pork and beef soup
+    - A bowl of Pho Bo Tai
+
 masten-gus-fried-chicken:
   place-id: gus-fried-chicken
   review-text: One of my favs is Gus' World Famous Fried Chicken. The originals are in the Memphis Area but it looks like there are some franchises sprinkled around the country. My favorite location in Memphis is a converted old southern house. Great chicken, very good sides and an extremely local atmosphere.

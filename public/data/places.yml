@@ -169,8 +169,8 @@ linhs-bistro:
   state: OH
   address: 5532 Airway Road
   phone: (937) 252-1857
-  place-image:
-  place-image-alt:
+  place-image: linhs-bistro.jpg
+  place-image-alt: A bowl of pho from Linh's
   place-url: http://www.linhsbistro.com
   place-website-display: www.linhsbistro.com
 
