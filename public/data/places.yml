@@ -448,3 +448,15 @@ shake-shack:
   place-image-alt: Shake Shack
   place-url: https://www.shakeshack.com/location/newbury-street-boston-ma/
   place-website-display: www.shakeshack.com
+  
+  
+nicholas-coffee:
+  place-name: Nicholas Coffee & Tea Co.
+  city: Pittsburgh
+  state: PA
+  address: 23 Market Square
+  phone: (412) 261-4225
+  place-image:
+  place-image-alt:
+  place-url: http://www.nicholascoffee.us/
+  place-website-display: http://www.nicholascoffee.us/
