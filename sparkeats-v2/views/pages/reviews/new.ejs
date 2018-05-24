@@ -1,0 +1,55 @@
+<h1>New Review</h1>
+<p>GET /review</p>
+
+<form class="new-review" method="post" action="/review">
+  <fieldset>
+    <label for="visitorName">Visitor Name</label>
+    <input type="text" name="visitorName">
+  </fieldset>
+
+  <fieldset>
+    <label for="experience">Experience</label>
+    <textarea name="experience"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>Rating</legend>
+    <ul class="new-review__rating-stars">
+      <li class="new-review__rating-star">
+        <label for="rating" for="rating-1 ">
+          1
+          <!-- <img src="/.tmp/public/images/star-open.svg" alt="Open star"> -->
+        </label>
+        <input type="radio" name="rating" id="rating-1" value="1 ">
+      </li>
+      <li>
+        <label for="rating" for="rating-2 ">2</label>
+        <input type="radio" name="rating" value="2 ">
+      </li>
+      <li>
+        <label for="rating" for="rating-3 ">3</label>
+        <input type="radio" name="rating" value="3 ">
+      </li>
+      <li>
+        <label for="rating" for="rating-4 ">4</label>
+        <input type="radio" name="rating" value="4 ">
+      </li>
+      <li>
+        <label for="rating" for="rating-5 ">5</label>
+        <input type="radio" name="rating" value="5 ">
+      </li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <label for="visitedAt">Visited</label>
+    <input type="date" name="visitedAt">
+  </fieldset>
+
+  <fieldset>
+    <label for="image">Image</label>
+    <input type="file" name="image" accept="image/*">
+  </fieldset>
+
+  <input type="submit" value="Submit">
+</form>
