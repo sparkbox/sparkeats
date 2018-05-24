@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>New Sails App</title>
 
-    <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+  <title>New Sails App</title>
+
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-    <!--
+  <!--
         Stylesheets and Preprocessors
         ==============================
 
@@ -28,12 +29,13 @@
             + Use a different or additional preprocessor, like SASS, SCSS or Stylus
     -->
 
-    <!--STYLES-->
-    <!--STYLES END-->
-  </head>
+  <!--STYLES-->
+  <link rel="stylesheet" href="/styles/importer.css">
+  <!--STYLES END-->
+</head>
 
-  <body>
-    <%- body %>
+<body>
+  <%- body %>
 
 
 
@@ -59,6 +61,7 @@
     -->
 
     <!--TEMPLATES-->
+
     <!--TEMPLATES END-->
 
 
@@ -102,6 +105,8 @@
     -->
 
     <!--SCRIPTS-->
+    <script src="/dependencies/sails.io.js"></script>
     <!--SCRIPTS END-->
-  </body>
+</body>
+
 </html>
