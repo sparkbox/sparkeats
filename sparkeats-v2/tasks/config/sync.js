@@ -11,14 +11,15 @@
  *
  */
 module.exports = function(grunt) {
-
-  grunt.config.set('sync', {
+  grunt.config.set("sync", {
     dev: {
-      files: [{
-        cwd: './assets',
-        src: ['**/*.!(coffee|less)'],
-        dest: '.tmp/public'
-      }]
+      files: [
+        {
+          cwd: "./assets",
+          src: ["**/*.!(coffee|less|scss|sass)"],
+          dest: ".tmp/public"
+        }
+      ]
     }
   });
 
@@ -45,5 +46,4 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-sync');
   // ```
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 };
