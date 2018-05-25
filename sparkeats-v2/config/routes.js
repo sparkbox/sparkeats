@@ -22,10 +22,9 @@ module.exports.routes = {
    *                                                                          *
    ***************************************************************************/
 
-  "/": {
-    view: "pages/homepage"
-  },
-  "GET /review": "ReviewsController.new"
+  "GET /": "ReviewsController.list",
+  "GET /review": "ReviewsController.new",
+  "POST /review": "ReviewsController.create"
 
   /***************************************************************************
    *                                                                          *
