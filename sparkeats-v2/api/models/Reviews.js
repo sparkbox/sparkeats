@@ -7,24 +7,27 @@
 
 module.exports = {
   attributes: {
-    visitorName: {
+    reviewText: {
       type: "string",
-      required: true
+      required: true,
     },
-    experience: {
+    reviewerName: {
       type: "string",
-      required: true
+      unique: true,
+      required: true,
     },
-    rating: {
+    numberOfStars: {
       type: "number",
-      required: true
+      isInteger: true,
+      min: 1,
+      max: 5,
+      required: true,
     },
-    visitedAt: {
+    dateVisited: {
       type: "string",
-      required: true
     },
-    imageName: {
-      type: "string"
+    reviewImageFileName: {
+      type: "string",
     }
   }
 };
