@@ -18,10 +18,10 @@ module.exports = {
     res.view("pages/reviews/new");
   },
   create: (req, res) => {
-    const { visitorName, experience, visitedAt, imageName } = req.body;
-    const rating = parseInt(req.body.rating, 10);
+    const { reviewerName, reviewText, dateVisited, reviewImageFileName } = req.body;
+    const numberOfStars = parseInt(req.body.numberOfStars, 10);
 
-    Reviews.create({ visitorName, experience, rating, visitedAt, imageName }).exec(
+    Reviews.create({ reviewerName, reviewText, dateVisited, reviewImageFileName, numberOfStars }).exec(
       err => {
         if (err) {
           res.send(500, { error: "Database Error" });
