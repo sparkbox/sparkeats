@@ -6,12 +6,13 @@
  */
 
 module.exports = {
-  list: (req, res) => {
+  reviews: (req, res) => {
     Reviews.find({}).exec((err, reviews) => {
       if (err) {
-        return res.send(500, { error: "Database Error" });
+        return res.serverError(err);
       }
-      return res.view("pages/homepage", { reviews });
+
+      return res.view("pages/reviews/reviews", { reviews });
     });
   },
   new: (req, res) => {
@@ -23,11 +24,15 @@ module.exports = {
 
     Reviews.create({ reviewerName, reviewText, dateVisited, reviewImageFileName, numberOfStars }).exec(
       err => {
-        if (err) {
-          return res.send(500, { error: "Database Error" });
+        if (err && err.code === 'E_UNIQUE') {
+          return res.sendStatus(409);
+        } else if (err && err.name === 'UsageError') {
+          return res.badRequest();
+        } else if (err) {
+          return res.serverError(err);
         }
 
-        return res.redirect("/");
+        return res.redirect("/reviews");
       }
     );
   }

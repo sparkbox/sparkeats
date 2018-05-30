@@ -1,0 +1,45 @@
+<h1>Reviews</h1>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Review text</th>
+      <th>Reviewer name</th>
+      <th>Number of stars</th>
+      <th>Date visited</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% reviews.forEach(review => { %>
+      <tr>
+        <td>
+          <%= review.id %>
+        </td>
+        <td>
+          <%= review.reviewText %>
+        </td>
+        <td>
+          <%= review.reviewerName %>
+        </td>
+        <td>
+          <%= review.numberOfStars %>
+        </td>
+        <td>
+          <%= review.dateVisited %>
+        </td>
+        <td>
+          <%= review.reviewImageFileName %>
+        </td>
+        <!-- <td>
+          <a href="/reviews/edit/<%= review.id %>">Edit</a>
+          <form method="delete" action="/reviews/destroy/<%= review.id %>">
+            <form method="delete" action="/reviews">
+              <input type="hidden" name="id" value="<%= review.id %>">
+              <input type="submit" value="Delete">
+            </form>
+        </td> -->
+      </tr>
+      <% }) %>
+  </tbody>
+</table>
