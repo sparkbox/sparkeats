@@ -24,11 +24,17 @@ module.exports = {
 
     Reviews.create({ reviewerName, reviewText, dateVisited, reviewImageFileName, numberOfStars }).exec(
       err => {
-        if (err && err.code === 'E_UNIQUE') {
-          return res.sendStatus(409);
-        } else if (err && err.name === 'UsageError') {
-          return res.badRequest();
-        } else if (err) {
+        if (err) {
+          const { code, name } = err;
+
+          if (code === 'E_UNIQUE') {
+            return res.sendStatus(409);
+          }
+
+          if (name === 'UsageError') {
+            return res.badRequest();
+          }
+
           return res.serverError(err);
         }
 
