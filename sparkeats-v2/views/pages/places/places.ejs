@@ -1,0 +1,20 @@
+<% places.forEach(place => { %>
+  <header class="place-card__header">
+    <a href="{{getReviewPageLink place-id}}">
+      <img class="place-card__image" src="<%= place.placeImageName %>" alt="<%= place.placeImageAlt %>"/>
+    </a>
+  </header>
+
+  <h1 class="place-card__name">
+    <a class="place-card__name-link"><%= place.placeName %></a>
+  </h1>
+  <h2 class="place-card__city"><%= place.city %>, <%= place.state %></h2> 
+
+  <address class="sparkeats-address">
+    <p><%= place.address %></p>
+    <p><a class="sparkeats-address__phone" href="tel:<%= place.phone %>"><%= place.phone %></a></p>
+  </address>
+  <div class="sparkeats-address__url">
+    <a class="sparkeats-address__url-link" href="<%= place.placeUrl %>">Visit Site</a>
+  </div>  
+<% }) %>
