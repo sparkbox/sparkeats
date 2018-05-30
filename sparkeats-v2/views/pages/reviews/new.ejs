@@ -1,52 +1,74 @@
-<h1>Add Review</h1>
-<p>GET /review</p>
+<form class="form" method="post" action="/review">
+  <section class="form__heading">
+    <h1 class="form__title">Review</h1>
+    <small class="form__required-field">
+      <span class="form__required-oval"></span> Required Field</small>
+  </section>
 
-<form class="new-review" method="post" action="/review">
-  <fieldset>
-    <label for="reviewerName">Your Name</label>
-    <input type="text" name="reviewerName">
+  <fieldset class="form__field">
+    <label class="form__label" for="reviewerName">
+      <span class="form__required-oval">
+      </span>
+      Your Name
+    </label>
+    <input class="form__input" type="text" name="reviewerName" placeholder="Your Name">
   </fieldset>
 
-  <fieldset>
-    <label for="reviewText">How was it?</label>
-    <textarea name="reviewText"></textarea>
-  </fieldset>
-
-  <fieldset>
-    <legend>Rating</legend>
-    <ul class="new-review__rating-stars">
-      <li class="new-review__rating-star">
-        <label for="numberOfStars" for="rating-1 ">1</label>
-        <input type="radio" name="numberOfStars" id="rating-1" value="1 ">
+  <fieldset class="form__field form__rating">
+    <legend class="form__legend">
+      <span class="form__required-oval"></span>
+      Rating
+    </legend>
+    <ul class="form__ratings">
+      <li class="form__rating">
+        <label class="form__rating-label">
+          <input class="form__input form__radio-input" type="radio" name="rating" value="1">
+          <span class="form__rating-circle"></span>
+          1 Star
+        </label>
       </li>
-      <li>
-        <label for="numberOfStars" for="rating-2 ">2</label>
-        <input type="radio" name="numberOfStars" value="2 ">
+      <li class="form__rating">
+        <label class="form__rating-label">
+          <input class="form__input form__radio-input" type="radio" name="rating" value="2 ">
+          <span class="form__rating-circle"></span>
+          2 Stars</label>
       </li>
-      <li>
-        <label for="numberOfStars" for="rating-3 ">3</label>
-        <input type="radio" name="numberOfStars" value="3 ">
+      <li class="form__rating">
+        <label class="form__label-rating">
+          <input class="form__input form__radio-input" type="radio" name="rating" value="3">
+          <span class="form__rating-circle"></span>
+          3 Stars
+        </label>
       </li>
-      <li>
-        <label for="numberOfStars" for="rating-4 ">4</label>
-        <input type="radio" name="numberOfStars" value="4 ">
+      <li class="form__rating">
+        <label class="form__label--rating">
+          <input class="form__input form__radio-input" type="radio" name="rating" value="4 ">
+          <span class="form__rating-circle"></span>
+          4 Stars
+        </label>
       </li>
-      <li>
-        <label for="numberOfStars" for="rating-5 ">5</label>
-        <input type="radio" name="numberOfStars" value="5 ">
+      <li class="form__rating">
+        <label>
+          <input class="form__input form__radio-input" type="radio" name="rating" value="5">
+          <span class="form__rating-circle"></span>
+          5 Stars
+        </label>
       </li>
     </ul>
   </fieldset>
 
-  <fieldset>
-    <label for="dateVisited">Date visited</label>
-    <input type="date" name="dateVisited">
+  <fieldset class="form__field">
+    <label class="form__label" for="reviewText">
+      <span class="form__required-oval"></span>
+      How Was It?
+    </label>
+    <textarea class="form__text-area" name="reviewText"></textarea>
   </fieldset>
 
-  <fieldset>
-    <label for="reviewImageFileName">Add an image to your review (max XXX MB)</label>
-    <input type="file" name="reviewImageFileName" accept="image/*">
+  <fieldset class="form__field">
+    <label class="form__label" for="reviewImageFileName">Add an image to your review (max XXX MB)</label>
+    <input class="form__file-input" type="file" name="reviewImageFileName " accept="image/*" aria-label="Upload Image">
   </fieldset>
 
-  <input type="submit" value="Submit">
+  <input class="form__submit-input" type="submit" value="Submit">
 </form>
