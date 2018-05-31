@@ -1,74 +1,67 @@
 <form class="form" method="post" action="/review">
   <section class="form__heading">
-    <h1 class="form__title">Review</h1>
-    <small class="form__required-field">
-      <span class="form__required-oval"></span> Required Field</small>
+    <h2 class="form__title">Review</h2>
+    <span class="form__required-key form__required-indicator">Required Field</span>
   </section>
 
-  <fieldset class="form__field">
-    <label class="form__label" for="reviewerName">
-      <span class="form__required-oval">
-      </span>
-      Your Name
-    </label>
-    <input class="form__input" type="text" name="reviewerName" placeholder="Your Name">
-  </fieldset>
+  <div class="form__field form__required-indicator">
+    <label class="form__label" for>Your Name</label>
+    <input id class="form__input" type="text" name="reviewerName" aria-label="Your Name (required)" placeholder="Your Name">
+  </div>
 
-  <fieldset class="form__field form__rating">
-    <legend class="form__legend">
-      <span class="form__required-oval"></span>
-      Rating
-    </legend>
+  <fieldset class="form__field">
+    <legend class="form__legend form__required-indicator">Rating</legend>
+
     <ul class="form__ratings">
+
       <li class="form__rating">
-        <label class="form__rating-label">
-          <input class="form__input form__radio-input" type="radio" name="rating" value="1">
-          <span class="form__rating-circle"></span>
-          1 Star
-        </label>
+        <input id="rating-1" class="form__input form__input--radio" type="radio" name="rating" value="1">
+        <label class="form__label form__label--rating" for="rating-1">1 Star</label>
       </li>
+
       <li class="form__rating">
-        <label class="form__rating-label">
-          <input class="form__input form__radio-input" type="radio" name="rating" value="2 ">
-          <span class="form__rating-circle"></span>
-          2 Stars</label>
+        <input id="rating-2" class="form__input form__input--radio" type="radio" name="rating" value="2">
+        <label class="form__label form__label--rating" for="rating-2">2 Stars</label>
       </li>
+
       <li class="form__rating">
-        <label class="form__label-rating">
-          <input class="form__input form__radio-input" type="radio" name="rating" value="3">
-          <span class="form__rating-circle"></span>
-          3 Stars
-        </label>
+        <input id="rating-3" class="form__input form__input--radio" type="radio" name="rating" value="3">
+        <label class="form__label form__label--rating" for="rating-3">3 Stars</label>
       </li>
+
       <li class="form__rating">
-        <label class="form__label--rating">
-          <input class="form__input form__radio-input" type="radio" name="rating" value="4 ">
-          <span class="form__rating-circle"></span>
-          4 Stars
-        </label>
+        <input id="rating-4" class="form__input form__input--radio" type="radio" name="rating" value="4">
+        <label class="form__label form__label--rating" for="rating-4">4 Stars</label>
       </li>
+
       <li class="form__rating">
-        <label>
-          <input class="form__input form__radio-input" type="radio" name="rating" value="5">
-          <span class="form__rating-circle"></span>
-          5 Stars
-        </label>
+        <input id="rating-5" class="form__input form__input--radio" type="radio" name="rating" value="5">
+        <label class="form__label form__label--rating" for="rating-5">5 Stars</label>
       </li>
     </ul>
   </fieldset>
 
-  <fieldset class="form__field">
-    <label class="form__label" for="reviewText">
-      <span class="form__required-oval"></span>
-      How Was It?
-    </label>
-    <textarea class="form__text-area" name="reviewText"></textarea>
-  </fieldset>
+  <div class="form__field">
+    <label class="form__label form__required-indicator">How Was It?</label>
+    <textarea class="form__text-area" name="reviewText" rows="5"></textarea>
+  </div>
 
   <fieldset class="form__field">
-    <label class="form__label" for="reviewImageFileName">Add an image to your review (max XXX MB)</label>
-    <input class="form__file-input" type="file" name="reviewImageFileName " accept="image/*" aria-label="Upload Image">
+    <legend class="form__legend">Add an image to your review (max XX MB).</legend>
+
+    <div class="form__buttons">
+      <label class="form__label--button" for="image-upload">
+        <input id="image-upload" class="form__file-input" type="file" name="reviewImageFileName" accept="image/*" aria-label="Upload Image">
+        <span class="button--secondary">Upload Image</span>
+      </label>
+
+      <label class="form__label--button" for="take-photo">
+        <input id="take-photo" class="form__file-input" type="file" name="reviewImageFileName" accept=accept="image/*" capture="user"
+          aria-label="Take Photo">
+        <span class="button--secondary">Take Photo</span>
+      </label>
+    </div>
   </fieldset>
 
-  <input class="form__submit-input" type="submit" value="Submit">
+  <input class="form__submit button--primary" type="submit" value="Submit">
 </form>
