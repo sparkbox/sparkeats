@@ -57,24 +57,15 @@
   color: #1C4C55;
   font-size: 1rem;
   font-weight: bold;
-  margin: 0 0 2.75rem 0;
+  margin-bottom: 2.75rem;
 }
 
 .form__label, .form__legend {
-  display: inline-block;
   margin-bottom: 0.75rem;
 }
 
-.form__label--button {
-  flex-grow: 1;
-  display: inline-block;
-}
-.form__label--button:nth-child(even) {
-  margin-left: 0.5rem;
-}
-
-.form__label--button:nth-child(odd) {
-  margin-right: 0.5rem;
+.form__label {
+  display: block;
 }
 
 .form__input, .form__text-area {
@@ -135,7 +126,6 @@
 }
 
 .form__input--radio {
-  // width: 0;
   position: absolute;
   opacity: 0;
 }
@@ -174,12 +164,21 @@
 
 .form__file-input {
   position: absolute;
+  opacity: 0;
   padding: 1rem;
-  top: auto;
-  width: 45%;
-  height: 25%;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+  &:hover + .button--secondary {
+    color: white;
+    background-color: #3E7E8E;
+  }
+  &:focus + .button--secondary {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color; 
+  }
+}
+
+
+.form__file-name {
+  height: 1rem;
 }
 
 // BUTTONS
@@ -189,21 +188,19 @@
   justify-content: space-between;
 }
 
+.form__label--button {
+  display: none;
+}
+
 .button--secondary {
-  width: 100%;
-  display: inline-block;
   cursor: pointer;
   color: #3E7E8E;
   border: 2px solid #3E7E8E;
   font-size: 1rem;
+  display: inline-block;
   font-weight: bold;
-  padding: 1rem 0;
+  padding: 1rem;
   text-align: center;
-  &:hover,
-  &:focus {
-    color: white;
-    background-color: #3E7E8E;
-  }
 }
 
 .button--primary {
@@ -222,3 +219,30 @@
     background-color: #337281;
   }
 }
+
+.form__field--file {
+  display: none;
+}
+
+.form__file {
+  margin: 1rem 0;
+}
+
+.form__remove-file {
+  border: none;
+  padding: 0;
+  color: black;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: normal;
+  vertical-align: sub;
+  margin-left: 0.5rem;
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.form__label--image-alt {
+  position: relative;
+}
+

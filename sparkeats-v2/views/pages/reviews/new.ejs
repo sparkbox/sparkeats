@@ -1,67 +1,66 @@
-<form class="form" method="post" action="/review">
-  <section class="form__heading">
-    <h2 class="form__title">Review</h2>
-    <span class="form__required-key form__required-indicator">Required Field</span>
-  </section>
+<% block('localScripts', '<script src="/js/local/showFile.js"></script>') %>
 
-  <div class="form__field form__required-indicator">
-    <label class="form__label" for>Your Name</label>
-    <input id class="form__input" type="text" name="reviewerName" aria-label="Your Name (required)" placeholder="Your Name">
-  </div>
+  <form class="form" method="post" action="/review">
+    <section class="form__heading">
+      <h2 class="form__title">Review</h2>
+      <span class="form__required-key form__required-indicator">Required Field</span>
+    </section>
 
-  <fieldset class="form__field">
-    <legend class="form__legend form__required-indicator">Rating</legend>
-
-    <ul class="form__ratings">
-
-      <li class="form__rating">
-        <input id="rating-1" class="form__input form__input--radio" type="radio" name="numberOfStars" value="1">
-        <label class="form__label form__label--rating" for="rating-1">1 Star</label>
-      </li>
-
-      <li class="form__rating">
-        <input id="rating-2" class="form__input form__input--radio" type="radio" name="numberOfStars" value="2">
-        <label class="form__label form__label--rating" for="rating-2">2 Stars</label>
-      </li>
-
-      <li class="form__rating">
-        <input id="rating-3" class="form__input form__input--radio" type="radio" name="numberOfStars" value="3">
-        <label class="form__label form__label--rating" for="rating-3">3 Stars</label>
-      </li>
-
-      <li class="form__rating">
-        <input id="rating-4" class="form__input form__input--radio" type="radio" name="numberOfStars" value="4">
-        <label class="form__label form__label--rating" for="rating-4">4 Stars</label>
-      </li>
-
-      <li class="form__rating">
-        <input id="rating-5" class="form__input form__input--radio" type="radio" name="numberOfStars" value="5">
-        <label class="form__label form__label--rating" for="rating-5">5 Stars</label>
-      </li>
-    </ul>
-  </fieldset>
-
-  <div class="form__field">
-    <label class="form__label form__required-indicator">How Was It?</label>
-    <textarea class="form__text-area" name="reviewText" rows="5"></textarea>
-  </div>
-
-  <fieldset class="form__field">
-    <legend class="form__legend">Add an image to your review (max XX MB).</legend>
-
-    <div class="form__buttons">
-      <label class="form__label--button" for="image-upload">
-        <input id="image-upload" class="form__file-input" type="file" name="reviewImageFileName" accept="image/*" aria-label="Upload Image">
-        <span class="button--secondary">Upload Image</span>
-      </label>
-
-      <label class="form__label--button" for="take-photo">
-        <!-- <input id="take-photo" class="form__file-input" type="file" name="reviewImageFileName" accept=accept="image/*" capture="user"
-          aria-label="Take Photo"> -->
-        <span class="button--secondary">Take Photo</span>
-      </label>
+    <div class="form__field form__required-indicator">
+      <label class="form__label" for>Your Name</label>
+      <input id class="form__input" type="text" name="reviewerName" aria-label="Your Name (required)" placeholder="Your Name">
     </div>
-  </fieldset>
 
-  <input class="form__submit button--primary" type="submit" value="Submit">
-</form>
+    <fieldset class="form__field">
+      <legend class="form__legend form__required-indicator">Rating</legend>
+
+      <ul class="form__ratings">
+        <li class="form__rating">
+          <input id="rating-1" class="form__input form__input--radio" type="radio" name="numberOfStars" value="1">
+          <label class="form__label form__label--rating" for="rating-1">1 Star</label>
+        </li>
+        <li class="form__rating">
+          <input id="rating-2" class="form__input form__input--radio" type="radio" name="numberOfStars" value="2">
+          <label class="form__label form__label--rating" for="rating-2">2 Stars</label>
+        </li>
+        <li class="form__rating">
+          <input id="rating-3" class="form__input form__input--radio" type="radio" name="numberOfStars" value="3">
+          <label class="form__label form__label--rating" for="rating-3">3 Stars</label>
+        </li>
+        <li class="form__rating">
+          <input id="rating-4" class="form__input form__input--radio" type="radio" name="numberOfStars" value="4">
+          <label class="form__label form__label--rating" for="rating-4">4 Stars</label>
+        </li>
+        <li class="form__rating">
+          <input id="rating-5" class="form__input form__input--radio" type="radio" name="numberOfStars" value="5">
+          <label class="form__label form__label--rating" for="rating-5">5 Stars</label>
+        </li>
+      </ul>
+    </fieldset>
+
+    <div class="form__field">
+      <label class="form__label form__required-indicator">How Was It?</label>
+      <textarea class="form__text-area" name="reviewText" rows="5"></textarea>
+    </div>
+
+    <div class="form__field ">
+      <p class="form__label">Add an image to your review (max XX MB).</p>
+
+      <label class="form__label--button" for="reviewImageFileName" aria-hidden="false">Upload Image</label>
+      <input id="reviewImageFileName" class="form__file-input" type="file" name="reviewImageFileName" accept="image/*">
+      <span class="button--secondary" aria-hidden="true">Upload Image</span>
+
+      <div class="form__field form__field--file">
+        <div class="form__file">
+          <span class="form__file-name"></span>
+          <button type="button" class="form__remove-file" aria-label="Close">&times</button>
+        </div>
+        <label class="form__label" for="review-image-alt">
+          <span class="form__label--image-alt form__required-indicator">Image alt text</span>
+        </label>
+        <input id="review-image-alt" class="form__input form__input--image-alt" type="text" name="reviewImageAlt" aria-label="Image alt text (required)">
+      </div>
+    </div>
+
+    <button class="form__submit button--primary" type="submit">Submit</button>
+  </form>

@@ -25,6 +25,10 @@ module.exports = {
     },
     reviewImageFileName: {
       type: "string",
+    },
+    reviewImageAlt: {
+      type: "string",
+      required: true,
     }
   }
 };
