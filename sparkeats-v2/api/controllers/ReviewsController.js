@@ -19,10 +19,10 @@ module.exports = {
     return res.view("pages/reviews/new");
   },
   create: (req, res) => {
-    const { reviewerName, reviewText, dateVisited, reviewImageFileName } = req.body;
+    const { reviewerName, reviewText, reviewImageFileName } = req.body;
     const numberOfStars = parseInt(req.body.numberOfStars, 10);
 
-    Reviews.create({ reviewerName, reviewText, dateVisited, reviewImageFileName, numberOfStars }).exec(
+    Reviews.create({ reviewerName, reviewText, reviewImageFileName, numberOfStars }).exec(
       err => {
         if (err) {
           const { code, name } = err;
