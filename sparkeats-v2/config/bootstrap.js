@@ -29,6 +29,7 @@ module.exports.bootstrap = async function(done) {
 
   // Don't forget to trigger `done()` when this bootstrap function's logic is finished.
   // (otherwise your server will never lift, since it's waiting on the bootstrap)
+  require('dotenv').config();
   return done();
 
 };
