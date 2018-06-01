@@ -4,9 +4,10 @@
     <tr>
       <th>#</th>
       <th>Review text</th>
-      <th>Reviewer name</th>
-      <th>Number of stars</th>
+      <th>Reviewer</th>
+      <th>Rating</th>
       <th>Image</th>
+      <th>Image alt</th>
     </tr>
   </thead>
   <tbody>
@@ -26,6 +27,9 @@
         </td>
         <td>
           <%= review.reviewImageFileName %>
+        </td>
+        <td>
+          <%= review.reviewImageAlt %>
         </td>
         <!-- <td>
           <a href="/reviews/edit/<%= review.id %>">Edit</a>
