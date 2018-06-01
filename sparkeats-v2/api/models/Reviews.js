@@ -23,9 +23,6 @@ module.exports = {
       max: 5,
       required: true,
     },
-    dateVisited: {
-      type: "string",
-    },
     reviewImageFileName: {
       type: "string",
     }
