@@ -7,40 +7,42 @@
     </section>
 
     <div class="form__field form__required-indicator">
-      <label class="form__label" for>Your Name</label>
-      <input id class="form__input" type="text" name="reviewerName" aria-label="Your Name (required)" placeholder="Your Name">
+      <label class="form__label" for="reviewerName">Your Name</label>
+      <input id="reviewerName" class="form__input" type="text" name="reviewerName" aria-label="Your Name" placeholder="Your Name"
+        required>
     </div>
 
     <fieldset class="form__field">
-      <legend class="form__legend form__required-indicator">Rating</legend>
+      <legend class="form__legend form__required-indicator" aria-label="Choose a rating for the restaurant" required>Rating</legend>
 
-      <ul class="form__ratings">
-        <li class="form__rating">
+      <div class="form__ratings">
+        <label class="form__label form__label--rating" for="rating-1">
+          1 Star
           <input id="rating-1" class="form__input form__input--radio" type="radio" name="numberOfStars" value="1">
-          <label class="form__label form__label--rating" for="rating-1">1 Star</label>
-        </li>
-        <li class="form__rating">
+        </label>
+        <label class="form__label form__label--rating" for="rating-2">
+          2 Stars
           <input id="rating-2" class="form__input form__input--radio" type="radio" name="numberOfStars" value="2">
-          <label class="form__label form__label--rating" for="rating-2">2 Stars</label>
-        </li>
-        <li class="form__rating">
+        </label>
+        <label class="form__label form__label--rating" for="rating-3">
+          3 Stars
           <input id="rating-3" class="form__input form__input--radio" type="radio" name="numberOfStars" value="3">
-          <label class="form__label form__label--rating" for="rating-3">3 Stars</label>
-        </li>
-        <li class="form__rating">
+        </label>
+        <label class="form__label form__label--rating" for="rating-4">
+          4 Stars
           <input id="rating-4" class="form__input form__input--radio" type="radio" name="numberOfStars" value="4">
-          <label class="form__label form__label--rating" for="rating-4">4 Stars</label>
-        </li>
-        <li class="form__rating">
+        </label>
+        <label class="form__label form__label--rating" for="rating-5">
+          5 Stars
           <input id="rating-5" class="form__input form__input--radio" type="radio" name="numberOfStars" value="5">
-          <label class="form__label form__label--rating" for="rating-5">5 Stars</label>
-        </li>
-      </ul>
+        </label>
+      </div>
+
     </fieldset>
 
     <div class="form__field">
-      <label class="form__label form__required-indicator">How Was It?</label>
-      <textarea class="form__text-area" name="reviewText" rows="5"></textarea>
+      <label class="form__label form__required-indicator" for="reviewText">How Was It?</label>
+      <textarea id="reviewText" class="form__text-area" name="reviewText" rows="5" required></textarea>
     </div>
 
     <div class="form__field ">
@@ -53,12 +55,12 @@
       <div class="form__field form__field--file">
         <div class="form__file">
           <span class="form__file-name"></span>
-          <button type="button" class="form__remove-file" aria-label="Close">&times</button>
+          <button type="button" class="form__remove-file" aria-label="Remove image">&times</button>
         </div>
         <label class="form__label" for="review-image-alt">
           <span class="form__label--image-alt form__required-indicator">Image alt text</span>
         </label>
-        <input id="review-image-alt" class="form__input form__input--image-alt" type="text" name="reviewImageAlt" aria-label="Image alt text (required)">
+        <input id="review-image-alt" class="form__input form__input--image-alt" type="text" name="reviewImageAlt" required>
       </div>
     </div>
 
