@@ -11,8 +11,9 @@ module.exports = {
       if (err) {
         return res.serverError(err);
       }
-
-      return res.view("pages/reviews/reviews", { reviews });
+      Places.find({}).exec((err, places) => {
+        return res.view("pages/reviews/reviews", { reviews, places });
+      });
     });
   },
   new: (req, res) => {
