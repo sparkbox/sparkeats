@@ -1,45 +1,36 @@
-<h1>Reviews</h1>
-<table>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Review text</th>
-      <th>Reviewer</th>
-      <th>Rating</th>
-      <th>Image</th>
-      <th>Image alt</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% reviews.forEach(review => { %>
-      <tr>
-        <td>
-          <%= review.id %>
-        </td>
-        <td>
-          <%= review.reviewText %>
-        </td>
-        <td>
-          <%= review.reviewerName %>
-        </td>
-        <td>
-          <%= review.numberOfStars %>
-        </td>
-        <td>
-          <%= review.reviewImageFileName %>
-        </td>
-        <td>
-          <%= review.reviewImageAlt %>
-        </td>
-        <!-- <td>
-          <a href="/reviews/edit/<%= review.id %>">Edit</a>
-          <form method="delete" action="/reviews/destroy/<%= review.id %>">
-            <form method="delete" action="/reviews">
-              <input type="hidden" name="id" value="<%= review.id %>">
-              <input type="submit" value="Delete">
-            </form>
-        </td> -->
-      </tr>
-      <% }) %>
-  </tbody>
-</table>
+<div class="review">
+  <% places.forEach((place) => { %>
+  <div class="review-header">    
+      <div class="review-header__backdrop">
+        <img class="review-header__backdrop-image" src="<%= place.placeImageName %>" alt="<%= place.placeImageAlt %>"/>
+      </div>
+      <div class="review-header__title">
+        <h1 class="review-header__name"><%= place.placeName %></h1>
+        <h2 class="review-header__city"><%= place.city %>, <%= place.state %></h2>
+      </div>
+    </div>
+  <% }) %>
+  <% reviews.forEach((review) => { %>
+  <div class="review-container">
+    <article class="review-submission">
+      <h1 class="review-submission__reviewer"><%= review.reviewerName %></h1>
+      <%= review.numberOfStars %>
+      <h2 class="review-submission__title">Comments</h2>
+      <p class="review-submission__review"><%= review.reviewText %></p>
+      <!--loop review image file names-->
+      <div class="review-submission__image-container">
+        <img class="review-submission__image" src="<%= review.reviewImageFileName %>" alt="<%= review.reviewImageAlt %>">
+      </div>
+    </article>
+  </div>
+  <% }); %>
+  <div class="review-overview">
+      <div class="review-overview__num-reviews">
+        <p class="review-overview__title"><!--getReviewOrReviews numberOfReviews--></p>
+        <!--_star-rating-->
+      </div>
+      <div class="review-overview__address">
+        <!--_address-->
+      </div>
+    </div>
+</div>
