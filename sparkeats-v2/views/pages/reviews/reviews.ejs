@@ -24,13 +24,21 @@
     </article>
   </div>
   <% }); %>
+  <% places.forEach((place) => { %>
   <div class="review-overview">
-      <div class="review-overview__num-reviews">
-        <p class="review-overview__title"><!--getReviewOrReviews numberOfReviews--></p>
-        <!--_star-rating-->
-      </div>
-      <div class="review-overview__address">
-        <!--_address-->
+    <div class="review-overview__num-reviews">
+      <p class="review-overview__title"><!--getReviewOrReviews numberOfReviews--></p>
+      <!--_star-rating (overall)-->
+    </div>
+    <div class="review-overview__address">
+      <address class="sparkeats-address">
+        <p><%= place.address %></p>
+        <p><a class="sparkeats-address__phone" href="tel:<%= place.phone %>"><%= place.phone %></a></p>
+      </address>
+      <div class="sparkeats-address__url">
+        <a class="sparkeats-address__url-link" href="<%= place.placeUrl %>">Visit Site</a>
       </div>
     </div>
+  </div>
+  <% }); %>
 </div>
