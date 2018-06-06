@@ -2,10 +2,9 @@ const express = require('express');
 const passport = require('passport');
 
 const app = express();
-
 app.use(passport.initialize());
 
-module.exports = function authenticate(req, res, ok) {
+function authenticate(req, res, ok) {
   passport.authenticate(
     'basic',
     {
@@ -21,4 +20,6 @@ module.exports = function authenticate(req, res, ok) {
       return ok(null, user);
     }
   )(req, res, ok);
-};
+}
+
+module.exports = authenticate;
