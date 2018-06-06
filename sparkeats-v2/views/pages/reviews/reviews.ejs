@@ -1,44 +1,61 @@
 <div class="review">
   <% places.forEach((place) => { %>
-  <div class="review-header">    
+    <div class="review-header">
       <div class="review-header__backdrop">
-        <img class="review-header__backdrop-image" src="<%= place.placeImageName %>" alt="<%= place.placeImageAlt %>"/>
+        <img class="review-header__backdrop-image" src="<%= place.placeImageName %>" alt="<%= place.placeImageAlt %>" />
       </div>
       <div class="review-header__title">
-        <h1 class="review-header__name"><%= place.placeName %></h1>
-        <h2 class="review-header__city"><%= place.city %>, <%= place.state %></h2>
+        <h1 class="review-header__name">
+          <%= place.placeName %>
+        </h1>
+        <h2 class="review-header__city">
+          <%= place.city %>,
+            <%= place.state %>
+        </h2>
       </div>
     </div>
-  <% }) %>
-  <% reviews.forEach((review) => { %>
-  <div class="review-container">
-    <article class="review-submission">
-      <h1 class="review-submission__reviewer"><%= review.reviewerName %></h1>
-      <%= review.numberOfStars %>
-      <h2 class="review-submission__title">Comments</h2>
-      <p class="review-submission__review"><%= review.reviewText %></p>
-      <!--loop review image file names-->
-      <div class="review-submission__image-container">
-        <img class="review-submission__image" src="<%= review.reviewImageFileName %>" alt="<%= review.reviewImageAlt %>">
-      </div>
-    </article>
-  </div>
-  <% }); %>
-  <% places.forEach((place) => { %>
-  <div class="review-overview">
-    <div class="review-overview__num-reviews">
-      <p class="review-overview__title"><!--getReviewOrReviews numberOfReviews--></p>
-      <!--_star-rating (overall)-->
-    </div>
-    <div class="review-overview__address">
-      <address class="sparkeats-address">
-        <p><%= place.address %></p>
-        <p><a class="sparkeats-address__phone" href="tel:<%= place.phone %>"><%= place.phone %></a></p>
-      </address>
-      <div class="sparkeats-address__url">
-        <a class="sparkeats-address__url-link" href="<%= place.placeUrl %>">Visit Site</a>
-      </div>
-    </div>
-  </div>
-  <% }); %>
+    <% }) %>
+      <% reviews.forEach((review) => { %>
+        <div class="review-container">
+          <article class="review-submission">
+            <h1 class="review-submission__reviewer">
+              <%= review.reviewerName %>
+            </h1>
+            <%= review.numberOfStars %>
+              <h2 class="review-submission__title">Comments</h2>
+              <p class="review-submission__review">
+                <%= review.reviewText %>
+              </p>
+              <!--loop review image file names-->
+              <div class="review-submission__image-container">
+                <img class="review-submission__image" src="<%= review.reviewImageFileName %>" alt="<%= review.reviewImageAlt %>">
+              </div>
+          </article>
+        </div>
+        <% }); %>
+          <% places.forEach((place) => { %>
+            <div class="review-overview">
+              <div class="review-overview__num-reviews">
+                <p class="review-overview__title">
+                  <!--getReviewOrReviews numberOfReviews-->
+                </p>
+                <!--_star-rating (overall)-->
+              </div>
+              <div class="review-overview__address">
+                <address class="sparkeats-address">
+                  <p>
+                    <%= place.address %>
+                  </p>
+                  <p>
+                    <a class="sparkeats-address__phone" href="tel:<%= place.phone %>">
+                      <%= place.phone %>
+                    </a>
+                  </p>
+                </address>
+                <div class="sparkeats-address__url">
+                  <a class="sparkeats-address__url-link" href="<%= place.placeUrl %>">Visit Site</a>
+                </div>
+              </div>
+            </div>
+            <% }); %>
 </div>

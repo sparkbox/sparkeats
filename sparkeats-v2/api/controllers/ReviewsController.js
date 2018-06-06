@@ -6,41 +6,44 @@
  */
 
 module.exports = {
-  reviews: (req, res) => {
-    Reviews.find({}).exec((err, reviews) => {
-      if (err) {
-        return res.serverError(err);
-      }
-      Places.find({}).exec((err, places) => {
-        return res.view("pages/reviews/reviews", { reviews, places });
-      });
-    });
-  },
   new: (req, res) => {
-    return res.view("pages/reviews/new");
+    return res.view('pages/reviews/new');
   },
-  create: (req, res) => {
-    const { reviewerName, reviewText, reviewImageFileName, reviewImageAlt } = req.body;
+  async reviews(req, res) {
+    let reviews;
+    let places;
+    try {
+      reviews = await Reviews.find({}).intercept(err => err);
+      places = await Places.find({}).intercept(err => err);
+    } catch (err) {
+      return res.serverError(err);
+    }
+
+    return res.view('pages/reviews/reviews', { reviews, places });
+  },
+  async create(req, res) {
+    const {
+      reviewerName,
+      reviewText,
+      reviewImageFileName,
+      reviewImageAlt,
+    } = req.body;
     const numberOfStars = parseInt(req.body.numberOfStars, 10);
-    
-    Reviews.create({ reviewerName, reviewText, reviewImageFileName, reviewImageAlt, numberOfStars }).exec(
-      err => {
-        if (err) {
-          const { code, name } = err;
 
-          if (code === 'E_UNIQUE') {
-            return res.sendStatus(409);
-          }
+    try {
+      await Reviews.create({
+        reviewerName,
+        reviewText,
+        reviewImageFileName,
+        reviewImageAlt,
+        numberOfStars,
+      })
+        .intercept('E_UNIQUE', err => err)
+        .intercept('UsageError', err => err);
+    } catch (err) {
+      return res.serverError(err);
+    }
 
-          if (name === 'UsageError') {
-            return res.badRequest();
-          }
-
-          return res.serverError(err);
-        }
-
-        return res.redirect("/reviews");
-      }
-    );
-  }
+    return res.redirect('/reviews');
+  },
 };
