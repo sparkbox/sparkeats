@@ -28,10 +28,19 @@
   },
   "devDependencies": {
     "@sailshq/eslint": "^4.19.3",
-    "grunt-sass": "^2.1.0"
+    "browser-sync": "^2.24.4",
+    "concurrently": "^3.5.1",
+    "grunt-sass": "^2.1.0",
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.17.5",
+    "postcss-cli": "^5.0.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production node app.js",
+    "start": "concurrently \"npm run sass\" \"npm run server\"",
+    "build": "npm run sass && npm run postcss",
+    "sass": "node-sass --watch assets/styles/importer.scss .tmp/styles/importer.css",
+    "postcss": "postcss --use autoprefixer -c tasks/postcss.config.json .tmp/styles/importer.css -d .tmp/styles/",
+    "server": "nodemon app.js & browser-sync start --proxy http://localhost:1337 --files \".tmp/styles/\" \"views/\" --reload-delay 1100",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo"

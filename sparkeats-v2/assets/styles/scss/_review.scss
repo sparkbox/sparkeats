@@ -1,0 +1,197 @@
+// ALL ELEMENTS RELATED TO THE REVIEWS CONTAINER
+
+.review {
+  background-color: $color-white;
+  max-width: 100%;
+  &-page {
+    display: block;
+    padding: 0;
+    max-width: 58.5em;
+    width: 90%;
+    margin: 0 auto;
+    @media (min-width: $bp-med-screen) {
+      margin: 0 auto;
+    }
+    &:after {
+      content: "";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+    }
+  }
+  &-container {
+    width: 100%;
+    @media (min-width: $bp-med-screen) {
+      float: left;
+      max-width: 66.5%;
+    }
+  }
+  &-submission {
+    background-color: $color-soft-gray;
+    box-sizing: border-box;
+    margin: 2em auto;
+    padding: 2em 2em 1em 2em;
+    &__reviewer {
+      @include primary-font();
+      color: $color-sparkblue-dark;
+      font-size: 2em;
+      padding: 0;
+      margin: 0;
+    }
+    &__title {
+      @include primary-font();
+      font-size: 0.875em;
+      text-transform: uppercase;
+      color: $color-sparkblue-dark;
+      letter-spacing: 0.25em;
+      margin: 2.75em 0 0.75em;
+    }
+    &__review {
+     @include secondary-font(500);
+     line-height: 1.875em;
+     font-weight: normal;
+     letter-spacing: 0.025em;
+     padding-bottom: 1em;
+     @media(min-width: $bp-small-screen) {
+       font-size: 1.125em;
+     }
+    }
+    &__image-container {
+      display: inline-block;
+      height: 13em;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 1.25em;
+      margin-right: 1.25em;
+      @media(min-width: $bp-med-screen) {
+        height: 15.625em;
+        width: 45%;
+      }
+    }
+    &__image {
+      max-height: 100%;
+      margin: auto;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+  }
+  &-overview {
+    background-color: $color-soft-gray;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    margin: 2em auto;
+    padding: 0.625em;
+    @media (min-width: $bp-med-screen) {
+      float: right;
+      width: 30%;
+      max-width: 20.5em;
+    }
+    &__num-reviews {
+      background-color: $color-white;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5em 0;
+    }
+    &__title {
+      @include primary-font();
+      font-size: 0.875em;
+      text-transform: uppercase;
+      color: $color-sparkblue-dark;
+      letter-spacing: 0.25em;
+      margin: 0;
+      margin-bottom: 0.75em;
+    }
+    &__address {
+      line-height: 1.25em;
+      letter-spacing: 0.025em;
+    }
+  }
+  &-header {
+    background-color: $color-sparkblue-light;
+    height: 20em;
+    min-height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    &__backdrop {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: -20%;
+      &-image {
+        min-width: 100%;
+        width: 58.5em;
+      }
+    }
+    &__title {
+      background: $color-white;
+      width: 70%;
+      max-width: 100%;
+      margin: 0;
+      padding: 1.75em 1em;
+      text-align: center;
+      position: relative;
+      @media (min-width: $bp-small-screen) {
+        max-width: 23.5em;
+        padding: 1.5em 1em;
+      }
+    }
+    &__name {
+      @include primary-font();
+      color: $color-sparkblue-dark;
+      font-size: 2.25em;
+      overflow-wrap: break-word;
+      word-wrap: break-word; // required for Edge, IE & Opera Mini
+      margin-bottom: 0;
+      margin: 0;
+      padding: 0em;
+      @media (min-width: $bp-small-screen) {
+        font-size: 2.5em;
+      }
+    }
+    &__city {
+      @include primary-font();
+      color: $color-sparkblue-dark;
+      font-size: 0.875em;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.review-nav {
+  -webkit-font-smoothing: antialiased;
+  max-width: 58.5em;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  @media (min-width: $bp-med-screen) {
+    max-width: 66.5%;
+  }
+  &__link {
+    @include primary-font();
+    background-color: $color-fountain-blue;
+    color: $color-sparkblue-dark;
+    text-decoration: none;
+    font-size: 1.25em;
+    padding: 0.75em 5em;
+    transition: all 500ms cubic-bezier(0,1.08,.65,.98);
+    &:hover {
+      color: $color-sparkblue-light;
+      background-color: darken($color-fountain-blue, 20%);
+    }
+  }
+}
