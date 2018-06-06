@@ -97,6 +97,16 @@
 
 // RATINGS
 
+.form__label--rating {
+  display: inline-block;
+  position: relative;
+  margin: 0 1rem 1rem 1rem;
+  padding-left: 1.5rem;
+  @media screen and (min-width: 33rem) {
+    margin: 0 1rem;
+  }
+}
+
 .form__ratings {
   padding: 0;
   margin: 0.25rem 0 0 0;
@@ -109,20 +119,8 @@
   }
 }
 
-.form__rating {
-  &:last-child .form__label--rating {
-    margin-bottom: 0;
-  }
-}
-
-.form__label--rating {
-  display: inline-block;
-  position: relative;
-  margin: 0 1rem 1rem 1rem;
-  padding-left: 1.5rem;
-  @media screen and (min-width: 33rem) {
-    margin: 0 1rem;
-  }
+.form__label--rating:last-child  {
+  margin-bottom: 0;
 }
 
 .form__input--radio {
