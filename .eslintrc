@@ -2,5 +2,10 @@
   "extends": [
     "airbnb-base",
     "plugin:prettier/recommended"
-  ]
+  ],
+  "globals": {
+    "sails": true,
+    "Reviews": true,
+    "Places": true
+  }
 }
