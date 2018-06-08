@@ -28,7 +28,6 @@ module.exports = {
     },
     reviewImageAlt: {
       type: 'string',
-      required: true,
     },
     placeId: {
       model: 'place',
