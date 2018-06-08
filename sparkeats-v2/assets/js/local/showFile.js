@@ -8,18 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
   fileInput.addEventListener('change', event => {
     if (!fileInput.value) {
       fileFormField.style.display = 'none';
-      altInput.value = "";
+      altInput.value = '';
+      altInput.required = false;
     } else {
       fileFormField.style.display = 'block';
-      fileName.innerText = event.target.value.split("\\").pop();
+      fileName.innerText = event.target.value.split('\\').pop();
+      altInput.required = true;
     }
   });
 
   removeFile.addEventListener('click', () => {
-    fileInput.value = "";
-    altInput.value = "";
-    fileName.innerText = "";
-
     fileFormField.style.display = 'none';
+    fileInput.value = '';
+    fileName.innerText = '';
+    altInput.value = '';
+    altInput.required = false;
   });
 });
