@@ -1,0 +1,515 @@
+katy-table-33:
+  place-id: table-33
+  review-text: This is one of the most gluten-free-friendly restaurants in the Dayton region. Everything they bake in-house is gluten free (including their brownies and muffins, which are delicious), although they do bring in regular bread and buns for their sandwiches and burgers. I highly recommend the Chicken and Waffles and the Quiche.
+  reviewer-name: Katy Bowman
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+    - 04/29/2017
+    - 07/10/2017
+    - 07/12/2017
+  review-image-file-name:
+    - table-33-katy-1.jpg
+  review-image-alt:
+    - Quiche with dressed greens
+
+heather-table-33:
+  place-id: table-33
+  review-text: I'm in love with Table 33! Upon my first visit I tried the quiche, which was wonderfully delicious. The light, flaky crust was an absolute delight. My second visit was even better! I chose the gluten-free Bananas Foster Waffles. They were A.M.A.Z.I.N.G!!! Brown sugar syrup, bananas and blueberries layered on top of a perfectly browned waffle. The menu also listed an amazing selection of gluten-free baked goods. I'm looking forward to my next visit!
+  reviewer-name: Heather Taylor
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 04/25/2017
+    - 07/10/2017
+  review-image-file-name:
+    - table-33-heather-1.jpeg
+  review-image-alt:
+    - Bananas Foster Waffles
+
+heather-zombie-dogz:
+  place-id: zombie-dogz
+  review-text: My first experience with Zombie Dogz was at an event catered by their food truck. I had the Killer Gauge dog with slow cooked buffalo chicken topped with blue cheese crumbles, celery bits and drizzled in ranch dressing. It was pretty amazing. I was extremely excited to learn that they offer gluten free hot dog buns. WINNER! Recently I visited their location on Brown Street and tried the Juan of Dead featuring slow cooked bbq pulled pork topped with shredded swiss cheese, diced dill pickles and drizzled with yellow mustard. It was good, but not as good as the Killer Gauge.
+  reviewer-name: Heather Taylor
+  number-of-stars: 3
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+heather-basils:
+  place-id: basils-on-market
+  review-text: I prefer the lunch menu versus the dinner menu at Basil's. There are more gluten free options available during lunch. The open faced caprese (minus the bread) and the market toss salad are my favorites! The truffle fries are also pretty aweseme! Basil's has two locations, one in Dayton and the original in Troy. I have always found the service and the food better at the Troy location. The Dayton location has a great view of the river and a fantastic outdoor patio.
+  reviewer-name: Heather Taylor
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - basils-heather.png
+  review-image-alt:
+    - Basil's Market Toss Salad
+
+heather-bourbon-street-grill:
+  place-id: bourbon-street-grill
+  review-text: The chicken and potatoes are sweet and spicy deliciousness! I could seriously eat here a couple times a week. The Bourbon Street Grill is a simple, down-to-earth cafe. Nothing fancy, but oh so good.
+  reviewer-name: Heather Taylor
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+heather-2nd-street-market:
+  place-id: 2nd-street-market
+  review-text: Crepe Boheme at the 2nd Street Public Market has become my go-to for lunch on Thursdays. I've never had a crepe there that I didn't love! The teriyaki chicken at Isaan Baan Thai Noi is my second favorite choice for lunch. For a delicious treat, I highly recommend Sweet P's Handcrafted Ice Pops or the Extreme Toffee coffee from Caffeine Carl's.
+  reviewer-name: Heather Taylor
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+katy-bareburger:
+  place-id: bareburger
+  review-text: Bareburger is basically a burger, fries, and shakes kind of place, although they do offer salads and other sandwiches. They have a list of specialty burgers to choose from or you can build your own. You can get burgers made from beef, bison, black beans, duck, elk, quinoa, grilled lemon chicken, sesame ginger beef, sweet potato and wild rice, turkey, or wild boar. All except the black bean and quinoa are gluten free. For your bun, to keep it gluten free you can choose to have your burger on a tapioca bun, with no bun, served on a lettuce bed, or wrapped with a collard. Their french fries and sweet potato fries are fried separately and kept gluten free. Other gluten free items are listed clearly on the menu. Beyond their burgers and fries, I also highly recommend trying their milkshakes. My personal favorite is the Mexican Chocolate, made with chocolate ice cream, cayenne, cinnamon, and a “torched marshmallow.” Just thinking about it makes me want one.
+  reviewer-name: Katy Bowman
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+katy-sleepy-bee-cafe:
+  place-id: sleepy-bee-cafe
+  review-text: The Sleepy Bee Cafe in Oakley, near Cincinnati (they also have a location in Blue Ash), is a very cute little restaurant. I visited on a Friday morning around 9:30 and the place was almost full. The food was delicious, I had the gluten free Bee Cakes—made with almond, quinoa, and buckwheat flour—and bacon and while the pancakes were heavier than normal pancakes, they weren't gritty at all. The only drawback was the space got very loud and it became difficult to have a conversation.
+  reviewer-name: Katy Bowman
+  number-of-stars: 3
+  dates-visited: #mm/dd/yyyy
+    - 06/16/2017
+  review-image-file-name:
+  review-image-alt:
+
+katy-bagger-daves:
+  place-id: bagger-daves
+  review-text: I found out about Bagger Dave's through the Gluten Free Ohio blog (glutenfreeohio.com). It has since become a favorite. I love that I can just get a burger without a bun and that the french fries and sweet potato chips are fried in separate friers and kept gluten free. My favorites are the Bacon BBQ Burger and the Saucy Sicilian Pizza Burger.
+  reviewer-name: Katy Bowman
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+heather-gaucho:
+  place-id: gaucho
+  review-text: Affectionately known as 'the meat hut' in the Sparkbox offices, I knew that my first visit to Pittsburgh would require a visit to Gaucho. Friends from Pittsburgh recommended sharing the Parrillada Mixta featuring over a pound of New York strip steak, grilled chicken breast and sweet -or- spicy chorizo paired with a side of Papas al Horno (oven roasted red potatoes with whole garlic cloves and fresh rosemary). It was fantastic! A word of warning when visiting Gaucho, be prepared to wait. Don't worry, it's worth it!
+  reviewer-name: Heather Taylor
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 05/23/2017
+  review-image-file-name:
+  review-image-alt:
+
+drew-canal-street-arcade-and-deli:
+  place-id: canal-street-arcade-and-deli
+  review-text: The sandwiches are as good as the owner is grumpy. It's a nice walk down 1st street from the Dayton Sparkbox office. I suggest the South Paw or a Breakfast sandwich, which is served all day.
+  reviewer-name: Drew Clemens
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 08/01/2017
+  review-image-file-name:
+  review-image-alt:
+
+emily-sky-asian:
+  place-id: sky-asian
+  review-text: Big perk - they deliver sushi (but probably not downtown)! They also have several standard Thai and other cooked dishes for parties looking for variety. And it's consistently delicious. Their actual speed can be slightly hit or miss, so make sure you have time to wait if needed. They've been generous the few times it's been slow, though.
+  reviewer-name: Emily Gray
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+emily-thai-9:
+  place-id: thai-9
+  review-text: Always enjoy the food here, and it tends to please crowds.
+  reviewer-name: Emily Gray
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+emily-2nd-street-market:
+  place-id: 2nd-street-market
+  review-text: Right by our Dayton office and lots of variety. Only open Thursday - Saturday.
+  reviewer-name: Emily Gray
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-cocos-bistro:
+  place-id: cocos-bistro
+  review-text: Cocos is the defacto place for the Sparkbox Holiday Party. It's a bit pricey, but the food is always good. I enjoy the romantic atmosphere, and you do get a large portion.
+  reviewer-name: Catherine Meade
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - cocos-bistro-catherine-1.jpg
+  review-image-alt:
+    - A big steak at Cocos
+
+catherine-shake-shack:
+  place-id: shake-shack
+  review-text: All of the Shake Shacks are pretty great. It's a small burger (I could eat two, easy), but their shakes are top notch, and cheese fries are yum. This image is from Washington, D.C., and I've put the location as Boston, because I think that is where folks are most likely to end up.
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+    - 04/14/2017
+  review-image-file-name:
+    - shake-shack-catherine-1.jpg
+  review-image-alt:
+    - Shake Shack
+
+catherine-yellow-cab-food-truck-rally:
+  place-id: yellow-cab-food-truck-rally
+  review-text: Food truck rallys happen once a month at the Old Yellow Cab building downtown. The trucks change, and there isn't much seating. It is a fun thing to do on a Friday for dinner, and if the Ramen Rickshaw is there, don't miss!
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - yellow-cab-food-truck-rally-catherine-1.jpg
+  review-image-alt:
+    - The Drunken Waffle
+
+catherine-kaminskys:
+  place-id: kaminskys-dessert-cafe
+  review-text: While at ConvergeSE, I went to Kaminsky's three days in a row. The only true 5 star I can give.
+  reviewer-name: Catherine Meade
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - kaminskys-dessert-cafe-catherine-1.jpg
+    - kaminskys-dessert-cafe-catherine-2.jpg
+  review-image-alt:
+    - Berry Cake at Kaminsys
+    - Coffee at Kaminskys
+
+catherine-pho-mi:
+  place-id: pho-mi
+  review-text: Pho Mi is by the Dayton Mall, and pretty good for Pho, but not as good as the other pho places in the area. You're probably better to go to What-da-Pho or Lihn's Bistro, but Pho Mi still hits that pho spot.
+  reviewer-name: Catherine Meade
+  number-of-stars: 3
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - pho-mi-catherine-1.jpg
+  review-image-alt:
+    - Spicy Pho
+
+catherine-lilys-bistro:
+  place-id: lilys-bistro
+  review-text: Lily's is my favorite place to eat in Dayton! While a little pricey (Croftcheck and I don't get out of there under $60), everything on their menu is good. Everything. EVERYTHING. Try it out for weekend brunch, but call ahead! Every Wednesday is punch night!
+  reviewer-name: Catherine Meade
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - lilys-bistro-catherine-1.jpg
+  review-image-alt:
+    - Punch Night at Lily's
+
+catherine-ginger-and-spice:
+  place-id: ginger-and-spice
+  review-text: I LOVE Ginger and Spice. They have awesome brown sugar bubble tea, dumplings, and robust seafood options. Their lo mein is more like spaghetti, fyi. Get the Ginger & Spice chicken! Online ordering works well, too.
+  reviewer-name: Catherine Meade
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - ginger-and-spice-catherine-1.jpg
+  review-image-alt:
+    - Bubble Tea!
+
+catherine-jeet-india:
+  place-id: jeet-india
+  review-text: Finally, good Indian food in the Dayton area! The wait staff are extremely polite, and they'll bring you more rice for free (even just to take home).
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - jeet-india-catherine-1.jpg
+  review-image-alt:
+    - Jeet India
+
+catherine-thai-9:
+  place-id: thai-9
+  review-text: Immediate loss of a star for not being open on Saturdays at lunch. Thai 9 is consistant, has a short wait, beautiful space, and excellent takeout. My food is never messed up! I almost always order mango curry, with pork, at a 3. Pineapple fried rice is also great. And Crab Rangoon.
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-zombie-dogz:
+  place-id: zombie-dogz
+  review-text: Zombie Dogz was a hot dog food truck turned into a hot dog restaurant on Brown Street. They are pretty cheap ($3-$6 for a giant hot dog). Also pretty good. My favorite things to get are the Chicago Dog or just a plain hotdog with mustard and relish. They have tator tots!
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-bourbon-street-grill:
+  place-id: bourbon-street-grill
+  review-text: This place is a no-frills kind of takeout. Rice, potatoes, and sweet bourbon chicken. The bags leak pretty hard, but the food is sooooo good.
+  reviewer-name: Catherine Meade
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-basils-on-market:
+  place-id: basils-on-market
+  review-text: I have been to Basil's ... 5 or so times now, and I've never been wholly impressed. Their space is beautiful, I love the Peach Mojito and their fries. I had a fantastic salmon salad. Everything else? Kinda meh. A little to pricey for the quality. Also, they always give me Diet Coke when I ask for regular.
+  reviewer-name: Catherine Meade
+  number-of-stars: 3
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+    - basils-on-market-catherine-1.jpg
+  review-image-alt:
+    - Happy Hour apps at Basils
+
+catherine-jimmy-johns:
+  place-id: jimmy-johns
+  review-text: Too much mayonnaise.
+  reviewer-name: Catherine Meade
+  number-of-stars: 1
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+catherine-linhs-bistro:
+  place-id: linhs-bistro
+  review-text: Linh's is just okay. Their pho was very hot, and came out fast, but tasted kind of like plain beef broth. They didn't serve it with basil or lemongrass, like most pho places, and their service was garbage. The iced coffee was good! They have a very full Chinese menu, as well. It's acceptable for downtown, but I'll probably make the drive to What Da Pho in Beavercreek if I really want Pho.
+  reviewer-name: Catherine Meade
+  number-of-stars: 3
+  dates-visited: #mm/dd/yyyy
+    - 09/21/2017
+  review-image-file-name:
+    - linhs-bistro-catherine-1.jpg
+    - linhs-bistro-catherine-2.jpg
+  review-image-alt:
+    - A bowl of spicy pork and beef soup
+    - A bowl of Pho Bo Tai
+
+masten-gus-fried-chicken:
+  place-id: gus-fried-chicken
+  review-text: One of my favs is Gus' World Famous Fried Chicken. The originals are in the Memphis Area but it looks like there are some franchises sprinkled around the country. My favorite location in Memphis is a converted old southern house. Great chicken, very good sides and an extremely local atmosphere.
+  reviewer-name: Masten Worley
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+leah-la-colombiana:
+  place-id: la-colombiana
+  review-text: The people working there made this food for their families for years, and then decided to open up shop to share the goodness with everyone.
+  reviewer-name: Leah Kelley
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+leah-linhs-bistro:
+  place-id: linhs-bistro
+  review-text: In my opinion, Linh's has the best pho in the Dayton area. Atmosphere is a little "meh," service from the waitresses is definitely a "meh," but I'll put up with anything for a good bowl of pho.
+  reviewer-name: Leah Kelley
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+leah-jeet-india:
+  place-id: jeet-india
+  review-text: I'd highly recommend Jeet for it's weekday lunch buffet.
+  reviewer-name: Leah Kelley
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+julie-mad-mex:
+  place-id: mad-mex
+  review-text: Mad Mex is the Pennsylvanian interpretation of California Mexican. They have tomato-free guacamole and pineapple habanero salsa and tasty margaritas (I like The Hamilton). I usually order the Buffalo wing tacos with a side of waffle fries, because who wouldn't?
+  reviewer-name: Julie Young
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+andrew-press:
+  place-id: press
+  review-text: Arguably some of the best coffee in the area. Press has a great selection of high-quality espresso drinks, coffee, teas, and seasonal sodas. While they are known for their espresso, they also carry a small selection of baked goods. I highly recommend Press for your Dayton caffeine fix. The only issue is their wifi is not very good so this is not a good place to go and get work done. Otherwise, the atmosphere is great for chatting. Parking along the street or in a vacant lot across the road. The Oregon District, library, riverfront, Sparkbox office, and other Dayton attractions are within walking distance.
+  reviewer-name: Andrew Spencer
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 07/17/2017
+    - 08/08/2017
+    - 08/20/2017
+  review-image-file-name:
+    - press-andrew-1.jpg
+  review-image-alt:
+    - Espresso from Press
+
+andrew-old-scratch:
+  place-id: old-scratch
+  review-text: Great neapolitan style pizza with a good selection of beers. Casual and trendy place with some nice outdoor seating for warm days. Try the Angry Beekeeper, a pizza with red sauce, mozzarella, basil, spicy salame, and honey.
+  reviewer-name: Andrew Spencer
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 03/25/2017
+  review-image-file-name:
+    - old-scratch-andrew-1.jpeg
+  review-image-alt:
+    - The Old Scratch building
+
+andrew-peace-love-and-little-donuts:
+  place-id: peace-love-and-little-donuts
+  review-text: Little donuts with all sorts of toppings in a hole-in-the-wall shop in The Strip District plus other locations around Pittsburgh and a few other cities. They have three categories of donuts from average to far our varieties like Maple Bacon or Raspberry Lemonade. You'll definitely want more than one.
+  reviewer-name: Andrew Spencer
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+    - 07/23/2017
+
+anastasia-smoke:
+  place-id: smoke
+  review-text: Smoke is by far one of my favorite restaurants. You should go to this place if you like soft tacos... and booze. The Brisket, Rib, Pork and Chicken Apple tacos are my favorites. Their queso starter and fresh chips are addicting. They have burgers on Tuesday, so be warned if you're coming in for tacos. They also make these very yummy Auga Fresca drinks.
+  reviewer-name: Anastasia Lanz
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 06/19/2017
+  review-image-file-name:
+  review-image-alt:
+
+lindsay-spice-island:
+  place-id: spice-island
+  review-text: Spice Island is one of my favorite restaurants in Pittsburgh. Their food is phenomenal, and encompasses flavors from Thailand to Malaysia. One of my favorite dishes to get here is either the Panang Style Curry or the Malaysian Beef Rendang. If you're looking to try something particularly interesting, I would recommend the Tea Leaf Salad. The service is also remarkably fast, so stop by if you're in the mood for a quick and amazing meal!
+  reviewer-name: Lindsay Silver
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 06/15/2017
+
+lindsay-colangelos:
+  place-id: colangelos
+  review-text: While Colangelo's offers many different types of foods, which range from pastries to pizzas to paninis, I am here to extoll the virtues of their chocolate chip cookies. These chocolate chip cookies are some of the best out there—soft, very generously sized, and they have lots of chocolate. Whether this is a lunch cookie, or a cookie you enjoy as a snack for a few days, I highly recommend Colangelo's chocolate chip cookies!
+  reviewer-name: Lindsay Silver
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 08/17/2017
+
+anastasia-arsenal-cider:
+  place-id: arsenal-cider
+  review-text: Arsenal Cider House is a small civil war themed winery located in Lawrenceville that makes hard ciders and mead. A few of their ciders use different fruits like raspberry, blueberry, and pear. They also have a neat outdoor area where they sometimes have food trucks and live music. Pick up a growler and be fancy at your next tailgate!
+  reviewer-name: Anastasia Lanz
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+anastasia-gaucho:
+  place-id: gaucho
+  review-text: Gaucho is an Argentinian restaurant in the Strip District that has the best tasting meats and chimichurri sauce. When you order at Guacho, you'll probably end up sharing your plate. They also have these little meat pockets called empanadas. My top picks would be the steak burger or any of the steak plates (sirloin, flank, ribeye). I love meat!
+  reviewer-name: Anastasia Lanz
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+    - 02/02/2017
+    - 05/23/2017
+    - 07/06/2017
+    - 07/07/2017
+
+julie-gaucho:
+  place-id: gaucho
+  review-text: This place gets a 3 for customer experience. The menu is written on a board on a wall (NOT ergonomic to read) and the text uses frequent, unexplained abbreviations. You generally have to wait in line, and then you have to eat quick and get out of there because lingering over a meal is frowned upon. It's also noisy and has bad lighting. I still haven't found the thing worth going back for, other than the carrots with goat cheese. Get those! You can't go wrong with ordering a steak. Some of the sandwiches are messy and overwhelming. The burger is probably your best bet if you go that direction. A lot of hype!
+  reviewer-name: Julie Young
+  number-of-stars: 3
+  dates-visited: #mm/dd/yyyy
+    - 05/01/2017
+    - 05/23/2017
+    - 07/06/2017
+  review-image-file-name:
+  review-image-alt:
+
+julie-thai-gourmet:
+  place-id: thai-gourmet
+  review-text: Great Thai food, shockingly inexpensive, friendly people. Everything is good. If you're there for dinner, get the Emerald Noodles. It's green curry, tempura vegetables, rice noodles, and salad. Yum. I also like the Nam Prik and the Chang Mai Noodles. You can't go wrong, actually. BYOB. Not to be confused with Thai Cuisine a few doors up.
+  reviewer-name: Julie Young
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+julie-thai-9:
+  place-id: thai-9
+  review-text: I've eaten here three times - it's great if you're in Dayton and staying in the Oregon District, and it has a bar with a decent bottle selection.
+  reviewer-name: Julie Young
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+julie-casellula:
+  place-id: casellula
+  review-text: Locally sourced with a focus on small plates and cheeses. Little pricey, but the tip is included in the price and they have a strong fair treatment of workers ethos. You're eating in the Alphabet City bookstore, so if you like books and want a nice dinner out, this place is for you!
+  reviewer-name: Julie Young
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+     - 08/04/2017
+  review-image-file-name:
+  review-image-alt:
+
+julie-the-yard:
+  place-id: the-yard
+  review-text: A restaurant that features grilled cheese sandwiches! You get a giant portion, so be hungry. The Market Squre location is right by Industrious.
+  reviewer-name: Julie Young
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+     - 07/25/2017
+  review-image-file-name:
+  review-image-alt:
+
+julie-bluebird-kitchen:
+  place-id: bluebird-kitchen
+  review-text: Great lunch spot by the Pittsburgh office. Try the confit chicken salad on a croissant! Skip the donuts, though - overly greasy.
+  reviewer-name: Julie Young
+  number-of-stars: 4
+  dates-visited: #mm/dd/yyyy
+     - 08/11/2017
+  review-image-file-name:
+  review-image-alt:
+
+julie-earth-inspired:
+  place-id: earth-inspired
+  review-text: Also known as Salads, Salads, Salads!, this place has a lot of salads. You can create your own or go with one of their presets. I recommend romaine with edamame, carrots, corn, and sesame soba noodles with ginger dressing. Near the office!
+  reviewer-name: Julie Young
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+     - 08/10/2017
+  review-image-file-name:
+  review-image-alt:
+
+anastasia-otb:
+  place-id: otb
+  review-text: This is one of my favorite places to eat. It's a bicycle themed bar and all of the burgers have bike related names. Lots of vegan and gluten free options too. Good beer selection and A+ pretzels and beer cheese. Get the burger called "The Banana Seat" with bacon and peanut butter wrapped bananas.
+  reviewer-name: Anastasia Lanz
+  number-of-stars: 5
+  dates-visited: #mm/dd/yyyy
+  review-image-file-name:
+  review-image-alt:
+
+julie-nicholas-coffee:
+  place-id: nicholas-coffee
+  review-text: Wonderful coffee in Market Square - can also buy loose tea, beans, and fresh roasted peanuts. Earlier in 2017 they had a fire and were closed for a while. They did some renovations before re-opening and they helpfully moved the coffee bar across the back so there’s more room to order and a more conventional spot to add cream and milk. Looks clean and fresh and I’m relieved it’s back!
+  reviewer-name: Julie Young
+  number-of-stars: 5
+  dates-visited:
+    - 10/05/2017
+  review-image-file-name:
+  review-image-alt:
+
+yosevu-everest-indian-cuisine:
+  place-id: everest-indian-cuisine 
+  review-text: Great service! Healthy serving sizes and extra rice. We ordered the Bhindi Masala and Lamb Korma.
+  reviewer-name: Yosevu Kilonzo
+  number-of-stars: 5
+  dates-visited:
+    - 01/03/2018
+  review-image-file-name: 
+  review-image-alt: 
