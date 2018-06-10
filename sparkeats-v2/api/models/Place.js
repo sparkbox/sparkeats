@@ -9,41 +9,40 @@ module.exports = {
 
   attributes: {
     placeName: {
-      type: "string",
+      type: 'string',
       required: true,
     },
     city: {
-      type: "string",
+      type: 'string',
       required: true,
       regex: /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/,
     },
     state: {
-      type: "string",
+      type: 'string',
       required: true,
       regex: /^(?:A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|PA|RI|S[CD]|T[NX]|UT|V[AT]|W[AIVY])*$/,
     },
     address: {
-      type: "string",
+      type: 'string',
     },
     phone: {
-      type: "string",
+      type: 'string',
       regex: /^(([0-9]{1})*[- .(]*([0-9]{3})[- .)]*[0-9]{3}[- .]*[0-9]{4})+$/,
     },
     placeImageName: {
-      type: "string"
+      type: 'string',
     },
     placeImageAlt: {
-      type: "string"
+      type: 'string',
     },
     placeUrl: {
-      type: "string",
+      type: 'string',
       isURL: true,
     },
     placeUrlDisplay: {
-      type: "string",
+      type: 'string',
       isURL: true,
     },
   },
 
 };
-
