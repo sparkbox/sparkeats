@@ -13,8 +13,8 @@ module.exports = {
     let reviews;
     let places;
     try {
-      reviews = await Reviews.find({}).intercept(err => err);
-      places = await Places.find({}).intercept(err => err);
+      reviews = await Review.find({}).intercept(err => err);
+      places = await Place.find({}).intercept(err => err);
     } catch (err) {
       return res.serverError(err);
     }
@@ -31,7 +31,7 @@ module.exports = {
     const numberOfStars = parseInt(req.body.numberOfStars, 10);
 
     try {
-      await Reviews.create({
+      await Review.create({
         reviewerName,
         reviewText,
         reviewImageFileName,
