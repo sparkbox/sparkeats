@@ -8,27 +8,27 @@
 module.exports = {
   attributes: {
     reviewText: {
-      type: "string",
+      type: 'string',
       required: true,
     },
     reviewerName: {
-      type: "string",
+      type: 'string',
       unique: true,
       required: true,
     },
     numberOfStars: {
-      type: "number",
+      type: 'number',
       isInteger: true,
       min: 1,
       max: 5,
       required: true,
     },
     reviewImageFileName: {
-      type: "string",
+      type: 'string',
     },
     reviewImageAlt: {
-      type: "string",
+      type: 'string',
       required: true,
-    }
-  }
+    },
+  },
 };

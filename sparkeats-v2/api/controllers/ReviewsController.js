@@ -19,7 +19,10 @@ module.exports = {
       return res.serverError(err);
     }
 
-    return res.view('pages/reviews/reviews', { reviews, places });
+    return res.view('pages/reviews/reviews', {
+      reviews,
+      places,
+    });
   },
   async create(req, res) {
     const {
@@ -32,12 +35,12 @@ module.exports = {
 
     try {
       await Review.create({
-        reviewerName,
-        reviewText,
-        reviewImageFileName,
-        reviewImageAlt,
-        numberOfStars,
-      })
+          reviewerName,
+          reviewText,
+          reviewImageFileName,
+          reviewImageAlt,
+          numberOfStars,
+        })
         .intercept('E_UNIQUE', err => err)
         .intercept('UsageError', err => err);
     } catch (err) {

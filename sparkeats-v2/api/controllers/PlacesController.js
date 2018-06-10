@@ -12,34 +12,53 @@ module.exports = {
         return res.serverError(err);
       }
 
-      return res.view("pages/places/places", { places });
+      return res.view('pages/places/places', {
+        places,
+      });
     });
   },
   new: (req, res) => {
-    return res.view("pages/places/new");
+    return res.view('pages/places/new');
   },
   create: (req, res) => {
-    const { placeName, city, state, address, phone, placeImageName, placeImageAlt, placeUrl, placeUrlDisplay } = req.body;
+    const {
+      placeName,
+      city,
+      state,
+      address,
+      phone,
+      placeImageName,
+      placeImageAlt,
+      placeUrl,
+      placeUrlDisplay,
+    } = req.body;
 
-    Place.create({ placeName, city, state, address, phone, placeImageName, placeImageAlt, placeUrl, placeUrlDisplay }).exec(
-      err => {
-        if (err) {
-          const { code, name } = err;
+    Place.create({
+      placeName,
+      city,
+      state,
+      address,
+      phone,
+      placeImageName,
+      placeImageAlt,
+      placeUrl,
+      placeUrlDisplay,
+    }).exec(err => {
+      if (err) {
+        const { code, name } = err;
 
-          if (code === 'E_UNIQUE') {
-            return res.sendStatus(409);
-          }
-
-          if (name === 'UsageError') {
-            return res.badRequest();
-          }
-
-          return res.serverError(err);
+        if (code === 'E_UNIQUE') {
+          return res.sendStatus(409);
         }
 
-        return res.redirect("/places");
-      }
-    );
-  }
-};
+        if (name === 'UsageError') {
+          return res.badRequest();
+        }
 
+        return res.serverError(err);
+      }
+
+      return res.redirect('/places');
+    });
+  },
+};
