@@ -7,7 +7,7 @@
 
 module.exports = {
   places: (req, res) => {
-    Places.find({}).exec((err, places) => {
+    Place.find({}).exec((err, places) => {
       if (err) {
         return res.serverError(err);
       }
@@ -21,7 +21,7 @@ module.exports = {
   create: (req, res) => {
     const { placeName, city, state, address, phone, placeImageName, placeImageAlt, placeUrl, placeUrlDisplay } = req.body;
 
-    Places.create({ placeName, city, state, address, phone, placeImageName, placeImageAlt, placeUrl, placeUrlDisplay }).exec(
+    Place.create({ placeName, city, state, address, phone, placeImageName, placeImageAlt, placeUrl, placeUrlDisplay }).exec(
       err => {
         if (err) {
           const { code, name } = err;
