@@ -30,5 +30,8 @@ module.exports = {
       type: 'string',
       required: true,
     },
+    placeId: {
+      model: 'place',
+    },
   },
 };

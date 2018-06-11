@@ -6,7 +6,6 @@
  */
 
 module.exports = {
-
   attributes: {
     placeName: {
       type: 'string',
@@ -29,7 +28,7 @@ module.exports = {
       type: 'string',
       regex: /^(([0-9]{1})*[- .(]*([0-9]{3})[- .)]*[0-9]{3}[- .]*[0-9]{4})+$/,
     },
-    placeImageName: {
+    placeImage: {
       type: 'string',
     },
     placeImageAlt: {
@@ -39,9 +38,13 @@ module.exports = {
       type: 'string',
       isURL: true,
     },
-    placeUrlDisplay: {
+    placeWebsiteDisplay: {
       type: 'string',
       isURL: true,
+    },
+    reviews: {
+      collection: 'review',
+      via: 'placeId',
     },
   },
 
