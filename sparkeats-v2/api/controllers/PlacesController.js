@@ -20,45 +20,39 @@ module.exports = {
   new: (req, res) => {
     return res.view('pages/places/new');
   },
-  create: (req, res) => {
+  async create(req, res) {
     const {
       placeName,
       city,
       state,
       address,
       phone,
-      placeImageName,
+      placeImage,
       placeImageAlt,
       placeUrl,
-      placeUrlDisplay,
+      placeWebsiteDisplay,
     } = req.body;
 
-    Place.create({
-      placeName,
-      city,
-      state,
-      address,
-      phone,
-      placeImageName,
-      placeImageAlt,
-      placeUrl,
-      placeUrlDisplay,
-    }).exec(err => {
-      if (err) {
-        const { code, name } = err;
+    let place;
+    try {
+      place = await Place.create({
+        placeName,
+        city,
+        state,
+        address,
+        phone,
+        placeImage,
+        placeImageAlt,
+        placeUrl,
+        placeWebsiteDisplay,
+      })
+        .intercept('E_UNIQUE', err => err)
+        .intercept('UsageError', err => err)
+        .fetch();
+    } catch (err) {
+      return res.serverError(err);
+    }
 
-        if (code === 'E_UNIQUE') {
-          return res.sendStatus(409);
-        }
-
-        if (name === 'UsageError') {
-          return res.badRequest();
-        }
-
-        return res.serverError(err);
-      }
-
-      return res.redirect('/places');
-    });
+    res.redirect(`/places/${place.id}/review`);
   },
 };

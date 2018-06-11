@@ -79,10 +79,12 @@ body {
   display: block;
 }
 
-.form__input, .form__text-area {
+.form__input, .form__text-area, .form__select {
   box-sizing: border-box;
+  background-color: $color-white;
   font-size: 1rem;
   padding: 0.5rem;
+  height: 2.5rem;
   width: 100%;
   outline: none;
   border: 2px solid $color-sparkblue-dark;

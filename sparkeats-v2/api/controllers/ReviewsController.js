@@ -6,8 +6,17 @@
  */
 
 module.exports = {
-  new: (req, res) => {
-    return res.view('pages/reviews/new');
+  async new(req, res) {
+    const id = req.param('id');
+    let place;
+
+    try {
+      place = await Place.findOne({ id }).intercept(err => err);
+    } catch (err) {
+      return res.serverError(err);
+    }
+
+    return res.view('pages/reviews/new', { place });
   },
   async reviews(req, res) {
     let reviews;
@@ -30,17 +39,20 @@ module.exports = {
       reviewText,
       reviewImageFileName,
       reviewImageAlt,
+      placeId,
     } = req.body;
+
     const numberOfStars = parseInt(req.body.numberOfStars, 10);
 
     try {
       await Review.create({
-          reviewerName,
-          reviewText,
-          reviewImageFileName,
-          reviewImageAlt,
-          numberOfStars,
-        })
+        reviewerName,
+        reviewText,
+        reviewImageFileName,
+        reviewImageAlt,
+        numberOfStars,
+        placeId,
+      })
         .intercept('E_UNIQUE', err => err)
         .intercept('UsageError', err => err);
     } catch (err) {
