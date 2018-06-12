@@ -9,7 +9,7 @@ li {
   list-style: none;
 }
 
-li:not([class]){
+li:not([class]) {
   list-style: disc;
 }
 
@@ -19,7 +19,7 @@ li:not([class]){
   width: 100%;
   height: 8.5em;
   background-color: $color-fountain-blue;
-  background-image: url(/assets/design/sparkeats_pattern_horiz.svg);
+  background-image: url(/design/sparkeats_pattern_horiz.svg);
   background-repeat: repeat-x;
   background-size: 22em;
   background-position: center bottom;
@@ -29,7 +29,7 @@ li:not([class]){
   max-width: 100%;
   &__logo {
     display: block;
-    background: url(/assets/design/sparkeats_logomark.svg) center no-repeat;
+    background: url(/design/sparkeats_logomark.svg) center no-repeat;
     padding: 1.75em;
     width: 61%;
     max-width: 25em;
@@ -79,7 +79,7 @@ li:not([class]){
     letter-spacing: 0.075em;
     line-height: 1.5em;
     padding: 0.5em 1em;
-    transition: all 500ms cubic-bezier(0,1.08,.65,.98);
+    transition: all 500ms cubic-bezier(0, 1.08, 0.65, 0.98);
     @media (min-width: $bp-small-screen) {
       font-size: 0.938em;
     }
@@ -103,12 +103,12 @@ li:not([class]){
     text-align: center;
     padding-top: 3.625em;
     margin: 0.5em;
-    @media (min-width: $bp-small-screen){
+    @media (min-width: $bp-small-screen) {
       margin: 1em;
     }
   }
   &__wordmark {
-    background: url(/assets/design/sparkeats_wordmark.svg) center no-repeat;
+    background: url(/design/sparkeats_wordmark.svg) center no-repeat;
     margin: 0 auto;
     margin-bottom: 0.5em;
     width: 18em;
@@ -129,7 +129,7 @@ li:not([class]){
     margin: 0 13%;
     @media (min-width: $bp-small-screen) {
       font-size: 1.3em;
-      @media (min-width: $bp-med-screen){
+      @media (min-width: $bp-med-screen) {
         margin: 0 24%;
       }
     }
@@ -164,7 +164,7 @@ li:not([class]){
     letter-spacing: 0.025em;
     padding-bottom: 2.5em;
     &:after {
-      content: "";
+      content: '';
       display: table;
       clear: both;
     }
@@ -178,7 +178,7 @@ li:not([class]){
   }
   &__onethird {
     display: block;
-    @media (min-width: $bp-med-screen){
+    @media (min-width: $bp-med-screen) {
       float: left;
       width: 38%;
     }
@@ -193,7 +193,7 @@ li:not([class]){
 }
 
 .sparkeats__footer-pins {
-  background: url(/assets/design/sparkeats_footer-pins.svg) repeat-x;
+  background: url(/design/sparkeats_footer-pins.svg) repeat-x;
   width: 100%;
   max-width: 100%;
   height: 5em;
@@ -262,7 +262,7 @@ li:not([class]){
     }
   }
   &__list {
-    display:none;
+    display: none;
     box-sizing: border-box;
     margin: 0 auto;
     @media (min-width: $bp-small-screen) {
@@ -288,7 +288,8 @@ li:not([class]){
       z-index: 1;
       @media (min-width: $bp-med-screen) {
         position: absolute;
-        left: 0; top: 100%;
+        left: 0;
+        top: 100%;
         width: 100%;
       }
 
@@ -311,12 +312,12 @@ li:not([class]){
       font-size: 1.2em;
       color: $color-black;
       text-align: left;
-      &:hover{
+      &:hover {
         background-color: $color-white;
       }
     }
     &-open {
-      display:block;
+      display: block;
       position: relative;
     }
   }
