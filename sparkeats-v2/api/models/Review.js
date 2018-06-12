@@ -13,7 +13,6 @@ module.exports = {
     },
     reviewerName: {
       type: 'string',
-      unique: true,
       required: true,
     },
     numberOfStars: {

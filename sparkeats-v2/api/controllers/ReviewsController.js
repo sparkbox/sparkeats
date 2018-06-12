@@ -19,18 +19,23 @@ module.exports = {
     return res.view('pages/reviews/new', { place });
   },
   async reviews(req, res) {
+    const id = req.param('id');
     let reviews;
-    let places;
+    let place;
     try {
-      reviews = await Review.find({}).intercept(err => err);
-      places = await Place.find({}).intercept(err => err);
+      reviews = await Review.find({
+        where: { placeId: id },
+      }).intercept(err => err);
+      place = await Place.findOne({
+        where: { id },
+      }).intercept(err => err);
     } catch (err) {
       return res.serverError(err);
     }
 
     return res.view('pages/reviews/reviews', {
       reviews,
-      places,
+      place,
     });
   },
   async create(req, res) {
@@ -43,7 +48,7 @@ module.exports = {
     } = req.body;
 
     const numberOfStars = parseInt(req.body.numberOfStars, 10);
-
+    let place;
     try {
       await Review.create({
         reviewerName,
@@ -55,10 +60,13 @@ module.exports = {
       })
         .intercept('E_UNIQUE', err => err)
         .intercept('UsageError', err => err);
+      place = await Place.findOne({
+        where: { id: placeId },
+      }).intercept(err => err);
     } catch (err) {
       return res.serverError(err);
     }
 
-    return res.redirect('/reviews');
+    return res.redirect(`/places/${place.id}`);
   },
 };
