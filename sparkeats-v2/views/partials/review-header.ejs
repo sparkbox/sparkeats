@@ -1,4 +1,14 @@
 <div class="review-header">
-  <%- partial('./review-header-image.ejs') %>
-  <%- partial('./review-name-city-state.ejs') %>
+    <div class="review-header__backdrop">
+        <img class="review-header__backdrop-image" src="<%= place.placeImage %>" alt="<%= place.placeImageAlt %>" />
+    </div>
+    <div class="review-header__title">
+        <h1 class="review-header__name">
+            <%= place.placeName %>
+        </h1>
+        <h2 class="review-header__city">
+            <%= place.city %>,
+            <%= place.state %>
+        </h2>
+    </div>
 </div>

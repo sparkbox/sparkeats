@@ -12,14 +12,12 @@ module.exports = {
         return res.serverError(err);
       }
 
-      return res.view('pages/places/places', {
+      return res.view('pages/homepage', {
         places,
       });
     });
   },
-  new: (req, res) => {
-    return res.view('pages/places/new');
-  },
+  new: (req, res) => res.view('pages/places/new'),
   async create(req, res) {
     const {
       placeName,
@@ -52,7 +50,6 @@ module.exports = {
     } catch (err) {
       return res.serverError(err);
     }
-
-    res.redirect(`/places/${place.id}/review`);
+    return res.redirect(`/places/${place.id}/review`);
   },
 };
