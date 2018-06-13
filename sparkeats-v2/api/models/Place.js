@@ -7,9 +7,6 @@
 
 module.exports = {
   attributes: {
-    placeId: {
-      type: 'string',
-    },
     placeName: {
       type: 'string',
       required: true,
