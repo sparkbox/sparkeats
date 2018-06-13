@@ -9,6 +9,7 @@
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
     "async": "2.0.1",
+    "autoprefixer": "^8.6.2",
     "dotenv": "5.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
@@ -17,6 +18,9 @@
     "eslint-plugin-prettier": "^2.6.0",
     "express": "4.16.3",
     "grunt": "1.0.1",
+    "grunt-sass": "^2.1.0",
+    "js-yaml": "^3.12.0",
+    "node-sass": "^4.9.0",
     "passport": "0.4.0",
     "passport-http": "0.3.0",
     "prettier": "^1.13.4",
@@ -31,19 +35,17 @@
     "@sailshq/eslint": "^4.19.3",
     "browser-sync": "^2.24.4",
     "concurrently": "^3.5.1",
-    "grunt-sass": "^2.1.0",
-    "node-sass": "^4.9.0",
     "nodemon": "^1.17.5",
     "postcss-cli": "^5.0.0"
   },
   "scripts": {
-    "start": "concurrently \"npm run sass-watch\" \"npm run dev\"",
+    "start": "concurrently \"npm run sass\" \"npm run server\"",
     "build": "npm run sass && npm run postcss",
-    "postinstall": "npm run build",
+    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi",
     "sass": "node-sass assets/styles/importer.scss .tmp/styles/importer.css",
     "sass-watch": "node-sass --watch assets/styles/importer.scss .tmp/styles/importer.css",
     "postcss": "postcss --use autoprefixer -c tasks/postcss.config.json .tmp/styles/importer.css -d .tmp/styles/",
-    "dev": "nodemon app.js & browser-sync start --proxy http://localhost:1337 --files \".tmp/styles/\" \"views/\" --reload-delay 1100",
+    "server": "nodemon app.js & browser-sync start --proxy http://localhost:1337 --files \".tmp/styles/\" \"views/\" --reload-delay 1100",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
@@ -56,6 +58,10 @@
   "author": "travisdagreat",
   "license": "",
   "engines": {
-    "node": ">=9.11"
-  }
+    "node": ">=9.11",
+    "npm": "6.1"
+  },
+  "cacheDirectories": [
+    "data"
+  ]
 }
