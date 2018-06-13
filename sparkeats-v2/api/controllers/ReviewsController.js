@@ -46,9 +46,9 @@ module.exports = {
       reviewImageAlt,
       placeId,
     } = req.body;
-
     const numberOfStars = parseInt(req.body.numberOfStars, 10);
     let place;
+
     try {
       await Review.create({
         reviewerName,
@@ -60,6 +60,7 @@ module.exports = {
       })
         .intercept('E_UNIQUE', err => err)
         .intercept('UsageError', err => err);
+
       place = await Place.findOne({
         where: { id: placeId },
       }).intercept(err => err);

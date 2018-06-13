@@ -6,18 +6,18 @@
  */
 
 module.exports = {
-  places: (req, res) => {
-    Place.find({}).exec((err, places) => {
-      if (err) {
-        return res.serverError(err);
-      }
-
-      return res.view('pages/homepage', {
-        places,
-      });
-    });
-  },
   new: (req, res) => res.view('pages/places/new'),
+  async places(req, res) {
+    let places;
+
+    try {
+      places = await Place.find({}).intercept(err => err);
+    } catch (err) {
+      return res.serverError(err);
+    }
+
+    return res.view('pages/homepage', { places });
+  },
   async create(req, res) {
     const {
       placeName,
@@ -50,6 +50,7 @@ module.exports = {
     } catch (err) {
       return res.serverError(err);
     }
+
     return res.redirect(`/places/${place.id}/review`);
   },
 };
