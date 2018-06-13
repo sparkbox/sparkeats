@@ -1,1 +1,1 @@
-web: node tasks/server.js
+web: node app.js
