@@ -1,79 +1,67 @@
 {
-  "name": "apprenticeProject2017",
-  "version": "1.0.0",
-  "engines": {
-    "node": "6.11.1"
-  },
-  "description": "An aggregate of Sparkboxer's reviews of places to eat and drink.",
-  "main": "server.js",
-  "scripts": {
-    "test": "mocha test",
-    "dev": "npm-run-all -s clean webpack html styles -p start watch",
-    "sass": "node tasks/sass.js",
-    "postcss": "node tasks/postcss.js",
-    "postinstall": "npm run build",
-    "build": "npm-run-all -s clean webpack html styles",
-    "styles": "npm run sass && npm run postcss",
-    "html": "node tasks/handlebars.js",
-    "watch:hbs": "node tasks/watch-hbs.js",
-    "watch:data": "node tasks/watch-data.js",
-    "watch:css": "node tasks/watch-sass.js",
-    "watch": "npm-run-all -p watch:hbs watch:data watch:css watch:webpack",
-    "start": "node tasks/server.js",
-    "webpack": "node tasks/webpack.js",
-    "watch:webpack": "node tasks/watch-webpack.js",
-    "clean": "rimraf ./dist && mkdir dist",
-    "validate-data": "node tasks/lib/validate-data.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sparkbox/appproject2017.git"
-  },
-  "author": "Sparkbox Full Stack Apprenticeship Team 2017",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sparkbox/appproject2017/issues"
-  },
-  "homepage": "https://github.com/sparkbox/appproject2017#readme",
+  "name": "sparkeats-v-2",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
   "dependencies": {
-    "autoprefixer": "^7.1.1",
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015": "^6.24.1",
-    "chai": "^4.1.0",
-    "dotenv": "^4.0.0",
+    "@sailshq/connect-redis": "^3.2.1",
+    "@sailshq/lodash": "^3.10.3",
+    "@sailshq/socket.io-redis": "^5.2.0",
+    "async": "2.0.1",
+    "autoprefixer": "^8.6.2",
+    "dotenv": "5.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-prettier": "^2.6.0",
-    "express": "^4.15.3",
-    "front-matter": "^2.1.2",
-    "fs": "0.0.1-security",
-    "glob": "^7.1.1",
-    "globby": "^6.1.0",
-    "handlebars": "^4.0.8",
-    "heroku-ssl-redirect": "^0.0.4",
-    "marshmallows": "^0.1.1",
-    "mkdirp": "^0.5.1",
-    "mocha": "^3.4.2",
-    "node-sass": "^4.5.2",
-    "npm-run-all": "^4.0.2",
-    "path": "^0.12.7",
-    "postcss-cli": "^4.0.0",
+    "express": "4.16.3",
+    "grunt": "^1.0.3",
+    "grunt-sass": "^2.1.0",
+    "js-yaml": "^3.12.0",
+    "node-sass": "^4.9.0",
+    "passport": "0.4.0",
+    "passport-http": "0.3.0",
+    "postcss-cli": "^5.0.1",
     "prettier": "^1.13.4",
-    "rimraf": "^2.6.1",
-    "sass": "^0.5.0",
-    "shelljs": "^0.7.7",
-    "webpack": "^3.3.0",
-    "yamljs": "^0.2.10"
+    "sails": "^1.0.2",
+    "sails-hook-grunt": "^3.0.2",
+    "sails-hook-orm": "^2.0.0-16",
+    "sails-hook-sockets": "^1.4.0",
+    "sails-mysql": "^1.0.0",
+    "tsscmp": "1.0.5"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "onchange": "^3.2.1",
-    "stylelint": "^8.0.0",
-    "stylelint-scss": "^1.5.1",
-    "themis": "^1.1.6"
-  }
+    "@sailshq/eslint": "^4.19.3",
+    "browser-sync": "^2.24.4",
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.5"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run sass\" \"npm run server\"",
+    "start": "npm run build && sails lift --prod",
+    "build": "npm run sass && npm run postcss",
+    "sass": "node-sass assets/styles/importer.scss .tmp/styles/importer.css",
+    "sass-watch": "node-sass --watch assets/styles/importer.scss .tmp/styles/importer.css",
+    "postcss": "postcss --use autoprefixer -c tasks/postcss.config.json .tmp/styles/importer.css -d .tmp/styles/",
+    "server": "nodemon app.js & browser-sync start --proxy http://localhost:1337 --files \".tmp/styles/\" \"views/\" --reload-delay 1100",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/travisdagreat/sparkeats-v-2.git"
+  },
+  "author": "travisdagreat",
+  "license": "",
+  "engines": {
+    "node": ">=9.11",
+    "npm": "6.1"
+  },
+  "cacheDirectories": [
+    "data"
+  ]
 }
