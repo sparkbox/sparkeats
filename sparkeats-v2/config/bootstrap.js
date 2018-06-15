@@ -79,17 +79,16 @@ function seedPlaces(places) {
 }
 
 async function bootstrap(done) {
-  // Seed Places and Reviews
+  require('dotenv').config();
 
   // Don't seed if already seeded
-  if ((await Place.count()) > 0 || (await Review.count()) > 0) {
+  if ((await Place.count()) > 0) {
     console.log('Already seeded.');
     return done();
   }
 
   seedPlaces(places);
 
-  require('dotenv').config();
   return done();
 }
 
