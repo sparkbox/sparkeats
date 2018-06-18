@@ -1,18 +1,20 @@
 <div class="review-container">
-<% reviews.forEach((review) => { %>
+<% dataForView.reviews.forEach((review) => { %>
   <article class="review-submission">
     <h1 class="review-submission__reviewer">
       <%= review.reviewerName %>
     </h1>
-    <%= review.numberOfStars %>
+    <%- review.numberOfStars %>
       <h2 class="review-submission__title">Comments</h2>
       <p class="review-submission__review">
         <%= review.reviewText %>
       </p>
       <!--loop review image file names-->
-      <div class="review-submission__image-container">
-        <img class="review-submission__image" src="../../images/reviews/<%= review.reviewImageFileName %>" alt="<%= review.reviewImageAlt %>">
-      </div>
+      <% if(review.reviewImageFileName !== '') { %>
+        <div class="review-submission__image-container">
+          <img class="review-submission__image" src="../../images/reviews/<%= review.reviewImageFileName %>" alt="<%= review.reviewImageAlt %>">
+        </div>
+      <% }; %>
   </article>
 <% }); %>
 </div>
