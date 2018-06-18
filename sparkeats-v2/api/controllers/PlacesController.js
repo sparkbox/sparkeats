@@ -9,14 +9,16 @@ module.exports = {
   new: (req, res) => res.view('pages/places/new'),
   async places(req, res) {
     let places;
+    let reviews;
 
     try {
       places = await Place.find({}).intercept(err => err);
+      reviews = await Review.find({}).intercept(err => err);
     } catch (err) {
       return res.serverError(err);
     }
 
-    return res.view('pages/homepage', { places });
+    return res.view('pages/homepage', { places, reviews });
   },
   async create(req, res) {
     const {
