@@ -10,6 +10,7 @@ module.exports = {
     reviewText: {
       type: 'string',
       required: true,
+      columnType: 'text',
     },
     reviewerName: {
       type: 'string',
