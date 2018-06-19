@@ -13,12 +13,27 @@ module.exports = {
 
     try {
       places = await Place.find({}).intercept(err => err);
-      reviews = await Review.find({}).intercept(err => err);
+      reviews = await Review.find({
+        select: ['numberOfStars', 'placeId'],
+      }).intercept(err => err);
     } catch (err) {
       return res.serverError(err);
     }
 
-    return res.view('pages/homepage', { places, reviews });
+    const dataForView = places.map(place => ({
+      id: place.id,
+      name: place.placeName,
+      address: `${place.city}, ${place.state}`,
+      phone: place.phone,
+      placeImage: place.placeImage,
+      placeImageAlt: place.placeImageAlt,
+      placeUrl: place.placeUrl,
+      placeWebsiteDisplay: place.placeWebsiteDisplay,
+      numberOfStars: await sails.helpers.getNumberOfStars(reviews, place),
+      numberOfReviews: await sails.helpers.getNumberOfReviews(reviews, place),
+    }));
+
+    return res.view('pages/homepage', { dataForView });
   },
   async create(req, res) {
     const {
