@@ -23,6 +23,7 @@
     "node-sass": "^4.9.0",
     "passport": "0.4.0",
     "passport-http": "0.3.0",
+    "postcss-cli": "^5.0.1",
     "prettier": "^1.13.4",
     "sails": "^1.0.2",
     "sails-hook-grunt": "^3.0.2",
@@ -35,13 +36,12 @@
     "@sailshq/eslint": "^4.19.3",
     "browser-sync": "^2.24.4",
     "concurrently": "^3.5.1",
-    "nodemon": "^1.17.5",
-    "postcss-cli": "^5.0.0"
+    "nodemon": "^1.17.5"
   },
   "scripts": {
-    "start": "concurrently \"npm run sass\" \"npm run server\"",
+    "dev": "concurrently \"npm run sass\" \"npm run server\"",
+    "start": "npm run build && sails lift --prod",
     "build": "npm run sass && npm run postcss",
-    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi",
     "sass": "node-sass assets/styles/importer.scss .tmp/styles/importer.css",
     "sass-watch": "node-sass --watch assets/styles/importer.scss .tmp/styles/importer.css",
     "postcss": "postcss --use autoprefixer -c tasks/postcss.config.json .tmp/styles/importer.css -d .tmp/styles/",
