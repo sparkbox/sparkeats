@@ -64,17 +64,6 @@ canal-street-arcade-and-deli:
   place-url: https://www.facebook.com/Canal-Street-Arcade-and-Deli-1752274581651410/
   place-website-display: www.facebook.com/Canal-Street-Arcade-and-Deli-1752274581651410
 
-cherry-republic:
-  place-name: Cherry Republic
-  city: Glen Arbor
-  state: MI
-  address: 6026 S Lake St
-  phone: (231) 226-3014
-  place-image: cherry-republic.jpg
-  place-image-alt: Cherry Republic
-  place-url: https://www.cherryrepublic.com/locations/glen-arbor/
-  place-website-display: www.cherryrepublic.com
-
 cocos-bistro:
   place-name: Coco's Bistro
   city: Dayton
@@ -207,18 +196,6 @@ old-scratch:
   place-url: https://www.oldscratchpizza.com/
   place-website-display: oldscratchpizza.com
 
-
-pasha-grill:
-  place-name: Pasha Grill
-  city: Dayton
-  state: OH
-  address: 72 Plum Street
-  phone: (937) 429-9000
-  place-image:
-  place-image-alt:
-  place-url: https://www.pashagrill.com
-  place-website-display:  www.pashagrill.com
-
 peace-love-and-little-donuts:
   place-name: Peace Love and Little Donuts
   city: Pittsburgh
@@ -295,17 +272,6 @@ thai-9:
   place-image-alt:
   place-url: http://www.thai9restaurant.com
   place-website-display: www.thai9restaurant.com
-
-village-cheese-shanty:
-  place-name: Village Cheese Shanty
-  city: Leland
-  state: MI
-  address: 199 W River St
-  phone: (231) 256-9141
-  place-image: village-cheese-shanty.jpg
-  place-image-alt: Village Cheese Shanty
-  place-url: http://www.villagecheeseshanty.com/
-  place-website-display: www.villagecheeseshanty.com
 
 yellow-cab-food-truck-rally:
   place-name: Yellow Cab Food Truck Rally
