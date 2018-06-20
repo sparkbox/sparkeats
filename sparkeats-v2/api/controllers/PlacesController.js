@@ -29,8 +29,8 @@ module.exports = {
       placeImageAlt: place.placeImageAlt,
       placeUrl: place.placeUrl,
       placeWebsiteDisplay: place.placeWebsiteDisplay,
-      numberOfStars: await sails.helpers.getNumberOfStars(reviews, place),
-      numberOfReviews: await sails.helpers.getNumberOfReviews(reviews, place),
+      avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
+      numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
     }));
 
     return res.view('pages/homepage', { dataForView });
