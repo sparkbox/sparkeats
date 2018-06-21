@@ -5,6 +5,6 @@ module.exports.routes = {
   'GET /places/:id/review': 'ReviewsController.new',
   'POST /review': 'ReviewsController.create',
 
-  'GET /place': 'PlacesController.new',
+  'GET /places/new': 'PlacesController.new',
   'POST /place': 'PlacesController.create',
 };
