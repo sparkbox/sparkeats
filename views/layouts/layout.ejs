@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sparkeats</title>
+
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!--STYLES-->
+  <link rel="stylesheet" href="/min/production.min.css">
+  <!--STYLES END-->
+  <%- blocks.localScripts %>
+</head>
+
+<body>
+  <%- partial('../partials/sparkeats-header.ejs') %>
+  
+  <%- body %>
+
+  <%- partial('../partials/sparkeats-footer-pins.ejs') %>
+  <%- partial('../partials/sparkeats-footer.ejs') %>
+
+    <!--SCRIPTS-->
+    <script src="/min/production.min.js"></script>
+    <!--SCRIPTS END-->
+
+</body>
+
+</html>
