@@ -33,10 +33,25 @@ module.exports = {
       return res.serverError(err);
     }
 
-    return res.view('pages/reviews/reviews', {
-      reviews,
-      place,
-    });
+    const dataForView = {
+      name: place.placeName,
+      placeImage: place.placeImage,
+      placeImageAlt: place.placeImageAlt,
+      phone: place.phone,
+      address: `${place.city}, ${place.state}`,
+      avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
+      numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
+      reviews: reviews.map(review => ({
+        reviewerName: review.reviewerName,
+        reviewText: review.reviewText,
+        reviewImageFileName: review.reviewImageFileName,
+        reviewImageAlt: review.reviewImageAlt,
+        placeId: review.placeId,
+        numberOfStars: sails.helpers.getNumberOfStars(review.numberOfStars),
+      })),
+    };
+
+    return res.view('pages/reviews/reviews', { dataForView });
   },
   async create(req, res) {
     const {
