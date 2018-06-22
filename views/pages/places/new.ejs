@@ -1,67 +1,69 @@
 <% block('localScripts', '<script src="/js/local/showFile.js"></script>') %>
 
-<form class="form" method="post" action="/place">
-  <div class="form__content-wrapper">
-    <section class="form__heading">
-      <h2 class="form__title">Place Information</h2>
-      <span class="form__required-key form__required-indicator">Required Field</span>
-    </section>
+<div class="wrapper--form">
+  <form class="form" method="post" action="/place">
+    <div class="form__content-wrapper">
+      <section class="form__heading">
+        <h2 class="form__title">Place Information</h2>
+        <span class="form__required-key form__required-indicator">Required Field</span>
+      </section>
 
-    <div class="form__field form__required-indicator">
-      <label class="form__label" for="placeName">Place Name</label>
-      <input id="placeName" class="form__input" type="text" name="placeName" aria-label="Place Name" placeholder="Place Name"
-        required>
-    </div>
-
-    <div class="form__field form__required-indicator">
-      <label class="form__label" for="city">City</label>
-      <input id="city" class="form__input" type="text" name="city" aria-label="City" placeholder="City"
-        required>
-    </div>
-
-    <div class="form__field form__required-indicator">
-      <label class="form__label" for="state">State Abbreviation (PA, OH, KY, etc.)</label>
-      <input id="state" class="form__input--short" type="text" name="state" aria-label="State" placeholder="State"
-        required>
-    </div>
-
-    <div class="form__field form__required-indicator">
-      <label class="form__label" for="address">Address</label>
-      <input id="address" class="form__input" type="text" name="address" aria-label="Address" placeholder="Address"
-        required>
-    </div>
-
-    <div class="form__field form__required-indicator">
-      <label class="form__label" for="phone">Phone number</label>
-      <input id="phone" class="form__input" type="text" name="phone" aria-label="Phone number" placeholder="Phone number"
-        required>
-    </div>
-
-    <div class="form__field ">
-      <p class="form__label">Add an image to your review (max XX MB).</p>
-
-      <label class="form__label--button" for="placeImage" aria-hidden="false">Upload Image</label>
-      <input id="placeImage" class="form__file-input" type="file" name="placeImage" accept="image/*">
-      <span class="button--secondary" aria-hidden="true">Upload Image</span>
-
-      <div class="form__field form__field--file">
-        <div class="form__file">
-          <span class="form__file-name"></span>
-          <button type="button" class="form__remove-file" aria-label="Remove image">&times</button>
-        </div>
-        <label class="form__label" for="place-image-alt">
-          <span class="form__label--image-alt form__required-indicator">Image alt text</span>
-        </label>
-        <input id="place-image-alt" class="form__input form__input--image-alt" type="text" name="placeImageAlt">
+      <div class="form__field form__required-indicator">
+        <label class="form__label" for="placeName">Place Name</label>
+        <input id="placeName" class="form__input" type="text" name="placeName" aria-label="Place Name" placeholder="Place Name"
+          required>
       </div>
-    </div>
 
-    <div class="form__field form__required-indicator">
-      <label class="form__label" for="placeUrl">Place Url</label>
-      <input id="placeUrl" class="form__input" type="text" name="placeUrl" aria-label="Place Url" placeholder="Place Url"
-        required>
-    </div>
+      <div class="form__field form__required-indicator">
+        <label class="form__label" for="city">City</label>
+        <input id="city" class="form__input" type="text" name="city" aria-label="City" placeholder="City"
+          required>
+      </div>
 
-    <button class="form__submit button--primary" type="submit">Add a review</button>
-  </div>
-</form>
+      <div class="form__field form__required-indicator">
+        <label class="form__label" for="state">State Abbreviation (PA, OH, KY, etc.)</label>
+        <input id="state" class="form__input--short" type="text" name="state" aria-label="State" placeholder="State"
+          required>
+      </div>
+
+      <div class="form__field form__required-indicator">
+        <label class="form__label" for="address">Address</label>
+        <input id="address" class="form__input" type="text" name="address" aria-label="Address" placeholder="Address"
+          required>
+      </div>
+
+      <div class="form__field form__required-indicator">
+        <label class="form__label" for="phone">Phone number</label>
+        <input id="phone" class="form__input" type="text" name="phone" aria-label="Phone number" placeholder="Phone number"
+          required>
+      </div>
+
+      <div class="form__field ">
+        <p class="form__label">Add an image to your review (max XX MB).</p>
+
+        <label class="form__label--button" for="placeImage" aria-hidden="false">Upload Image</label>
+        <input id="placeImage" class="form__file-input" type="file" name="placeImage" accept="image/*">
+        <span class="button--secondary" aria-hidden="true">Upload Image</span>
+
+        <div class="form__field form__field--file">
+          <div class="form__file">
+            <span class="form__file-name"></span>
+            <button type="button" class="form__remove-file" aria-label="Remove image">&times</button>
+          </div>
+          <label class="form__label" for="place-image-alt">
+            <span class="form__label--image-alt form__required-indicator">Image alt text</span>
+          </label>
+          <input id="place-image-alt" class="form__input form__input--image-alt" type="text" name="placeImageAlt">
+        </div>
+      </div>
+
+      <div class="form__field form__required-indicator">
+        <label class="form__label" for="placeUrl">Place Url</label>
+        <input id="placeUrl" class="form__input" type="text" name="placeUrl" aria-label="Place Url" placeholder="Place Url"
+          required>
+      </div>
+
+      <button class="form__submit button--primary" type="submit">Add a review</button>
+    </div>
+  </form>
+</div>
