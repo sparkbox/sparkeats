@@ -4,8 +4,8 @@
  * ---------------------------------------------------------------
  *
  * Together with the `concat` task, this is the final step that minifies
- * all CSS files from `assets/styles/` (and potentially your LESS importer
- * file from `assets/styles/importer.less`)
+ * all CSS files from `assets/styles/` (and potentially your LESS main
+ * file from `assets/styles/main.less`)
  *
  * For more information, see:
  *   https://sailsjs.com/anatomy/tasks/config/cssmin.js

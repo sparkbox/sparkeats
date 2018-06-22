@@ -29,7 +29,7 @@
 // CSS files to inject as <link> tags, in order.
 //
 // > Note: if you're using built-in LESS support with default settings,
-// > you'll want to change `assets/styles/importer.less` instead.
+// > you'll want to change `assets/styles/main.less` instead.
 //
 var cssFilesToInject = [
 
