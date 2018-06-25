@@ -7,16 +7,14 @@ function seedReviews(place, placeReviews) {
       'review-text': reviewText,
       'reviewer-name': reviewerName,
       'number-of-stars': numberOfStars,
-      'review-image-file-name': reviewImageFileName,
+      'review-image-file-name': reviewImage,
       'review-image-alt': reviewImageAlt,
     }) => {
       try {
         await Review.create({
           reviewerName,
           reviewText,
-          reviewImageFileName: reviewImageFileName
-            ? reviewImageFileName[0]
-            : '',
+          reviewImage: reviewImage ? reviewImage[0] : '',
           reviewImageAlt: reviewImageAlt ? reviewImageAlt[0] : '',
           numberOfStars,
           placeId: place.id,

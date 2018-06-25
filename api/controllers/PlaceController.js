@@ -1,3 +1,5 @@
+const SkipperMySQLAdapter = require('../../skipper-mysql/SkipperMySQLAdapter');
+
 /**
  * PlaceController
  *
@@ -10,6 +12,8 @@ module.exports = {
   async places(req, res) {
     let places;
     let reviews;
+    let placeImage;
+    let dataForView;
 
     try {
       places = await Place.find({}).intercept(err => err);
@@ -20,19 +24,16 @@ module.exports = {
       return res.serverError(err);
     }
 
-    const dataForView = places.map(place => {
-      const {
-        id,
-        placeName: name,
-        city,
-        state,
-        phone,
-        address,
-        placeImage,
-        placeImageAlt,
-        placeURL,
-        placeWebsiteDisplay,
-      } = place;
+    dataForView = places.map(async place => {
+      // get placeImage file if placeImage is an id
+      if (/^\d+$/.test(place.placeImage)) {
+        placeImage = await PlaceImage.findOne({
+          id: place.placeImage,
+        }).intercept(err => err);
+        placeImage = `data:image/jpeg;base64,${placeImage.file}`;
+      } else {
+        placeImage = `../../images/places/${place.placeImage}`;
+      }
 
       let { stars, rating } = sails.helpers.getAvgNumberOfStars(
         reviews,
@@ -40,23 +41,22 @@ module.exports = {
       );
 
       return {
-        id,
-        name,
-        city,
-        state,
-        phone,
-        address,
+        id: place.id,
+        name: place.placeName,
+        address: `${place.city}, ${place.state}`,
+        phone: place.phone,
         placeImage,
-        placeImageAlt,
-        placeURL,
-        placeWebsiteDisplay,
-        numberOfStars: stars,
-        rating,
-        numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place.id),
+        placeImageAlt: place.placeImageAlt,
+        placeUrl: place.placeUrl,
+        placeWebsiteDisplay: place.placeWebsiteDisplay,
+        avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
+        numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
       };
     });
 
-    return res.view('pages/homepage', { dataForView });
+    Promise.all(dataForView).then(dataForView => {
+      return res.view('pages/homepage', { dataForView });
+    });
   },
   async create(req, res) {
     const {
@@ -67,30 +67,45 @@ module.exports = {
       address,
       placeImage,
       placeImageAlt,
-      placeURL,
+      placeUrl,
       placeWebsiteDisplay,
     } = req.body;
 
     let place;
-    try {
-      place = await Place.create({
-        placeName,
-        city,
-        state,
-        phone,
-        address,
-        placeImage,
-        placeImageAlt,
-        placeURL,
-        placeWebsiteDisplay,
-      })
-        .intercept('E_UNIQUE', err => err)
-        .intercept('UsageError', err => err)
-        .fetch();
-    } catch (err) {
-      return res.serverError(err);
-    }
+    let file;
 
-    return res.redirect(`/places/${place.id}/review`);
+    await req.file('placeImage').upload(
+      {
+        adapter: SkipperMySQLAdapter,
+        model: PlaceImage,
+      },
+      async (err, files) => {
+        if (err) return res.serverError(err);
+        file = await PlaceImage.findOne({
+          fd: files[0].fd,
+        }).intercept(err => err);
+
+        try {
+          place = await Place.create({
+            placeName,
+            city,
+            state,
+            address,
+            phone,
+            placeImage: file.id,
+            placeImageAlt,
+            placeUrl,
+            placeWebsiteDisplay,
+          })
+            .intercept('E_UNIQUE', err => err)
+            .intercept('UsageError', err => err)
+            .fetch();
+        } catch (err) {
+          return res.serverError(err);
+        }
+
+        return res.redirect(`/places/${place.id}/review`);
+      }
+    );
   },
 };

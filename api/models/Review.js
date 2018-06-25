@@ -23,7 +23,7 @@ module.exports = {
       max: 5,
       required: true,
     },
-    reviewImageFileName: {
+    reviewImage: {
       type: 'string',
     },
     reviewImageAlt: {
