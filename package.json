@@ -30,6 +30,7 @@
     "sails-hook-orm": "^2.0.0-16",
     "sails-hook-sockets": "^1.4.0",
     "sails-mysql": "^1.0.0",
+    "stream-to-blob": "^1.0.1",
     "tsscmp": "1.0.5"
   },
   "devDependencies": {

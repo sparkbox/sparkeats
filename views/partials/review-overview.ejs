@@ -7,9 +7,9 @@
         <%- place.numberOfReviews %> Review
       <% } %>
     </p>
-    <%- place.avgNumberOfStars %>
+    <%- dataForView.avgNumberOfStars %>
   </div>
   <div class="review-overview__address">
-    <%- partial('./address') %>
+    <%- partial('./address', {place}) %>
   </div>
 </div>

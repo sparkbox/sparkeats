@@ -2,7 +2,8 @@
 
 <%- partial('../../partials/review-header.ejs', {place: dataForView}) %>
 
-<form class="form" method="post" action="/review">
+<form class="form" method="post" action="/review" enctype="multipart/form-data">
+  <input id="placeId" type="hidden" value="<%= place.id %>" name="placeId" />
   <div class="form__content-wrapper">
     <section class="form__heading">
       <h2 class="form__title">Review</h2>
@@ -51,8 +52,8 @@
     <div class="form__field ">
       <p class="form__label">Add an image to your review (max 5 MB).</p>
 
-      <label class="form__label--button" for="reviewImageFileName" aria-hidden="false">Upload Image</label>
-      <input id="reviewImageFileName" class="form__file-input" type="file" name="reviewImageFileName" accept="image/*">
+      <label class="form__label--button" for="reviewImage" aria-hidden="false">Upload Image</label>
+      <input id="reviewImage" class="form__file-input" type="file" name="reviewImage" accept="image/*">
       <span class="button--secondary" aria-hidden="true">Upload Image</span>
 
       <div class="form__field form__field--file" aria-live="polite">
@@ -66,8 +67,6 @@
         <input id="review-image-alt" class="form__input form__input--image-alt" type="text" name="reviewImageAlt">
       </div>
     </div>
-
-    <input id="placeId" type="hidden" value="<%= dataForView.id %>" name="placeId" />
 
     <button class="form__submit button--primary" type="submit">Submit</button>
   </div>
