@@ -9,14 +9,22 @@ module.exports = {
   async new(req, res) {
     const id = req.param('id');
     let place;
+    let placeImage;
 
     try {
       place = await Place.findOne({ id }).intercept(err => err);
+      placeImage = await PlaceImage.findOne({
+        imageId: place.placeImage,
+      }).intercept(err => err);
     } catch (err) {
       return res.serverError(err);
     }
 
-    return res.view('pages/reviews/new', { place });
+    let dataURI = `data:image/jpeg;base64,${placeImage.file.toString(
+      'base64'
+    )}`;
+
+    return res.view('pages/reviews/new', { place, dataURI });
   },
   async reviews(req, res) {
     const id = req.param('id');
@@ -26,6 +34,7 @@ module.exports = {
       reviews = await Review.find({
         where: { placeId: id },
       }).intercept(err => err);
+
       place = await Place.findOne({
         where: { id },
       }).intercept(err => err);
