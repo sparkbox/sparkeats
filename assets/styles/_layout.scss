@@ -152,6 +152,9 @@ li:not([class]) {
       margin-right: 1em;
     }
   }
+  &__intro {
+    margin: 0;
+  }
 }
 
 .sparkeats-column {
@@ -191,12 +194,13 @@ li:not([class]) {
 }
 
 .sparkeats__footer-pins {
-  background: url(/design/sparkeats_footer-pins.svg) repeat-x;
+  background-color: $color-sparkblue-light;
+  background-image: url(/design/sparkeats_footer-pins.svg);
+  background-repeat: repeat-x;
   width: 100%;
   max-width: 100%;
   height: 5em;
-  margin-top: 3.5em;
-  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .location-dropdown {
