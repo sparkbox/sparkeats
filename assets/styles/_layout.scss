@@ -199,6 +199,19 @@ li:not([class]) {
   margin-bottom: 1.5em;
 }
 
+.place-new {
+  display: block;
+  margin-top: 2em;
+  &__link {
+    @include secondary-font(500);
+    font-size: 0.90em;
+    color: $color-jellybean-blue;
+    text-decoration: none;
+    border-bottom: 1px solid $color-jellybean-blue;
+    padding-bottom: 2px;
+  }
+}
+
 .location-dropdown {
   display: block;
   text-align: center;

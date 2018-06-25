@@ -84,7 +84,6 @@
     box-sizing: border-box;
     width: 100%;
     text-align: center;
-    margin: 2em auto;
     padding: 0.625em;
     @media (min-width: $bp-med-screen) {
       float: right;
@@ -119,6 +118,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    margin: 2em auto;
     width: 100%;
     text-align: center;
     overflow: hidden;
