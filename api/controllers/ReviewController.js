@@ -34,6 +34,7 @@ module.exports = {
     }
 
     const dataForView = {
+      id: place.id,
       name: place.placeName,
       placeImage: place.placeImage,
       placeImageAlt: place.placeImageAlt,
