@@ -26,16 +26,17 @@ module.exports.http = {
      * (This Sails app's routes are handled by the "router" middleware below.)  *
      *                                                                          *
      ***************************************************************************/
-    // order: [
-    //   'cookieParser',
-    //   'session',
-    //   'bodyParser',
-    //   'compress',
-    //   'poweredBy',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    // ],
+    order: [
+      'cookieParser',
+      'session',
+      'bodyParser',
+      'compress',
+      'poweredBy',
+      'redirectHTTPS',
+      'router',
+      'www',
+      'favicon',
+    ],
     /***************************************************************************
      *                                                                          *
      * The body parser that will handle incoming multipart HTTP requests.       *
@@ -48,5 +49,12 @@ module.exports.http = {
     //   var middlewareFn = skipper({ strict: true });
     //   return middlewareFn;
     // })(),
+    redirectHTTPS: (req, res, next) => {
+      if (sails.config.environment === 'production' && !req.secure) {
+        return res.redirect(`https://${req.get('host')}${req.url}`);
+      }
+
+      return next();
+    },
   },
 };
