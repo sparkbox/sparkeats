@@ -1,3 +1,6 @@
+const uuidv1 = require('uuid/v1');
+const SkipperMySQLAdapter = require('../../skipper-mysql/SkipperMySQLAdapter');
+
 /**
  * PlaceController
  *
@@ -10,6 +13,7 @@ module.exports = {
   async places(req, res) {
     let places;
     let reviews;
+    let f;
 
     try {
       places = await Place.find({}).intercept(err => err);
@@ -36,13 +40,31 @@ module.exports = {
     return res.view('pages/homepage', { dataForView });
   },
   async create(req, res) {
+    const imageId = uuidv1();
+
+    await req.file('placeImage').upload(
+      {
+        adapter: SkipperMySQLAdapter,
+        model: PlaceImage,
+        imageId,
+      },
+      (err, files) => {
+        if (err) return res.serverError(err);
+        // console.log(files);
+      }
+    );
+
+    // const f = await PlaceImage.findOne({
+    //   imageId,
+    // }).intercept(err => err);
+
     const {
       placeName,
       city,
       state,
       address,
       phone,
-      placeImage,
+      // placeImage,
       placeImageAlt,
       placeUrl,
       placeWebsiteDisplay,
@@ -56,10 +78,11 @@ module.exports = {
         state,
         address,
         phone,
-        placeImage,
+        placeImage: imageId,
         placeImageAlt,
         placeUrl,
         placeWebsiteDisplay,
+        imageId,
       })
         .intercept('E_UNIQUE', err => err)
         .intercept('UsageError', err => err)
