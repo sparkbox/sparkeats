@@ -1,6 +1,6 @@
 <% block('localScripts', '<script src="/js/local/showFile.js"></script>') %>
 
-<%- partial('../../partials/review-header.ejs') %>
+<%- partial('../../partials/review-header.ejs', {place: dataForView}) %>
 
 <form class="form" method="post" action="/review">
   <div class="form__content-wrapper">
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <input id="placeId" type="hidden" value="<%= place.id %>" name="placeId" />
+    <input id="placeId" type="hidden" value="<%= dataForView.id %>" name="placeId" />
 
     <button class="form__submit button--primary" type="submit">Submit</button>
   </div>
