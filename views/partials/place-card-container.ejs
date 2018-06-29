@@ -1,7 +1,7 @@
 <section class="place-card__container">
   <ul class="place-card__list">
     <% dataForView.forEach(place => { %>
-    <%- partial('./place-card', {place: place}) %>
+    <%- partial('./place-card', { place }) %>
     <% }) %>
   </ul>
 </section>

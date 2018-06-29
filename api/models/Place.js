@@ -34,7 +34,7 @@ module.exports = {
     placeImageAlt: {
       type: 'string',
     },
-    placeUrl: {
+    placeURL: {
       type: 'string',
       isURL: true,
     },
