@@ -42,7 +42,7 @@ function seedPlaces(places) {
         'place-name': placeName,
         'place-image': placeImage,
         'place-image-alt': placeImageAlt,
-        'place-url': placeUrl,
+        'place-url': placeURL,
         'place-website-display': placeWebsiteDisplay,
       },
       placeId
@@ -58,7 +58,7 @@ function seedPlaces(places) {
           phone: phone || '',
           placeImage: placeImage || '',
           placeImageAlt: placeImageAlt || '',
-          placeUrl: placeUrl || '',
+          placeURL: placeURL || '',
           placeWebsiteDisplay: placeWebsiteDisplay || '',
         })
           .intercept(err => err)

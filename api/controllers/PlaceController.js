@@ -27,7 +27,7 @@ module.exports = {
       phone: place.phone,
       placeImage: place.placeImage,
       placeImageAlt: place.placeImageAlt,
-      placeUrl: place.placeUrl,
+      placeURL: place.placeURL,
       placeWebsiteDisplay: place.placeWebsiteDisplay,
       avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
       numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
@@ -44,7 +44,7 @@ module.exports = {
       phone,
       placeImage,
       placeImageAlt,
-      placeUrl,
+      placeURL,
       placeWebsiteDisplay,
     } = req.body;
 
@@ -58,7 +58,7 @@ module.exports = {
         phone,
         placeImage,
         placeImageAlt,
-        placeUrl,
+        placeURL,
         placeWebsiteDisplay,
       })
         .intercept('E_UNIQUE', err => err)

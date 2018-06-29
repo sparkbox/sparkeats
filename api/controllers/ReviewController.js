@@ -12,7 +12,7 @@ module.exports = {
 
     try {
       place = await Place.findOne({
-        where: { id }
+        where: { id },
       }).intercept(err => err);
     } catch (err) {
       return res.serverError(err);
@@ -47,6 +47,7 @@ module.exports = {
       id: place.id,
       name: place.placeName,
       placeImage: place.placeImage,
+      placeURL: place.placeURL,
       placeImageAlt: place.placeImageAlt,
       phone: place.phone,
       address: `${place.city}, ${place.state}`,
