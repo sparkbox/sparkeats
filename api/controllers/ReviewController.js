@@ -11,12 +11,22 @@ module.exports = {
     let place;
 
     try {
-      place = await Place.findOne({ id }).intercept(err => err);
+      place = await Place.findOne({
+        where: { id }
+      }).intercept(err => err);
     } catch (err) {
       return res.serverError(err);
     }
 
-    return res.view('pages/reviews/new', { place });
+    const dataForView = {
+      id: place.id,
+      name: place.placeName,
+      placeImage: place.placeImage,
+      placeImageAlt: place.placeImageAlt,
+      address: `${place.city}, ${place.state}`,
+    };
+
+    return res.view('pages/reviews/new', { dataForView });
   },
   async reviews(req, res) {
     const id = req.param('id');
