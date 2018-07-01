@@ -16,15 +16,12 @@ module.exports = {
     try {
       place = await Place.findOne({ id }).intercept(err => err);
 
-      // get placeImage file if placeImage is an id
-      if (/^\d+$/.test(place.placeImage)) {
+      if (place.placeImage) {
         placeImage = await PlaceImage.findOne({
           id: place.placeImage,
         }).intercept(err => err);
 
         placeImage = `data:image/jpeg;base64,${placeImage.file}`;
-      } else {
-        placeImage = `../../images/places/${place.placeImage}`;
       }
     } catch (err) {
       return res.serverError(err);
@@ -46,8 +43,6 @@ module.exports = {
       reviews = await Review.find({
         placeId: id,
       }).intercept(err => err);
-      console.log('REVIEWS');
-      console.log(reviews.length);
 
       place = await Place.findOne({
         id,
@@ -60,27 +55,21 @@ module.exports = {
 
       numberOfReviews = await sails.helpers.getNumberOfReviews(reviews, place);
 
-      // get placeImage file if placeImage is an id
-      if (/^\d+$/.test(place.placeImage)) {
+      if (place.placeImage) {
         placeImage = await PlaceImage.findOne({
           id: place.placeImage,
         }).intercept(err => err);
 
         placeImage = `data:image/jpeg;base64,${placeImage.file}`;
-      } else {
-        placeImage = `../../images/places/${place.placeImage}`;
       }
 
       reviews = reviews.map(async review => {
-        // get reviewImage file if reviewImage is an id
-        if (/^\d+$/.test(review.reviewImage)) {
+        if (review.reviewImage) {
           reviewImage = await ReviewImage.findOne({
             id: review.reviewImage,
           }).intercept(err => err);
 
           reviewImage = `data:image/jpeg;base64,${reviewImage.file}`;
-        } else {
-          reviewImage = `../../images/reviews/${review.reviewImage}`;
         }
 
         return {

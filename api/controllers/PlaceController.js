@@ -25,14 +25,12 @@ module.exports = {
     }
 
     dataForView = places.map(async place => {
-      // get placeImage file if placeImage is an id
-      if (/^\d+$/.test(place.placeImage)) {
+      if (place.placeImage) {
         placeImage = await PlaceImage.findOne({
           id: place.placeImage,
         }).intercept(err => err);
+
         placeImage = `data:image/jpeg;base64,${placeImage.file}`;
-      } else {
-        placeImage = `../../images/places/${place.placeImage}`;
       }
 
       return {

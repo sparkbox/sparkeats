@@ -1,91 +1,48 @@
-const { places, reviews } = require('../migrateYaml');
-
-function seedReviews(place, placeReviews) {
-  _.each(
-    placeReviews,
-    async ({
-      'review-text': reviewText,
-      'reviewer-name': reviewerName,
-      'number-of-stars': numberOfStars,
-      'review-image-file-name': reviewImage,
-      'review-image-alt': reviewImageAlt,
-    }) => {
-      try {
-        await Review.create({
-          reviewerName,
-          reviewText,
-          reviewImage: reviewImage ? reviewImage[0] : '',
-          reviewImageAlt: reviewImageAlt ? reviewImageAlt[0] : '',
-          numberOfStars,
-          placeId: place.id,
-        });
-      } catch (err) {
-        console.log('*'.repeat(20));
-        console.log(err);
-        console.log('*'.repeat(20));
-      }
-    }
-  );
-}
-
-function seedPlaces(places) {
-  _.each(
-    places,
-    async (
-      {
-        city,
-        state,
-        address,
-        phone,
-        'place-name': placeName,
-        'place-image': placeImage,
-        'place-image-alt': placeImageAlt,
-        'place-url': placeURL,
-        'place-website-display': placeWebsiteDisplay,
-      },
-      placeId
-    ) => {
-      let place;
-
-      try {
-        place = await Place.create({
-          placeName,
-          city,
-          state,
-          address,
-          phone: phone || '',
-          placeImage: placeImage || '',
-          placeImageAlt: placeImageAlt || '',
-          placeURL: placeURL || '',
-          placeWebsiteDisplay: placeWebsiteDisplay || '',
-        })
-          .intercept(err => err)
-          .fetch();
-      } catch (err) {
-        console.log('*'.repeat(20));
-        console.log(err);
-        console.log('*'.repeat(20));
-      }
-
-      const placeReviews = _.filter(reviews, review => {
-        return review['place-id'] === placeId;
-      });
-
-      seedReviews(place, placeReviews);
-    }
-  );
-}
+const { places, reviews } = require('../migrate');
+const seed = require('../seed');
 
 async function bootstrap(done) {
   require('dotenv').config();
 
-  // Don't seed if already seeded
-  if ((await Place.count()) > 0) {
-    console.log('Already seeded.');
+  if (process.env.NODE_ENV === 'production') {
     return done();
   }
 
-  seedPlaces(places);
+  let placesCount;
+  let placeImageCount;
+  let reviewsCount;
+  let reviewImageCount;
+
+  // try {
+  // await Place.destroy({});
+  // await PlaceImage.destroy({});
+  // await Review.destroy({});
+  // await ReviewImage.destroy({});
+  // if ((await Place.count()) === 0) {
+  // seed(places, reviews, done);
+  // }
+  // } catch (err) {
+  // return done(err);
+  // }
+
+  seed(places, reviews, done);
+
+  setTimeout(async () => {
+    try {
+      placesCount = await Place.count();
+      placeImageCount = await PlaceImage.count();
+      reviewsCount = await Review.count();
+      reviewImageCount = await ReviewImage.count();
+    } catch (err) {
+      return done(err);
+    }
+
+    console.log('Seeded:');
+    console.log(`- ${placesCount} places`);
+    console.log(`- ${placeImageCount} placeImages`);
+    console.log(`- ${reviewsCount} reviews`);
+    console.log(`- ${reviewImageCount} reviewImages`);
+  }, 1500);
 
   return done();
 }
