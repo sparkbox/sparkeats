@@ -1,11 +1,10 @@
-const yaml = require('js-yaml');
 const fs = require('fs');
-const _ = require('@sailshq/lodash');
+const yaml = require('js-yaml');
 
 const placesPath = './data/places.yml';
 const reviewsPath = './data/reviews.yml';
 
-function parseYaml(yamlPath) {
+function parseYAML(yamlPath) {
   let obj;
 
   try {
@@ -18,6 +17,6 @@ function parseYaml(yamlPath) {
 }
 
 module.exports = {
-  places: parseYaml(placesPath),
-  reviews: parseYaml(reviewsPath),
+  places: parseYAML(placesPath),
+  reviews: parseYAML(reviewsPath),
 };

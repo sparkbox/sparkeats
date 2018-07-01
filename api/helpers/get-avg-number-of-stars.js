@@ -1,5 +1,4 @@
 module.exports = {
-  sync: true,
   friendlyName: 'Get average number of stars',
 
   description:
