@@ -1,5 +1,4 @@
 module.exports = {
-  sync: true,
   friendlyName: 'Get numbe rof reviews',
 
   description: 'Returns the amount of reviews of a place.',

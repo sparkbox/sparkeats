@@ -1,6 +1,6 @@
 <% block('localScripts', '<script src="/js/local/showFile.js"></script>') %>
 
-<%- partial('../../partials/review-header.ejs', {place: dataForView}) %>
+<%- partial('../../partials/review-header.ejs') %>
 
 <form class="form" method="post" action="/review" enctype="multipart/form-data">
   <input id="placeId" type="hidden" value="<%= place.id %>" name="placeId" />

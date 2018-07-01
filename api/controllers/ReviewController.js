@@ -39,15 +39,26 @@ module.exports = {
     let placeImage;
     let reviewImage;
     let dataForView;
+    let avgNumberOfStars;
+    let numberOfReviews;
 
     try {
       reviews = await Review.find({
         placeId: id,
       }).intercept(err => err);
+      console.log('REVIEWS');
+      console.log(reviews.length);
 
       place = await Place.findOne({
         id,
       }).intercept(err => err);
+
+      avgNumberOfStars = await sails.helpers.getAvgNumberOfStars(
+        reviews,
+        place
+      );
+
+      numberOfReviews = await sails.helpers.getNumberOfReviews(reviews, place);
 
       // get placeImage file if placeImage is an id
       if (/^\d+$/.test(place.placeImage)) {
@@ -78,18 +89,21 @@ module.exports = {
           reviewImage,
           reviewImageAlt: review.reviewImageAlt,
           placeId: review.placeId,
-          numberOfStars: sails.helpers.getNumberOfStars(review.numberOfStars),
+          numberOfStars: await sails.helpers.getNumberOfStars(
+            review.numberOfStars
+          ),
         };
       });
     } catch (err) {
       return res.serverError(err);
     }
+
     Promise.all(reviews).then(reviews => {
       dataForView = {
         place,
         placeImage,
-        avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
-        numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
+        avgNumberOfStars,
+        numberOfReviews,
         reviews,
       };
 
@@ -126,9 +140,9 @@ module.exports = {
         } catch (err) {
           return res.serverError(err);
         }
+
+        return res.redirect(`/places/${placeId}`);
       }
     );
-
-    return res.redirect(`/places/${placeId}`);
   },
 };

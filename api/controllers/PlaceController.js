@@ -42,10 +42,13 @@ module.exports = {
         phone: place.phone,
         placeImage,
         placeImageAlt: place.placeImageAlt,
-        placeUrl: place.placeUrl,
+        placeURL: place.placeURL,
         placeWebsiteDisplay: place.placeWebsiteDisplay,
-        avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
-        numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
+        avgNumberOfStars: await sails.helpers.getAvgNumberOfStars(
+          reviews,
+          place
+        ),
+        numberOfReviews: await sails.helpers.getNumberOfReviews(reviews, place),
       };
     });
 
