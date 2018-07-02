@@ -18,7 +18,7 @@ async function seedReviews(place, placeReviews, done) {
       try {
         if (reviewImage) {
           file = await ReviewImage.create({
-            file: encode(`./assets/images/reviews/${reviewImage}`),
+            file: encode(`./data/images/reviews/${reviewImage}`),
             fd: reviewImage,
           })
             .intercept(err => err)
@@ -63,7 +63,7 @@ async function seed(places, reviews, done) {
       try {
         if (placeImage) {
           file = await PlaceImage.create({
-            file: encode(`./assets/images/places/${placeImage}`),
+            file: encode(`./data/images/places/${placeImage}`),
             fd: placeImage,
           })
             .intercept(err => err)

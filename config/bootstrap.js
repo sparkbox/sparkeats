@@ -14,15 +14,11 @@ async function bootstrap(done) {
   let reviewImageCount;
 
   // try {
-  // await Place.destroy({});
-  // await PlaceImage.destroy({});
-  // await Review.destroy({});
-  // await ReviewImage.destroy({});
-  // if ((await Place.count()) === 0) {
-  // seed(places, reviews, done);
-  // }
+  //   if ((await Place.count()) === 0) {
+  //     seed(places, reviews, done);
+  //   }
   // } catch (err) {
-  // return done(err);
+  //   return done(err);
   // }
 
   seed(places, reviews, done);
