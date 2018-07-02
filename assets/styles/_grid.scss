@@ -21,12 +21,12 @@
   padding: 0;
   @media (min-width: $bp-small-screen) {
     @supports (display: flex) {
-      display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      flex: 1 0 18em;
-      margin: 0 auto;
     }
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 18em;
+    margin: 0 auto;
     text-align: center;
   }
   &::after {
@@ -41,9 +41,7 @@
     width: 23em;
     max-width: 100%;
     @media (min-width: $bp-small-screen) {
-      @supports (display: flex) {
-        margin: 2em;
-      }
+      margin: 1em;
       // use inline-block for browsers and devices that do not support flexbox
       display: inline-block;
       max-width: 32%;
