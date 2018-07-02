@@ -100,7 +100,8 @@ module.exports = {
     });
   },
   async create(req, res) {
-    const { reviewerName, reviewText, reviewImageAlt, placeId } = req.body;
+    const placeId = req.param('id');
+    const { reviewerName, reviewText, reviewImageAlt } = req.body;
     const numberOfStars = parseInt(req.body.numberOfStars, 10);
     let reviewImage;
 

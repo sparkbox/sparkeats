@@ -2,8 +2,8 @@
 
 <%- partial('../../partials/review-header.ejs') %>
 
-<form class="form" method="post" action="/review" enctype="multipart/form-data">
-  <input id="placeId" type="hidden" value="<%= place.id %>" name="placeId" />
+<form class="form" method="post" action="/places/<%= place.id %>/reviews" enctype="multipart/form-data">
+  <!--<input id="placeId" type="hidden" value="<%= place.id %>" name="placeId" />-->
   <div class="form__content-wrapper">
     <section class="form__heading">
       <h2 class="form__title">Review</h2>

@@ -100,7 +100,7 @@ module.exports = {
           return res.serverError(err);
         }
 
-        return res.redirect(`/places/${place.id}/review`);
+        return res.redirect(`/places/${place.id}/reviews/new`);
       }
     );
   },
