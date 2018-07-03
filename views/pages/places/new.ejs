@@ -10,35 +10,35 @@
 
       <div class="form__field form__required-indicator">
         <label class="form__label" for="placeName">Place Name</label>
-        <input id="placeName" class="form__input" type="text" name="placeName" aria-label="Place Name" placeholder="Place Name"
+        <input id="placeName" class="form__input" type="text" name="placeName" placeholder="Place Name"
           required>
       </div>
 
       <div class="form__field form__required-indicator">
         <label class="form__label" for="city">City</label>
-        <input id="city" class="form__input" type="text" name="city" aria-label="City" placeholder="City"
+        <input id="city" class="form__input" type="text" name="city" placeholder="City"
           required>
       </div>
 
       <div class="form__field form__required-indicator">
         <label class="form__label" for="state">State Abbreviation (PA, OH, KY, etc.)</label>
-        <input id="state" class="form__input--short" type="text" name="state" aria-label="State" placeholder="State"
+        <input id="state" class="form__input--short" type="text" name="state" placeholder="State"
           required>
       </div>
 
       <div class="form__field form__required-indicator">
         <label class="form__label" for="address">Address</label>
-        <input id="address" class="form__input" type="text" name="address" aria-label="Address" placeholder="Address"
+        <input id="address" class="form__input" type="text" name="address" placeholder="Address"
           required>
       </div>
 
       <div class="form__field">
         <label class="form__label" for="phone">Phone number</label>
-        <input id="phone" class="form__input" type="text" name="phone" aria-label="Phone number" placeholder="Phone number">
+        <input id="phone" class="form__input" type="text" name="phone" placeholder="(555) 555-5555">
       </div>
 
       <div class="form__field ">
-        <p class="form__label">Add an image to your review (max XX MB).</p>
+        <p class="form__label">Add an image to your review (max 5 MB).</p>
 
         <label class="form__label--button" for="placeImage" aria-hidden="false">Upload Image</label>
         <input id="placeImage" class="form__file-input" type="file" name="placeImage" accept="image/*">
@@ -50,7 +50,7 @@
             <button type="button" class="form__remove-file" aria-label="Remove image">&times</button>
           </div>
           <label class="form__label" for="place-image-alt">
-            <span class="form__label--image-alt form__required-indicator">Image alt text</span>
+            <span class="form__label--image-alt form__required-indicator">Image Description</span>
           </label>
           <input id="place-image-alt" class="form__input form__input--image-alt" type="text" name="placeImageAlt">
         </div>
@@ -58,7 +58,7 @@
 
       <div class="form__field">
         <label class="form__label" for="placeURL">Place Url</label>
-        <input id="placeURL" class="form__input" type="text" name="placeURL" aria-label="Place Url" placeholder="Place Url">
+        <input id="placeURL" class="form__input" type="text" name="placeURL" placeholder="Place Url">
       </div>
 
       <button class="form__submit button--primary" type="submit">Add a review</button>

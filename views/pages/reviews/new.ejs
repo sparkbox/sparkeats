@@ -11,7 +11,7 @@
 
     <div class="form__field form__required-indicator">
       <label class="form__label" for="reviewerName">Your Name</label>
-      <input id="reviewerName" class="form__input" type="text" name="reviewerName" aria-label="Your Name" placeholder="Your Name"
+      <input id="reviewerName" class="form__input" type="text" name="reviewerName" placeholder="First Name Last Name"
         required>
     </div>
 
@@ -49,7 +49,7 @@
     </div>
 
     <div class="form__field ">
-      <p class="form__label">Add an image to your review (max XX MB).</p>
+      <p class="form__label">Add an image to your review (max 5 MB).</p>
 
       <label class="form__label--button" for="reviewImageFileName" aria-hidden="false">Upload Image</label>
       <input id="reviewImageFileName" class="form__file-input" type="file" name="reviewImageFileName" accept="image/*">
@@ -61,7 +61,7 @@
           <button type="button" class="form__remove-file" aria-label="Remove image">&times</button>
         </div>
         <label class="form__label" for="review-image-alt">
-          <span class="form__label--image-alt form__required-indicator">Image alt text</span>
+          <span class="form__label--image-alt form__required-indicator">Image Description</span>
         </label>
         <input id="review-image-alt" class="form__input form__input--image-alt" type="text" name="reviewImageAlt">
       </div>
