@@ -1,5 +1,7 @@
 <address class="sparkeats-address">
-  <p><%= place.address %></p>
+  <p>
+    <%= place.city %>, <abbr title="<%= place.state %>"><%= place.stateAbbr %></abbr>
+  </p>
   <% if (place.phone) { %>
     <p><a class="sparkeats-address__phone" href="tel:<%= place.phone %>"><%= place.phone %></a></p>
   <% } %>

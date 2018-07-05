@@ -1,3 +1,5 @@
+const getState = require('../../lib/getState');
+
 /**
  * PlaceController
  *
@@ -23,7 +25,9 @@ module.exports = {
     const dataForView = places.map(place => ({
       id: place.id,
       name: place.placeName,
-      address: `${place.city}, ${place.state}`,
+      city: place.city,
+      state: place.state,
+      stateAbbr: place.stateAbbr,
       phone: place.phone,
       placeImage: place.placeImage,
       placeImageAlt: place.placeImageAlt,
@@ -39,7 +43,7 @@ module.exports = {
     const {
       placeName,
       city,
-      state,
+      state: stateAbbr,
       address,
       phone,
       placeImage,
@@ -53,8 +57,8 @@ module.exports = {
       place = await Place.create({
         placeName,
         city,
-        state,
-        address,
+        state: getState(stateAbbr),
+        stateAbbr,
         phone,
         placeImage,
         placeImageAlt,

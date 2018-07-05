@@ -23,7 +23,8 @@ module.exports = {
       name: place.placeName,
       placeImage: place.placeImage,
       placeImageAlt: place.placeImageAlt,
-      address: `${place.city}, ${place.state}`,
+      city: place.city,
+      state: place.state,
     };
 
     return res.view('pages/reviews/new', { dataForView });
@@ -50,7 +51,9 @@ module.exports = {
       placeURL: place.placeURL,
       placeImageAlt: place.placeImageAlt,
       phone: place.phone,
-      address: `${place.city}, ${place.state}`,
+      city: place.city,
+      stateAbbr: place.stateAbbr,
+      state: place.state,
       avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
       numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
       reviews: reviews.map(review => ({

@@ -1,4 +1,5 @@
 const { places, reviews } = require('../migrateYaml');
+const getState = require('../lib/getState');
 
 function seedReviews(place, placeReviews) {
   _.each(
@@ -36,7 +37,7 @@ function seedPlaces(places) {
     async (
       {
         city,
-        state,
+        state: stateAbbr,
         address,
         phone,
         'place-name': placeName,
@@ -53,7 +54,8 @@ function seedPlaces(places) {
         place = await Place.create({
           placeName,
           city,
-          state,
+          stateAbbr,
+          state: getState(stateAbbr),
           address,
           phone: phone || '',
           placeImage: placeImage || '',

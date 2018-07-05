@@ -5,35 +5,35 @@
     <div class="form__content-wrapper">
       <section class="form__heading">
         <h2 class="form__title">Place Information</h2>
-        <span class="form__required-key form__required-indicator">Required Field</span>
+        <span class="form__required-key form__required-indicator" aria-hidden="true">Required Field</span>
       </section>
 
       <div class="form__field form__required-indicator">
-        <label class="form__label" for="placeName">Place Name</label>
+        <label class="form__label" for="placeName" aria-hidden="true">Place Name</label>
         <input id="placeName" class="form__input" type="text" name="placeName" placeholder="Place Name"
           required>
       </div>
 
       <div class="form__field form__required-indicator">
-        <label class="form__label" for="city">City</label>
+        <label class="form__label" for="city" aria-hidden="true">City</label>
         <input id="city" class="form__input" type="text" name="city" placeholder="City"
           required>
       </div>
 
       <div class="form__field form__required-indicator">
-        <label class="form__label" for="state">State Abbreviation (PA, OH, KY, etc.)</label>
+        <label class="form__label" for="state" aria-hidden="true">State Abbreviation (PA, OH, KY, etc.)</label>
         <input id="state" class="form__input--short" type="text" name="state" placeholder="State"
           required>
       </div>
 
-      <div class="form__field form__required-indicator">
-        <label class="form__label" for="address">Address</label>
+      <div class="form__field form__required-indicator" >
+        <label class="form__label" for="address" aria-hidden="true">Address</label>
         <input id="address" class="form__input" type="text" name="address" placeholder="Address"
           required>
       </div>
 
       <div class="form__field">
-        <label class="form__label" for="phone">Phone number</label>
+        <label class="form__label" for="phone" aria-hidden="true">Phone number</label>
         <input id="phone" class="form__input" type="text" name="phone" placeholder="(555) 555-5555">
       </div>
 
@@ -44,12 +44,12 @@
         <input id="placeImage" class="form__file-input" type="file" name="placeImage" accept="image/*">
         <span class="button--secondary" aria-hidden="true">Upload Image</span>
 
-        <div class="form__field form__field--file">
+        <div class="form__field form__field--file" aria-live="polite">
           <div class="form__file">
             <span class="form__file-name"></span>
             <button type="button" class="form__remove-file" aria-label="Remove image">&times</button>
           </div>
-          <label class="form__label" for="place-image-alt">
+          <label class="form__label" for="place-image-alt" aria-hidden="true">
             <span class="form__label--image-alt form__required-indicator">Image Description</span>
           </label>
           <input id="place-image-alt" class="form__input form__input--image-alt" type="text" name="placeImageAlt">
@@ -57,7 +57,7 @@
       </div>
 
       <div class="form__field">
-        <label class="form__label" for="placeURL">Place Url</label>
+        <label class="form__label" for="placeURL" aria-hidden="true">Place Url</label>
         <input id="placeURL" class="form__input" type="text" name="placeURL" placeholder="Place Url">
       </div>
 
