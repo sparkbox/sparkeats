@@ -1,4 +1,8 @@
 <a class="place-card__footer-link" href="/places/<%= place.id %>">
 <!-- number of reviews -->
-<%- place.numberOfReviews %>
+<% if (place.numberOfReviews > 1) { %>
+  <%= place.numberOfReviews %> Reviews
+<% } else { %>
+  <%= place.numberOfReviews %> Review
+<% } %>
 </a>

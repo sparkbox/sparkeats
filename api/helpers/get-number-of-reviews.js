@@ -16,8 +16,9 @@ module.exports = {
   },
 
   fn: ({ ratings, currentPlace }, exits) => {
-    const n = ratings.filter(rating => rating.placeId === currentPlace.id)
-      .length;
-    return exits.success(`${n} ${n === 1 ? 'Review' : 'Reviews'}`);
+    const numberOfReviews = ratings.filter(
+      rating => rating.placeId === currentPlace.id
+    ).length;
+    return exits.success(numberOfReviews);
   },
 };
