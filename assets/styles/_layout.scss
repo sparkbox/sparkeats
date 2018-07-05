@@ -253,11 +253,9 @@ li:not([class]) {
     @media (min-width: $bp-large-screen) {
       width: 30%;
     }
-    &:hover {
-      background-color: $color-white;
-    }
+    &:hover,
     &:focus {
-      outline: 0;
+      background-color: $color-white;
     }
     &-text {
       display: inline-block;
@@ -328,7 +326,8 @@ li:not([class]) {
       font-size: 1.2em;
       color: $color-black;
       text-align: left;
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $color-white;
       }
     }
