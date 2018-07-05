@@ -25,6 +25,14 @@ li:not([class]) {
   display: flex;
   justify-content: center;
   max-width: 100%;
+  &__title {
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
   &__logo {
     display: block;
     background: url(/design/sparkeats_logomark.svg) center no-repeat;
