@@ -1,13 +1,15 @@
 <div class="review-header">
-    <div class="review-header__backdrop">
+  <div class="review-header__backdrop">
+    <% if (placeImage) { %>
         <img class="review-header__backdrop-image" src="<%= placeImage %>" alt="<%= place.placeImageAlt %>" />
-    </div>
-    <div class="review-header__title">
-        <h1 class="review-header__name">
-            <%= place.placeName %>
-        </h1>
-        <h2 class="review-header__city">
-            <%= place.city %>, <%= place.state %>
-        </h2>
-    </div>
+    <% } %>
+  </div>
+  <div class="review-header__title">
+    <h1 class="review-header__name">
+        <%= place.placeName %>
+    </h1>
+    <h2 class="review-header__city">
+        <%= place.city %>, <%= place.state %>
+    </h2>
+  </div>
 </div>

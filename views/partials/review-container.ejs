@@ -13,9 +13,11 @@
         <%= review.reviewText %>
       </p>
       <!--loop review image file names-->
+      <% if (review.reviewImage) { %>
         <div class="review-submission__image-container">
           <img class="review-submission__image" src="<%= review.reviewImage %>" alt="<%= review.reviewImageAlt %>">
         </div>
+      <% } %>
   </article>
 <% }); %>
 </div>
