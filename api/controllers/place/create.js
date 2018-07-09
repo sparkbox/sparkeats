@@ -7,34 +7,37 @@ module.exports = async function create(req, res) {
     state,
     address,
     phone,
-    placeImage,
     placeImageAlt,
     placeUrl,
     placeWebsiteDisplay,
   } = req.body;
 
-  let place;
-  let file;
-
-  await req.file('placeImage').upload(
+  req.file('placeImage').upload(
     {
       adapter: SkipperMySQLAdapter,
       model: PlaceImage,
     },
     async (err, files) => {
       if (err) return res.serverError(err);
-      file = await PlaceImage.findOne({
-        fd: files[0].fd,
-      }).intercept(err => err);
 
       try {
-        place = await Place.create({
+        let placeImage = '';
+
+        if (files.length) {
+          placeImage = await PlaceImage.findOne({
+            fd: files[0].fd,
+          }).intercept(err => err);
+
+          placeImage = placeImage.id;
+        }
+
+        let place = await Place.create({
           placeName,
           city,
           state,
           address,
           phone,
-          placeImage: file.id,
+          placeImage,
           placeImageAlt,
           placeUrl,
           placeWebsiteDisplay,
@@ -42,11 +45,11 @@ module.exports = async function create(req, res) {
           .intercept('E_UNIQUE', err => err)
           .intercept('UsageError', err => err)
           .fetch();
+
+        return res.redirect(`/places/${place.id}/reviews/new`);
       } catch (err) {
         return res.serverError(err);
       }
-
-      return res.redirect(`/places/${place.id}/reviews/new`);
     }
   );
 };

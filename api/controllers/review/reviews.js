@@ -1,25 +1,26 @@
 module.exports = async function reviews(req, res) {
   const id = req.param('id');
-  let reviews;
-  let place;
-  let placeImage;
-  let reviewImage;
-  let dataForView;
-  let avgNumberOfStars;
-  let numberOfReviews;
 
   try {
-    reviews = await Review.find({
+    let reviews = await Review.find({
       placeId: id,
     }).intercept(err => err);
 
-    place = await Place.findOne({
+    let place = await Place.findOne({
       id,
     }).intercept(err => err);
 
-    avgNumberOfStars = await sails.helpers.getAvgNumberOfStars(reviews, place);
+    let avgNumberOfStars = await sails.helpers.getAvgNumberOfStars(
+      reviews,
+      place
+    );
 
-    numberOfReviews = await sails.helpers.getNumberOfReviews(reviews, place);
+    let numberOfReviews = await sails.helpers.getNumberOfReviews(
+      reviews,
+      place
+    );
+
+    let placeImage = '';
 
     if (place.placeImage) {
       placeImage = await PlaceImage.findOne({
@@ -30,6 +31,8 @@ module.exports = async function reviews(req, res) {
     }
 
     reviews = reviews.map(async review => {
+      let reviewImage = '';
+
       if (review.reviewImage) {
         reviewImage = await ReviewImage.findOne({
           id: review.reviewImage,
@@ -49,19 +52,19 @@ module.exports = async function reviews(req, res) {
         ),
       };
     });
+
+    Promise.all(reviews).then(reviews => {
+      let dataForView = {
+        place,
+        placeImage,
+        avgNumberOfStars,
+        numberOfReviews,
+        reviews,
+      };
+
+      return res.view('pages/reviews/reviews', { dataForView });
+    });
   } catch (err) {
     return res.serverError(err);
   }
-
-  Promise.all(reviews).then(reviews => {
-    dataForView = {
-      place,
-      placeImage,
-      avgNumberOfStars,
-      numberOfReviews,
-      reviews,
-    };
-
-    return res.view('pages/reviews/reviews', { dataForView });
-  });
 };

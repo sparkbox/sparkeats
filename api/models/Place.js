@@ -31,6 +31,9 @@ module.exports = {
     placeImage: {
       type: 'string',
     },
+    fd: {
+      type: 'string',
+    },
     placeImageAlt: {
       type: 'string',
     },

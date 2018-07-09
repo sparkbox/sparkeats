@@ -13,7 +13,9 @@ function authenticate(req, res, ok) {
     (err, user) => {
       if (err || !user) {
         res.set('WWW-Authenticate', 'Basic realm="Restricted"');
-        return res.send('You are not permitted to perform this action', 401);
+        return res
+          .status(401)
+          .send('You are not permitted to perform this action');
       }
 
       req.session.user = user;
