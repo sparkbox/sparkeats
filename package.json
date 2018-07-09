@@ -39,7 +39,8 @@
     "chai": "^4.1.2",
     "concurrently": "^3.5.1",
     "mocha": "^5.2.0",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.17.5",
+    "supertest": "^3.1.0"
   },
   "scripts": {
     "lift": "sails lift --drop",
@@ -50,7 +51,9 @@
     "sass-watch": "node-sass --watch assets/styles/main.scss .tmp/styles/main.css",
     "postcss": "postcss --use autoprefixer -c tasks/postcss.config.json .tmp/styles/main.css -d .tmp/styles/",
     "server": "nodemon app.js & browser-sync start --proxy http://localhost:1337 --files \".tmp/styles/\" \"views/\" --reload-delay 1100",
-    "test": "node ./node_modules/mocha/bin/mocha  test/lifecycle.test.js test/",
+    "test": "node ./node_modules/mocha/bin/mocha test/lifecycle.test.js test/ test/integration/controllers/**/*.test.js",
+    "test-unit": "",
+    "test-integration": "",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
   },
