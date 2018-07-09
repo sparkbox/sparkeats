@@ -129,7 +129,7 @@ li:not([class]) {
     color: $color-seagull-blue;
     font-weight: normal;
     font-size: 1.25em;
-    line-height: 2em;
+    line-height: 1.5;
     letter-spacing: 0.025em;
     text-align: center;
     margin: 0 13%;
@@ -152,10 +152,6 @@ li:not([class]) {
     &:hover {
       @include secondary-font(700);
     }
-    &:visited {
-      color: $color-fountain-blue;
-      border-bottom: 0.1em solid $color-fountain-blue;
-    }
     &-span {
       margin-right: 1em;
     }
@@ -169,7 +165,7 @@ li:not([class]) {
   &__container {
     margin: 2em 15% 0 15%;
     font-size: 1.063em;
-    line-height: 2em;
+    line-height: 1.75;
     letter-spacing: 0.025em;
     padding-bottom: 2.5em;
     &:after {
@@ -218,9 +214,9 @@ li:not([class]) {
   &__link {
     @include secondary-font(500);
     font-size: 0.9em;
-    color: $color-jellybean-blue;
+    color: $color-sparkblue-dark;
     text-decoration: none;
-    border-bottom: 1px solid $color-jellybean-blue;
+    border-bottom: 1px solid $color-sparkblue-dark;
     padding-bottom: 2px;
   }
 }
