@@ -97,9 +97,9 @@ function showDropdownOptions() {
       locationFilter.push(city);
 
       locationListHtml += `
-          <li><button id="${city}" class="location-dropdown__list-button">
+          <button id="${city}" class="location-dropdown__list-button">
             ${city}
-          </button></li>`;
+          </button>`;
     }
   });
 
@@ -109,7 +109,7 @@ function showDropdownOptions() {
 
   if (currentLocation !== 'All Places') {
     let allPlacesButton = `
-      <li><button id="All Places" class="location-dropdown__list-button">All Places</button></li>`;
+      <button id="All Places" class="location-dropdown__list-button">All Places</button>`;
     locationListHtml = allPlacesButton += locationListHtml;
     locationFilter.push('All Places');
   }
