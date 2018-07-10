@@ -1,8 +1,6 @@
 'use strict';
-
 function toggleDropdown() {
   document
-    // .getElementById('location-list')
     .querySelector('.location-dropdown__list')
     .classList.toggle('location-dropdown__list-open');
 }
@@ -10,13 +8,12 @@ function toggleDropdown() {
 function hideOrShowCard(city, location, hasHiddenClass) {
   if ((city === location || location === 'All Places') && hasHiddenClass) {
     return 'show';
-  } else if (
-    city !== location &&
-    location !== 'All Places' &&
-    !hasHiddenClass
-  ) {
+  }
+
+  if (city !== location && location !== 'All Places' && !hasHiddenClass) {
     return 'hide';
   }
+
   return '';
 }
 
@@ -26,6 +23,7 @@ function hideOrShowLocation(location, elementId, hasHiddenClass) {
   } else if (elementId !== location && hasHiddenClass) {
     return 'show';
   }
+
   return '';
 }
 
@@ -48,8 +46,6 @@ function hideLocationInDropdown(location, locationListElements) {
 
 function selectLocation(allCards, location) {
   Array.from(allCards).forEach(card => {
-    // const cityAndState = card.getElementsByClassName('place-card__city')[0]
-    //   .innerHTML;
     const cityAndState = card.querySelector('.place-card__city').innerHTML;
     const city = cityAndState.split(',')[0];
     const hasHiddenClass = card.classList.contains('hidden');
@@ -65,6 +61,7 @@ function onLocationDropdownClick() {
   const locationListElements = document.querySelectorAll(
     '.location-dropdown__list-button'
   );
+
   selectLocation(allCards, location);
   hideLocationInDropdown(location, locationListElements);
   toggleDropdown();
@@ -78,24 +75,25 @@ function addSelectionListener(element) {
   element.addEventListener('click', onLocationDropdownClick);
 }
 
+function isNotCurrentCity(city) {
+  const currentLocation = document.querySelector(
+    '.location-dropdown__button-text'
+  ).innerHTML;
+
+  return currentLocation !== city;
+}
+
 function showDropdownOptions() {
   let locationFilter = [];
   let locationListHtml = '';
   const allCards = document.querySelectorAll('.place-card__list-item');
-  // const locationDropdown = document
-  // .getElementById('location-list')
-  // .getElementsByTagName('ul')[0];
   const locationDropdown = document.querySelector('.location-dropdown__list');
 
   Array.from(allCards).forEach(card => {
-    // const cityAndState = card.getElementsByClassName('place-card__city')[0]
-    //   .innerHTML;
-
     const cityAndState = card.querySelector('.place-card__city').innerHTML;
-
     const city = cityAndState.split(',')[0];
 
-    if (!locationFilter.includes(city)) {
+    if (!locationFilter.includes(city) && isNotCurrentCity(city)) {
       locationFilter.push(city);
 
       locationListHtml += `
@@ -104,12 +102,23 @@ function showDropdownOptions() {
           </button></li>`;
     }
   });
+
+  const currentLocation = document.querySelector(
+    '.location-dropdown__button-text'
+  ).innerHTML;
+
+  if (currentLocation !== 'All Places') {
+    let allPlacesButton = `
+      <li><button id="All Places" class="location-dropdown__list-button">All Places</button></li>`;
+    locationListHtml = allPlacesButton += locationListHtml;
+    locationFilter.push('All Places');
+  }
+
   locationDropdown.innerHTML = locationListHtml;
   toggleDropdown();
 
   for (let i = 0; i < locationFilter.length; i++) {
     addSelectionListener(
-      // document.getElementById('location-list').getElementsByTagName('button')[i]
       document.querySelectorAll('.location-dropdown__list-button')[i]
     );
   }
