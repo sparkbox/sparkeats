@@ -51,8 +51,8 @@ module.exports = {
       placeURL: place.placeURL,
       placeImageAlt: place.placeImageAlt,
       phone: place.phone,
+      address: place.address,
       city: place.city,
-      stateAbbr: place.stateAbbr,
       state: place.state,
       avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
       numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
@@ -66,7 +66,7 @@ module.exports = {
       })),
     };
 
-    return res.view('pages/reviews/reviews', { dataForView });
+    return res.view('pages/reviews/reviews', { place: dataForView });
   },
   async create(req, res) {
     const {

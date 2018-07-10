@@ -1,5 +1,3 @@
-const getState = require('../../lib/getState');
-
 /**
  * PlaceController
  *
@@ -22,20 +20,35 @@ module.exports = {
       return res.serverError(err);
     }
 
-    const dataForView = places.map(place => ({
-      id: place.id,
-      name: place.placeName,
-      city: place.city,
-      state: place.state,
-      stateAbbr: place.stateAbbr,
-      phone: place.phone,
-      placeImage: place.placeImage,
-      placeImageAlt: place.placeImageAlt,
-      placeURL: place.placeURL,
-      placeWebsiteDisplay: place.placeWebsiteDisplay,
-      avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
-      numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
-    }));
+    const dataForView = places.map(place => {
+      const {
+        id,
+        placeName: name,
+        city,
+        state,
+        phone,
+        address,
+        placeImage,
+        placeImageAlt,
+        placeURL,
+        placeWebsiteDisplay,
+      } = place;
+
+      return {
+        id,
+        name,
+        city,
+        state,
+        phone,
+        address,
+        placeImage,
+        placeImageAlt,
+        placeURL,
+        placeWebsiteDisplay,
+        avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
+        numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
+      };
+    });
 
     return res.view('pages/homepage', { dataForView });
   },
@@ -43,9 +56,9 @@ module.exports = {
     const {
       placeName,
       city,
-      state: stateAbbr,
-      address,
+      state,
       phone,
+      address,
       placeImage,
       placeImageAlt,
       placeURL,
@@ -57,9 +70,9 @@ module.exports = {
       place = await Place.create({
         placeName,
         city,
-        state: getState(stateAbbr),
-        stateAbbr,
+        state,
         phone,
+        address,
         placeImage,
         placeImageAlt,
         placeURL,

@@ -23,7 +23,7 @@ module.exports = {
 
     const avgRating = Math.round(
       placeRatings.reduce((total, currentRating) => total + currentRating, 0) /
-        placeRatings.length
+      placeRatings.length
     );
 
     const result = sails.helpers.getNumberOfStars(avgRating);

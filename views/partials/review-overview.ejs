@@ -1,7 +1,11 @@
 <div class="review-overview">
   <div class="review-overview__num-reviews">
     <p class="review-overview__title">
-      <%- place.numberOfReviews %>
+      <% if (place.numberOfReviews > 1) { %>
+        <%- place.numberOfReviews %> Reviews
+      <% } else { %>
+        <%- place.numberOfReviews %> Review
+      <% } %>
     </p>
     <%- place.avgNumberOfStars %>
   </div>
