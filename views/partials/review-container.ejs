@@ -4,13 +4,13 @@
 </a>
 <% place.reviews.forEach((review) => { %>
   <article class="review-submission">
-    <h1 class="review-submission__reviewer">
+    <h3 class="review-submission__reviewer">
       <%= review.reviewerName %>
-    </h1>
+    </h3>
     <div class="place-card__star-rating" aria-label="<%= review.rating %>">
       <%- review.numberOfStars %>
     </div>
-      <h2 class="review-submission__title">Comments</h2>
+      <h4 class="review-submission__title">Comments</h4>
       <p class="review-submission__review">
         <%= review.reviewText %>
       </p>

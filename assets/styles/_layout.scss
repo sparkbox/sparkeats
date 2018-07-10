@@ -226,7 +226,7 @@ li:not([class]) {
   text-align: center;
   margin: 0 auto 1em auto;
   width: 80%;
-  h1 {
+  &__title {
     @include primary-font();
     color: $color-sparkblue-dark;
     font-size: 2em;

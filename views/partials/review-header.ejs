@@ -1,13 +1,13 @@
 <div class="review-header">
-    <div class="review-header__backdrop">
-        <img class="review-header__backdrop-image" src="../../images/places/<%= place.placeImage %>" alt="<%= place.placeImageAlt %>" />
-    </div>
-    <div class="review-header__title">
-        <h1 class="review-header__name">
-            <%= place.name %>
-        </h1>
-        <h2 class="review-header__city">
-            <%= place.city %>, <%= place.state %>
-        </h2>
-    </div>
+  <div class="review-header__backdrop">
+    <img class="review-header__backdrop-image" src="../../images/places/<%= place.placeImage %>" alt="<%= place.placeImageAlt %>" />
+  </div>
+  <div class="review-header__title">
+    <h2 class="review-header__name">
+        <%= place.name %>
+    </h2>
+    <p class="review-header__city">
+      <%= place.city %>, <%= place.state %>
+    </p>
+  </div>
 </div>
