@@ -2,14 +2,19 @@
 
 function toggleDropdown() {
   document
-    .getElementById('location-list')
+    // .getElementById('location-list')
+    .querySelector('.location-dropdown__list')
     .classList.toggle('location-dropdown__list-open');
 }
 
 function hideOrShowCard(city, location, hasHiddenClass) {
   if ((city === location || location === 'All Places') && hasHiddenClass) {
     return 'show';
-  } else if ((city !== location && location !== 'All Places') && !hasHiddenClass) {
+  } else if (
+    city !== location &&
+    location !== 'All Places' &&
+    !hasHiddenClass
+  ) {
     return 'hide';
   }
   return '';
@@ -33,7 +38,7 @@ function addOrRemoveHiddenClass(element, hideOrShow) {
 }
 
 function hideLocationInDropdown(location, locationListElements) {
-  Array.from(locationListElements).forEach((element) => {
+  Array.from(locationListElements).forEach(element => {
     const elementId = element.id;
     const hasHiddenClass = element.classList.contains('hidden');
     const hideOrShow = hideOrShowLocation(location, elementId, hasHiddenClass);
@@ -42,9 +47,10 @@ function hideLocationInDropdown(location, locationListElements) {
 }
 
 function selectLocation(allCards, location) {
-  Array.from(allCards).forEach((card) => {
-    const cityAndState = card.getElementsByClassName('place-card__city')[0]
-      .innerHTML;
+  Array.from(allCards).forEach(card => {
+    // const cityAndState = card.getElementsByClassName('place-card__city')[0]
+    //   .innerHTML;
+    const cityAndState = card.querySelector('.place-card__city').innerHTML;
     const city = cityAndState.split(',')[0];
     const hasHiddenClass = card.classList.contains('hidden');
     const hideOrShow = hideOrShowCard(city, location, hasHiddenClass);
@@ -54,17 +60,18 @@ function selectLocation(allCards, location) {
 
 function onLocationDropdownClick() {
   const location = this.id;
-  const allCards = document.getElementsByClassName('place-card__list-item');
-  const mainButton = document.getElementById('location-dropdown__button-main');
-  const locationListElements = document.getElementsByClassName(
-    'location-dropdown__list-button'
+  const allCards = document.querySelectorAll('.place-card__list-item');
+  const mainButton = document.querySelector('.location-dropdown__button');
+  const locationListElements = document.querySelectorAll(
+    '.location-dropdown__list-button'
   );
   selectLocation(allCards, location);
   hideLocationInDropdown(location, locationListElements);
   toggleDropdown();
-  mainButton.getElementsByClassName(
-    'location-dropdown__button-text'
-  )[0].innerHTML = location;
+
+  mainButton.querySelector(
+    '.location-dropdown__button-text'
+  ).innerHTML = location;
 }
 
 function addSelectionListener(element) {
@@ -72,16 +79,25 @@ function addSelectionListener(element) {
 }
 
 function showDropdownOptions() {
-	let filter = [];
+  let locationFilter = [];
   let locationListHtml = '';
-  const allCards = document.getElementsByClassName('place-card__list-item');
-  const locationDropdown = document.getElementById('location-list').getElementsByTagName('ul')[0];
-  Array.from(allCards).forEach((card) => {
-    const cityAndState = card.getElementsByClassName('place-card__city')[0]
-      .innerHTML;
+  const allCards = document.querySelectorAll('.place-card__list-item');
+  // const locationDropdown = document
+  // .getElementById('location-list')
+  // .getElementsByTagName('ul')[0];
+  const locationDropdown = document.querySelector('.location-dropdown__list');
+
+  Array.from(allCards).forEach(card => {
+    // const cityAndState = card.getElementsByClassName('place-card__city')[0]
+    //   .innerHTML;
+
+    const cityAndState = card.querySelector('.place-card__city').innerHTML;
+
     const city = cityAndState.split(',')[0];
-    if (!filter.includes(city)) {
-      filter.push(city);
+
+    if (!locationFilter.includes(city)) {
+      locationFilter.push(city);
+
       locationListHtml += `
           <li><button id="${city}" class="location-dropdown__list-button">
             ${city}
@@ -90,11 +106,14 @@ function showDropdownOptions() {
   });
   locationDropdown.innerHTML = locationListHtml;
   toggleDropdown();
-  
-  for (let i = 0; i < filter.length; i++) {
-    addSelectionListener(document.getElementById('location-list').getElementsByTagName('button')[i]);
+
+  for (let i = 0; i < locationFilter.length; i++) {
+    addSelectionListener(
+      // document.getElementById('location-list').getElementsByTagName('button')[i]
+      document.querySelectorAll('.location-dropdown__list-button')[i]
+    );
   }
 }
 
-const dropdownButton = document.getElementById('location-dropdown__button-main');
+const dropdownButton = document.querySelector('.location-dropdown__button');
 dropdownButton.addEventListener('click', showDropdownOptions);
