@@ -7,7 +7,9 @@
         <%- place.numberOfReviews %> Review
       <% } %>
     </p>
-    <%- place.avgNumberOfStars %>
+    <div class="place-card__star-rating" aria-label="<%= place.rating %>">
+      <%- place.numberOfStars %>
+    </div>
   </div>
   <div class="review-overview__address">
     <%- partial('./address') %>

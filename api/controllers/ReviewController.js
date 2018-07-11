@@ -44,6 +44,11 @@ module.exports = {
       return res.serverError(err);
     }
 
+    let { stars, rating } = sails.helpers.getAvgNumberOfStars(
+      reviews,
+      place.id
+    );
+
     const dataForView = {
       id: place.id,
       name: place.placeName,
@@ -54,16 +59,30 @@ module.exports = {
       address: place.address,
       city: place.city,
       state: place.state,
-      avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
-      numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
-      reviews: reviews.map(review => ({
-        reviewerName: review.reviewerName,
-        reviewText: review.reviewText,
-        reviewImageFileName: review.reviewImageFileName,
-        reviewImageAlt: review.reviewImageAlt,
-        placeId: review.placeId,
-        numberOfStars: sails.helpers.getNumberOfStars(review.numberOfStars),
-      })),
+      numberOfStars: stars,
+      rating,
+      numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place.id),
+      reviews: reviews.map(
+        ({
+          reviewerName,
+          reviewText,
+          reviewImageFileName,
+          reviewImageAlt,
+          numberOfStars,
+          placeId,
+        }) => {
+          const { stars, rating } = sails.helpers.getNumberOfStars(numberOfStars);
+          return {
+            reviewerName,
+            reviewText,
+            reviewImageFileName,
+            reviewImageAlt,
+            placeId,
+            numberOfStars: stars,
+            rating
+          };
+        }
+      ),
     };
 
     return res.view('pages/reviews/reviews', { place: dataForView });

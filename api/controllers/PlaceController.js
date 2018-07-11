@@ -34,6 +34,11 @@ module.exports = {
         placeWebsiteDisplay,
       } = place;
 
+      let { stars, rating } = sails.helpers.getAvgNumberOfStars(
+        reviews,
+        place.id
+      );
+
       return {
         id,
         name,
@@ -45,8 +50,9 @@ module.exports = {
         placeImageAlt,
         placeURL,
         placeWebsiteDisplay,
-        avgNumberOfStars: sails.helpers.getAvgNumberOfStars(reviews, place),
-        numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place),
+        numberOfStars: stars,
+        rating,
+        numberOfReviews: sails.helpers.getNumberOfReviews(reviews, place.id),
       };
     });
 

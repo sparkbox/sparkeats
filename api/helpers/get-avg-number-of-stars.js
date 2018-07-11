@@ -10,15 +10,15 @@ module.exports = {
       type: 'ref',
       description: 'The reviews of a single place.',
     },
-    currentPlace: {
+    placeId: {
       type: 'ref',
       description: 'A single place.',
     },
   },
 
-  fn: ({ reviews, currentPlace }, exits) => {
+  fn: ({ reviews, placeId }, exits) => {
     const placeRatings = reviews
-      .filter(review => review.placeId === currentPlace.id)
+      .filter(review => review.placeId === placeId)
       .map(item => item.numberOfStars);
 
     const avgRating = Math.round(
@@ -26,8 +26,8 @@ module.exports = {
       placeRatings.length
     );
 
-    const result = sails.helpers.getNumberOfStars(avgRating);
+    const { stars, rating } = sails.helpers.getNumberOfStars(avgRating);
 
-    return exits.success(result);
+    return exits.success({ stars, rating });
   },
 };

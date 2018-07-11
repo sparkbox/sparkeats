@@ -12,18 +12,21 @@ module.exports = {
   },
 
   fn: ({ rating }, exits) => {
-    const filledStar = `<img class="place-card__star" src="../design/sparkeats_star.svg" alt="review star">`;
-    const emptyStar = `<img class="place-card__star" src="../design/sparkeats_star_empty.svg" alt="review star">`;
-    let result = '';
+    const filledStar = `<img class="place-card__star" src="../design/sparkeats_star.svg" alt="review star" aria-hidden="true">`;
+    const emptyStar = `<img class="place-card__star" src="../design/sparkeats_star_empty.svg" alt="review star" aria-hidden="true">`;
+    let stars = '';
 
     for (let i = 0; i < rating; i += 1) {
-      result += filledStar;
+      stars += filledStar;
     }
     if (5 - rating !== 0) {
       for (let i = 0; i < 5 - rating; i += 1) {
-        result += emptyStar;
+        stars += emptyStar;
       }
     }
-    return exits.success(result);
+
+    rating = rating > 1 ? `${rating} stars` : `${rating} star`;
+
+    return exits.success({ stars, rating });
   },
 };

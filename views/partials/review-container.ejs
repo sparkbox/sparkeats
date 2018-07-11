@@ -7,7 +7,9 @@
     <h1 class="review-submission__reviewer">
       <%= review.reviewerName %>
     </h1>
-    <%- review.numberOfStars %>
+    <div class="place-card__star-rating" aria-label="<%= review.rating %>">
+      <%- review.numberOfStars %>
+    </div>
       <h2 class="review-submission__title">Comments</h2>
       <p class="review-submission__review">
         <%= review.reviewText %>
