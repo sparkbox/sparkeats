@@ -1,70 +1,64 @@
+const { findImageByID } = require('../../../lib/findImage');
+const getNumberOfStars = require('../../../lib/getNumberOfStars');
+const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
+const getAvgNumberOfStars = require('../../../lib/getAvgNumberOfStars');
+
 module.exports = async function reviews(req, res) {
   const id = req.param('id');
 
-  try {
-    let reviews = await Review.find({
+  Promise.all(
+    await Review.find({
       placeId: id,
-    }).intercept(err => err);
+    })
+  )
+    .then(reviews => {
+      return Promise.all(
+        reviews.map(async ({
+          reviewerName,
+          reviewText,
+          reviewImage: reviewImageName,
+          reviewImageAlt,
+          numberOfStars,
+          placeId,
+        }) => {
+          let reviewImage = await findImageByID(ReviewImage, reviewImageName);
 
-    let place = await Place.findOne({
-      id,
-    }).intercept(err => err);
+          return {
+            reviewerName,
+            reviewText,
+            reviewImage,
+            reviewImageAlt,
+            placeId,
+            numberOfStars: getNumberOfStars(numberOfStars),
+            rating: numberOfStars,
+          };
+        })
+      );
+    })
+    .then(async reviews => {
+      let place = await Place.findOne({
+        id,
+      });
 
-    let avgNumberOfStars = await sails.helpers.getAvgNumberOfStars(
-      reviews,
-      place
-    );
-
-    let numberOfReviews = await sails.helpers.getNumberOfReviews(
-      reviews,
-      place
-    );
-
-    let placeImage = '';
-
-    if (place.placeImage) {
-      placeImage = await PlaceImage.findOne({
-        id: place.placeImage,
-      }).intercept(err => err);
-
-      placeImage = `data:image/jpeg;base64,${placeImage.file}`;
-    }
-
-    reviews = reviews.map(async review => {
-      let reviewImage = '';
-
-      if (review.reviewImage) {
-        reviewImage = await ReviewImage.findOne({
-          id: review.reviewImage,
-        }).intercept(err => err);
-
-        reviewImage = `data:image/jpeg;base64,${reviewImage.file}`;
-      }
-
-      return {
-        reviewerName: review.reviewerName,
-        reviewText: review.reviewText,
-        reviewImage,
-        reviewImageAlt: review.reviewImageAlt,
-        placeId: review.placeId,
-        numberOfStars: await sails.helpers.getNumberOfStars(
-          review.numberOfStars
-        ),
-      };
-    });
-
-    Promise.all(reviews).then(reviews => {
-      let dataForView = {
-        place,
-        placeImage,
-        avgNumberOfStars,
-        numberOfReviews,
+      let avgNumberOfStars = getAvgNumberOfStars(
         reviews,
-      };
+        place.id
+      );
 
-      return res.view('pages/reviews/reviews', { dataForView });
-    });
-  } catch (err) {
-    return res.serverError(err);
-  }
+      let numberOfReviews = getNumberOfReviews(reviews, place.id);
+
+      let placeImage = '';
+
+      if (place.placeImage) {
+        placeImage = await PlaceImage.findOne({
+          id: place.placeImage,
+        });
+
+        placeImage = `data:image/jpeg;base64,${placeImage.file}`;
+      }
+      Promise.all(reviews).then(reviews => {
+        return res.view('pages/reviews/reviews', { place, placeImage, avgNumberOfStars, numberOfReviews, reviews });
+      });
+    })
+    .catch(res.serverError);
 };

@@ -1,10 +1,10 @@
 <div class="review-overview">
   <div class="review-overview__num-reviews">
     <p class="review-overview__title">
-      <% if (place.numberOfReviews > 1) { %>
-        <%- place.numberOfReviews %> Reviews
+      <% if (numberOfReviews > 1) { %>
+        <%- numberOfReviews %> Reviews
       <% } else { %>
-        <%- place.numberOfReviews %> Review
+        <%- numberOfReviews %> Review
       <% } %>
     </p>
     <div class="place-card__star-rating" aria-label="<%= place.rating %>">
@@ -12,6 +12,6 @@
     </div>
   </div>
   <div class="review-overview__address">
-    <%- partial('./address', { place: dataForView.place }) %>
+    <%- partial('./address') %>
   </div>
 </div>

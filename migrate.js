@@ -10,7 +10,7 @@ function parseYAML(yamlPath) {
   try {
     obj = yaml.safeLoad(fs.readFileSync(yamlPath, 'utf8'));
   } catch (err) {
-    console.log(err);
+    throw Error('Problem Loading YAML');
   }
 
   return obj;

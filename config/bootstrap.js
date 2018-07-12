@@ -12,15 +12,11 @@ async function bootstrap(done) {
   return Promise
     .all(seedPlaces(places))
     .then(places => {
-      const seedPromises = places.map(place => {
-        const placeReviews = _.filter(reviews, review => {
-          return review['place-id'] === place.fd;
-        });
+      return Promise.all(places.map(place => {
+        const placeReviews = _.filter(reviews, review => review['place-id'] === place.fd);
 
         return Promise.all(seedReviews(place, placeReviews));
-      });
-
-      return Promise.all(seedPromises);
+      }));
     })
     .then(() => done())
     .catch(done);

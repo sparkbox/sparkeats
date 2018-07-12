@@ -9,29 +9,30 @@ function seedReviews(place, placeReviews) {
       'review-text': reviewText,
       'reviewer-name': reviewerName,
       'number-of-stars': numberOfStars,
-      'review-image-file-name': reviewImage,
-      'review-image-alt': reviewImageAlt,
+      'review-image-file-name': reviewImageNames,
+      'review-image-alt': reviewImageAlts,
     }) => {
-      let file;
-      reviewImage = reviewImage ? reviewImage[0] : '';
+      let reviewImageName = reviewImageNames ? reviewImageNames[0] : reviewImageNames;
 
-      if (reviewImage) {
-        file = await ReviewImage.create({
-          file: encode(`./data/images/reviews/${reviewImage}`),
-          fd: reviewImage,
-        })
-          .intercept(err => err)
-          .fetch();
+      let file = encode(reviewImageName, 'reviews');
+      let reviewImage = '';
+
+      if (file) {
+        reviewImage = await ReviewImage.create({
+          file,
+          fd: reviewImageName,
+        }).fetch();
       }
 
       return await Review.create({
         reviewerName,
         reviewText,
-        reviewImage: file ? file.id : '',
-        reviewImageAlt: reviewImageAlt ? reviewImageAlt[0] : '',
+        reviewImage: reviewImage.id,
+        reviewImageAlt: reviewImageAlts ? reviewImageAlts[0] : '',
         numberOfStars,
         placeId: place.id,
-      }).intercept(err => err);
+      })
+        .fetch()
     }
   );
 }
@@ -46,22 +47,21 @@ function seedPlaces(places) {
         address,
         phone,
         'place-name': placeName,
-        'place-image': placeImage,
+        'place-image': placeImageName,
         'place-image-alt': placeImageAlt,
         'place-url': placeURL,
         'place-website-display': placeWebsiteDisplay,
       },
       placeKey
     ) => {
-      let file;
+      let file = encode(placeImageName, 'places');
+      let placeImage = '';
 
-      if (placeImage) {
-        file = await PlaceImage.create({
-          file: encode(`./data/images/places/${placeImage}`),
-          fd: placeImage,
-        })
-          .intercept(err => err)
-          .fetch();
+      if (file) {
+        placeImage = await PlaceImage.create({
+          file,
+          fd: placeImageName,
+        }).fetch();
       }
 
       return await Place.create({
@@ -70,13 +70,12 @@ function seedPlaces(places) {
         state,
         address,
         phone: phone || '',
-        placeImage: file ? file.id : '',
+        placeImage: placeImage.id,
         fd: placeKey,
         placeImageAlt: placeImageAlt || '',
         placeURL: placeURL || '',
         placeWebsiteDisplay: placeWebsiteDisplay || '',
       })
-        .intercept(err => err)
         .fetch();
     }
   );

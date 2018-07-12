@@ -1,4 +1,5 @@
 const SkipperMySQLAdapter = require('../../../skipper-mysql/SkipperMySQLAdapter');
+const { findImageByFD } = require('../../../lib/findImage');
 
 module.exports = async function create(req, res) {
   const {
@@ -20,36 +21,24 @@ module.exports = async function create(req, res) {
     async (err, files) => {
       if (err) return res.serverError(err);
 
-      try {
-        let placeImage = '';
+      let placeImage = await findImageByFD(PlaceImage, files);
 
-        if (files.length) {
-          placeImage = await PlaceImage.findOne({
-            fd: files[0].fd,
-          }).intercept(err => err);
-
-          placeImage = placeImage.id;
-        }
-
-        let place = await Place.create({
-          placeName,
-          city,
-          state,
-          address,
-          phone,
-          placeImage,
-          placeImageAlt,
-          placeUrl,
-          placeWebsiteDisplay,
+      return Place.create({
+        placeName,
+        city,
+        state,
+        address,
+        phone,
+        placeImage,
+        placeImageAlt,
+        placeUrl,
+        placeWebsiteDisplay,
+      })
+        .fetch()
+        .then(place => {
+          return res.redirect(`/places/${place.id}/reviews/new`);
         })
-          .intercept('E_UNIQUE', err => err)
-          .intercept('UsageError', err => err)
-          .fetch();
-
-        return res.redirect(`/places/${place.id}/reviews/new`);
-      } catch (err) {
-        return res.serverError(err);
-      }
+        .catch(res.serverError);
     }
   );
 };

@@ -18,9 +18,9 @@ module.exports.policies = {
 
   // '*': true,
   PlaceController: {
-    new: 'authenticated',
+    add: 'authenticated',
   },
   ReviewController: {
-    new: 'authenticated',
+    add: 'authenticated',
   },
 };
