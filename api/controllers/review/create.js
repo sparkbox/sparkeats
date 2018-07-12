@@ -13,30 +13,26 @@ module.exports = async function create(req, res) {
     async (err, files) => {
       if (err) return res.serverError(err);
 
-      try {
-        let reviewImage = '';
+      let reviewImage = '';
 
-        if (files.length) {
-          reviewImage = await ReviewImage.findOne({
-            fd: files[0].fd,
-          }).intercept(err => err);
+      if (files.length) {
+        reviewImage = await ReviewImage.findOne({
+          fd: files[0].fd,
+        });
 
-          reviewImage = reviewImage.id;
-        }
-
-        await Review.create({
-          reviewerName,
-          reviewText,
-          reviewImage,
-          reviewImageAlt,
-          numberOfStars,
-          placeId,
-        })
-          .then(() => res.redirect(`/places/${placeId}`))
-          .catch(res.serverError);
-      } catch (err) {
-        return res.serverError(err);
+        reviewImage = reviewImage.id;
       }
+
+      return Review.create({
+        reviewerName,
+        reviewText,
+        reviewImage,
+        reviewImageAlt,
+        numberOfStars,
+        placeId,
+      })
+        .then(() => res.redirect(`/places/${placeId}`))
+        .catch(res.serverError);
     }
   );
 };

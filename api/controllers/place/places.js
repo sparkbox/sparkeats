@@ -1,41 +1,64 @@
+const Promise = require('bluebird');
+
 module.exports = async function places(req, res) {
-  try {
-    let placeImage;
-    let places = await Place.find({}).intercept(err => err);
-    let reviews = await Review.find({
+  Promise.props({
+    places: await Place.find({}),
+    reviews: await Review.find({
       select: ['numberOfStars', 'placeId'],
-    }).intercept(err => err);
+    }),
+  })
+    .then(({ places, reviews }) => {
+      return Promise.all(
+        places.map(
+          async ({
+            id,
+            placeName,
+            city,
+            state,
+            phone,
+            address,
+            placeImage,
+            placeImageAlt,
+            placeURL,
+            placeWebsiteDisplay,
+          }) => {
+            if (placeImage) {
+              placeImage = await PlaceImage.findOne({
+                id: placeImage,
+              });
+              placeImage = `data:image/jpeg;base64,${placeImage.file}`;
+            }
 
-    let dataForView = places.map(async place => {
-      if (place.placeImage) {
-        placeImage = await PlaceImage.findOne({
-          id: place.placeImage,
-        }).intercept(err => err);
+            let avgNumberOfStars = await sails.helpers.getAvgNumberOfStars(
+              reviews,
+              id
+            );
 
-        placeImage = `data:image/jpeg;base64,${placeImage.file}`;
-      }
+            let numberOfReviews = await sails.helpers.getNumberOfReviews(
+              reviews,
+              id
+            );
 
-      return {
-        id: place.id,
-        name: place.placeName,
-        address: `${place.city}, ${place.state}`,
-        phone: place.phone,
-        placeImage,
-        placeImageAlt: place.placeImageAlt,
-        placeURL: place.placeURL,
-        placeWebsiteDisplay: place.placeWebsiteDisplay,
-        avgNumberOfStars: await sails.helpers.getAvgNumberOfStars(
-          reviews,
-          place
-        ),
-        numberOfReviews: await sails.helpers.getNumberOfReviews(reviews, place),
-      };
-    });
-
-    Promise.all(dataForView).then(dataForView => {
-      return res.view('pages/homepage', { dataForView });
-    });
-  } catch (err) {
-    return res.serverError(err);
-  }
+            return {
+              id,
+              placeName,
+              city,
+              state,
+              phone,
+              address,
+              placeImage,
+              placeImageAlt,
+              placeURL,
+              placeWebsiteDisplay,
+              avgNumberOfStars,
+              numberOfReviews,
+            };
+          }
+        )
+      );
+    })
+    .then(places => {
+      return res.view('pages/homepage', { dataForView: places });
+    })
+    .catch(res.serverError);
 };

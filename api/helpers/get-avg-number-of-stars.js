@@ -9,15 +9,15 @@ module.exports = {
       type: 'ref',
       description: 'The reviews of a single place.',
     },
-    currentPlace: {
+    placeId: {
       type: 'ref',
       description: 'A single place.',
     },
   },
 
-  fn: async ({ reviews, currentPlace }, exits) => {
+  fn: async ({ reviews, placeId }, exits) => {
     const placeRatings = reviews
-      .filter(review => review.placeId === currentPlace.id)
+      .filter(review => review.placeId === placeId)
       .map(item => item.numberOfStars);
 
     const avgRating = Math.round(

@@ -8,16 +8,15 @@ module.exports = {
       type: 'ref',
       description: 'The ratings of a place.',
     },
-    currentPlace: {
+    placeId: {
       type: 'ref',
       description: 'A single place.',
     },
   },
 
-  fn: ({ ratings, currentPlace }, exits) => {
-    const numberOfReviews = ratings.filter(
-      rating => rating.placeId === currentPlace.id
-    ).length;
+  fn: ({ ratings, placeId }, exits) => {
+    const numberOfReviews = ratings.filter(rating => rating.placeId === placeId)
+      .length;
     return exits.success(numberOfReviews);
   },
 };

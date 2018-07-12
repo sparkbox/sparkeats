@@ -23,7 +23,6 @@ module.exports = {
         result += emptyStar;
       }
     }
-    // console.log(result);
     return exits.success(result);
   },
 };

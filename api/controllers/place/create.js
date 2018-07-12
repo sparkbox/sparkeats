@@ -20,36 +20,32 @@ module.exports = async function create(req, res) {
     async (err, files) => {
       if (err) return res.serverError(err);
 
-      try {
-        let placeImage = '';
+      let placeImage = '';
 
-        if (files.length) {
-          placeImage = await PlaceImage.findOne({
-            fd: files[0].fd,
-          }).intercept(err => err);
+      if (files.length) {
+        placeImage = await PlaceImage.findOne({
+          fd: files[0].fd,
+        });
 
-          placeImage = placeImage.id;
-        }
-
-        let place = await Place.create({
-          placeName,
-          city,
-          state,
-          address,
-          phone,
-          placeImage,
-          placeImageAlt,
-          placeUrl,
-          placeWebsiteDisplay,
-        })
-          .intercept('E_UNIQUE', err => err)
-          .intercept('UsageError', err => err)
-          .fetch();
-
-        return res.redirect(`/places/${place.id}/reviews/new`);
-      } catch (err) {
-        return res.serverError(err);
+        placeImage = placeImage.id;
       }
+
+      return Place.create({
+        placeName,
+        city,
+        state,
+        address,
+        phone,
+        placeImage,
+        placeImageAlt,
+        placeUrl,
+        placeWebsiteDisplay,
+      })
+        .fetch()
+        .then(place => {
+          return res.redirect(`/places/${place.id}/reviews/new`);
+        })
+        .catch(res.serverError);
     }
   );
 };
