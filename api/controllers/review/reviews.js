@@ -1,3 +1,5 @@
+const { findImageByID } = require('../../../lib/findImage');
+
 module.exports = async function reviews(req, res) {
   const id = req.param('id');
 
@@ -11,18 +13,13 @@ module.exports = async function reviews(req, res) {
         reviews.map(async ({
           reviewerName,
           reviewText,
-          reviewImage,
+          reviewImage: reviewImageName,
           reviewImageAlt,
           numberOfStars,
           placeId,
         }) => {
-          if (reviewImage) {
-            reviewImage = await ReviewImage.findOne({
-              id: reviewImage,
-            });
+          let reviewImage = await findImageByID(ReviewImage, reviewImageName);
 
-            reviewImage = `data:image/jpeg;base64,${reviewImage.file}`;
-          }
           return {
             reviewerName,
             reviewText,

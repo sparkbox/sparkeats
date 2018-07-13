@@ -1,4 +1,5 @@
 const SkipperMySQLAdapter = require('../../../skipper-mysql/SkipperMySQLAdapter');
+const { findImageByFD } = require('../../../lib/findImage');
 
 module.exports = async function create(req, res) {
   const placeId = req.param('id');
@@ -13,15 +14,7 @@ module.exports = async function create(req, res) {
     async (err, files) => {
       if (err) return res.serverError(err);
 
-      let reviewImage = '';
-
-      if (files.length) {
-        reviewImage = await ReviewImage.findOne({
-          fd: files[0].fd,
-        });
-
-        reviewImage = reviewImage.id;
-      }
+      let reviewImage = await findImageByFD(ReviewImage, files);
 
       return Review.create({
         reviewerName,

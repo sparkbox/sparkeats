@@ -1,4 +1,5 @@
 const Promise = require('bluebird');
+const { findImageByID } = require('../../../lib/findImage');
 
 module.exports = async function places(req, res) {
   Promise.props({
@@ -17,18 +18,12 @@ module.exports = async function places(req, res) {
             state,
             address,
             phone,
-            placeImage,
+            placeImage: placeImageID,
             placeImageAlt,
             placeURL,
             placeWebsiteDisplay,
           }) => {
-            if (placeImage) {
-              placeImage = await PlaceImage.findOne({
-                id: placeImage,
-              });
-              placeImage = `data:image/jpeg;base64,${placeImage.file}`;
-            }
-
+            let placeImage = await findImageByID(PlaceImage, placeImageID);
             let avgNumberOfStars = sails.helpers.getAvgNumberOfStars(
               reviews,
               id
