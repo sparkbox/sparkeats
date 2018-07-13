@@ -1,4 +1,7 @@
 const { findImageByID } = require('../../../lib/findImage');
+const getNumberOfStars = require('../../../lib/getNumberOfStars');
+const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
+const getAvgNumberOfStars = require('../../../lib/getAvgNumberOfStars');
 
 module.exports = async function reviews(req, res) {
   const id = req.param('id');
@@ -26,7 +29,7 @@ module.exports = async function reviews(req, res) {
             reviewImage,
             reviewImageAlt,
             placeId,
-            numberOfStars: sails.helpers.getNumberOfStars(numberOfStars),
+            numberOfStars: getNumberOfStars(numberOfStars),
             rating: numberOfStars,
           };
         })
@@ -37,12 +40,12 @@ module.exports = async function reviews(req, res) {
         id,
       });
 
-      let avgNumberOfStars = sails.helpers.getAvgNumberOfStars(
+      let avgNumberOfStars = getAvgNumberOfStars(
         reviews,
         place.id
       );
 
-      let numberOfReviews = sails.helpers.getNumberOfReviews(reviews, place.id);
+      let numberOfReviews = getNumberOfReviews(reviews, place.id);
 
       let placeImage = '';
 

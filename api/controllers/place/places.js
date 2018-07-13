@@ -1,5 +1,7 @@
 const Promise = require('bluebird');
 const { findImageByID } = require('../../../lib/findImage');
+const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
+const getAvgNumberOfStars = require('../../../lib/getAvgNumberOfStars');
 
 module.exports = async function places(req, res) {
   Promise.props({
@@ -24,12 +26,12 @@ module.exports = async function places(req, res) {
             placeWebsiteDisplay,
           }) => {
             let placeImage = await findImageByID(PlaceImage, placeImageID);
-            let avgNumberOfStars = sails.helpers.getAvgNumberOfStars(
+            let avgNumberOfStars = getAvgNumberOfStars(
               reviews,
               id
             );
 
-            let numberOfReviews = sails.helpers.getNumberOfReviews(
+            let numberOfReviews = getNumberOfReviews(
               reviews,
               id
             );
