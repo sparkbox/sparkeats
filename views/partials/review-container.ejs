@@ -1,8 +1,8 @@
 <div class="review-container">
-<a href="/places/<%= place.id %>/review">
+<a href="/places/<%= place.id %>/reviews/new">
   <button class="button--bordered-primary">Add review</button>
 </a>
-<% place.reviews.forEach((review) => { %>
+<% reviews.forEach((review) => { %>
   <article class="review-submission">
     <h1 class="review-submission__reviewer">
       <%= review.reviewerName %>

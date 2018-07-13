@@ -23,14 +23,14 @@ module.exports = async function reviews(req, res) {
 
             reviewImage = `data:image/jpeg;base64,${reviewImage.file}`;
           }
-
           return {
             reviewerName,
             reviewText,
             reviewImage,
             reviewImageAlt,
             placeId,
-            numberOfStars: await sails.helpers.getNumberOfStars(numberOfStars),
+            numberOfStars: sails.helpers.getNumberOfStars(numberOfStars),
+            rating: numberOfStars,
           };
         })
       );
@@ -40,12 +40,12 @@ module.exports = async function reviews(req, res) {
         id,
       });
 
-      let avgNumberOfStars = await sails.helpers.getAvgNumberOfStars(
+      let avgNumberOfStars = sails.helpers.getAvgNumberOfStars(
         reviews,
-        place
+        place.id
       );
 
-      let numberOfReviews = await sails.helpers.getNumberOfReviews(reviews, place);
+      let numberOfReviews = sails.helpers.getNumberOfReviews(reviews, place.id);
 
       let placeImage = '';
 
@@ -56,17 +56,8 @@ module.exports = async function reviews(req, res) {
 
         placeImage = `data:image/jpeg;base64,${placeImage.file}`;
       }
-
       Promise.all(reviews).then(reviews => {
-        let dataForView = {
-          place,
-          placeImage,
-          avgNumberOfStars,
-          numberOfReviews,
-          reviews,
-        };
-
-        return res.view('pages/reviews/reviews', { dataForView });
+        return res.view('pages/reviews/reviews', { place, placeImage, avgNumberOfStars, numberOfReviews, reviews });
       });
     })
     .catch(res.serverError);

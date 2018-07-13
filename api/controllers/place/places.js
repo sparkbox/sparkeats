@@ -15,8 +15,8 @@ module.exports = async function places(req, res) {
             placeName,
             city,
             state,
-            phone,
             address,
+            phone,
             placeImage,
             placeImageAlt,
             placeURL,
@@ -29,12 +29,12 @@ module.exports = async function places(req, res) {
               placeImage = `data:image/jpeg;base64,${placeImage.file}`;
             }
 
-            let avgNumberOfStars = await sails.helpers.getAvgNumberOfStars(
+            let avgNumberOfStars = sails.helpers.getAvgNumberOfStars(
               reviews,
               id
             );
 
-            let numberOfReviews = await sails.helpers.getNumberOfReviews(
+            let numberOfReviews = sails.helpers.getNumberOfReviews(
               reviews,
               id
             );
@@ -44,8 +44,8 @@ module.exports = async function places(req, res) {
               placeName,
               city,
               state,
-              phone,
               address,
+              phone,
               placeImage,
               placeImageAlt,
               placeURL,
@@ -57,8 +57,6 @@ module.exports = async function places(req, res) {
         )
       );
     })
-    .then(places => {
-      return res.view('pages/homepage', { dataForView: places });
-    })
+    .then(places => res.view('pages/homepage', { places }))
     .catch(res.serverError);
 };

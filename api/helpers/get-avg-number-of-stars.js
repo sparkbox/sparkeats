@@ -1,4 +1,5 @@
 module.exports = {
+  sync: true,
   friendlyName: 'Get average number of stars',
 
   description:
@@ -15,17 +16,17 @@ module.exports = {
     },
   },
 
-  fn: async ({ reviews, placeId }, exits) => {
+  fn: ({ reviews, placeId }, exits) => {
     const placeRatings = reviews
       .filter(review => review.placeId === placeId)
-      .map(item => item.numberOfStars);
+      .map(item => item.rating || item.numberOfStars);
 
     const avgRating = Math.round(
       placeRatings.reduce((total, currentRating) => total + currentRating, 0) /
       placeRatings.length
     );
 
-    const result = await sails.helpers.getNumberOfStars(avgRating);
+    const result = sails.helpers.getNumberOfStars(avgRating);
 
     return exits.success(result);
   },

@@ -1,4 +1,5 @@
 module.exports = {
+  sync: true,
   friendlyName: 'Format welcome message',
 
   description: 'Return a personalized greeting based on the provided name.',
@@ -10,7 +11,7 @@ module.exports = {
     },
   },
 
-  fn: async ({ rating }, exits) => {
+  fn: ({ rating }, exits) => {
     const filledStar = `<img class="place-card__star" src="../design/sparkeats_star.svg" alt="review star">`;
     const emptyStar = `<img class="place-card__star" src="../design/sparkeats_star_empty.svg" alt="review star">`;
     let result = '';
