@@ -2,7 +2,7 @@ const supertest = require('supertest');
 
 describe('ReviewController', () => {
   describe('GET /places/:id', () => {
-    it('renders /pages/reviews/reviews', done => {
+    xit('renders /pages/reviews/reviews', done => {
       supertest(sails.hooks.http.app)
         .get('/places/1')
         .expect(200, done);
@@ -18,7 +18,7 @@ describe('ReviewController', () => {
   });
 
   describe('GET /places/:id/reviews/new (authenticated)', () => {
-    it('renders pages/reviews/new', done => {
+    xit('renders pages/reviews/new', done => {
       supertest(sails.hooks.http.app)
         .get('/places/1/reviews/new')
         .auth('test', 'test')

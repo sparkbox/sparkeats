@@ -14,7 +14,7 @@ module.exports = async function create(req, res) {
     async (err, files) => {
       if (err) return res.serverError(err);
 
-      let reviewImage = await findImageByFD(ReviewImage, files);
+      const reviewImage = await findImageByFD(ReviewImage, files);
 
       return Review.create({
         reviewerName,

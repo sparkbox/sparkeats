@@ -21,7 +21,7 @@ module.exports = async function create(req, res) {
     async (err, files) => {
       if (err) return res.serverError(err);
 
-      let placeImage = await findImageByFD(PlaceImage, files);
+      const placeImage = await findImageByFD(PlaceImage, files);
 
       return Place.create({
         placeName,

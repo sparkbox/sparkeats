@@ -14,3 +14,9 @@ ratings:
   paths:
   - "**.js"
   - "**.scss"
+exclude_patterns:
+ - data/
+ - api/
+ - assets/
+ - test/
+ - seed.js

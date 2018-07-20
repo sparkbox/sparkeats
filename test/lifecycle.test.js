@@ -1,7 +1,7 @@
 var sails = require('sails');
 
 // Before running any tests...
-before(function(done) {
+before(function (done) {
   process.env.NODE_ENV = 'test';
 
   // Increase the Mocha timeout so that Sails has enough time to lift, even if you have a bunch of assets.
@@ -11,12 +11,6 @@ before(function(done) {
     {
       // Your sails app's configuration files will be loaded automatically,
       // but you can also specify any other special overrides here for testing purposes.
-      datastores: {
-        default: {
-          adapter: 'sails-mysql',
-          url: 'mysql://root@localhost:3306/sparkeats-test',
-        },
-      },
       models: {
         migrate: 'drop',
       },
@@ -25,7 +19,7 @@ before(function(done) {
       hooks: { grunt: false },
       log: { level: 'warn' },
     },
-    function(err) {
+    function (err) {
       if (err) {
         return done(err);
       }
@@ -39,7 +33,7 @@ before(function(done) {
 });
 
 // After all tests have finished...
-after(function(done) {
+after(function (done) {
   // here you can clear fixtures, etc.
   // (e.g. you might want to destroy the records you created above)
 

@@ -5,8 +5,7 @@ module.exports = async function add(req, res) {
 
   Place.findOne({ id })
     .then(async place => {
-      let placeImage = await findImageByID(PlaceImage, place.placeImage);
-
+      const placeImage = await findImageByID(PlaceImage, place.placeImage);
       return res.view('pages/reviews/new', { place, placeImage });
     })
     .catch(res.serverError);

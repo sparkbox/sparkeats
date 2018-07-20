@@ -2,6 +2,8 @@ const Promise = require('bluebird');
 const { findImageByID } = require('../../../lib/findImage');
 const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
 const getAvgNumberOfStars = require('../../../lib/getAvgNumberOfStars');
+const ratingToString = require('../../../lib/ratingToString');
+
 
 module.exports = async function places(req, res) {
   Promise.props({
@@ -25,11 +27,13 @@ module.exports = async function places(req, res) {
             placeURL,
             placeWebsiteDisplay,
           }) => {
-            let placeImage = await findImageByID(PlaceImage, placeImageID);
-            let avgNumberOfStars = getAvgNumberOfStars(
+            const placeImage = await findImageByID(PlaceImage, placeImageID);
+            const { stars, numberOfStars } = getAvgNumberOfStars(
               reviews,
               id
             );
+
+            const rating = ratingToString(numberOfStars);
 
             let numberOfReviews = getNumberOfReviews(
               reviews,
@@ -47,7 +51,9 @@ module.exports = async function places(req, res) {
               placeImageAlt,
               placeURL,
               placeWebsiteDisplay,
-              avgNumberOfStars,
+              numberOfStars,
+              stars,
+              rating,
               numberOfReviews,
             };
           }

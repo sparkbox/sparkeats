@@ -2,6 +2,7 @@ const { findImageByID } = require('../../../lib/findImage');
 const getNumberOfStars = require('../../../lib/getNumberOfStars');
 const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
 const getAvgNumberOfStars = require('../../../lib/getAvgNumberOfStars');
+const ratingToString = require('../../../lib/ratingToString');
 
 module.exports = async function reviews(req, res) {
   const id = req.param('id');
@@ -21,7 +22,9 @@ module.exports = async function reviews(req, res) {
           numberOfStars,
           placeId,
         }) => {
-          let reviewImage = await findImageByID(ReviewImage, reviewImageName);
+          const reviewImage = await findImageByID(ReviewImage, reviewImageName);
+          const stars = getNumberOfStars(numberOfStars);
+          const rating = ratingToString(numberOfStars);
 
           return {
             reviewerName,
@@ -29,23 +32,26 @@ module.exports = async function reviews(req, res) {
             reviewImage,
             reviewImageAlt,
             placeId,
-            numberOfStars: getNumberOfStars(numberOfStars),
-            rating: numberOfStars,
+            numberOfStars,
+            stars,
+            rating,
           };
         })
       );
     })
     .then(async reviews => {
-      let place = await Place.findOne({
+      const place = await Place.findOne({
         id,
       });
 
-      let avgNumberOfStars = getAvgNumberOfStars(
+      const { stars, numberOfStars } = getAvgNumberOfStars(
         reviews,
         place.id
       );
 
-      let numberOfReviews = getNumberOfReviews(reviews, place.id);
+      const rating = ratingToString(numberOfStars);
+
+      const numberOfReviews = getNumberOfReviews(reviews, place.id);
 
       let placeImage = '';
 
@@ -56,8 +62,17 @@ module.exports = async function reviews(req, res) {
 
         placeImage = `data:image/jpeg;base64,${placeImage.file}`;
       }
+
       Promise.all(reviews).then(reviews => {
-        return res.view('pages/reviews/reviews', { place, placeImage, avgNumberOfStars, numberOfReviews, reviews });
+        return res.view('pages/reviews/reviews', {
+          place,
+          placeImage,
+          numberOfStars,
+          stars,
+          rating,
+          numberOfReviews,
+          reviews
+        });
       });
     })
     .catch(res.serverError);
