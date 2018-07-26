@@ -9,14 +9,18 @@ async function bootstrap(done) {
     return done();
   }
 
-  return Promise
-    .all(seedPlaces(places))
+  return Promise.all(seedPlaces(places))
     .then(places => {
-      return Promise.all(places.map(place => {
-        const placeReviews = _.filter(reviews, review => review['place-id'] === place.fd);
+      return Promise.all(
+        places.map(place => {
+          const placeReviews = _.filter(
+            reviews,
+            review => review['place-id'] === place.fd
+          );
 
-        return Promise.all(seedReviews(place, placeReviews));
-      }));
+          return Promise.all(seedReviews(place, placeReviews));
+        })
+      );
     })
     .then(() => done())
     .catch(done);
