@@ -1,13 +1,12 @@
-// site-wide styles
-@import 'breakpoints';
-@import 'fonts';
-@import 'colors';
+@import 'settings.main';
+@import 'settings.fonts';
+
 @import 'layout';
 
-// module styles
 @import 'place-card';
 @import 'grid';
 @import 'review';
 @import 'homepage';
-@import 'new';
-@import 'buttons';
+
+@import 'components.forms';
+@import 'components.buttons';
