@@ -222,8 +222,9 @@ li:not([class]) {
 }
 
 .location-dropdown {
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto 1em auto;
   width: 80%;
   &__title {

@@ -14,29 +14,36 @@ module.exports = async function reviews(req, res) {
   )
     .then(reviews => {
       return Promise.all(
-        reviews.map(async ({
-          reviewerName,
-          reviewText,
-          reviewImage: reviewImageName,
-          reviewImageAlt,
-          numberOfStars,
-          placeId,
-        }) => {
-          const reviewImage = await findImageByID(ReviewImage, reviewImageName);
-          const stars = getNumberOfStars(numberOfStars);
-          const rating = ratingToString(numberOfStars);
-
-          return {
+        reviews.map(
+          async ({
             reviewerName,
             reviewText,
-            reviewImage,
+            reviewImage: reviewImageName,
             reviewImageAlt,
-            placeId,
             numberOfStars,
-            stars,
-            rating,
-          };
-        })
+            placeId,
+            id: reviewID,
+          }) => {
+            const reviewImage = await findImageByID(
+              ReviewImage,
+              reviewImageName
+            );
+            const stars = getNumberOfStars(numberOfStars);
+            const rating = ratingToString(numberOfStars);
+
+            return {
+              reviewerName,
+              reviewText,
+              reviewImage,
+              reviewImageAlt,
+              placeId,
+              numberOfStars,
+              stars,
+              rating,
+              reviewID,
+            };
+          }
+        )
       );
     })
     .then(async reviews => {
@@ -44,10 +51,7 @@ module.exports = async function reviews(req, res) {
         id,
       });
 
-      const { stars, numberOfStars } = getAvgNumberOfStars(
-        reviews,
-        place.id
-      );
+      const { stars, numberOfStars } = getAvgNumberOfStars(reviews, place.id);
 
       const rating = ratingToString(numberOfStars);
 
@@ -71,7 +75,7 @@ module.exports = async function reviews(req, res) {
           stars,
           rating,
           numberOfReviews,
-          reviews
+          reviews,
         });
       });
     })

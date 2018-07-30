@@ -14,6 +14,8 @@
       <p class="review-submission__review">
         <%= review.reviewText %>
       </p>
+      <%= review.reviewID %>
+      <%- partial('../partials/modal.ejs', { buttonText: 'Delete Review', review }) %>
       <!--loop review image file names-->
       <% if (review.reviewImage) { %>
         <div class="review-submission__image-container">

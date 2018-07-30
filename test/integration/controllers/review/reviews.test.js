@@ -18,7 +18,7 @@ describe('ReviewController', () => {
   });
 
   describe('GET /places/:id/reviews/new (authenticated)', () => {
-    xit('renders pages/reviews/new', done => {
+    it('renders pages/reviews/new', done => {
       supertest(sails.hooks.http.app)
         .get('/places/1/reviews/new')
         .auth('test', 'test')

@@ -28,6 +28,8 @@
     }
   }
   &-submission {
+    display: flex;
+    flex-direction: column;
     background-color: $color-soft-gray;
     box-sizing: border-box;
     margin: 2em auto;

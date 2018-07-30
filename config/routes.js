@@ -6,4 +6,5 @@ module.exports.routes = {
   'GET /places/:id': 'ReviewController.reviews',
   'GET /places/:id/reviews/new': 'ReviewController.add',
   'POST /places/:id/reviews': 'ReviewController.create',
+  'DELETE /places/:id/reviews/:id': 'ReviewController.destroy',
 };

@@ -8,6 +8,7 @@
   box-sizing: border-box;
   transition: all 500ms cubic-bezier(0, 1.08, 0.65, 0.98);
   text-align: center;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
   }
@@ -25,14 +26,11 @@
   background-color: $color-seagull-blue;
   color: $color-sparkblue-dark;
   text-align: center;
-  font-size: 1.25rem;
-  text-decoration: none;
 }
 
 .btn--secondary {
   color: $color-jellybean-blue;
   border: 2px solid $color-jellybean-blue;
-  font-size: 1rem;
 }
 
 .btn--secondary-full-width {
@@ -40,4 +38,27 @@
   border: 2px solid $color-jellybean-blue;
   font-size: 1.25rem;
   width: 100%;
+}
+
+.btn--full-width {
+  width: 100%;
+}
+
+.btn--small-text {
+  font-size: 1rem;
+}
+
+.btn--link {
+  @include secondary-font(500);
+  color: $color-sparkblue-dark;
+  font-size: 0.9em;
+  margin: 1rem auto;
+  padding: 0 0 0.2rem 0;
+  border: none;
+  border-bottom: 1px solid $color-sparkblue-dark;
+  background: none;
+  &:hover {
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+  }
 }
