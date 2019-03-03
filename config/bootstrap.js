@@ -1,4 +1,4 @@
-const { places, reviews } = require('../migrate');
+const { placeData, reviewData } = require('../migrate');
 const { seedPlaces, seedReviews } = require('../seed');
 const dotenv = require('dotenv');
 
@@ -9,15 +9,25 @@ async function bootstrap(done) {
     return done();
   }
 
-  return Promise
-    .all(seedPlaces(places))
-    .then(places => {
-      return Promise.all(places.map(place => {
-        const placeReviews = _.filter(reviews, review => review['place-id'] === place.fd);
+  const seeded = await Place.count();
 
-        return Promise.all(seedReviews(place, placeReviews));
-      }));
-    })
+  if (seeded) {
+    return done();
+  }
+
+  return Promise.all(seedPlaces(placeData))
+    .then(places =>
+      Promise.all(
+        places.map(place => {
+          const placeReviews = _.filter(
+            reviewData,
+            review => review['place-id'] === place.fd
+          );
+
+          return Promise.all(seedReviews(place, placeReviews));
+        })
+      )
+    )
     .then(() => done())
     .catch(done);
 }

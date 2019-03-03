@@ -15,7 +15,7 @@
 
 module.exports.models = {
   schema: true,
-  migrate: 'alter',
+  migrate: 'safe',
   attributes: {
     createdAt: { type: 'number', autoCreatedAt: true },
     updatedAt: { type: 'number', autoUpdatedAt: true },

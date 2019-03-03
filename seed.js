@@ -12,7 +12,9 @@ function seedReviews(place, placeReviews) {
       'review-image-file-name': reviewImageNames,
       'review-image-alt': reviewImageAlts,
     }) => {
-      let reviewImageName = reviewImageNames ? reviewImageNames[0] : reviewImageNames;
+      let reviewImageName = reviewImageNames
+        ? reviewImageNames[0]
+        : reviewImageNames;
 
       let file = encode(reviewImageName, 'reviews');
       let reviewImage = '';
@@ -31,8 +33,7 @@ function seedReviews(place, placeReviews) {
         reviewImageAlt: reviewImageAlts ? reviewImageAlts[0] : '',
         numberOfStars,
         placeId: place.id,
-      })
-        .fetch()
+      }).fetch();
     }
   );
 }
@@ -75,8 +76,7 @@ function seedPlaces(places) {
         placeImageAlt: placeImageAlt || '',
         placeURL: placeURL || '',
         placeWebsiteDisplay: placeWebsiteDisplay || '',
-      })
-        .fetch();
+      }).fetch();
     }
   );
 }
