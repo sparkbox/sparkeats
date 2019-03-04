@@ -4,7 +4,6 @@ const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
 const getAvgNumberOfStars = require('../../../lib/getAvgNumberOfStars');
 const ratingToString = require('../../../lib/ratingToString');
 
-
 module.exports = async function places(req, res) {
   Promise.props({
     places: await Place.find({}),
@@ -12,9 +11,9 @@ module.exports = async function places(req, res) {
       select: ['numberOfStars', 'placeId'],
     }),
   })
-    .then(({ places, reviews }) => {
-      return Promise.all(
-        places.map(
+    .then(props =>
+      Promise.all(
+        props.places.map(
           async ({
             id,
             placeName,
@@ -29,16 +28,11 @@ module.exports = async function places(req, res) {
           }) => {
             const placeImage = await findImageByID(PlaceImage, placeImageID);
             const { stars, numberOfStars } = getAvgNumberOfStars(
-              reviews,
+              props.reviews,
               id
             );
-
             const rating = ratingToString(numberOfStars);
-
-            let numberOfReviews = getNumberOfReviews(
-              reviews,
-              id
-            );
+            const numberOfReviews = getNumberOfReviews(props.reviews, id);
 
             return {
               id,
@@ -58,8 +52,10 @@ module.exports = async function places(req, res) {
             };
           }
         )
-      );
-    })
-    .then(places => res.view('pages/homepage', { places }))
+      )
+    )
+    .then(placesForView =>
+      res.view('pages/homepage', { places: placesForView })
+    )
     .catch(res.serverError);
 };
