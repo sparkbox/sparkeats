@@ -9,8 +9,7 @@ module.exports = async function create(req, res) {
     address,
     phone,
     placeImageAlt,
-    placeUrl,
-    placeWebsiteDisplay,
+    placeURL,
   } = req.body;
 
   req.file('placeImage').upload(
@@ -31,13 +30,10 @@ module.exports = async function create(req, res) {
         phone,
         placeImage,
         placeImageAlt,
-        placeUrl,
-        placeWebsiteDisplay,
+        placeURL,
       })
         .fetch()
-        .then(place => {
-          return res.redirect(`/places/${place.id}/reviews/new`);
-        })
+        .then(place => res.redirect(`/places/${place.id}/reviews/new`))
         .catch(res.serverError);
     }
   );

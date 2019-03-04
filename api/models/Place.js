@@ -39,11 +39,10 @@ module.exports = {
     },
     placeURL: {
       type: 'string',
-      isURL: true,
+      regex: /\b((http|https):\/\/?)[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|\/?))/g,
     },
     placeWebsiteDisplay: {
       type: 'string',
-      isURL: true,
     },
     reviews: {
       collection: 'review',
