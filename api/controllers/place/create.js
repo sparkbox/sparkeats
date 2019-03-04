@@ -17,8 +17,10 @@ module.exports = async function create(req, res) {
       adapter: SkipperMySQLAdapter,
       model: PlaceImage,
     },
-    async (err, files) => {
-      if (err) return res.serverError(err);
+    async (error, files) => {
+      if (error && error.raw.code === 'ER_NET_PACKET_TOO_LARGE') {
+        return res.redirect('/places/new?error=image-too-big');
+      }
 
       const placeImage = await findImageByFD(PlaceImage, files);
 

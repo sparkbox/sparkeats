@@ -50,11 +50,13 @@
     </div>
 
     <div class="form__field ">
-      <p class="form__label">Add an image to your review (max 5 MB).</p>
+      <p class="form__label">Add an image to your review (Upload limit 5 MB).</p>
 
       <label class="form__label--button" for="reviewImage" aria-hidden="false">Upload Image</label>
       <input id="reviewImage" class="form__file-input" type="file" name="reviewImage" accept="image/*">
       <span class="button--secondary" aria-hidden="true">Upload Image</span>
+
+      <%- partial('../../partials/image-error.ejs') %>
 
       <div class="form__field form__field--file" aria-live="polite">
         <div class="form__file">

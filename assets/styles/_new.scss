@@ -295,3 +295,8 @@
 .form__label--image-alt {
   position: relative;
 }
+
+.form__error {
+  color: $color-red;
+  font-weight: normal
+}
