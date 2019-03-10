@@ -3,10 +3,13 @@
   "globals": {
     "_": true,
     "document": true,
+    "describe": true,
+    "it": true,
     "Place": true,
-    "Review": true,
     "PlaceImage": true,
+    "Review": true,
     "ReviewImage": true,
-    "sails": true
+    "sails": true,
+    "window": true,
   }
 }

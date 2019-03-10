@@ -1,4 +1,3 @@
-'use strict';
 function toggleDropdown() {
   document
     .getElementById('location-list')
@@ -86,7 +85,7 @@ function isNotCurrentCity(city) {
 }
 
 function showDropdownOptions() {
-  let locationFilter = [];
+  const locationFilter = [];
   let locationListHtml = '';
 
   const allCards = document.getElementsByClassName('place-card__list-item');
@@ -104,9 +103,9 @@ function showDropdownOptions() {
       locationFilter.push(city);
 
       locationListHtml += `
-          <li><button id="${city}" class="location-dropdown__list-button">
-            ${city}
-          </button></li>`;
+        <li><button id="${city}" class="location-dropdown__list-button">
+          ${city}
+        </button></li>`;
     }
   });
 
@@ -116,7 +115,7 @@ function showDropdownOptions() {
 
   if (currentLocation !== 'All Places') {
     let allPlacesButton = `
-      <li><button id="All Places" class="location-dropdown__list-button">All Places</button></li>`;
+    <li><button id="All Places" class="location-dropdown__list-button">All Places</button></li>`;
     locationListHtml = allPlacesButton += locationListHtml;
     locationFilter.push('All Places');
   }
@@ -124,14 +123,17 @@ function showDropdownOptions() {
   locationDropdown.innerHTML = locationListHtml;
   toggleDropdown();
 
-  for (let i = 0; i < locationFilter.length; i++) {
+  for (let i = 0; i < locationFilter.length; i += 1) {
     addSelectionListener(
       document.getElementById('location-list').getElementsByTagName('button')[i]
     );
   }
 }
 
-const dropdownButton = document.getElementById(
-  'location-dropdown__button-main'
-);
-dropdownButton.addEventListener('click', showDropdownOptions);
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdownButton = document.getElementById(
+    'location-dropdown__button-main'
+  );
+
+  dropdownButton.addEventListener('click', showDropdownOptions);
+});

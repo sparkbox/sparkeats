@@ -1,4 +1,8 @@
 {
+	"hooks": {
+		"sockets": false,
+		"pubsub": false
+	},
 	"generators": {
 		"modules": {}
 	},
