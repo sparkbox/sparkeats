@@ -49,25 +49,23 @@
       <textarea id="reviewText" class="form__text-area" name="reviewText" rows="5" required></textarea>
     </div>
 
-    <div class="form__field ">
+    <div class="form__field">
       <p class="form__label">Add an image to your review (Upload limit 5 MB).</p>
-
       <label class="form__label--button" for="reviewImage" aria-hidden="false">Upload Image</label>
       <input id="reviewImage" class="form__file-input" type="file" name="reviewImage" accept="image/*">
       <span class="button--secondary" aria-hidden="true">Upload Image</span>
-
       <%- partial('../../partials/image-error.ejs') %>
+    </div>
 
-      <div class="form__field form__field--file" aria-live="polite">
-        <div class="form__file">
-          <span class="form__file-name"></span>
-          <button type="button" class="form__remove-file" aria-label="Remove image">&times</button>
-        </div>
-        <label class="form__label" for="review-image-alt" aria-hidden="true">
-          <span class="form__label--image-alt form__required-indicator" >Image Description</span>
-        </label>
-        <input id="review-image-alt" class="form__input form__input--image-alt" type="text" name="reviewImageAlt">
+    <div class="form__field form__field--file form__field--hidden" aria-live="polite">
+      <div class="form__file">
+        <span class="form__file-name"></span>
+        <button type="button" class="form__remove-file" aria-label="Remove image">&times</button>
       </div>
+      <label class="form__label" for="review-image-alt" aria-hidden="true">
+        <span class="form__label--image-alt form__required-indicator" >Image Description</span>
+      </label>
+      <input id="review-image-alt" class="form__input form__input--image-alt" type="text" name="reviewImageAlt">
     </div>
 
     <button class="form__submit button--primary" type="submit">Submit</button>

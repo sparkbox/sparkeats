@@ -71,6 +71,14 @@
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 2rem;
+
+  &--hidden {
+    display: none;
+  }
+
+  &--file {
+    margin-top: -1rem;
+  }
 }
 
 .form__label,
@@ -270,10 +278,6 @@
   }
 }
 
-.form__field--file {
-  display: none;
-}
-
 .form__file {
   margin: 1rem 0;
 }
@@ -298,5 +302,8 @@
 
 .form__error {
   color: $color-red;
-  font-weight: normal
+  font-weight: normal;
+  &--hidden {
+    display: none;
+  }
 }

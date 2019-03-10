@@ -1,3 +1,7 @@
-<% if (req.query.error === 'image-too-big') { %>
-  <p class="form__error">Your image is too big. Please upload an image 5 MB or smaller.</p>
-<% } %>
+<p class="form__error
+  <% if (req.query.error !== 'image-too-big') { %>
+    form__error--hidden
+  <% } %>"
+>
+  Your image is too big. Please upload an image 5 MB or smaller.
+</p>
