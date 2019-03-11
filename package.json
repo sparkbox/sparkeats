@@ -21,6 +21,7 @@
     "grunt-sass": "^2.1.0",
     "js-yaml": "^3.12.0",
     "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.5",
     "passport": "0.4.0",
     "passport-http": "0.3.0",
     "postcss-cli": "^5.0.1",
@@ -30,6 +31,7 @@
     "sails-hook-orm": "^2.0.0-16",
     "sails-hook-sockets": "^1.4.0",
     "sails-mysql": "^1.0.0",
+    "shelljs": "^0.8.3",
     "stream-to-blob": "^1.0.1",
     "tsscmp": "1.0.5"
   },
@@ -37,19 +39,17 @@
     "@sailshq/eslint": "^4.19.3",
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
-    "npm-run-all": "^4.1.5",
     "supertest": "^3.1.0"
   },
   "scripts": {
     "build": "run-s sass postcss",
-    "dev": "run-s server sass:watch",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
     "postcss": "postcss --use autoprefixer -c tasks/postcss.config.json .tmp/styles/main.css -d .tmp/styles/",
     "sass": "node-sass assets/styles/main.scss .tmp/styles/main.css",
     "sass:watch": "node-sass --watch assets/styles/main.scss .tmp/styles/main.css",
-    "server": "node app.js",
-    "start": "run-s build && sails lift --prod",
-    "test:integration": "node ./node_modules/mocha/bin/mocha test/lifecycle.test.js test/ test/integration/controllers/**/*.test.js",
+    "server": "node app.js --color always",
+    "start": "node scripts/start.js",
+    "test:integration": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/ test/integration/controllers/**/*.test.js",
     "test:unit": "node ./node_modules/mocha/bin/mocha test/unit/*.test.js"
   },
   "main": "app.js",

@@ -1,24 +1,24 @@
 const supertest = require('supertest');
 
-describe('PlaceController', () => {
-  describe('GET /', () => {
-    it('renders /pages/homepage', done => {
+describe('Places', () => {
+  describe('homepage', () => {
+    it('returns 200 OK', done => {
       supertest(sails.hooks.http.app)
         .get('/')
         .expect(200, done);
     });
   });
 
-  describe('GET /places/ new (unauthenticated)', () => {
-    it('returns 401 Unauthorized without auth', done => {
+  describe('new place page (unauthenticated)', () => {
+    it('returns 401 Unauthorized', done => {
       supertest(sails.hooks.http.app)
         .get('/places/new')
         .expect(401, done);
     });
   });
 
-  describe('GET /places/new (authenticated)', () => {
-    it('renders /pages/places/new', done => {
+  describe('new place page (authenticated)', () => {
+    it('returns 200 OK', done => {
       supertest(sails.hooks.http.app)
         .get('/places/new')
         .auth('test', 'test')
@@ -26,15 +26,15 @@ describe('PlaceController', () => {
     });
   });
 
-  describe('POST /places', () => {
-    it('creates a new place', done => {
+  describe('creating a new place', () => {
+    it('returns 302 Found', done => {
       const newPlace = {
         placeName: 'a new place',
         city: 'a new city',
         state: 'SD',
         address: '7140 Manchester St.',
         phone: '(555) 555-5555',
-        placeURL: 'anewplace.com',
+        placeURL: 'https://www.anewplace.com',
       };
 
       supertest(sails.hooks.http.app)
