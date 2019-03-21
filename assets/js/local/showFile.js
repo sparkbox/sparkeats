@@ -3,6 +3,7 @@ function replaceState(url) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const submitButton = document.querySelector('.form__submit');
   const fileFormField = document.querySelector('.form__field--hidden');
   const fileInput = document.querySelector('.form__file-input');
   const removeFile = document.querySelector('.form__remove-file');
@@ -17,9 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
       altInput.required = false;
     } else if (fileInput.files[0].size > 5000000) {
       replaceState('?error=image-too-big');
+      submitButton.disabled = 'disabled';
       errorMessage.classList.remove('form__error--hidden');
+      fileName.innerText = event.target.value.split('\\').pop();
     } else {
       replaceState('new');
+      submitButton.disabled = '';
       errorMessage.classList.add('form__error--hidden');
       fileFormField.classList.remove('form__field--hidden');
       fileName.innerText = event.target.value.split('\\').pop();

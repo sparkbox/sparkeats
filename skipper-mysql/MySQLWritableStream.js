@@ -7,7 +7,7 @@ class MySQLWritableStream extends Writable {
   }
 
   _write(readable, encoding, cb) {
-    let chunks = [];
+    const chunks = [];
 
     readable.on('data', chunk => {
       chunks.push(chunk);
@@ -15,8 +15,13 @@ class MySQLWritableStream extends Writable {
 
     readable.on('end', () => {
       const data = Buffer.concat(chunks);
+      const bytes = data.toString('base64').length * 0.75 - 2;
 
-      this.adapter.options.model
+      if (bytes > 5000000) {
+        return cb(new Error('image-too-big'));
+      }
+
+      return this.adapter.options.model
         .create({
           file: data.toString('base64'),
           fd: readable.fd,

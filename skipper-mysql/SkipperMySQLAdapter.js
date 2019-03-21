@@ -10,6 +10,4 @@ class SkipperMySQLAdapter {
   }
 }
 
-module.exports = options => {
-  return new SkipperMySQLAdapter(options);
-};
+module.exports = options => new SkipperMySQLAdapter(options);

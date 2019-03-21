@@ -1,5 +1,6 @@
 const SkipperMySQLAdapter = require('../../../skipper-mysql/SkipperMySQLAdapter');
 const { findImageByFD } = require('../../../lib/findImage');
+const handleError = require('../../../lib/handleError');
 
 module.exports = async function create(req, res) {
   const placeId = req.param('id');
@@ -12,10 +13,8 @@ module.exports = async function create(req, res) {
       model: ReviewImage,
     },
     async (error, files) => {
-      if (error && error.raw.code === 'ER_NET_PACKET_TOO_LARGE') {
-        return res.redirect(
-          `/places/${placeId}/reviews/new?error=image-too-big`
-        );
+      if (error) {
+        return handleError(res, error);
       }
 
       const reviewImage = await findImageByFD(ReviewImage, files);
