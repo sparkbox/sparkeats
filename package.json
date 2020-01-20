@@ -44,7 +44,7 @@
   },
   "scripts": {
     "lift": "sails lift --drop",
-    "dev": "concurrently \"npm run sass-watch\" \"npm run server\"",
+    "dev": "concurrently \"npm run sass:watch\" \"npm run server\"",
     "start": "npm run build && sails lift --prod",
     "build": "npm run sass && npm run postcss",
     "sass": "node-sass assets/styles/main.scss .tmp/styles/main.css",
