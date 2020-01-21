@@ -63,7 +63,7 @@
   "author": "travisdagreat",
   "license": "",
   "engines": {
-    "node": ">=9.11",
-    "npm": "6.1"
+    "node": "10.x",
+    "npm": "6.x"
   }
 }
