@@ -1,4 +1,3 @@
-'use strict';
 function toggleDropdown() {
   document
     .getElementById('location-list')
@@ -86,7 +85,7 @@ function isNotCurrentCity(city) {
 }
 
 function showDropdownOptions() {
-  let locationFilter = [];
+  const locationFilter = [];
   let locationListHtml = '';
 
   const allCards = document.getElementsByClassName('place-card__list-item');
@@ -134,4 +133,7 @@ function showDropdownOptions() {
 const dropdownButton = document.getElementById(
   'location-dropdown__button-main'
 );
-dropdownButton.addEventListener('click', showDropdownOptions);
+
+if (dropdownButton) {
+  dropdownButton.addEventListener('click', showDropdownOptions);
+}
