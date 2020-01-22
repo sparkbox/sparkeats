@@ -1,8 +1,25 @@
 {
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs#v166"
+    }
+  ],
+  "addons": ["cleardb:punch"],
+  "environments": {
+    "review": {
+      "addons": ["cleardb:ignite"]
+    },
+  },
   "name": "Sparkeats",
-  "description":
-    "An aggregate of Sparkboxer's personal opinions regarding places to eat, drink and be merry.",
+  "description": "An aggregate of Sparkboxer's personal opinions regarding places to eat, drink and be merry.",
   "repository": "https://github.com/sparkbox/sparkeats",
   "keywords": [],
-  "env": {}
+  "env": {
+    "CLEARDB_DATABASE_URL": {
+      "required": true
+    },
+    "NODE_ENV": {
+      "required": true
+    }
+  }
 }
