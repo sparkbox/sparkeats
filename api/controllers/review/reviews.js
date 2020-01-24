@@ -3,6 +3,7 @@ const getNumberOfStars = require('../../../lib/getNumberOfStars');
 const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
 const getAvgNumberOfStars = require('../../../lib/getAvgNumberOfStars');
 const ratingToString = require('../../../lib/ratingToString');
+const { filledStar, emptyStar } = require('../../../lib/getNumberOfStarsData');
 
 module.exports = async function reviews(req, res) {
   const id = req.param('id');
@@ -23,7 +24,7 @@ module.exports = async function reviews(req, res) {
           placeId,
         }) => {
           const reviewImage = await findImageByID(ReviewImage, reviewImageName);
-          const stars = getNumberOfStars(numberOfStars);
+          const stars = getNumberOfStars(numberOfStars, filledStar, emptyStar);
           const rating = ratingToString(numberOfStars);
 
           return {
