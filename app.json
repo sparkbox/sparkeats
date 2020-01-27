@@ -8,7 +8,7 @@
   "environments": {
     "review": {
       "addons": ["cleardb:ignite"]
-    },
+    }
   },
   "name": "Sparkeats",
   "description": "An aggregate of Sparkboxer's personal opinions regarding places to eat, drink and be merry.",
