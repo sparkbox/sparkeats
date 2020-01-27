@@ -62,7 +62,7 @@
     "type": "git",
     "url": "git://github.com/travisdagreat/sparkeats-v-2.git"
   },
-  "author": "travisdagreat",
+  "author": "travisdagreat et al",
   "license": "",
   "engines": {
     "node": "10.x",
