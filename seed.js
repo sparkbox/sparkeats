@@ -63,7 +63,6 @@ function seedPlaces(places) {
           fd: placeImageName,
         }).fetch();
       }
-
       return await Place.create({
         placeName,
         city,
@@ -81,4 +80,7 @@ function seedPlaces(places) {
   );
 }
 
-module.exports = { seedPlaces, seedReviews };
+const databaseRequiresSeeding = async () =>
+  (await Place.count()) < 1 && (await Review.count()) < 1;
+
+module.exports = { seedPlaces, seedReviews, databaseRequiresSeeding };

@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 /**
  * Datastores
  * (sails.config.datastores)
@@ -47,6 +50,6 @@ module.exports.datastores = {
      ***************************************************************************/
     adapter: require('sails-mysql'),
     // url: "mysql://user:password@host:port/database"
-    url: 'mysql://root@localhost:3306/sparkeats-dev',
+    url: process.env.CLEARDB_DATABASE_URL,
   },
 };
