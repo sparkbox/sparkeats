@@ -26,6 +26,7 @@
     "passport-http": "0.3.0",
     "postcss-cli": "^5.0.1",
     "prettier": "^1.13.4",
+    "ramda": "^0.26.1",
     "sails": "^1.0.2",
     "sails-hook-grunt": "^3.0.2",
     "sails-hook-orm": "^2.0.0-16",
