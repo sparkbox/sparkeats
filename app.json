@@ -15,9 +15,6 @@
   "repository": "https://github.com/sparkbox/sparkeats",
   "keywords": [],
   "env": {
-    "CLEARDB_DATABASE_URL": {
-      "required": true
-    },
     "NODE_ENV": {
       "required": true
     }
