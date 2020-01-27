@@ -31,7 +31,7 @@ const createPlaceImageSchema = table => {
   table.increments('id').primary();
   table.bigInteger('createdAt');
   table.bigInteger('updatedAt');
-  table.binary('file');
+  table.specificType('file', 'mediumblob');
   table.string('fd', 255);
 };
 
@@ -51,7 +51,7 @@ const createReviewImageSchema = table => {
   table.increments('id').primary();
   table.bigInteger('createdAt');
   table.bigInteger('updatedAt');
-  table.binary('file');
+  table.specificType('file', 'mediumblob');
   table.string('fd', 255);
 };
 
@@ -65,4 +65,4 @@ exports.up = knex =>
       maybeCreateTable(knex, TABLE_NAME_REVIEW_IMAGE, createReviewImageSchema)
     );
 
-exports.down = () => {};
+exports.down = () => Promise.resolve();
