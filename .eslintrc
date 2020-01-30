@@ -6,5 +6,8 @@
     "Place": true,
     "Review": true,
     "sails": true
+  },
+  "env": {
+    "mocha": true
   }
 }
