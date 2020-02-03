@@ -4,7 +4,7 @@ const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
 const { getAvgPlaceRating } = require('../../../lib/getAvgNumberOfStars');
 const ratingToString = require('../../../lib/ratingToString');
 
-module.exports = async function reviews(req, res) {
+module.exports = async function getReviews(req, res) {
   const id = req.param('id');
 
   Promise.all(

@@ -4,7 +4,7 @@ const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
 const { getAvgPlaceRating } = require('../../../lib/getAvgNumberOfStars');
 const ratingToString = require('../../../lib/ratingToString');
 
-module.exports = async function places(req, res) {
+module.exports = async function getPlaces(req, res) {
   Promise.props({
     places: await Place.find({}),
     reviews: await Review.find({
