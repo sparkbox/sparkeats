@@ -5,7 +5,7 @@ before(function (done) {
   process.env.NODE_ENV = 'test';
 
   // Increase the Mocha timeout so that Sails has enough time to lift, even if you have a bunch of assets.
-  this.timeout(10000);
+  this.timeout(5000);
 
   sails.lift(
     {
