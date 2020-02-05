@@ -1,7 +1,7 @@
 const { findImageByID } = require('../../../lib/findImage');
 const getNumberOfStars = require('../../../lib/getNumberOfStars');
 const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
-const getAvgNumberOfStars = require('../../../lib/getAvgNumberOfStars');
+const { getAvgPlaceRating } = require('../../../lib/getAvgNumberOfStars');
 const ratingToString = require('../../../lib/ratingToString');
 
 module.exports = async function reviews(req, res) {
@@ -12,39 +12,44 @@ module.exports = async function reviews(req, res) {
       placeId: id,
     })
   )
-    .then(reviews => {
-      return Promise.all(
-        reviews.map(async ({
-          reviewerName,
-          reviewText,
-          reviewImage: reviewImageName,
-          reviewImageAlt,
-          numberOfStars,
-          placeId,
-        }) => {
-          const reviewImage = await findImageByID(ReviewImage, reviewImageName);
-          const stars = getNumberOfStars(numberOfStars);
-          const rating = ratingToString(numberOfStars);
-
-          return {
+    .then(reviews =>
+      Promise.all(
+        reviews.map(
+          async ({
             reviewerName,
             reviewText,
-            reviewImage,
+            reviewImage: reviewImageName,
             reviewImageAlt,
-            placeId,
             numberOfStars,
-            stars,
-            rating,
-          };
-        })
-      );
-    })
+            placeId,
+          }) => {
+            const reviewImage = await findImageByID(
+              ReviewImage,
+              reviewImageName
+            );
+            const stars = getNumberOfStars(numberOfStars);
+            const rating = ratingToString(numberOfStars);
+
+            return {
+              reviewerName,
+              reviewText,
+              reviewImage,
+              reviewImageAlt,
+              placeId,
+              numberOfStars,
+              stars,
+              rating,
+            };
+          }
+        )
+      )
+    )
     .then(async reviews => {
       const place = await Place.findOne({
         id,
       });
 
-      const { stars, numberOfStars } = getAvgNumberOfStars(
+      const { starImagesString, numberOfStars } = getAvgPlaceRating(
         reviews,
         place.id
       );
@@ -63,17 +68,17 @@ module.exports = async function reviews(req, res) {
         placeImage = `data:image/jpeg;base64,${placeImage.file}`;
       }
 
-      Promise.all(reviews).then(reviews => {
-        return res.view('pages/reviews/reviews', {
+      Promise.all(reviews).then(reviews =>
+        res.view('pages/reviews/reviews', {
           place,
           placeImage,
           numberOfStars,
-          stars,
+          stars: starImagesString,
           rating,
           numberOfReviews,
-          reviews
-        });
-      });
+          reviews,
+        })
+      );
     })
     .catch(res.serverError);
 };
