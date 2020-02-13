@@ -1,7 +1,7 @@
 const { findImageByID } = require('../../../lib/findImage');
 const getNumberOfStars = require('../../../lib/getNumberOfStars');
 const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
-const { getAvgPlaceRating } = require('../../../lib/getAvgNumberOfStars');
+const { getAvgPlaceRating } = require('../../../lib/getAvgPlaceRating');
 const ratingToString = require('../../../lib/ratingToString');
 
 module.exports = async function getReviews(req, res) {
@@ -49,11 +49,8 @@ module.exports = async function getReviews(req, res) {
         id,
       });
 
-      const { starImagesString, numberOfStars } = getAvgPlaceRating(
-        reviews,
-        place.id
-      );
-
+      const numberOfStars = getAvgPlaceRating(place.id, reviews);
+      const starImagesString = getNumberOfStars(numberOfStars);
       const rating = ratingToString(numberOfStars);
 
       const numberOfReviews = getNumberOfReviews(reviews, place.id);
@@ -68,17 +65,15 @@ module.exports = async function getReviews(req, res) {
         placeImage = `data:image/jpeg;base64,${placeImage.file}`;
       }
 
-      Promise.all(reviews).then(reviews =>
-        res.view('pages/reviews/reviews', {
-          place,
-          placeImage,
-          numberOfStars,
-          stars: starImagesString,
-          rating,
-          numberOfReviews,
-          reviews,
-        })
-      );
+      res.view('pages/reviews/reviews', {
+        place,
+        placeImage,
+        numberOfStars,
+        stars: starImagesString,
+        rating,
+        numberOfReviews,
+        reviews,
+      });
     })
     .catch(res.serverError);
 };
