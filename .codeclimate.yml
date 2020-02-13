@@ -1,22 +1,21 @@
----
-engines:
+version: "2"
+plugins:
+  csslint:
+    enabled: true
   duplication:
     enabled: true
-    exclude_paths: "**.spec.js"
     config:
       languages:
-      - javascript
+        - javascript
   eslint:
-    enabled: false
+    enabled: true
   fixme:
     enabled: true
-ratings:
-  paths:
-  - "**.js"
-  - "**.scss"
+  nodesecurity:
+    enabled: true
 exclude_patterns:
- - data/
- - api/
- - assets/
- - test/
- - seed.js
+ - assets/dependencies
+ - config
+ - data
+ - test
+ - tasks
