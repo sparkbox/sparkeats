@@ -137,3 +137,10 @@ const dropdownButton = document.getElementById(
 if (dropdownButton) {
   dropdownButton.addEventListener('click', showDropdownOptions);
 }
+
+if (typeof module !== "undefined") {
+  module.exports = {
+    toggleDropdown,
+    hideOrShowCard
+  };
+}
