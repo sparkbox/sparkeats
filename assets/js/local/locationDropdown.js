@@ -141,6 +141,7 @@ if (dropdownButton) {
 if (typeof module !== "undefined") {
   module.exports = {
     toggleDropdown,
-    hideOrShowCard
+    hideOrShowCard,
+    hideOrShowLocation
   };
 }
