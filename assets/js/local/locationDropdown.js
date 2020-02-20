@@ -138,10 +138,11 @@ if (dropdownButton) {
   dropdownButton.addEventListener('click', showDropdownOptions);
 }
 
-if (typeof module !== "undefined") {
+if (typeof module !== 'undefined') {
   module.exports = {
     toggleDropdown,
     hideOrShowCard,
-    hideOrShowLocation
+    hideOrShowLocation,
+    addOrRemoveHiddenClass,
   };
 }
