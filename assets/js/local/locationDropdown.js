@@ -54,11 +54,20 @@ function addOrRemoveHiddenClass(element, hideOrShow) {
   }
 }
 
+/**
+ *
+ * @param {String} location
+ * @param {NodeList} locationListElements
+ */
+
 function hideLocationInDropdown(location, locationListElements) {
   Array.from(locationListElements).forEach(element => {
     const elementId = element.id;
+
     const hasHiddenClass = element.classList.contains('hidden');
+
     const hideOrShow = hideOrShowLocation(location, elementId, hasHiddenClass);
+
     addOrRemoveHiddenClass(element, hideOrShow);
   });
 }
