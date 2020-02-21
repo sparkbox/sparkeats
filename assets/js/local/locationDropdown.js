@@ -173,5 +173,6 @@ if (typeof module !== 'undefined') {
     hideOrShowCard,
     hideOrShowLocation,
     addOrRemoveHiddenClass,
+    hideLocationInDropdown,
   };
 }
