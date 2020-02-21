@@ -72,6 +72,11 @@ function hideLocationInDropdown(location, locationListElements) {
   });
 }
 
+/**
+ * Determines which elements are shown on a page based on the city in the dropdown menu. If the location is not equal to the city or location does not equal 'All Places', then the cards are hidden.
+ * @param {HTMLCollection} allCards
+ * @param {String} location
+ */
 function selectLocation(allCards, location) {
   Array.from(allCards).forEach(card => {
     const cityAndState = card.getElementsByClassName('place-card__city')[0]
@@ -174,5 +179,6 @@ if (typeof module !== 'undefined') {
     hideOrShowLocation,
     addOrRemoveHiddenClass,
     hideLocationInDropdown,
+    selectLocation,
   };
 }
