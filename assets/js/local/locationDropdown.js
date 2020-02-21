@@ -3,7 +3,14 @@ function toggleDropdown() {
     .getElementById('location-list')
     .classList.toggle('location-dropdown__list-open');
 }
-
+/**
+ * Determines if a card is hidden or shown on the home page
+ *
+ * @param {String} city
+ * @param {String} location
+ * @param {Boolean} hasHiddenClass
+ * @returns {String}
+ */
 function hideOrShowCard(city, location, hasHiddenClass) {
   if ((city === location || location === 'All Places') && hasHiddenClass) {
     return 'show';
@@ -16,6 +23,13 @@ function hideOrShowCard(city, location, hasHiddenClass) {
   return '';
 }
 
+/**
+ * Determines if a location is hidden or shown on the dropdown menu
+ *
+ * @param {String} location
+ * @param {String} elementId
+ * @param {String} hasHiddenClass
+ */
 function hideOrShowLocation(location, elementId, hasHiddenClass) {
   if (elementId === location && !hasHiddenClass) {
     return 'hide';
@@ -26,6 +40,12 @@ function hideOrShowLocation(location, elementId, hasHiddenClass) {
   return '';
 }
 
+/**
+ * Adds or removes the class hidden to determine which cards are shown on the page
+ *
+ * @param {Element} element
+ * @param {String} hideOrShow
+ */
 function addOrRemoveHiddenClass(element, hideOrShow) {
   if (hideOrShow === 'hide') {
     element.classList.add('hidden');
