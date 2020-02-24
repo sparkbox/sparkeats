@@ -92,6 +92,11 @@ function selectLocation(allCards, location) {
   });
 }
 
+/**
+ * Change location to selected one then hide it from the option list
+ * and toggle the dropdown
+ *
+ */
 function onLocationDropdownClick() {
   const location = this.id;
 
@@ -184,5 +189,6 @@ if (typeof module !== 'undefined') {
     addOrRemoveHiddenClass,
     hideLocationInDropdown,
     selectLocation,
+    onLocationDropdownClick,
   };
 }
