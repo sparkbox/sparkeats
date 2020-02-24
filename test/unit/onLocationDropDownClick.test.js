@@ -40,7 +40,7 @@ describe('onLocationDropdownClick', () => {
     global.document =  globalDoc;
   });
 
-  it.only('Hides the selected location from the options', () => {
+  it('Hides the selected location from the options', () => {
     const selectedItem = document.getElementById('Dayton');
     onLocationDropdownClick.call(selectedItem);
 
