@@ -1,11 +1,10 @@
-const rewire = require('rewire');
-const { expect } = require('chai');
+/* eslint-disable no-underscore-dangle */
 const sinon = require('sinon');
 const jsdom = require('jsdom');
-
-const { addSelectionListener as rewireApi } = rewire(
-  '../../assets/js/local/locationDropdown'
-);
+const {
+  addSelectionListener,
+  __RewireAPI__,
+} = require('../../assets/js/local/locationDropdown');
 
 const { JSDOM } = jsdom;
 
@@ -23,14 +22,13 @@ describe('addSelectionListener', () => {
   let onLocationDropdownClickSpy;
   beforeEach(() => {
     onLocationDropdownClickSpy = sinon.spy();
-    //console.log(locationDropdown.__set__);
-    rewireApi.__set__(
+    __RewireAPI__.__Rewire__(
       'onLocationDropdownClick',
       onLocationDropdownClickSpy
     );
   });
   afterEach(() => {
-    // global.onLocationDropdownClick = onLocationDropdownClick;
+    __RewireAPI__.__ResetDependency__('onLocationDropdownClick');
   });
   it.only('adds click event handler', () => {
     const buttonElement = document.querySelector('button');
