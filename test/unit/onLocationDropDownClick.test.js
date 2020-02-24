@@ -13,7 +13,7 @@ const dom = new JSDOM(
         <button id='location-dropdown__button-main' class='location-dropdown__button'>
           <div class='location-dropdown__button-text'>All Places</div>
         </button>
-        <div id='location-list' class='location-dropdown__list location-dropdown__list-open'>
+        <div id='location-list' class='location-dropdown__list'>
           <ul>
             <li id='All Places' class='location-dropdown__list-button'>All Places</li>
             <li id='Dayton' class='location-dropdown__list-button'>Dayton</li>
@@ -32,6 +32,9 @@ describe('onLocationDropdownClick', () => {
   let globalDoc;
 
   beforeEach(() => {
+    document.getElementById('location-list')
+      .classList.add('location-dropdown__list-open');
+
     globalDoc = global.document;
     global.document = dom.window.document;
   });
@@ -50,7 +53,9 @@ describe('onLocationDropdownClick', () => {
   });
 
   it('toggles dropdown', () => {
-    onLocationDropdownClick();
+    const selectedItem = document.getElementById('Dayton');
+    onLocationDropdownClick.call(selectedItem);
+
     const dropdownList = document.getElementById('location-list');
 
     expect(
