@@ -197,5 +197,6 @@ if (typeof module !== 'undefined') {
     selectLocation,
     onLocationDropdownClick,
     isNotCurrentCity,
+    addSelectionListener,
   };
 }
