@@ -31,7 +31,9 @@
     "tsscmp": "1.0.5"
   },
   "devDependencies": {
+    "@babel/register": "^7.8.3",
     "@sailshq/eslint": "^4.19.3",
+    "babel-plugin-rewire": "^1.2.0",
     "browser-sync": "^2.24.4",
     "chai": "^4.1.2",
     "concurrently": "^3.5.1",
@@ -43,8 +45,8 @@
     "mocha": "^5.2.0",
     "nodemon": "^1.17.5",
     "prettier": "^1.19.1",
-    "supertest": "^3.1.0",
-    "sinon": "^9.0.0"
+    "sinon": "^9.0.0",
+    "supertest": "^3.1.0"
   },
   "scripts": {
     "lift": "sails lift --drop",
