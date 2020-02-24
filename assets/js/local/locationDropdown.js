@@ -119,6 +119,12 @@ function addSelectionListener(element) {
   element.addEventListener('click', onLocationDropdownClick);
 }
 
+/**
+ * Check if input does not match current location
+ *
+ * @param {String} city name of city to compare
+ * @returns {Boolean} if city input is equal to current location
+ */
 function isNotCurrentCity(city) {
   const currentLocation = document.querySelector(
     '.location-dropdown__button-text'
@@ -190,5 +196,6 @@ if (typeof module !== 'undefined') {
     hideLocationInDropdown,
     selectLocation,
     onLocationDropdownClick,
+    isNotCurrentCity,
   };
 }
