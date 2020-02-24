@@ -115,6 +115,10 @@ function onLocationDropdownClick() {
   )[0].innerHTML = location;
 }
 
+/**
+ * Once the HTML element is clicked, onLocationDropdownClick function is called
+ * @param {Element} element type of HTML element being clicked
+ */
 function addSelectionListener(element) {
   element.addEventListener('click', onLocationDropdownClick);
 }
