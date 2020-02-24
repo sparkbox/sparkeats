@@ -30,7 +30,7 @@ describe('addSelectionListener', () => {
   afterEach(() => {
     __RewireAPI__.__ResetDependency__('onLocationDropdownClick');
   });
-  it.only('adds click event handler', () => {
+  it('adds click event handler', () => {
     const buttonElement = document.querySelector('button');
     addSelectionListener(buttonElement);
     buttonElement.click();
