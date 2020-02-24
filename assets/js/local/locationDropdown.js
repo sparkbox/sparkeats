@@ -1,8 +1,12 @@
+/**
+ * Toggles the dropdown menu
+ */
 function toggleDropdown() {
   document
     .getElementById('location-list')
     .classList.toggle('location-dropdown__list-open');
 }
+
 /**
  * Determines if a card is hidden or shown on the home page
  *
