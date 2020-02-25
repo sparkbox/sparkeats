@@ -45,7 +45,8 @@ function hideOrShowLocation(location, elementId, hasHiddenClass) {
 }
 
 /**
- * Adds or removes the class hidden to determine which cards are shown on the page
+ * Adds or removes the class hidden to determine which cards are
+ * shown on the page
  *
  * @param {Element} element
  * @param {String} hideOrShow
@@ -77,7 +78,9 @@ function hideLocationInDropdown(location, locationListElements) {
 }
 
 /**
- * Determines which elements are shown on a page based on the city in the dropdown menu. If the location is not equal to the city or location does not equal 'All Places', then the cards are hidden.
+ * Determines which elements are shown on a page based on the
+ * city in the dropdown menu. If the location is not equal to the city
+ * or location does not equal 'All Places', then the cards are hidden.
  * @param {HTMLCollection} allCards
  * @param {String} location
  */
