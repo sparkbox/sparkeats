@@ -137,6 +137,9 @@ function isNotCurrentCity(city) {
   return currentLocation !== city;
 }
 
+/**
+ *Determines which city options are renderend in the dropdown based on the current selected city
+ */
 function showDropdownOptions() {
   const locationFilter = [];
   let locationListHtml = '';
