@@ -8,6 +8,35 @@ function toggleDropdown() {
 }
 
 /**
+ * Adds or removes the class hidden to determine which cards are
+ * shown on the page
+ *
+ * @param {Element} element
+ * @param {String} hideOrShow
+ */
+function addOrRemoveHiddenClass(element, hideOrShow) {
+  if (hideOrShow === 'hide') {
+    element.classList.add('hidden');
+  } else if (hideOrShow === 'show') {
+    element.classList.remove('hidden');
+  }
+}
+
+/**
+ * Check if input does not match current location
+ *
+ * @param {String} city name of city to compare
+ * @returns {Boolean} if city input is equal to current location
+ */
+function isNotCurrentCity(city) {
+  const currentLocation = document.querySelector(
+    '.location-dropdown__button-text'
+  ).innerHTML;
+
+  return currentLocation !== city;
+}
+
+/**
  * Determines if a card is hidden or shown on the home page
  *
  * @param {String} city
@@ -45,39 +74,6 @@ function hideOrShowLocation(location, elementId, hasHiddenClass) {
 }
 
 /**
- * Adds or removes the class hidden to determine which cards are
- * shown on the page
- *
- * @param {Element} element
- * @param {String} hideOrShow
- */
-function addOrRemoveHiddenClass(element, hideOrShow) {
-  if (hideOrShow === 'hide') {
-    element.classList.add('hidden');
-  } else if (hideOrShow === 'show') {
-    element.classList.remove('hidden');
-  }
-}
-
-/**
- *
- * @param {String} location
- * @param {NodeList} locationListElements
- */
-
-function hideLocationInDropdown(location, locationListElements) {
-  Array.from(locationListElements).forEach(element => {
-    const elementId = element.id;
-
-    const hasHiddenClass = element.classList.contains('hidden');
-
-    const hideOrShow = hideOrShowLocation(location, elementId, hasHiddenClass);
-
-    addOrRemoveHiddenClass(element, hideOrShow);
-  });
-}
-
-/**
  * Determines which elements are shown on a page based on the
  * city in the dropdown menu. If the location is not equal to the city
  * or location does not equal 'All Places', then the cards are hidden.
@@ -92,6 +88,23 @@ function selectLocation(allCards, location) {
     const hasHiddenClass = card.classList.contains('hidden');
     const hideOrShow = hideOrShowCard(city, location, hasHiddenClass);
     addOrRemoveHiddenClass(card, hideOrShow);
+  });
+}
+
+/**
+ *
+ * @param {String} location
+ * @param {NodeList} locationListElements
+ */
+function hideLocationInDropdown(location, locationListElements) {
+  Array.from(locationListElements).forEach(element => {
+    const elementId = element.id;
+
+    const hasHiddenClass = element.classList.contains('hidden');
+
+    const hideOrShow = hideOrShowLocation(location, elementId, hasHiddenClass);
+
+    addOrRemoveHiddenClass(element, hideOrShow);
   });
 }
 
@@ -124,20 +137,6 @@ function onLocationDropdownClick() {
  */
 function addSelectionListener(element) {
   element.addEventListener('click', onLocationDropdownClick);
-}
-
-/**
- * Check if input does not match current location
- *
- * @param {String} city name of city to compare
- * @returns {Boolean} if city input is equal to current location
- */
-function isNotCurrentCity(city) {
-  const currentLocation = document.querySelector(
-    '.location-dropdown__button-text'
-  ).innerHTML;
-
-  return currentLocation !== city;
 }
 
 /**
