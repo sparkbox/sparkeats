@@ -92,7 +92,8 @@ function selectLocation(allCards, location) {
 }
 
 /**
- *
+ * Determine if an item in the dropdown menu is hidden or shown based on the
+ * id of the location selected
  * @param {String} location
  * @param {NodeList} locationListElements
  */
@@ -132,7 +133,7 @@ function onLocationDropdownClick() {
 }
 
 /**
- * Once the HTML element is clicked, onLocationDropdownClick function is called
+ * Attach event listener to call `onLocationDropdownClick` when selection changes
  * @param {Element} element type of HTML element being clicked
  */
 function addSelectionListener(element) {
