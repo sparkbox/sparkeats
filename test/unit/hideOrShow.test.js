@@ -1,6 +1,3 @@
-global.document = {
-  getElementById: () => null
-};
 const { hideOrShowCard } = require('../../assets/js/local/locationDropdown');
 const { expect } = require('chai');
 
