@@ -27,29 +27,27 @@ const dom = new JSDOM(
 
 const { document } = dom.window;
 
-
 describe('onLocationDropdownClick', () => {
   let globalDoc;
 
   beforeEach(() => {
-    document.getElementById('location-list')
+    document
+      .getElementById('location-list')
       .classList.add('location-dropdown__list-open');
 
     globalDoc = global.document;
-    global.document = dom.window.document;
+    global.document = document;
   });
 
   afterEach(() => {
-    global.document =  globalDoc;
+    global.document = globalDoc;
   });
 
   it('Hides the selected location from the options', () => {
     const selectedItem = document.getElementById('Dayton');
     onLocationDropdownClick.call(selectedItem);
 
-    expect(
-      selectedItem.classList.contains('hidden')
-    ).to.equal(true);
+    expect(selectedItem.classList.contains('hidden')).to.equal(true);
   });
 
   it('toggles dropdown', () => {
