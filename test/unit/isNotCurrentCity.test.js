@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const jsdom = require('jsdom');
 const {
-  isNotCurrentCity,
+  isCurrentCity,
 } = require('../../assets/js/local/locationDropdown');
 
 const { JSDOM } = jsdom;
@@ -40,14 +40,14 @@ describe('isNotCurrentCity', () => {
   });
 
   it('returns true if selected city does not equal inputted city', () => {
-    const result = isNotCurrentCity('Dayton');
+    const result = isCurrentCity('Dayton');
 
-    expect(result).to.equal(true);
+    expect(result).to.equal(false);
   });
 
   it('returns false if selected city equals inputted city', () => {
-    const result = isNotCurrentCity('All Places');
+    const result = isCurrentCity('All Places');
 
-    expect(result).to.equal(false);
+    expect(result).to.equal(true);
   });
 });

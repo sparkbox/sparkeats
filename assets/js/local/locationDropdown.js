@@ -28,12 +28,12 @@ function addOrRemoveHiddenClass(element, hideOrShow) {
  * @param {String} city name of city to compare
  * @returns {Boolean} if city input is equal to current location
  */
-function isNotCurrentCity(city) {
+function isCurrentCity(city) {
   const currentLocation = document.querySelector(
     '.location-dropdown__button-text'
   ).innerHTML;
 
-  return currentLocation !== city;
+  return currentLocation === city;
 }
 
 /**
@@ -159,7 +159,7 @@ function showDropdownOptions() {
 
     const city = cityAndState.split(',')[0];
 
-    if (!locationFilter.includes(city) && isNotCurrentCity(city)) {
+    if (!locationFilter.includes(city) && !isCurrentCity(city)) {
       locationFilter.push(city);
 
       locationListHtml += `
@@ -207,7 +207,7 @@ if (typeof module !== 'undefined') {
     hideLocationInDropdown,
     selectLocation,
     onLocationDropdownClick,
-    isNotCurrentCity,
+    isCurrentCity,
     addSelectionListener,
     showDropdownOptions,
   };
