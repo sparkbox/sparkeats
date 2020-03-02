@@ -20,7 +20,7 @@ const dom = new JSDOM(
 const { document } = dom.window;
 
 describe('selectLocation', () => {
-  it('removes hidden class from selected element if the element has a hidden class', () => {
+  it('hides selected element if the element has a hidden class', () => {
     const selectedElements = document.querySelectorAll(
       '.place-card__list-item'
     );
@@ -29,7 +29,7 @@ describe('selectLocation', () => {
     expect(daytonCard.classList.contains('hidden')).to.equal(false);
   });
 
-  it('adds hidden class from selected element if the element does not have a hidden class', () => {
+  it('shows the selected element if the element does not have a hidden class', () => {
     const selectedElements = document.querySelectorAll(
       '.place-card__list-item'
     );
