@@ -11,11 +11,10 @@ const { JSDOM } = jsdom;
 const dom = new JSDOM(
   `<html>
     <body>
-      <button id='dayton' class='location-dropdown_list-button'>Dayton</button>
+      <button id='dayton' hidden class='location-dropdown_list-button'>Dayton</button>
       <button id='pittsburgh' class='location-dropdown_list-button hidden'>Pittsburgh</button>
     </body>
   </html>`,
-  { pretendToBeVisual: true }
 );
 
 const { document } = dom.window;
@@ -28,7 +27,6 @@ describe('Hide Location In Dropdown', () => {
     hideLocationInDropdown('dayton', elementList);
 
     const dayton = document.getElementById('dayton');
-
     expect(dayton.classList.contains('hidden')).to.equal(true);
   });
 
@@ -37,7 +35,7 @@ describe('Hide Location In Dropdown', () => {
 
     const pittsburgh = document.getElementById('pittsburgh');
 
-    expect(pittsburgh.hidden).to.equal(false);
+    expect(pittsburgh.classList.contains('hidden')).to.equal(false);
   });
 
   it('leaves element classList unaltered', () => {
