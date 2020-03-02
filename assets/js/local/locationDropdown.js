@@ -62,6 +62,7 @@ function hideOrShowCard(city, location, hasHiddenClass) {
  * @param {String} location
  * @param {String} elementId
  * @param {String} hasHiddenClass
+ * @returns {String} Whether to hide or show the given location
  */
 function hideOrShowLocation(location, elementId, hasHiddenClass) {
   if (elementId === location && !hasHiddenClass) {
