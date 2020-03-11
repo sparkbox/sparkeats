@@ -8,7 +8,9 @@
     "document": true,
     "Place": true,
     "Review": true,
-    "sails": true
+    "sails": true,
+    "PlaceImage": true,
+    "ReviewImage": true
   },
   "env": {
     "mocha": true
