@@ -35,9 +35,7 @@ module.exports = async function create(req, res) {
         placeWebsiteDisplay,
       })
         .fetch()
-        .then(place => {
-          return res.redirect(`/places/${place.id}/reviews/new`);
-        })
+        .then(place => res.redirect(`/places/${place.id}/reviews/new`))
         .catch(res.serverError);
     }
   );
