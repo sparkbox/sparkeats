@@ -1,37 +1,6 @@
-
-
-// h2:not([class]) {
-//   font-family: 'Roboto', sans-serif;
-//   font-style: normal;
-//   font-weight: bold;
-// }
-
-// h3:not([class]) {
-//   font-family: 'Oswald', sans-serif;
-//   font-style: normal;
-//   font-weight: bold;
-// }
-
-h1:not([class]) {
-  @include h1;
+h1,h2,h3,h4,h5,h6 {
+  font-family: $oswald-stack;
+  color: inherit;
+  margin: 0;
 }
 
-// h2:not([class]) {
-//   @include h2;
-// }
-
-// h3:not([class]) {
-//   @include h3;
-// }
-
-// h4:not([class]) {
-//   @include h4;
-// }
-
-// h5:not([class]) {
-//   @include h5;
-// }
-
-// h6:not([class]) {
-//   @include h6;
-// }
