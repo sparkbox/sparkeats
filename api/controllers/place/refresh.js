@@ -56,6 +56,11 @@ module.exports = async function getPlaces(req, res) {
         )
       )
     )
-    .then(places => res.view('pages/homepage-refresh', { places }))
+    .then(places =>
+      res.view('pages/homepage-refresh', {
+        places,
+        layout: 'layouts/layout-refresh',
+      })
+    )
     .catch(res.serverError);
 };
