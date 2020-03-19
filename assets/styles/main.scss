@@ -1,12 +1,12 @@
 // site-wide styles
-@import 'breakpoints';
-@import 'fonts';
-@import 'colors';
-@import 'layout';
+@import 'legacy/breakpoints';
+@import 'legacy/fonts';
+@import 'legacy/colors';
+@import 'legacy/layout';
 
 // module styles
-@import 'place-card';
-@import 'grid';
-@import 'review';
-@import 'homepage';
-@import 'new';
+@import 'legacy/place-card';
+@import 'legacy/grid';
+@import 'legacy/review';
+@import 'legacy/homepage';
+@import 'legacy/new';
