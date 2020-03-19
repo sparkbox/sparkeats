@@ -20,3 +20,5 @@ passport.use(
     }
   })
 );
+
+module.exports = { validate };
