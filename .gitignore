@@ -131,4 +131,4 @@ lib-cov
 *.pid
 
 .env
-/.sass-cache
+.sass-cache
