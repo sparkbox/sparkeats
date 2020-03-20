@@ -1,0 +1,54 @@
+// PLACE CARD GRID STYLES
+
+.place-card__container {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  @media (min-width: $bp-med-screen) {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  @media (min-width: $bp-xlarge-screen) {
+    max-width: 90%;
+  }
+}
+
+.place-card__list {
+  display: block;
+  margin: 0;
+  margin: 0 1em;
+  padding: 0;
+  @media (min-width: $bp-small-screen) {
+    @supports (display: flex) {
+      justify-content: center;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 18em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  &-item {
+    list-style: none;
+    vertical-align: top;
+    margin: 2em auto;
+    width: 23em;
+    max-width: 100%;
+    @media (min-width: $bp-small-screen) {
+      margin: 1em;
+      // use inline-block for browsers and devices that do not support flexbox
+      display: inline-block;
+      max-width: 32%;
+      min-width: 18em;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+}
