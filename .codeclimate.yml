@@ -9,6 +9,8 @@ plugins:
         - javascript
   eslint:
     enabled: true
+    channel: "eslint-4"
+
   fixme:
     enabled: true
   nodesecurity:
