@@ -1,18 +1,15 @@
 const { expect } = require('chai');
 const { isValid } = require('../../api/services/auth-basic');
 
-describe('Authenticate', () => {
-  const authUserName = process.env.AUTH_USERNAME;
-  const authPassword = process.env.AUTH_PASSWORD;
-
+describe('Basic Authentication', () => {
   before(() => {
     process.env.AUTH_USERNAME = 'sample';
     process.env.AUTH_PASSWORD = 'sample';
   });
 
   after(() => {
-    process.env.AUTH_USERNAME = authUserName;
-    process.env.AUTH_PASSWORD = authPassword;
+    process.env.AUTH_USERNAME = undefined;
+    process.env.AUTH_PASSWORD = undefined;
   });
 
   it('validates username and password', () => {
