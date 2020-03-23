@@ -1,9 +1,9 @@
 <section class="place-card__container">
   <ul class="place-card__list">
     <% places.forEach(place => { %>
-    <% if (place.numberOfReviews) { %>
-    <%- partial('./place-card', { place }) %>
-    <% } %>
+      <% if (place.numberOfReviews) { %>
+        <%- partial('./place-card', { place }) %>
+      <% } %>
     <% }) %>
   </ul>
 </section>
