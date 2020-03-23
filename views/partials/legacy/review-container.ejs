@@ -1,0 +1,25 @@
+<div class="review-container">
+  <a href="/places/<%= place.id %>/reviews/new">
+    <button class="button--bordered-primary">Add review</button>
+  </a>
+  <% reviews.forEach((review) => { %>
+  <article class="review-submission">
+    <h3 class="review-submission__reviewer">
+      <%= review.reviewerName %>
+    </h3>
+    <div class="place-card__star-rating" aria-label="<%= review.rating %>">
+      <%- review.stars %>
+    </div>
+    <h4 class="review-submission__title">Comments</h4>
+    <p class="review-submission__review">
+      <%= review.reviewText %>
+    </p>
+    <!--loop review image file names-->
+    <% if (review.reviewImage) { %>
+    <div class="review-submission__image-container">
+      <img class="review-submission__image" src="<%= review.reviewImage %>" alt="<%= review.reviewImageAlt %>">
+    </div>
+    <% } %>
+  </article>
+  <% }); %>
+</div>
