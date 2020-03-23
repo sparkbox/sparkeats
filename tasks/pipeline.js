@@ -60,10 +60,6 @@ var cssFilesToInject = [
 // Client-side javascript files to inject as <script> tags, in order.
 //
 var jsFilesToInject = [
-
-  // Load `sails.io` before everything else.
-  'dependencies/sails.io.js',
-
   // Bring in `.js` files for any other client-side JavaScript dependencies.
   // (e.g. Lodash, Vue.js, jQuery, Bootstrap, Ember, Angular, etc.)
   // > Be sure to list dependencies that depend on each other in the right order!
