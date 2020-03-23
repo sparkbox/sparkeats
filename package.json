@@ -56,7 +56,7 @@
     "start": "npm run build && sails lift",
     "build": "npm run sass && npm run postcss",
     "sass": "node-sass assets/styles/main.scss .tmp/styles/main.css",
-    "sass:watch": "node-sass --watch assets/styles:.tmp/styles",
+    "sass:watch": "node-sass --watch assets/styles -o .tmp/styles",
     "postcss": "postcss --use autoprefixer -c tasks/postcss.config.json .tmp/styles/main.css -d .tmp/styles/",
     "server": "nodemon app.js & browser-sync start --proxy http://localhost:1337 --files \".tmp/styles/\" \"views/\" --reload-delay 1100",
     "test:unit": "mocha test/unit/*.test.js --require test-helper.js --require @babel/register",
