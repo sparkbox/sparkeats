@@ -1,7 +1,7 @@
 {
-  "extends": ["airbnb-base", "prettier"],
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
   "rules": {
-    "quotes": [2, "single", { "avoidEscape": true }]
+    "quotes": ["error", "single", { "avoidEscape": true }]
   },
   "globals": {
     "_": true,
