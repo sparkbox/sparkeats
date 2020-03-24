@@ -1,12 +1,14 @@
 .primary-button{
   @include primary-button;
-  margin: 1rem;
-  padding: 1% 6%;
-
+  margin:2rem 1.25rem 1.375rem;
 }
 
-.primary-button--lg{
+.primary-button--header{
   @include primary-button;
-  margin: 2rem;
-  padding: 1% 25%;
+  margin: 0;
+}
+
+.primary-button--full-width{
+  @include primary-button;
+  margin: 2.5rem 0;
 }

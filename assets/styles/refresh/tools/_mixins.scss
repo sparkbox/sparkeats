@@ -1,9 +1,12 @@
 @mixin primary-button {
-  text-decoration: none;
   background: black;
   color: white;
-  height: 10%;
-  display: inline-block;
-  text-transform: uppercase;
+  display: block;
+  font-family: $roboto-stack;
+  font-size: 1.125rem;
+  font-weight: 900;
+  padding: 1.25rem;
   text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }
