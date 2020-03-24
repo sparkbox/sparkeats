@@ -60,4 +60,13 @@ describe('getNumberOfStars', () => {
 
     expect(stars).to.equal(expectedOutput);
   });
+
+  it('defaults to zero (5 empty stars) when rating is NaN', () => {
+    const positive = 'positive ';
+    const negative = 'negative ';
+    const stars = getNumberOfStars(NaN, positive, negative);
+    const expectedOutput = 'negative negative negative negative negative ';
+
+    expect(stars).to.equal(expectedOutput);
+  });
 });
