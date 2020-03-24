@@ -61,18 +61,9 @@ function hideOrShowCard(city, location, hasHiddenClass) {
  *
  * @param {String} location
  * @param {String} elementId
- * @param {String} hasHiddenClass
  * @returns {String} Whether to hide or show the given location
  */
-function hideOrShowLocation(location, elementId, hasHiddenClass) {
-  if (elementId === location && !hasHiddenClass) {
-    return 'hide';
-  } else if (elementId !== location && hasHiddenClass) {
-    return 'show';
-  }
-
-  return '';
-}
+const hideOrShowLocation = (location, elementId) => (elementId === location) ? 'hide' : 'show';
 
 /**
  * Determines which elements are shown on a page based on the
@@ -101,10 +92,7 @@ function selectLocation(allCards, location) {
 function hideLocationInDropdown(location, locationListElements) {
   Array.from(locationListElements).forEach(element => {
     const elementId = element.id;
-
-    const hasHiddenClass = element.classList.contains('hidden');
-
-    const hideOrShow = hideOrShowLocation(location, elementId, hasHiddenClass);
+    const hideOrShow = hideOrShowLocation(location, elementId);
 
     addOrRemoveHiddenClass(element, hideOrShow);
   });
