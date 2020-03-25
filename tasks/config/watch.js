@@ -49,7 +49,7 @@ module.exports = function(grunt) {
   //
   // ```
   // // Load Grunt plugin from the node_modules/ folder.
-  // grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   // ```
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
