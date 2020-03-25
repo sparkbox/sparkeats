@@ -61,7 +61,7 @@
     "sass": "node-sass assets/styles/main.scss .tmp/styles/main.css",
     "sass:watch": "node-sass --watch assets/styles -o .tmp/styles",
     "postcss": "postcss --use autoprefixer -c tasks/postcss.config.json .tmp/styles/main.css -d .tmp/styles/",
-    "server": "nodemon app.js & browser-sync start --proxy http://localhost:1337 --files \".tmp/styles/\" \"views/\" --reload-delay 1100",
+    "server": "nodemon app.js",
     "test:unit": "mocha test/unit/*.test.js --require test-helper.js --require @babel/register",
     "test:integration": "mocha test/lifecycle.test.js test/ test/integration/controllers/**/*.test.js",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'"
