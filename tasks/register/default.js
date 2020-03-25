@@ -20,7 +20,8 @@ module.exports = function (grunt) {
     'compileAssets',
     // 'babel',        //« uncomment to ALSO transpile during development (for broader browser compat.)
     'linkAssets',
-    'watch'
+    'browserSync',
+    'watch',
   ]);
 
 
