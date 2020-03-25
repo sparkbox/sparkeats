@@ -1,9 +1,9 @@
-.primary-button{
+.place-card__primary-button{
   @include primary-button;
   margin:2rem 1.25rem 1.375rem;
 }
 
-.primary-button--header{
+.header__primary-button{
   @include primary-button;
   margin: 0;
 }
