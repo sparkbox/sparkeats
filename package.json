@@ -39,7 +39,6 @@
     "browser-sync": "^2.24.4",
     "chai": "^4.1.2",
     "concurrently": "^3.5.1",
-    "connect-livereload": "^0.6.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.10.0",
