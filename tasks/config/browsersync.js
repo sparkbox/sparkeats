@@ -16,6 +16,7 @@ module.exports = function(grunt) {
         },
         watchTask: true,
         reloadOnRestart: true,
+        open: false,
       },
     },
   });
