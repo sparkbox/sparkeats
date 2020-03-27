@@ -1,5 +1,5 @@
 const { findImageByID } = require('../../../lib/findImage');
-const getNumberOfStars = require('../../../lib/getNumberOfStars');
+const getNumberOfStars = require('../../../lib/legacy/getNumberOfStars');
 const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
 const { getAvgPlaceRating } = require('../../../lib/getAvgPlaceRating');
 const ratingToString = require('../../../lib/ratingToString');

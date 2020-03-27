@@ -1,7 +1,7 @@
 const Promise = require('bluebird');
 const { findImageByID } = require('../../../lib/findImage');
 const getNumberOfReviews = require('../../../lib/getNumberOfReviews');
-const getNumberOfStars = require('../../../lib/getNumberOfStars');
+const getNumberOfStars = require('../../../lib/legacy/getNumberOfStars');
 const { getAvgPlaceRating } = require('../../../lib/getAvgPlaceRating');
 const ratingToString = require('../../../lib/ratingToString');
 
