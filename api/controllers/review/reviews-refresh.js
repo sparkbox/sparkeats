@@ -73,6 +73,7 @@ module.exports = async function getReviews(req, res) {
         rating,
         numberOfReviews,
         reviews,
+        layout: 'layouts/layout-refresh',
       });
     })
     .catch(res.serverError);
