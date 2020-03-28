@@ -11,16 +11,16 @@
  *
  */
 module.exports = function(grunt) {
-  grunt.config.set("sync", {
+  grunt.config.set('sync', {
     dev: {
       files: [
         {
-          cwd: "./assets",
-          src: ["**/*.!(coffee|less|scss|sass)"],
-          dest: ".tmp/public"
-        }
-      ]
-    }
+          cwd: './assets',
+          src: ['**/*.!(less|scss|sass)'],
+          dest: '.tmp/public',
+        },
+      ],
+    },
   });
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
