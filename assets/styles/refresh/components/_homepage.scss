@@ -1,4 +1,16 @@
 .wrapper--homepage {
-  padding: 6.25rem 8rem;
+  padding: 1rem 1.5rem;
   background-color: $bg-color;
+
+  @media (min-width: $small-screen-bp){
+    padding: 2rem 3rem;
+  }
+
+  @media (min-width: $large-screen-bp){
+    padding: 4rem 5rem;
+  }
+
+  @media (min-width: $xlarge-screen-bp){
+    padding: 6.25rem 8rem;
+  }
 }
