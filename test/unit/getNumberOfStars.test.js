@@ -1,27 +1,27 @@
 const { expect } = require('chai');
 const getNumberOfStars = require('../../lib/getNumberOfStars');
 
-function lookForFilledImageSrc(src) {
-  return src === 'src="../design/sparkeats_star.svg"';
+function lookForFilledImageSrc(className) {
+  return className === 'class="filled-star"';
 }
 
-function lookForEmptyImageSrc(src) {
-  return src === 'src="../design/sparkeats_star_empty.svg"';
+function lookForEmptyImageSrc(className) {
+  return className === 'class="empty-star"';
 }
 
-function sourceLength(sourceFunc, rating) {
+function classLength(classFunc, rating) {
   return getNumberOfStars(rating)
     .split(' ')
-    .filter(sourceFunc).length;
+    .filter(classFunc).length;
 }
 
 describe('getNumberOfStars', () => {
   it('outputs the correct number of filled stars', () => {
-    expect(sourceLength(lookForFilledImageSrc, 3)).to.equal(3);
+    expect(classLength(lookForFilledImageSrc, 3)).to.equal(3);
   });
 
   it('outputs the correct number of empty stars', () => {
-    expect(sourceLength(lookForEmptyImageSrc, 3)).to.equal(2);
+    expect(classLength(lookForEmptyImageSrc, 3)).to.equal(2);
   });
 
   it('tests that you can change positive rating and negative rating to any desired string to give the expected output', () => {
