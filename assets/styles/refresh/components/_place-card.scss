@@ -12,15 +12,15 @@
     border-color: $primary-color;
     margin-top: 2.0625rem;
 
-    @media (min-width: $small-screen-bp){
+    @media (min-width: $bp-small-screen){
       width: 43%;
     }
 
-    @media (min-width: $med-screen-bp){
+    @media (min-width: $bp-med-screen){
       width: 31%;
     }
 
-    @media (min-width: $large-screen-bp){
+    @media (min-width: $bp-large-screen){
       width: 22%;
     }
   }

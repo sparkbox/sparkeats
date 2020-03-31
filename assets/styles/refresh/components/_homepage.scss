@@ -2,15 +2,15 @@
   padding: 1rem 1.5rem;
   background-color: $secondary-color;
 
-  @media (min-width: $small-screen-bp){
+  @media (min-width: $bp-small-screen){
     padding: 2rem 3rem;
   }
 
-  @media (min-width: $large-screen-bp){
+  @media (min-width: $bp-med-screen){
     padding: 4rem 5rem;
   }
 
-  @media (min-width: $xlarge-screen-bp){
+  @media (min-width: $bp-xlarge-screen){
     padding: 6.25rem 8rem;
   }
 }
