@@ -1,0 +1,23 @@
+.sparkeats-header {
+  background-color: $primary-color;
+  padding: 1em;
+  box-sizing: border-box;
+
+  &__title {
+    @include visually-hidden;
+  }
+
+  &__logo {
+    margin: 0 auto;
+    display: block;
+    height: 2em;
+    width: 14em;
+    background: url("../../../design/sparkeats_logomark.svg") center no-repeat;
+  }
+}
+
+@media screen and (min-width: $bp-med-screen) {
+  .sparkeats-header__logo {
+    margin-left: 4em;
+  }
+}
