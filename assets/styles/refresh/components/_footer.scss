@@ -1,9 +1,8 @@
 .footer {
-  padding: 5em 4em;
+  padding: 4rem 6rem;
   background: #1A1A1A;
   color: white;
   display: flex;
-  align-items: flex-start;
   justify-content: space-around;
 
   &__logo {
@@ -19,15 +18,17 @@
   }
 
   &__title {
+    color: $secondary-color;
     text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     margin-bottom: 15px;
     line-height: 16px;
     letter-spacing: 0.04em;
   }
 
   &__paragraph {
-    font-size: 1em;
+    color: $secondary-color;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.04em;
   }
@@ -35,11 +36,15 @@
   &__link {
     display: inline-block;
     margin-top: 15px;
-    color: #F7C952;
+    color: $cream-can;
     text-decoration: none;
     padding-bottom: 6px;
-    border-bottom: 2px solid #F7C952;
+    border-bottom: 2px solid $cream-can;
     letter-spacing: 0.04em;
     line-height: 24px;
+  }
+
+  &--no-margin {
+    margin: 0;
   }
 }
