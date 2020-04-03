@@ -1,46 +1,75 @@
 .review-header {
-  height: 27.25rem;
+  height: 22.25rem;
   background: url(../../../design/review-header-bg.svg) no-repeat;
-  background-size: 100%;
+  background-size: cover;
+
+  @media (min-width: $bp-large-screen) {
+    height: 27.25rem;
+  }
 
   &__backdrop {
-    position: absolute;
     width: 100%;
   }
 
   &__backdrop-image {
     object-fit: cover;
     width: 100%;
-    height: 27.25rem;
-    position: relative;
-    display: inline-block;
+    height: 22.25rem;
+
+    @media (min-width: $bp-large-screen) {
+      height: 27.25rem;
+    }
   }
 
   &__title {
-    width: 42.6875rem;
-    height: 10.75rem;
+    padding: 1rem;
     position: absolute;
-    background-color: $bg-color;
-    border-radius: 1px;
-    border-style: solid;
-    border-color: $primary-color;
-    margin-left: 3rem;
+    background-color: $secondary-color;
+    border: 0.0625rem solid $primary-color;
+    margin-left: 0.5rem;
     margin-top: 13.5rem;
+
+    @media (min-width: $bp-small-screen) {
+      margin-left: 3rem;
+    }
+
+    @media (min-width: $bp-large-screen) {
+      width: 42.6875rem;
+      height: 10.75rem;
+    }
   }
 
   &__name {
-    text-transform: capitalize;
+    text-transform: uppercase;
+    font-size: 1.4rem;
     line-height: 121.6%;
-    font-size: 2.375rem;
     font-weight: 700;
-    margin: 3.0625rem 13.5rem 0.9375rem 3rem;
+
+    @media (min-width: $bp-med-screen) {
+      font-size: 2rem;
+      margin: 0rem 7rem 0.4rem 2rem;
+    }
+
+    @media (min-width: $bp-large-screen) {
+      font-size: 2.375rem;
+      margin: 3.0625rem 13.5rem 0.9375rem 3rem;
+    }
   }
 
   &__city {
-    margin-left: 3rem;
-    font-size: 0.875rem;
+    font-size: 0.675rem;
     font-weight: 700;
     line-height: 1rem;
+    text-transform: uppercase;
+
+    @media (min-width: $bp-med-screen) {
+      font-size: 0.875rem;
+      margin-left: 2rem;
+    }
+
+    @media (min-width: $bp-large-screen) {
+      margin-left: 3rem;
+    }
   }
 
 }

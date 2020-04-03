@@ -1,6 +1,15 @@
 .review-page { 
-  margin-left: 8rem;
-  margin-right: 8rem;
-  margin-top: 6.4375rem;
-  margin-bottom: 6.375rem;
+  margin: 1rem 1.5rem;
+  
+  @media (min-width: $bp-small-screen){
+    margin: 2rem 3rem;
+  }
+
+  @media (min-width: $bp-med-screen){
+    margin: 4rem 5rem;
+  }
+
+  @media (min-width: $bp-xlarge-screen){
+    margin: 6.4375rem 8rem 6.375rem 8rem;
+  }
 }
