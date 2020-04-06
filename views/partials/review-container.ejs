@@ -7,7 +7,7 @@
     <h3 class="review-submission__reviewer">
       <%= review.reviewerName %>
     </h3>
-    <h4 class="review-submission__date">
+    <div class="review-submission__date">
       <%
         const d = new Date(place.createdAt)
         const ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(d)
@@ -15,7 +15,7 @@
         const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d)
       %>
        Created<%= ` ${mo}/${da}/${ye}` %>
-    </h4>
+    </div>
     <div class="place-card__star-rating" aria-label="<%= review.rating %>">
       <%- review.stars %>
     </div>
