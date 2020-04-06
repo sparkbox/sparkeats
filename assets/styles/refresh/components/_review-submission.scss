@@ -1,0 +1,41 @@
+.review-submission {
+  box-sizing: border-box;
+  border: 1px solid $primary-color;
+  width: 100%;
+  padding: 2rem;
+}
+
+.review-submission__reviewer {
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.review-submission__date {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+
+  @media (min-width: $bp-small-screen) {
+    float: right;
+  }
+}
+
+.place-card__star-rating {
+  @media (min-width: $bp-small-screen) {
+    clear: both;
+  }
+}
+
+.review-submission__title {
+  margin-top: 3rem;
+  margin-bottom: 1.125rem;
+}
+
+.review-submission__review {
+  margin-bottom: 3rem;
+}
+
+.review-submission__image {
+  width: 100%;
+}
