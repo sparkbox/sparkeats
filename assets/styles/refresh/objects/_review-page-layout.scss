@@ -1,0 +1,55 @@
+.review-page {
+  margin: 1rem;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  @media (min-width: $bp-small-screen) {
+    margin: 2rem;
+    grid-column-gap: 1rem;
+  }
+
+  @media (min-width: $bp-med-screen) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'nav . .'
+      'header header header'
+      'review review overview';
+    margin: 4rem;
+  }
+}
+
+.review-nav {
+  order: -1;
+
+  @media (min-width: $bp-med-screen) {
+    grid-area: nav;
+  }
+}
+
+.review-header {
+  @media (min-width: $bp-med-screen) {
+    grid-area: header;
+  }
+}
+
+.review-container {
+  @media (min-width: $bp-med-screen) {
+    grid-area: review;
+  }
+}
+
+.review-submission {
+  margin-bottom: 2rem;
+}
+
+.review-overview {
+  @media (min-width: $bp-med-screen) {
+    grid-area: overview;
+    margin-top: 8.8rem;
+    align-self: start;
+  }
+}
