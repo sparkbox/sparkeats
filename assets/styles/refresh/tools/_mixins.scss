@@ -1,6 +1,6 @@
 @mixin primary-button {
   background: $primary-color;
-  color: white;
+  color: $tertiary-color;
   display: block;
   font-family: $roboto-stack;
   font-size: 1.125rem;
@@ -20,7 +20,7 @@
   width: 1px !important;
   overflow: hidden;
 
-  @if $status == 'disable' {
+  @if $status=='disable' {
     position: static !important;
     clip: auto !important;
     height: auto !important;

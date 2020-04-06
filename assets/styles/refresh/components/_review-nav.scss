@@ -1,0 +1,31 @@
+.review-nav {
+  margin-bottom: 2.5625rem;
+  margin-left: 0.5rem;
+
+  &__svg {
+    height: 0.9375rem;
+    width: 1rem;
+    background: url(/design/review-header_home-arrow.svg) no-repeat;
+    display: inline-block;
+  }
+
+  &__link {
+    font-family: $roboto-stack;
+    font-weight: 900;
+    font-size: 1.125rem;
+    line-height: 1.3125rem;
+    letter-spacing: 0.04rem;
+    color: $primary-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 2.5625rem;
+
+    &::active {
+      color: $primary-color;
+    }
+
+    &::visited {
+      color: $primary-color;
+    }
+  }
+}

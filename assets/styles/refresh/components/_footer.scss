@@ -1,7 +1,7 @@
 .footer {
   padding: 2rem 0;
   background: $primary-color;
-  color: white;
+  color: $tertiary-color;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -20,7 +20,7 @@
   }
 
   &__title {
-    color: $secondary-color;
+    color: $tertiary-color;
     text-transform: uppercase;
     font-size: 0.9rem;
     margin-bottom: 15px;
@@ -29,7 +29,7 @@
   }
 
   &__paragraph {
-    color: $secondary-color;
+    color: $tertiary-color;
     font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.04em;
