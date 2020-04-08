@@ -63,12 +63,12 @@
   @media (min-width: $bp-med-screen) {
     width: calc(33% - 4rem);
     align-self: flex-start;
-    margin: 8.8rem 0 0 1rem;
+    margin: 8.8rem 0 0 1rem; //magic number that aligns the review-overview with the top of review-submission.
     flex-grow: 1;
 
     @supports (display: grid) {
       grid-area: overview;
-      margin: 8.8rem 0 0 0; //magic number that alighs the review-overview with the top of review-submission.
+      margin-left: 0;
       align-self: start;
       width: 100%;
     }

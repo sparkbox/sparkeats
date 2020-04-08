@@ -9,12 +9,12 @@
     </h3>
     <div class="review-submission__date">
       <%
-        const d = new Date(place.createdAt)
-        const ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(d)
-        const mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(d)
-        const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d)
+        const date = new Date(place.createdAt)
+        const year = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(date)
+        const month = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(date)
+        const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date)
       %>
-       Created<%= ` ${mo}/${da}/${ye}` %>
+       Created<%= ` ${month}/${day}/${year}` %>
     </div>
     <div class="place-card__star-rating" aria-label="<%= review.rating %>">
       <%- review.stars %>
