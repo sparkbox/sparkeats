@@ -60,10 +60,8 @@
 // 5. Objects
 //    Class-based selectors which define undecorated design patterns,
 //    for example media object known from OOCSS.
-@import 'refresh/objects/_review-page-layout';
 @import 'refresh/objects/review-page';
 @import 'refresh/objects/homepage';
-@import 'refresh/objects/_review-page-layout';
 
 // =====================================================================
 // 6. Components
@@ -71,10 +69,9 @@
 //    and our UI components are often composed of Objects and Components
 @import 'refresh/components/sparkeats-header';
 @import 'refresh/components/buttons';
-@import 'refresh/components/homepage';
 @import 'refresh/components/place-card';
 @import 'refresh/components/stars';
-@import 'refresh/componenets/footer';
+@import 'refresh/components/footer';
 @import 'refresh/components/review-overview';
 @import 'refresh/components/review-header';
 @import 'refresh/components/review-nav';

@@ -1,5 +1,11 @@
-$bp-xsmall-screen: 22.5rem; // 360px
-$bp-small-screen:  30rem; // 480px
+$bp-small-screen: 30rem; // 480px
 $bp-med-screen: 45rem; // 720px
 $bp-large-screen: 64rem; // 1024px
-$bp-xlarge-screen: 120rem; // 1920px
+$bp-full-size-desktop: $bp-large-screen;
+
+// Breakpoints for places grid on homepage
+$bp-grid-two-col: $bp-small-screen; // 480px
+$bp-grid-three-col: $bp-med-screen; // 720px
+
+// Breakpoints for reviews page.
+$bp-rating-overview-move-right: $bp-med-screen;

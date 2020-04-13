@@ -1,15 +1,75 @@
 .review-page {
-  margin: 2rem 1.5rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 90rem;
 
-  @media (min-width: $bp-small-screen) {
-    margin: 2rem 3rem;
+  // setting display flex to get access to the order property for our review-nav
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @media (min-width: $bp-rating-overview-move-right) {
+    margin: 4rem auto;
+
+    @supports (display: grid) {
+      display: grid;
+      grid-column-gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+        'nav . .'
+        'header header header'
+        'review review overview';
+    }
   }
 
-  @media (min-width: $bp-med-screen) {
-    margin: 4rem 5rem;
+  @media (min-width: $bp-full-size-desktop) {
+    padding: 2rem 8rem;
   }
+}
 
-  @media (min-width: $bp-xlarge-screen) {
-    margin: 6.4375rem 8rem 6.375rem;
+.review-nav {
+  order: -1;
+  width: 100%;
+
+  @supports (display: grid) {
+    grid-area: nav;
+  }
+}
+
+.review-header {
+  width: 100%;
+  @supports (display: grid) {
+    grid-area: header;
+  }
+}
+
+.review-container {
+  @media (min-width: $bp-rating-overview-move-right) {
+    width: calc(66% - 4rem);
+
+    @supports (display: grid) {
+      grid-area: review;
+      width: 100%;
+    }
+  }
+}
+
+.review-overview {
+  width: 100%;
+
+  @media (min-width: $bp-rating-overview-move-right) {
+    width: calc(33% - 4rem);
+    align-self: flex-start;
+    margin: 8.8rem 0 0 1rem; //magic number that aligns the review-overview with the top of review-submission.
+    flex-grow: 1;
+
+    @supports (display: grid) {
+      grid-area: overview;
+      margin-left: 0;
+      align-self: start;
+      width: 100%;
+    }
   }
 }
