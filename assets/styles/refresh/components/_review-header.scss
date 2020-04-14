@@ -22,7 +22,7 @@
   }
 
   &__title {
-    padding: 1rem;
+    padding: 0.5rem;
     position: absolute;
     background-color: $secondary-color;
     border: 0.0625rem solid $primary-color;
@@ -71,5 +71,4 @@
       margin-left: 3rem;
     }
   }
-
 }
