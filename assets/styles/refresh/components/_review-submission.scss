@@ -3,6 +3,7 @@
   border: 0.0675rem solid $primary-color; // 1px
   width: 100%;
   padding: 3rem;
+  margin-bottom: 2rem;
 
   &__reviewer {
     margin-bottom: 1.5rem;
@@ -13,7 +14,7 @@
   &__date {
     font-size: 0.875rem;
     font-family: $roboto-condensed-stack;
-    font-weight: bold;
+    font-weight: $roboto-condensed-bold;
     text-transform: uppercase;
     margin-bottom: 1rem;
     margin-top: 0.25rem;
@@ -34,7 +35,7 @@
   }
 
   &__image {
-    max-width: 50%;
+    max-width: 75%;
   }
 }
 
