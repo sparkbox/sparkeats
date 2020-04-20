@@ -50,4 +50,17 @@ module.exports = {
       via: 'placeId',
     },
   },
+  async beforeCreate(values, proceed) {
+    const places = await Place.findOne({
+      where: {
+        address: values.address,
+        city: values.city,
+        state: values.state,
+      },
+    });
+    if (places) {
+      return proceed(new Error('This place already exists in the database'));
+    }
+    return proceed();
+  },
 };
