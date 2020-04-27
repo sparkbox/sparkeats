@@ -1,4 +1,50 @@
 .review-overview {
   box-sizing: border-box;
-  border: 0.0675rem solid $primary-color; // 1px
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary-color;
+  border: 1px solid $primary-color;
+  box-shadow: 2px 4px 28px rgba(0, 0, 0, 0.08);
+  padding: 48px;
+  // not supported on ie11
+  height: max-content;
+  width: 100%;
+
+  &__stars {
+    margin-top: 24px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__address {
+    font-style: normal;
+    margin-top: 48px;
+  }
+
+  &__phone {
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+  &__address p,
+  &__phone {
+    font-family: $oswald-stack;
+    font-size: 1.1rem;
+  }
+
+  &__address p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  &__url {
+    font-family: $oswald-stack;
+    margin-top: 1rem;
+    text-decoration: none;
+    border-bottom: 2px solid $accent-color;
+    font-size: 1.1rem;
+    color: $accent-color;
+  }
 }
