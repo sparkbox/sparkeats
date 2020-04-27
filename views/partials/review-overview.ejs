@@ -1,17 +1,16 @@
-<div class="review-overview">
-  <div class="review-overview__num-reviews">
-    <p class="review-overview__title">
+<section class="review-overview">
+  <header>
+    <h1 class="review-overview__title">
       <% if (numberOfReviews > 1) { %>
         <%- numberOfReviews %> Reviews
       <% } else { %>
         <%- numberOfReviews %> Review
       <% } %>
-    </p>
-    <div class="place-card__star-rating" aria-label="<%= rating %>">
+    </h1>
+    <div class="review-overview__stars">
       <%- stars %>
     </div>
-  </div>
-  <div class="review-overview__address">
-    <%- partial('./address') %>
-  </div>
-</div>
+  </header>
+
+  <%- partial('./address') %>
+</section>
