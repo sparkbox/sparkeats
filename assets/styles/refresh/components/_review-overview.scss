@@ -6,8 +6,6 @@
   border: 1px solid $primary-color;
   box-shadow: 2px 4px 28px rgba(0, 0, 0, 0.08);
   padding: 48px;
-  // not supported on ie11
-  height: max-content;
   width: 100%;
 
   &__stars {
