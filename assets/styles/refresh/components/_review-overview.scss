@@ -22,6 +22,10 @@
   }
 
   &__phone {
+    &:hover {
+      border-bottom: 2px solid $primary-color;
+    }
+
     text-decoration: none;
     color: $primary-color;
   }
