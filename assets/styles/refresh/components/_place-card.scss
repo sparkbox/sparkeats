@@ -68,4 +68,23 @@
     font-weight: 700;
     margin-top: 0.5rem;
   }
+
+  &__header {
+    height: 5rem;
+    overflow: hidden;
+    border-bottom: 0.0625px $primary-color solid; //0.0625rem = 1px
+
+    @media (min-width: $bp-med-screen) {
+      height: 8rem;
+    }
+
+    @media (min-width: $bp-full-size-desktop) {
+      height: 10rem;
+    }
+  }
+
+  &__image {
+    min-height: 100%;
+    min-width: 100%;
+  }
 }

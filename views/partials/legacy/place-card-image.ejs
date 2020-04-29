@@ -1,0 +1,7 @@
+<header class="place-card__header">
+  <a href="/places/<%= place.id %>">
+    <% if (place.placeImage) { %>
+    <img class="place-card__image" src="<%= place.placeImage %>" alt="<%= place.placeImageAlt %>" />
+    <% } %>
+  </a>
+</header>
