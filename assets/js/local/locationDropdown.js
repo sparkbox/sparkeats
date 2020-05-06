@@ -5,6 +5,9 @@ function toggleDropdown() {
   document
     .getElementById('location-list')
     .classList.toggle('location-dropdown__list-open');
+  document
+    .querySelector('.location-dropdown__button-arrow')
+    .classList.toggle('location-dropdown__button-arrow-up');
 }
 
 /**
