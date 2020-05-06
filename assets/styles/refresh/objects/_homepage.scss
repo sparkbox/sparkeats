@@ -1,15 +1,14 @@
-.wrapper--homepage {
-  padding: 2rem 1.5rem;
+.homepage-header {
+  margin: 4rem auto 5rem auto;
+  width: 80%;
+}
 
-  @media (min-width: $bp-small-screen) {
-    padding: 2rem 3rem;
-  }
+.section-border {
+  border-top: 2px solid #000000;
+  width: 100%;
+}
 
-  @media (min-width: $bp-med-screen) {
-    padding: 4rem 5rem;
-  }
-
-  @media (min-width: $bp-full-size-desktop) {
-    padding: 6.25rem 8rem;
-  }
+.place-card__container {
+  margin: 2rem auto 4rem auto;
+  width: 80%;
 }
