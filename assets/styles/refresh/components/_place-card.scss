@@ -14,22 +14,22 @@
   }
 
   &__list-item {
-    width: 100%;
+    width: 80%;
     border-style: solid;
     border-width: 0.0625rem;
     border-color: $primary-color;
     margin-top: 2.0625rem;
 
-    @media (min-width: $bp-small-screen) {
+    @media (min-width: $bp-grid-two-col) {
       width: 43%;
     }
 
-    @media (min-width: $bp-med-screen) {
-      width: 31%;
+    @media (min-width: $bp-grid-three-col) {
+      width: 28%;
     }
 
-    @media (min-width: $bp-large-screen) {
-      width: 22%;
+    @media (min-width: $bp-full-size-desktop) {
+      width: 20%;
     }
   }
 
