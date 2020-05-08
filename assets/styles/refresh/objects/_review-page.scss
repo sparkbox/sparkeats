@@ -61,6 +61,10 @@
 .review-overview {
   width: 100%;
 
+  @media (max-width: $bp-rating-overview-move-right) {
+    margin-top: 2.5rem;
+  }
+
   @media (min-width: $bp-rating-overview-move-right) {
     width: calc(33% - 4rem);
     align-self: flex-start;
