@@ -24,8 +24,10 @@
 
   &__phone {
     &:hover {
-      border-bottom: 2px solid $primary-color;
+      color: lighten($primary-color, 20%);
+      border-bottom: 2px solid lighten($primary-color, 20%);
     }
+    border-bottom: 2px solid $primary-color;
 
     text-decoration: none;
     color: $primary-color;
@@ -43,6 +45,11 @@
   }
 
   &__url {
+    &:hover {
+      border-bottom: 2px solid lighten($accent-color, 20%);
+      color: lighten($accent-color, 20%);
+    }
+
     font-family: $oswald-stack;
     margin-top: 1rem;
     text-decoration: none;
