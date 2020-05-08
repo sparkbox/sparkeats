@@ -46,6 +46,8 @@
 }
 
 .review-container {
+  order: 2;
+
   @media (min-width: $bp-rating-overview-move-right) {
     width: calc(66% - 4rem);
 
