@@ -1,0 +1,14 @@
+.sparkeats-subtitle {
+  font-family: $oswald-stack;
+  font-size: 2rem;
+  font-weight: $oswald-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.01rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  @media (min-width: $bp-grid-three-col) {
+    text-align: left;
+    width: 66%;
+  }
+}
