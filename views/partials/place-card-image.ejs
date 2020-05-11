@@ -1,5 +1,5 @@
 <header class="place-card__header">
-  <a href="/refresh/<%= place.id %>">
+  <a href="/refresh/<%= place.id %>" aria-label="review page for <%= place.placeName%>">
     <% if (place.placeImage) { %>
       <img class="place-card__image" src="<%= place.placeImage %>" alt="<%= place.placeImageAlt %>"/>
     <% } else { %>
