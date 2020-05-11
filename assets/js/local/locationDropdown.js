@@ -5,9 +5,20 @@ function toggleDropdown() {
   document
     .getElementById('location-list')
     .classList.toggle('location-dropdown__list-open');
-  document
-    .querySelector('.location-dropdown__button-arrow')
-    .classList.toggle('location-dropdown__button-arrow-up');
+
+  const dropdownButton = document.getElementById(
+    'location-dropdown__button-main'
+  );
+
+  let isExpanded = dropdownButton.getAttribute('aria-expanded');
+
+  if (isExpanded === 'true') {
+    isExpanded = 'false';
+  } else {
+    isExpanded = 'true';
+  }
+
+  dropdownButton.setAttribute('aria-expanded', isExpanded);
 }
 
 /**
