@@ -1,13 +1,12 @@
-<address class="sparkeats-address">
+<address class="place-card__address">
   <p>
     <%= place.address %>
   </p>
-  <% if (place.phone) { %>
-    <p><a class="sparkeats-address__phone" href="tel:<%= place.phone %>"><%= place.phone %></a></p>
-  <% } %>
 </address>
-<% if (place.placeURL) { %>
-  <div class="sparkeats-address__url">
-    <a class="sparkeats-address__url-link" href="<%= place.placeURL %>">Visit Site</a>
-  </div>
+<% if (place.phone) { %>
+  <p><a class="place-card__phone" href="tel:<%= place.phone %>"><%= place.phone %></a></p>
 <% } %>
+<% if (place.placeURL) { %>
+    <a class="place-card__url" href="<%= place.placeURL %>">Visit Site</a>
+<% } %>
+
