@@ -33,7 +33,7 @@ describe('onLocationDropdownClick', () => {
   beforeEach(() => {
     document
       .getElementById('location-list')
-      .classList.add('location-dropdown__list-open');
+      .classList.add('location-dropdown__list--open');
 
     globalDoc = global.document;
     global.document = document;
@@ -57,7 +57,7 @@ describe('onLocationDropdownClick', () => {
     const dropdownList = document.getElementById('location-list');
 
     expect(
-      dropdownList.classList.contains('location-dropdown__list-open')
+      dropdownList.classList.contains('location-dropdown__list--open')
     ).to.equal(false);
   });
 });
