@@ -4,21 +4,13 @@
 function toggleDropdown() {
   document
     .getElementById('location-list')
-    .classList.toggle('location-dropdown__list-open');
+    .classList.toggle('location-dropdown__list--open');
 
   const dropdownButton = document.getElementById(
     'location-dropdown__button-main'
   );
-
-  let isExpanded = dropdownButton.getAttribute('aria-expanded');
-
-  if (isExpanded === 'true') {
-    isExpanded = 'false';
-  } else {
-    isExpanded = 'true';
-  }
-
-  dropdownButton.setAttribute('aria-expanded', isExpanded);
+  const isExpanded = dropdownButton.getAttribute('aria-expanded') === 'true';
+  dropdownButton.setAttribute('aria-expanded', !isExpanded);
 }
 
 /**
