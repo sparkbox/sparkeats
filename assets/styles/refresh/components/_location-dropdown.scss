@@ -18,7 +18,7 @@
     border: 1px solid #4f4f4f;
   }
 
-  &__button[aria-expanded='false'] .location-dropdown__button-arrow {
+  &__button .location-dropdown__button-arrow {
     display: block;
     float: right;
     height: 0.5em;
@@ -32,16 +32,7 @@
   }
 
   &__button[aria-expanded='true'] .location-dropdown__button-arrow {
-    display: block;
-    float: right;
-    height: 0.5em;
-    width: 0.5em;
     transform: rotate(-45deg);
-    border: solid $accent-color;
-    border-width: 0.15rem 0.15rem 0 0;
-
-    // center the arrow vertically.
-    margin: 0.2rem 0.25rem 0 0;
   }
 
   &__button-text {
