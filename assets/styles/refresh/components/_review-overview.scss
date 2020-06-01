@@ -19,6 +19,7 @@
 
   &__address {
     font-style: normal;
+    margin-top: 48px;
   }
 
   &__phone {
@@ -58,10 +59,6 @@
   }
 
   @media (min-width: $bp-med-screen) {
-    order: 1;
-
-    &__address {
-      margin-top: 48px;
-    }
+    order: 2;
   }
 }
