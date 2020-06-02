@@ -1,5 +1,6 @@
 body {
   font-family: $roboto-condensed-stack;
   color: $primary-color;
-  background-color: $secondary-color;
+  background: url('/design/background-img.png');
+  background-blend-mode: darken;
 }
