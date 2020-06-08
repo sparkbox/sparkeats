@@ -2,6 +2,7 @@
   height: 22.25rem;
   background: url(/design/review-header_bg.svg) no-repeat;
   background-size: cover;
+  position: relative;
 
   @media (min-width: $bp-large-screen) {
     height: 27.25rem;
@@ -22,20 +23,24 @@
   }
 
   &__title {
-    padding: 0.5rem;
+    padding: 1rem;
     position: absolute;
     background-color: $secondary-color;
     border: 0.0625rem solid $primary-color;
-    margin-left: 0.5rem;
-    margin-top: 13.5rem;
+    bottom: 1rem;
+    left: 1rem;
+    width: 10rem;
 
     @media (min-width: $bp-small-screen) {
-      margin-left: 3rem;
+      bottom: 3rem;
+      left: 3rem;
+      padding: 2rem;
+      width: 20rem;
     }
 
     @media (min-width: $bp-large-screen) {
+      padding: 3rem;
       width: 42.6875rem;
-      height: 10.75rem;
     }
   }
 
@@ -44,15 +49,14 @@
     font-size: 1.4rem;
     line-height: 121.6%;
     font-weight: 700;
+    margin-bottom: 0.9375rem;
 
     @media (min-width: $bp-med-screen) {
       font-size: 2rem;
-      margin: 0rem 7rem 0.4rem 2rem;
     }
 
     @media (min-width: $bp-large-screen) {
       font-size: 2.375rem;
-      margin: 3.0625rem 13.5rem 0.9375rem 3rem;
     }
   }
 
@@ -64,11 +68,6 @@
 
     @media (min-width: $bp-med-screen) {
       font-size: 0.875rem;
-      margin-left: 2rem;
-    }
-
-    @media (min-width: $bp-large-screen) {
-      margin-left: 3rem;
     }
   }
 }
