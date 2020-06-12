@@ -4,9 +4,13 @@
   </p>
 </address>
 <% if (place.phone) { %>
-  <p><a class="place-card__phone" href="tel:<%= place.phone %>"><%= place.phone %></a></p>
+  <p>
+    <a class="review-overview__phone" href="tel:<%= place.phone %>"><%= place.phone %></a>
+  </p>
 <% } %>
 <% if (place.placeURL) { %>
-    <a class="place-card__url" href="<%= place.placeURL %>">Visit Site</a>
+    <p>
+      <a class="review-overview__url" href="<%= place.placeURL %>">Visit Site</a>
+    </p>
 <% } %>
 </address>
