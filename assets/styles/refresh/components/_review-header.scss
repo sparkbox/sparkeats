@@ -25,6 +25,7 @@
   &__title {
     padding: 1rem;
     position: absolute;
+    background-color: $secondary-color;
     background: url('/design/background-img.png');
     border: 0.0625rem solid $primary-color;
     bottom: 1rem;
