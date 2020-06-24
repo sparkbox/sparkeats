@@ -67,6 +67,7 @@
     "server": "nodemon app.js",
     "test:unit": "mocha test/unit/*.test.js --require test-helper.js --require @babel/register",
     "test:integration": "mocha test/lifecycle.test.js test/ test/integration/controllers/**/*.test.js",
+    "test": "npm run test:integration && npm run test:unit",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'"
   },
   "main": "app.js",
