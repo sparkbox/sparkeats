@@ -36,6 +36,6 @@ before(function (done) {
 after(function (done) {
   // here you can clear fixtures, etc.
   // (e.g. you might want to destroy the records you created above)
-  process.exit();
   sails.lower(done);
+  process.exit();
 });
