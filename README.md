@@ -1,15 +1,24 @@
 # Sparkeats
- 
-**Sparkboxers review food and drink places so you can eat well**
 
-Built with [Sails.js](https://sailsjs.com/).
+Welcome to Sparkeats!
 
-Welcome to Sparkeats! The purpose of this site is to provide reviews and recommendations from sparkboxers of places we love to eat and drink.
+Sparkeats is a restaurant review app created by [Sparkbox Apprentices](https://apprentices.sparkbox.com/) during the 2017, 2018, and 2020 Full-Stack Web Development apprenticeships.
 
-## To Run the Site Locally
+## Prerequisites
 
-Instructions for running the site locally are saved in a wiki here: [https://github.com/sparkbox/sparkeats/wiki/Running-Sparkeats-Locally](https://github.com/sparkbox/sparkeats/wiki/Running-Sparkeats-Locally)
+### Install Yarn
+```sh
+npm install --global yarn
+```
 
-#### License
+## Setup
 
-&copy; Sparkbox Apprenticeship 7.0 and 8.0
+### Install dependencies
+```sh
+yarn
+```
+
+### Develop app
+```sh
+yarn dev
+```

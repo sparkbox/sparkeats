@@ -1,9 +1,0 @@
-{
-  "env": {
-    "development": {
-      "plugins": [
-        "babel-plugin-rewire"
-      ]
-    }
-  }
-}
