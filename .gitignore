@@ -25,3 +25,5 @@ dist-ssr
 
 .lsp
 .clj-kondo
+.calva
+.nrepl-port
