@@ -1,0 +1,21 @@
+name: sparkeats-web
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Install Yarn
+        run: npm install --location=global yarn
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build src
+        run: yarn build
