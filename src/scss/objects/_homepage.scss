@@ -2,19 +2,19 @@
   padding-top: 1px;
 
   &__header {
-    margin: 4rem auto 5rem auto;
+    margin: 4rem auto 5rem;
     width: 80%;
   }
 
   &__cards {
-    margin: 2rem auto 4rem auto;
+    margin: 2rem auto 4rem;
     width: 80%;
     padding-top: 3rem;
   }
 
-  .homepage__cards::before {
+  &__cards::before {
     content: '';
-    border-top: 2px solid #000000;
+    border-top: 2px solid #000;
     display: block;
     position: absolute;
     left: 0;

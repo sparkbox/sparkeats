@@ -1,6 +1,6 @@
 .review-header {
   height: 22.25rem;
-  background: url(./img/review-header_bg.svg) no-repeat;
+  background: url("./img/review-header_bg.svg") no-repeat;
   background-size: cover;
   position: relative;
 
@@ -25,8 +25,8 @@
   &__title {
     padding: 1rem;
     position: absolute;
-    background-color: $secondary-color;
-    background: url('./img/background-img.png');
+    background: $secondary-color;
+    background: url("./img/background-img.png");
     border: 0.0625rem solid $primary-color;
     bottom: 1rem;
     left: 1rem;

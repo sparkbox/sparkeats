@@ -39,8 +39,10 @@
   }
 }
 
-.place-card__star-rating {
-  @media (min-width: $bp-small-screen) {
-    clear: both;
+.place-card {
+  &__star-rating {
+    @media (min-width: $bp-small-screen) {
+      clear: both;
+    }
   }
 }

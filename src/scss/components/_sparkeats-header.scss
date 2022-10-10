@@ -17,7 +17,9 @@
 }
 
 @media screen and (min-width: $bp-med-screen) {
-  .sparkeats-header__logo {
-    margin-left: 4em;
+  .sparkeats-header {
+    &__logo {
+      margin-left: 4em;
+    }
   }
 }
