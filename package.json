@@ -11,7 +11,9 @@
     "migrate": "nbb -m migrate-sparkeats place placeImage review reviewImage",
     "postinstall": "husky install",
     "lint:ts": "eslint src",
-    "lint:scss": "stylelint src/**/*.scss"
+    "lint:scss": "stylelint src/**/*.scss",
+    "test:e2e": "yarn cypress open",
+    "test:e2e:ci": "yarn cypress run"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -21,6 +23,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@testing-library/cypress": "^8.0.3",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.3.3",
@@ -29,6 +32,7 @@
     "@vitejs/plugin-react": "^2.1.0",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
+    "cypress": "^10.10.0",
     "husky": "^8.0.1",
     "mysql2": "^2.3.3",
     "nbb": "^0.7.135",

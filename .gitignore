@@ -27,3 +27,4 @@ dist-ssr
 .clj-kondo
 .calva
 .nrepl-port
+cypress/videos
