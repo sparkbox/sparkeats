@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "migrate": "nbb -m migrate-sparkeats place placeImage review reviewImage"
+    "migrate": "nbb -m migrate-sparkeats place placeImage review reviewImage",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
