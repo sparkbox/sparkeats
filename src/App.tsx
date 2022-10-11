@@ -1,8 +1,9 @@
 import { Outlet } from 'react-router-dom'
+import './App.scss'
 
 function App() {
   return (
-    <div className="App homepage">
+    <div className="homepage">
       <header>Sparkeats Header</header>
       <Outlet />
     </div>
