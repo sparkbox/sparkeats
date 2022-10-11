@@ -3,13 +3,6 @@
 //Admin empty export to make this spec file a module
 export { }
 
-const restaurantPlacardSelector = 'li.place-card__list-item'
-const dropdownSelector = '.location-dropdown__button-text'
-const dropdownOptionsSelector = 'li button.location-dropdown__list-button'
-const footerSelector = '.footer'
-const placeCardCitySelector = '.place-card__city'
-const linkOfRestaurantSelector = '.place-card__name-link'
-
 describe('some basic sanity tests', () => {
 
   context('a few smoke tests', () => {
@@ -19,38 +12,34 @@ describe('some basic sanity tests', () => {
       cy.visit('/')
 
       cy.log('**Verifying that the banner is present**')
-      cy.get('.sparkeats-header').should('be.visible')
-      cy.get('.sparkeats-header__logo').should('be.visible')
-        .and('have.attr', 'href', '/refresh')
+      cy.findByRole('heading', { name: 'Sparkeats' }).should('be.visible')
+      cy.findByRole('link', { name: 'Sparkeats logo' }).should('be.visible')
 
       cy.log('**Verifying the locaton picker region**')
-      cy.get('.sparkeats-subtitle').should('be.visible')
-        .and($el => {
-
-          expect($el.text().trim().replaceAll('  ', ' ')).to.equal('sparkboxers review food and drink places so you can eat right')
-        }
-        )
+      cy.findByRole('button', { name: 'All Places' }).should('be.visible')
     })
 
     it('should show the location options properly', () => {
       cy.log('**Verifying the dropdown options**')
-      cy.get(dropdownSelector).should('have.text', 'All Places')
-      cy.get('.location-dropdown__button').click()
-      cy.get(dropdownOptionsSelector).should($options => {
-        expect($options.length > 0).to.be.true
+      cy.findByRole('button', { name: 'All Places' }).click()
+      cy.findByRole('heading', { name: 'Pick a Location' }).parent().within(() => {
+        cy.findAllByRole('listitem').should($options => {
+          expect($options.length > 0).to.be.true
+        })
       })
+
     })
 
     it('should show the restaurant cards properly', () => {
       cy.log('**Verifying that the restaurant cards are shown up correctly**')
-      cy.get(restaurantPlacardSelector).should($options => {
+      cy.findAllByRole('link', { name: /\d+ Review[\S]*/ }).should($options => {
         expect($options.length > 0).to.be.true
       })
     })
 
     it('should have the footer displayed properly', () => {
       cy.log('**Verifying the footer region**')
-      cy.get(footerSelector).should($el => {
+      cy.findByRole('contentinfo').should($el => {
 
         const textInFooterWithoutSpaces = $el.text().trim().replaceAll('\n', '').replaceAll(' ', '')
 
@@ -71,18 +60,22 @@ describe('some basic sanity tests', () => {
       cy.visit('/')
 
       cy.log('**Select a location randomly from the list**')
-      cy.get(dropdownSelector).click()
-      cy.get(dropdownOptionsSelector).then($options => {
-        let listOfLocations = $options.get().map(option => option.textContent!.trim())
-        randomLocation = listOfLocations[Math.floor(Math.random() * listOfLocations.length)]
+      cy.findByRole('button', { name: 'All Places' }).click()
 
-        cy.log(`The randomly chosen location is ${randomLocation}`)
-        cy.get(dropdownOptionsSelector).contains(randomLocation).click()
+      cy.findByRole('heading', { name: 'Pick a Location' }).parent().within(() => {
+        cy.findAllByRole('listitem').as('options').then($options => {
+          let listOfLocations = $options.get().map(option => option.textContent!.trim())
+          randomLocation = listOfLocations[Math.floor(Math.random() * listOfLocations.length)]
+
+          cy.log(`The randomly chosen location is ${randomLocation}`)
+          cy.get('@options').contains(randomLocation).click()
+        })
       })
 
       cy.log('**Verify that the filtered list is correct**')
-      cy.get(restaurantPlacardSelector).not('.hidden').within(() => {
-        cy.get(placeCardCitySelector).each(($cityTextInCard, index) => {
+      cy.findAllByRole('list').within(() => {
+        cy.findAllByText(randomLocation.toUpperCase(), { exact: false }).each(($cityTextInCard, index) => {
+          debugger
           expect($cityTextInCard.text()).to.include(randomLocation)
         })
       })
@@ -91,15 +84,14 @@ describe('some basic sanity tests', () => {
     it('should open the details page for a selected restaurant', () => {
 
       cy.log('**Randomly click one of the restaurants from the filtered list**')
-      cy.get(restaurantPlacardSelector).not('.hidden').as('filteredList').then($restaurants => {
+      cy.findAllByRole('list').as('filteredList').then($restaurants => {
         let listOfRestaurants = $restaurants.get().map(option => option.textContent!.trim())
         let randomIndex = Math.floor(Math.random() * listOfRestaurants.length)
 
-        cy.get(restaurantPlacardSelector).not('.hidden').then($options => {
-          cy.get('@filteredList').within(() => {
-            cy.get(linkOfRestaurantSelector).eq(randomIndex).click()
-          })
+        cy.get('@filteredList').within(() => {
+          cy.findAllByRole('heading', { level: 3 }).eq(randomIndex).click()
         })
+
       })
     })
   })
