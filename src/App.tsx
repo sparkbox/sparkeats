@@ -1,6 +1,11 @@
+import { Outlet } from 'react-router-dom'
+
 function App() {
   return (
-    <div className="">hello sparkeats</div>
+    <div className="App homepage">
+      <header>Sparkeats Header</header>
+      <Outlet />
+    </div>
   )
 }
 
