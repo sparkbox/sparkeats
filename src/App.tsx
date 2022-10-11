@@ -1,6 +1,12 @@
+import { Outlet } from 'react-router-dom'
+import './App.scss'
+
 function App() {
   return (
-    <div className="">hello sparkeats</div>
+    <div className="homepage">
+      <header>Sparkeats Header</header>
+      <Outlet />
+    </div>
   )
 }
 
