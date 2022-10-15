@@ -57,9 +57,9 @@
   (p/let [connection (mysql/createConnection database)]
     (doseq [tablename tablenames]
       (p/let [[rows] (.execute connection (select-all tablename))]
-        (if (has-image? (first rows))
-          (write-image-files tablename rows)
-          (write-json-file tablename rows))))
+        (write-json-file tablename rows)
+        (when (has-image? (first rows))
+          (write-image-files tablename rows))))
     (.end connection)))
 
 ;; entry
