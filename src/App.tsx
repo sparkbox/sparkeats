@@ -3,8 +3,8 @@ import './App.scss'
 
 function App() {
   return (
-    <div className="homepage">
-      <header>Sparkeats Header</header>
+    <div>
+      <header>Site Header</header>
       <Outlet />
     </div>
   )
