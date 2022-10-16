@@ -20,6 +20,10 @@ Follow the [Cloning a repository](https://docs.github.com/en/repositories/creati
 1. Set up Sparkeats for development
 Follow the [Setup](https://github.com/sparkbox/sparkeats#setup) instructions in the README.
 
+### Commit changes
+
+- Squash commits into a single commit and rebase against `main`. See [Advanced Techniques in Git](https://sparkbox.com/foundry/advanced_git_techniques_rebasing_interactive_rebase_with_git) to learn how to do an interactive rebase.
+- Write a [semantic commit message](https://sparkbox.com/foundry/semantic_commit_messages) using a [conventional commit](https://www.conventionalcommits.org/) type. 
 ### Create a pull request
 
 Follow the GitHub [Creating a pull request from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) to create a pull request.
