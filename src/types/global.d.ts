@@ -1,6 +1,10 @@
 export {};
 
 declare global {
+  interface Window {
+    __SPARKEATS_VERSION__: string;
+  }
+
   type Location = {
     id: number;
     name: string;
