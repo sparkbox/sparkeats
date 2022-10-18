@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter basename={`${import.meta.env['BASE_URL']}`}>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/" element={<HomePage locations={locations} />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/locations/:id" element={<div>Location Page</div>} />
           <Route path="/locations/new" element={<div>New Location Page</div>} />
           <Route path="/reviews/new" element={<div>New Review Page</div>} />
