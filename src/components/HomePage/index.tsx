@@ -1,3 +1,4 @@
+import HomeHeader from '../HomeHeader';
 import { LocationCards } from './LocationCards';
 import { useLocations } from '../../useLocations';
 
@@ -6,7 +7,7 @@ export function HomePage() {
 
   return (
     <div className="homepage">
-      <header>Home Header</header>
+      <HomeHeader />
       <LocationCards locations={locations} />
     </div>
   );

@@ -62,6 +62,7 @@
 //    for example media object known from OOCSS.
 @import 'scss/objects/review-page';
 @import 'scss/objects/homepage';
+@import 'scss/objects/home-header';
 
 // =====================================================================
 // 6. Components
@@ -76,9 +77,9 @@
 @import 'scss/components/review-header';
 @import 'scss/components/review-nav';
 @import 'scss/components/review-submission';
-@import 'scss/components/sparkeats-subtitle';
-@import 'scss/components/location-dropdown';
+@import 'scss/components/site-subtitle';
 @import 'scss/components/location-new';
+@import 'scss/components/location-select';
 
 // =====================================================================
 // 7. Vendors

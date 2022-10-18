@@ -161,6 +161,13 @@ function transformLocations(legacyPlaces: LegacyPlace[]): Locations {
     .reduce(mapLocation, {});
 }
 
-const locations = transformLocations(legacyPlaces);
+function getUniqueCities(locations: Locations): string[] {
+  return Array.from(
+    new Set(Object.values(locations).map((location) => location.city))
+  );
+}
 
-export { locations };
+const locations = transformLocations(legacyPlaces);
+const uniqueCities = getUniqueCities(locations);
+
+export { locations, uniqueCities };

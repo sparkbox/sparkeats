@@ -1,0 +1,45 @@
+.location-select {
+  @media (min-width: $bp-grid-three-col) {
+    width: 33%;
+  }
+
+  &__title {
+    font-family: $roboto-stack;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__menu {
+    appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #4f4f4f;
+    padding: 0.5rem;
+    background-color: $tertiary-color;
+    font-family: $roboto-stack;
+    text-transform: capitalize;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    line-height: 120%;
+
+    // Custom select arrow
+    padding-right: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 0.5rem);
+    background-size: 1rem auto;
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 20' xmlns='http://www.w3.org/2000/svg'><path d='M4.5 1 15 11.3 25.5 1l3.8 3.9L15 19 .7 4.8 4.5.9Z' fill='%23C92400'/></svg>");
+  }
+
+  &__button .location-select {
+    &__button-arrow {
+      display: block;
+      float: right;
+      height: 0.5em;
+      width: 0.5em;
+      transform: rotate(135deg);
+      border: solid $accent-color;
+      border-width: 0.15rem 0.15rem 0 0;
+    }
+  }
+}
