@@ -53,7 +53,7 @@ declare global {
     createdAt: number;
     updatedAt: number;
     fd: string;
-    file: {type: string, data: Number[]};
+    file: {type: string, data: number[]};
     id: number;
   };
   

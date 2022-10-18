@@ -1,4 +1,4 @@
-function HomePage({ locations }: { locations: Locations }) {
+function HomePage() {
   return (
     <div className="homepage">
       <header>Home Header</header>
