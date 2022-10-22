@@ -1,6 +1,6 @@
-// PLACE CARD GRID STYLES
+// LOCATION CARD GRID STYLES
 
-.place-card {
+.location-card {
   border-style: solid;
   border-width: 0.0625rem;
   border-color: $primary-color;
@@ -34,7 +34,7 @@
     min-height: 100%;
   }
 
-  &__title {
+  &__heading {
     padding: 1rem;
     border-bottom: 0.0675rem solid $primary-color;
   }

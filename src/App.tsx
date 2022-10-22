@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import './App.scss';
 import { SiteHeader } from './components/SiteHeader';
 
-function App() {
+export function App() {
   return (
     <div>
       <SiteHeader />
@@ -10,5 +10,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

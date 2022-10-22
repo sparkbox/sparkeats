@@ -1,12 +1,71 @@
+/**
+ * Locations
+ * @module locations
+ * This module transforms the legacy location data into an updated `locations` object.
+ * The data was migrated from SQL tables to JSON and image files using the `migrate_sparkeats.cljs` script.
+ */
+
 import legacyPlaces from '../data/place.json';
 import legacyReviews from '../data/review.json';
 import legacyPlaceImages from '../data/placeImage.json';
 import legacyReviewImages from '../data/reviewImage.json';
+import { Location, Review } from './types/sparkeats';
 
-function getImageURL(imageID: string, legacyImages: LegacyImage[]) {
-  return (
-    legacyImages.find((image) => image.id.toString() === imageID)?.fd ?? ''
-  );
+type LegacyPlace = {
+  createdAt: number;
+  updatedAt: number;
+  id: number;
+  placeName: string;
+  city: string;
+  state: string;
+  address: string;
+  phone: string;
+  placeImage: string;
+  fd: string;
+  placeImageAlt: string;
+  placeURL: string;
+  placeWebsiteDisplay: string;
+};
+
+type LegacyImage = {
+  createdAt: number;
+  updatedAt: number;
+  fd: string;
+  file: { type: string; data: number[] };
+  id: number;
+};
+
+type LegacyReview = {
+  createdAt: number;
+  updatedAt: number;
+  id: number;
+  reviewText: string;
+  reviewerName: string;
+  numberOfStars: number;
+  reviewImage: string;
+  reviewImageAlt: string;
+  placeId: number;
+};
+
+function getImageURL(
+  imagePath: string,
+  imageID: string,
+  legacyImages: LegacyImage[]
+) {
+  const imageName = legacyImages.find(
+    (image) => image.id.toString() === imageID
+  )?.fd;
+  return imageName
+    ? `${imagePath}${imageName}`
+    : '/img/location-card-header_bg.png';
+}
+
+function getImageDescription(imageDescription: string) {
+  return imageDescription || 'Placeholder image description';
+}
+
+function getLocationURL(id: number): string {
+  return `locations/${id}`;
 }
 
 function transformReview({
@@ -22,8 +81,8 @@ function transformReview({
     id,
     reviewerName,
     text,
-    imageURL: getImageURL(imageID, legacyReviewImages),
-    imageDescription: reviewImageAlt,
+    imageURL: getImageURL('img/reviews/', imageID, legacyReviewImages),
+    imageDescription: getImageDescription(reviewImageAlt),
     starRating,
     placeID,
   };
@@ -35,7 +94,7 @@ function getReviews(placeID: number) {
     .map(transformReview);
 }
 
-function transformLocations(legacyPlaces: LegacyPlace[]): Locations {
+function transformLocations(legacyPlaces: LegacyPlace[]): Location[] {
   return legacyPlaces.map(
     ({
       id,
@@ -46,7 +105,7 @@ function transformLocations(legacyPlaces: LegacyPlace[]): Locations {
       phone,
       placeURL: url,
       placeImage: imageID,
-      placeImageAlt: imageDescription,
+      placeImageAlt,
     }) => {
       return {
         id,
@@ -57,8 +116,9 @@ function transformLocations(legacyPlaces: LegacyPlace[]): Locations {
         address,
         phone,
         url,
-        imageURL: getImageURL(imageID, legacyPlaceImages),
-        imageDescription,
+        locationURL: getLocationURL(id),
+        imageURL: getImageURL('img/locations/', imageID, legacyPlaceImages),
+        imageDescription: getImageDescription(placeImageAlt),
         reviews: getReviews(id),
       };
     }
