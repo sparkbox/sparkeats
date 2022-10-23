@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router-dom'
-import './App.scss'
+import { Outlet } from 'react-router-dom';
+import './App.scss';
 import { SiteHeader } from './components/SiteHeader';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <SiteHeader />
       <Outlet />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

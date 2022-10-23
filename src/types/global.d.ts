@@ -24,7 +24,7 @@ declare global {
   type Review = {
     id: number;
     reviewerName: string;
-    text: string; 
+    text: string;
     imageURL: string;
     imageDescription: string;
     starRating: number;
@@ -34,8 +34,8 @@ declare global {
   type Reviews = Review[];
 
   type LegacyPlace = {
-    createdAt: number,
-    updatedAt: number,
+    createdAt: number;
+    updatedAt: number;
     id: number;
     placeName: string;
     city: string;
@@ -53,10 +53,10 @@ declare global {
     createdAt: number;
     updatedAt: number;
     fd: string;
-    file: {type: string, data: number[]};
+    file: { type: string; data: number[] };
     id: number;
   };
-  
+
   type LegacyReview = {
     createdAt: number;
     updatedAt: number;
@@ -66,6 +66,6 @@ declare global {
     numberOfStars: number;
     reviewImage: string;
     reviewImageAlt: string;
-    placeId: number
+    placeId: number;
   };
 }

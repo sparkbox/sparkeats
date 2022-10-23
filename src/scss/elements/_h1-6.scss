@@ -1,9 +1,15 @@
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $oswald-stack;
   color: $primary-color;
   margin: 0;
 }
 
-h5, h6 {
+h5,
+h6 {
   font-family: $roboto-condensed-stack;
 }

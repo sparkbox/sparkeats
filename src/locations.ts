@@ -4,9 +4,9 @@ import legacyPlaceImages from '../data/placeImage.json';
 import legacyReviewImages from '../data/reviewImage.json';
 
 function getImageURL(imageID: string, legacyImages: LegacyImage[]) {
-  return legacyImages
-    .find((image) => image.id.toString() === imageID)
-    ?.fd ?? '';
+  return (
+    legacyImages.find((image) => image.id.toString() === imageID)?.fd ?? ''
+  );
 }
 
 function transformReview({
@@ -16,7 +16,7 @@ function transformReview({
   numberOfStars: starRating,
   reviewImage: imageID,
   reviewImageAlt,
-  placeId: placeID
+  placeId: placeID,
 }: LegacyReview): Review {
   return {
     id,
@@ -36,35 +36,35 @@ function getReviews(placeID: number) {
 }
 
 function transformLocations(legacyPlaces: LegacyPlace[]): Locations {
-  return legacyPlaces.map(({
-    id,
-    placeName: name,
-    city,
-    state: region,
-    address,
-    phone,
-    placeURL: url,
-    placeImage: imageID,
-    placeImageAlt: imageDescription
-  }) => {
-    return {
+  return legacyPlaces.map(
+    ({
       id,
-      name,
+      placeName: name,
       city,
-      region,
-      country: '', // TODO
+      state: region,
       address,
       phone,
-      url,
-      imageURL: getImageURL(imageID, legacyPlaceImages), 
-      imageDescription,
-      reviews: getReviews(id)
-    };
-  });
+      placeURL: url,
+      placeImage: imageID,
+      placeImageAlt: imageDescription,
+    }) => {
+      return {
+        id,
+        name,
+        city,
+        region,
+        country: '', // TODO
+        address,
+        phone,
+        url,
+        imageURL: getImageURL(imageID, legacyPlaceImages),
+        imageDescription,
+        reviews: getReviews(id),
+      };
+    }
+  );
 }
 
 const locations = transformLocations(legacyPlaces);
 
-export {
-  locations,
-};
+export { locations };

@@ -1,9 +1,9 @@
 p {
-  font-family:$roboto-condensed-stack;
+  font-family: $roboto-condensed-stack;
   margin: 0;
   color: $primary-color;
-  
-  &+& {
+
+  & + & {
     margin-top: 1em;
   }
 }
