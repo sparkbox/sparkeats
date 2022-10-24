@@ -57,7 +57,7 @@ function getImageURL(
   )?.fd;
   return imageName
     ? `${imagePath}${imageName}`
-    : '/img/location-card-header_bg.png';
+    : 'img/location-card-header_bg.png';
 }
 
 function getImageDescription(imageDescription: string) {
