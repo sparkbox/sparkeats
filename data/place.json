@@ -178,20 +178,5 @@
     "placeImageAlt": "Gaucho Parrilla Argentina",
     "placeURL": "http://www.eatgaucho.com/",
     "placeWebsiteDisplay": "www.eatgaucho.com"
-  },
-  {
-    "createdAt": 1593110876860,
-    "updatedAt": 1593110876860,
-    "id": 122,
-    "placeName": "a new place",
-    "city": "a new city",
-    "state": "SD",
-    "address": "7140 Manchester St.",
-    "phone": "(555) 555-5555",
-    "placeImage": "",
-    "fd": "",
-    "placeImageAlt": "",
-    "placeURL": "",
-    "placeWebsiteDisplay": ""
   }
 ]

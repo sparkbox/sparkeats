@@ -196,16 +196,5 @@
     "reviewImage": "42",
     "reviewImageAlt": "Jeet India",
     "placeId": 102
-  },
-  {
-    "createdAt": 1593110876907,
-    "updatedAt": 1593110876907,
-    "id": 182,
-    "reviewText": "a new review",
-    "reviewerName": "John Doe",
-    "numberOfStars": 5,
-    "reviewImage": "",
-    "reviewImageAlt": "",
-    "placeId": 1
   }
 ]
