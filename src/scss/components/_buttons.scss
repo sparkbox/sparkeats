@@ -16,4 +16,25 @@
 
     margin: 2.5rem 0;
   }
+
+  &__secondary {
+    font-family: $roboto-stack;
+    font-weight: 900;
+    font-size: 1.125rem;
+    line-height: 1.3125rem;
+    letter-spacing: 0.04rem;
+    color: $primary-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    min-width: 8rem;
+    cursor: pointer;
+
+    &:active {
+      color: $primary-color;
+    }
+
+    &:visited {
+      color: $primary-color;
+    }
+  }
 }

@@ -6,9 +6,9 @@ export function HomePage() {
   const locations = useLocations();
 
   return (
-    <div className="homepage">
+    <main className="homepage">
       <HomeHeader />
       <LocationCards locations={locations} />
-    </div>
+    </main>
   );
 }

@@ -28,3 +28,4 @@ dist-ssr
 .calva
 .nrepl-port
 cypress/videos
+cypress/screenshots

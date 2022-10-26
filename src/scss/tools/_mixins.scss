@@ -28,3 +28,9 @@
     overflow: visible;
   }
 }
+
+@mixin primary-font() {
+  font-family: $roboto-stack;
+  font-weight: $roboto-bold;
+  font-style: normal;
+}
