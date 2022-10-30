@@ -7,6 +7,7 @@ const LocationCardImage = ({ location }: { location: Location }) => {
       <Link
         to={location.locationURL}
         aria-label={`review page for ${location.name}`}
+        state={{ id: location.id }}
       >
         <img
           className="location-card__image"
@@ -25,7 +26,7 @@ const LocationHeading = ({ location }: { location: Location }) => {
         <Link
           className="location-card__name-link"
           to={location.locationURL}
-          state={{ location }}
+          state={{ id: location.id }}
         >
           {location.name}
         </Link>
@@ -39,11 +40,11 @@ const LocationHeading = ({ location }: { location: Location }) => {
 
 const LocationAddress = ({ location }: { location: Location }) => {
   return (
-    <address className="review-overview__address">
+    <address className="review-details__address">
       <p>{location.address}</p>
       {location.phone && (
         <p>
-          <a className="review-overview__phone" href={`tel:${location.phone}`}>
+          <a className="review-details__phone" href={`tel:${location.phone}`}>
             {location.phone}
           </a>
         </p>

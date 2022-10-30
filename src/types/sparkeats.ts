@@ -1,3 +1,21 @@
+export type Locations = {
+  [key: string]: {
+    id: number;
+    name: string;
+    city: string;
+    region: string;
+    country: string;
+    address: string;
+    phone: string;
+    url: string;
+    locationURL: string;
+    imageURL: string;
+    imageDescription: string;
+    reviews: Review[];
+    reviewCountText: string;
+  };
+};
+
 export type Location = {
   id: number;
   name: string;
@@ -11,13 +29,14 @@ export type Location = {
   imageURL: string;
   imageDescription: string;
   reviews: Review[];
+  reviewCountText: string;
 };
 
 export type Review = {
   id: number;
   reviewerName: string;
   text: string;
-  imageURL: string;
+  imageURL: string | null;
   imageDescription: string;
   starRating: number;
   placeID: number;

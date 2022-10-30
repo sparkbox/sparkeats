@@ -1,12 +1,12 @@
 /* stylelint-disable scss/no-global-function-names */
 
-.review-overview {
+.review-details {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   background: $secondary-color;
-  background: url('./img/background-img.png');
+  background: url('/img/background-img.png');
   border: 1px solid $primary-color;
   box-shadow: 2px 4px 28px rgba(0 0 0 / 8%);
   padding: 3rem 3rem 1rem;

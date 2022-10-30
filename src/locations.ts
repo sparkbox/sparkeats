@@ -9,7 +9,7 @@ import legacyPlaces from '../data/place.json';
 import legacyReviews from '../data/review.json';
 import legacyPlaceImages from '../data/placeImage.json';
 import legacyReviewImages from '../data/reviewImage.json';
-import { Location, Review } from './types/sparkeats';
+import { Locations, Location, Review } from './types/sparkeats';
 
 type LegacyPlace = {
   createdAt: number;
@@ -47,7 +47,18 @@ type LegacyReview = {
   placeId: number;
 };
 
-function getImageURL(
+function getReviewImageURL(
+  imagePath: string,
+  imageID: string,
+  legacyImages: LegacyImage[]
+) {
+  const imageName = legacyImages.find(
+    (image) => image.id.toString() === imageID
+  )?.fd;
+  return imageName ? `${imagePath}${imageName}` : null;
+}
+
+function getLocationImageURL(
   imagePath: string,
   imageID: string,
   legacyImages: LegacyImage[]
@@ -81,7 +92,7 @@ function transformReview({
     id,
     reviewerName,
     text,
-    imageURL: getImageURL('img/reviews/', imageID, legacyReviewImages),
+    imageURL: getReviewImageURL('/img/reviews/', imageID, legacyReviewImages),
     imageDescription: getImageDescription(reviewImageAlt),
     starRating,
     placeID,
@@ -94,35 +105,58 @@ function getReviews(placeID: number) {
     .map(transformReview);
 }
 
-function transformLocations(legacyPlaces: LegacyPlace[]): Location[] {
-  return legacyPlaces.map(
-    ({
-      id,
-      placeName: name,
-      city,
-      state: region,
-      address,
-      phone,
-      placeURL: url,
-      placeImage: imageID,
-      placeImageAlt,
-    }) => {
-      return {
+function getReviewCountText(reviewCount: number): string {
+  return reviewCount !== 1 ? `${reviewCount} Reviews` : `${reviewCount} Review`;
+}
+
+function mapLocation(
+  locationMap: { [key: string]: Location },
+  location: Location
+): { [key: string]: Location } {
+  return {
+    [location.id]: location,
+    ...locationMap,
+  };
+}
+
+function transformLocations(legacyPlaces: LegacyPlace[]): Locations {
+  return legacyPlaces
+    .map(
+      ({
         id,
-        name,
+        placeName: name,
         city,
-        region,
-        country: '', // TODO
+        state: region,
         address,
         phone,
-        url,
-        locationURL: getLocationURL(id),
-        imageURL: getImageURL('img/locations/', imageID, legacyPlaceImages),
-        imageDescription: getImageDescription(placeImageAlt),
-        reviews: getReviews(id),
-      };
-    }
-  );
+        placeURL: url,
+        placeImage: imageID,
+        placeImageAlt,
+      }) => {
+        const reviews = getReviews(id);
+
+        return {
+          id,
+          name,
+          city,
+          region,
+          country: '',
+          address,
+          phone,
+          url,
+          locationURL: getLocationURL(id),
+          imageURL: getLocationImageURL(
+            '/img/locations/',
+            imageID,
+            legacyPlaceImages
+          ),
+          imageDescription: getImageDescription(placeImageAlt),
+          reviews,
+          reviewCountText: getReviewCountText(reviews.length),
+        };
+      }
+    )
+    .reduce(mapLocation, {});
 }
 
 const locations = transformLocations(legacyPlaces);

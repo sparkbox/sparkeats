@@ -1,11 +1,11 @@
 import { LocationCard } from './LocationCard';
-import type { Location } from '../../types/sparkeats';
+import type { Locations } from '../../types/sparkeats';
 
-export function LocationCards({ locations }: { locations: Location[] }) {
+export function LocationCards({ locations }: { locations: Locations }) {
   return (
     <section className="homepage__cards">
       <ul className="location-card__list">
-        {locations.map((location) => (
+        {Object.values(locations).map((location) => (
           <LocationCard key={location.id} location={location} />
         ))}
       </ul>
