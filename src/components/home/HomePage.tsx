@@ -1,7 +1,9 @@
 import { LocationCards } from './LocationCards';
-import type { Location } from '../../types/sparkeats';
+import { useLocations } from '../../useLocations';
 
-export function HomePage({ locations }: { locations: Location[] }) {
+export function HomePage() {
+  const locations = useLocations();
+
   return (
     <div className="homepage">
       <header>Home Header</header>
