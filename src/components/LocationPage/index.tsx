@@ -1,4 +1,3 @@
-import { useLocation as useWindowLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { LocationHeader } from './LocationHeader';
 import { LocationDetails } from './LocationDetails';
@@ -6,12 +5,8 @@ import { LocationReviews } from './LocationReviews';
 import { useLocations } from '../../useLocations';
 
 export function LocationPage() {
-  const {
-    state: { id },
-  } = useWindowLocation();
-
+  const id = window.location.pathname.split('/').pop() as string;
   const locations = useLocations();
-
   const location = locations[id];
 
   return (
