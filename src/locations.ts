@@ -47,6 +47,8 @@ type LegacyReview = {
   placeId: number;
 };
 
+const BASE_URL = import.meta.env['BASE_URL'];
+
 function getReviewImageURL(
   imagePath: string,
   imageID: string,
@@ -55,7 +57,7 @@ function getReviewImageURL(
   const imageName = legacyImages.find(
     (image) => image.id.toString() === imageID
   )?.fd;
-  return imageName ? `${imagePath}${imageName}` : null;
+  return imageName ? `${BASE_URL}${imagePath}${imageName}` : null;
 }
 
 function getLocationImageURL(
@@ -67,8 +69,8 @@ function getLocationImageURL(
     (image) => image.id.toString() === imageID
   )?.fd;
   return imageName
-    ? `${imagePath}${imageName}`
-    : 'img/location-card-header_bg.png';
+    ? `${BASE_URL}${imagePath}${imageName}`
+    : `${BASE_URL}img/location-card-header_bg.png`;
 }
 
 function getImageDescription(imageDescription: string) {
@@ -92,7 +94,7 @@ function transformReview({
     id,
     reviewerName,
     text,
-    imageURL: getReviewImageURL('/img/reviews/', imageID, legacyReviewImages),
+    imageURL: getReviewImageURL('img/reviews/', imageID, legacyReviewImages),
     imageDescription: getImageDescription(reviewImageAlt),
     starRating,
     placeID,
@@ -146,7 +148,7 @@ function transformLocations(legacyPlaces: LegacyPlace[]): Locations {
           url,
           locationURL: getLocationURL(id),
           imageURL: getLocationImageURL(
-            '/img/locations/',
+            'img/locations/',
             imageID,
             legacyPlaceImages
           ),
