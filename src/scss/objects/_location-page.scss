@@ -1,7 +1,7 @@
 .review-page {
   box-sizing: border-box;
-  padding: 2rem;
-  margin: 2rem auto;
+  margin: 1rem auto;
+  padding: 1rem;
   max-width: 90rem;
 
   // setting display flex to get access to the order property for our review-nav
@@ -9,7 +9,7 @@
   flex-flow: row wrap;
 
   @media (min-width: $bp-rating-overview-move-right) {
-    margin: 4rem auto;
+    margin: 1rem auto;
 
     @supports (display: grid) {
       display: grid;
@@ -20,10 +20,6 @@
         'nav . .'
         'header header header'
         'review review overview';
-    }
-
-    @media (min-width: $bp-full-size-desktop) {
-      padding: 2rem 8rem;
     }
   }
 
