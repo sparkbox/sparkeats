@@ -5,6 +5,7 @@ import { App } from './App';
 import { HomePage } from './components/HomePage';
 import { LocationPage } from './components/LocationPage';
 import { NewLocationPage } from './components/NewLocationPage';
+import { NewReviewPage } from './components/NewReviewPage';
 
 window.__SPARKEATS_VERSION__ = import.meta.env['VITE_SPARKEATS_VERSION'];
 
@@ -16,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           <Route path="/" element={<HomePage />} />
           <Route path="/locations/:id" element={<LocationPage />} />
           <Route path="/locations/new" element={<NewLocationPage />} />
-          <Route path="/reviews/new" element={<div>New Review Page</div>} />
+          <Route path="/reviews/new" element={<NewReviewPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
