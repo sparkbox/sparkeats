@@ -1,12 +1,19 @@
 import { SyntheticEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import { Location } from '../../types/sparkeats';
 
-export function NewReviewForm() {
+export function NewReviewForm({ location }: { location: Location }) {
   const navigate = useNavigate();
-  const [review, setReview] = useState({});
+  const [review, setReview] = useState({
+    reviewerName: '',
+    text: '',
+    imageURL: '',
+    imageDescription: '',
+    starRating: '',
+  });
 
-  const handleChange = (field: HTMLInputElement) => {
+  const handleChange = (field: HTMLInputElement | HTMLTextAreaElement) => {
     setReview((values) => ({
       ...values,
       [field.name]: field.value,
@@ -16,13 +23,15 @@ export function NewReviewForm() {
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
 
-    const newReview = { ...review, id: uuidv4() };
+    const newReview = { ...review, id: uuidv4(), placeID: location.id };
 
-    // console.log('TODO: Persist new review:', newReview);
+    console.log('TODO: Persist new review:', newReview);
 
-    navigate(`/locations/${newReview.id}`, {
+    navigate(`/locations/${location.id}`, {
       replace: true,
-      state: { location: newReview },
+      state: {
+        location: { ...location, reviews: [...location.reviews, newReview] },
+      },
     });
   };
 
@@ -31,11 +40,9 @@ export function NewReviewForm() {
   return (
     <form
       className="form"
-      method="post"
-      action="/places/<%= place.id %>/reviews"
+      onSubmit={handleSubmit}
       encType="multipart/form-data"
     >
-      {/* <input id="placeId" type="hidden" value="<%= place.id %>" name="placeId" /> */}
       <div className="form__content-wrapper">
         <section className="form__heading">
           <h3 className="form__title">Review</h3>
@@ -59,6 +66,8 @@ export function NewReviewForm() {
             id="reviewerName"
             className="form__input"
             type="text"
+            value={review.reviewerName}
+            onChange={(event) => handleChange(event.target)}
             name="reviewerName"
             placeholder="First Name Last Name"
             required
@@ -76,8 +85,9 @@ export function NewReviewForm() {
                 id="rating-1"
                 className="form__input form__input--radio"
                 type="radio"
-                name="numberOfStars"
+                name="starRating"
                 value="1"
+                onChange={(event) => handleChange(event.target)}
               />
               <span className="form__label--rating">1 Star</span>
             </label>
@@ -86,8 +96,9 @@ export function NewReviewForm() {
                 id="rating-2"
                 className="form__input form__input--radio"
                 type="radio"
-                name="numberOfStars"
+                name="starRating"
                 value="2"
+                onChange={(event) => handleChange(event.target)}
               />
               <span className="form__label--rating">2 Star</span>
             </label>
@@ -96,8 +107,9 @@ export function NewReviewForm() {
                 id="rating-3"
                 className="form__input form__input--radio"
                 type="radio"
-                name="numberOfStars"
+                name="starRating"
                 value="3"
+                onChange={(event) => handleChange(event.target)}
               />
               <span className="form__label--rating">3 Star</span>
             </label>
@@ -106,8 +118,9 @@ export function NewReviewForm() {
                 id="rating-4"
                 className="form__input form__input--radio"
                 type="radio"
-                name="numberOfStars"
+                name="starRating"
                 value="4"
+                onChange={(event) => handleChange(event.target)}
               />
               <span className="form__label--rating">4 Star</span>
             </label>
@@ -116,8 +129,9 @@ export function NewReviewForm() {
                 id="rating-5"
                 className="form__input form__input--radio"
                 type="radio"
-                name="numberOfStars"
+                name="starRating"
                 value="5"
+                onChange={(event) => handleChange(event.target)}
               />
               <span className="form__label--rating">5 Star</span>
             </label>
@@ -127,21 +141,23 @@ export function NewReviewForm() {
         <div className="form__field">
           <label
             className="form__label form__required-indicator"
-            htmlFor="reviewText"
+            htmlFor="text"
             aria-hidden="true"
           >
             How was it?
           </label>
           <textarea
-            id="reviewText"
+            id="text"
             className="form__text-area"
-            name="reviewText"
+            name="text"
             rows={5}
+            value={review.text}
+            onChange={(event) => handleChange(event.target)}
             required
           ></textarea>
         </div>
 
-        <div className="form__field ">
+        {/* <div className="form__field ">
           <p className="form__label">Add an image to your review (max 5 MB).</p>
 
           <label
@@ -189,7 +205,7 @@ export function NewReviewForm() {
               name="reviewImageAlt"
             />
           </div>
-        </div>
+        </div> */}
 
         <button className="form__submit button--primary" type="submit">
           Submit
