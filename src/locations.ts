@@ -70,7 +70,7 @@ function getLocationImageURL(
   )?.fd;
   return imageName
     ? `${BASE_URL}${imagePath}${imageName}`
-    : `${BASE_URL}img/location-card-header_bg.png`;
+    : `${BASE_URL}img/background-fallback.svg`;
 }
 
 function getImageDescription(imageDescription: string) {

@@ -9,7 +9,15 @@ export function LocationHeader({ location }: { location: Location }) {
           {location.city}, {location.region}
         </p>
       </div>
-      <div className="review-header__backdrop"></div>
+      <div className="review-header__backdrop">
+        {location.imageURL && (
+          <img
+            className="review-header__backdrop-image"
+            src={location?.imageURL}
+            alt={location?.imageDescription}
+          />
+        )}
+      </div>
     </div>
   );
 }
