@@ -1,31 +1,44 @@
-import { SyntheticEvent, useState } from 'react';
+import { SyntheticEvent, useReducer } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import { Location } from '../../types/sparkeats';
+import { usePersistence, write } from '../../persistence';
+import { reducer } from '../../state';
+import { Location, Review } from '../../types/sparkeats';
 
 export function NewReviewForm({ location }: { location: Location }) {
   const navigate = useNavigate();
-  const [review, setReview] = useState({
-    reviewerName: '',
-    text: '',
-    imageURL: '',
-    imageDescription: '',
-    starRating: '',
+  const db = usePersistence();
+  const [{ review }, dispatch] = useReducer(reducer, {
+    review: {
+      reviewerName: '',
+      text: '',
+      imageURL: '',
+      imageDescription: '',
+      starRating: '',
+    },
   });
 
   const handleChange = (field: HTMLInputElement | HTMLTextAreaElement) => {
-    setReview((values) => ({
-      ...values,
-      [field.name]: field.value,
-    }));
+    dispatch({
+      type: 'update_review',
+      data: { [field.name]: field.value },
+    });
   };
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
 
-    const newReview = { ...review, id: uuidv4(), placeID: location.id };
+    const id = uuidv4();
+    const newReview: Review = { ...review, id, placeID: location.id };
 
-    console.log('TODO: Persist new review:', newReview);
+    await write({
+      db,
+      collection: 'locations',
+      id: location.id.toString(),
+      payload: {
+        reviews: [...location.reviews, newReview],
+      },
+    });
 
     navigate(`/locations/${location.id}`, {
       replace: true,

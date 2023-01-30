@@ -5,7 +5,9 @@ export function ReviewHeader({ location }: { location: Location }) {
     <div className="review-header">
       <div className="review-header__title">
         <h2 className="review-header__name">{location.name}</h2>
-        <p className="review-header__city">city, state</p>
+        <p className="review-header__city">
+          {location.city}, {location.region}
+        </p>
       </div>
       <div className="review-header__backdrop">
         {location.imageURL && (

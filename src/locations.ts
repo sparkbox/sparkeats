@@ -5,6 +5,7 @@
  * The data was migrated from SQL tables to JSON and image files using the `migrate_sparkeats.cljs` script.
  */
 
+import React, { useContext } from 'react';
 import legacyPlaces from '../data/place.json';
 import legacyReviews from '../data/review.json';
 import legacyPlaceImages from '../data/placeImage.json';
@@ -77,7 +78,7 @@ function getImageDescription(imageDescription: string) {
   return imageDescription || 'Placeholder image description';
 }
 
-function getLocationURL(id: number): string {
+export function getLocationURL(id: number): string {
   return `locations/${id}`;
 }
 
@@ -169,5 +170,10 @@ function getUniqueCities(locations: Locations): string[] {
 
 const locations = transformLocations(legacyPlaces);
 const uniqueCities = getUniqueCities(locations);
+const LocationsContext = React.createContext(locations);
 
 export { locations, uniqueCities };
+
+export const LocationsProvider = LocationsContext.Provider;
+
+export const useLocations = () => useContext(LocationsContext);

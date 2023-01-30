@@ -1,6 +1,6 @@
 import HomeHeader from '../HomeHeader';
 import { LocationCards } from './LocationCards';
-import { useLocations } from '../../useLocations';
+import { useLocations } from '../../locations';
 
 export function HomePage() {
   const locations = useLocations();
@@ -8,7 +8,7 @@ export function HomePage() {
   return (
     <main className="homepage">
       <HomeHeader />
-      <LocationCards locations={locations} />
+      <LocationCards />
     </main>
   );
 }

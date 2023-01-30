@@ -1,6 +1,9 @@
+// React
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Sparkeats
 import { App } from './App';
 import { HomePage } from './components/HomePage';
 import { LocationPage } from './components/LocationPage';

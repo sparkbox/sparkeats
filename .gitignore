@@ -29,3 +29,5 @@ dist-ssr
 .nrepl-port
 cypress/videos
 cypress/screenshots
+
+.env

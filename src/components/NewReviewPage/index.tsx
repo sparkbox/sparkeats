@@ -1,15 +1,11 @@
+import { useEffect, useReducer } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useLocations } from '../../useLocations';
+import { useLocations } from '../../locations';
 import { NewReviewForm } from './NewReviewForm';
 import { ReviewHeader } from './ReviewHeader';
 import { Location } from '../../types/sparkeats';
-
-function loadLocation(id: string): Location {
-  const locations = useLocations();
-  const location = locations[id];
-
-  return location;
-}
+import { usePersistence, read } from '../../persistence';
+import { reducer } from '../../state';
 
 type LocationState = {
   state: {
@@ -18,11 +14,34 @@ type LocationState = {
 };
 
 export function NewReviewPage() {
+  const [{ location }, dispatch] = useReducer(reducer, {
+    location: {},
+  });
+
+  const db = usePersistence();
   const { state: locationState }: LocationState = useLocation();
-  const isNewLocation = locationState?.location;
-  const location = isNewLocation
-    ? locationState.location
-    : loadLocation(window.location.pathname.split('/').pop() as string);
+
+  useEffect(() => {
+    const id = window.location.pathname.split('/').pop() as string;
+    const isNewLocation = locationState?.location;
+
+    async function setLocation() {
+      const location = isNewLocation
+        ? locationState.location
+        : await read({
+            db,
+            collection: 'locations',
+            id,
+          });
+
+      dispatch({
+        type: 'set_location',
+        data: location,
+      });
+    }
+
+    setLocation();
+  }, []);
 
   return (
     <main className="new-page">

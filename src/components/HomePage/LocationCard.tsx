@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import { getLocationURL } from '../../locations';
 import type { Location } from '../../types/sparkeats';
 
 const LocationCardImage = ({ location }: { location: Location }) => {
   return (
     <header className="location-card__header">
       <Link
-        to={location.locationURL}
+        to={getLocationURL(location.id)}
         aria-label={`review page for ${location.name}`}
       >
         <img
@@ -22,7 +23,10 @@ const LocationHeading = ({ location }: { location: Location }) => {
   return (
     <div className="location-card__heading">
       <h3 className="location-card__name">
-        <Link className="location-card__name-link" to={location.locationURL}>
+        <Link
+          className="location-card__name-link"
+          to={getLocationURL(location.id)}
+        >
           {location.name}
         </Link>
       </h3>
