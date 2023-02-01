@@ -1,17 +1,50 @@
-import { uniqueCities } from '../locations';
+import type { Location } from '../types/sparkeats';
 
-function LocationMenu() {
+function getUniqueCities(locations: Location[]): string[] {
+  const cities = Array.from(
+    new Set(locations.map((location) => location.city))
+  );
+
+  return cities;
+}
+
+function LocationMenu({
+  currentCity,
+  locations,
+  dispatch,
+}: {
+  currentCity: string;
+  locations: Location[];
+  dispatch: React.Dispatch<{
+    type: string;
+    data: any;
+  }>;
+}) {
+  const handleChange = (field: HTMLSelectElement) => {
+    dispatch({
+      type: 'select_city',
+      data: { [field.name]: field.value },
+    });
+  };
+
+  const cities = getUniqueCities(locations);
+
   return (
     <div className="location-select">
       <h2 className="location-select__title">
-        <label htmlFor="location">Select a Location</label>
+        <label htmlFor="city">Select a Location</label>
       </h2>
-
-      <select className="location-select__menu" name="location" id="location">
-        <option className="location-select__option" value="all">
+      <select
+        className="location-select__menu"
+        name="city"
+        id="city"
+        value={currentCity}
+        onChange={(event) => handleChange(event.target)}
+      >
+        <option className="location-select__option" value="All Cities">
           All Cities
         </option>
-        {uniqueCities.map((city: string) => (
+        {cities.map((city: string) => (
           <option key={city} value={city}>
             {city}
           </option>

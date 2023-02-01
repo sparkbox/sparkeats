@@ -162,17 +162,10 @@ function transformLocations(legacyPlaces: LegacyPlace[]): Locations {
     .reduce(mapLocation, {});
 }
 
-function getUniqueCities(locations: Locations): string[] {
-  return Array.from(
-    new Set(Object.values(locations).map((location) => location.city))
-  );
-}
-
 const locations = transformLocations(legacyPlaces);
-const uniqueCities = getUniqueCities(locations);
 const LocationsContext = React.createContext(locations);
 
-export { locations, uniqueCities };
+export { locations };
 
 export const LocationsProvider = LocationsContext.Provider;
 

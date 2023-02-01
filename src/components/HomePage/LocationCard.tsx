@@ -78,11 +78,9 @@ export function LocationCard({ location }: { location: Location }) {
         <LocationHeading location={location} />
         <div className="location-card__info">
           <LocationAddress location={location} />
-          {location.reviews.length && (
-            <div className="location-card__star-rating" aria-label="">
-              <LocationStars reviews={location.reviews} />
-            </div>
-          )}
+          <div className="location-card__star-rating" aria-label="">
+            <LocationStars reviews={location.reviews} />
+          </div>
         </div>
         <LocationLink location={location} />
       </section>
