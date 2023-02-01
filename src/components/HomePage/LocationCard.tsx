@@ -67,6 +67,16 @@ const LocationStarRating = () => {
   );
 };
 
+const LocationLink = ({ location }: { location: Location }) => {
+  return (
+    <a className="button__primary" href={getLocationURL(location.id)}>
+      {location.reviews.length > 1 || location.reviews.length === 0
+        ? `${location.reviews.length} Reviews`
+        : `${location.reviews.length} Review`}
+    </a>
+  );
+};
+
 export function LocationCard({ location }: { location: Location }) {
   return (
     <li className="location-card__list-item">
@@ -76,6 +86,7 @@ export function LocationCard({ location }: { location: Location }) {
         <div className="location-card__info">
           <LocationAddress location={location} />
           <LocationStarRating />
+          <LocationLink location={location} />
         </div>
       </section>
     </li>
