@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Location, Review } from '../../types/sparkeats';
+import { ReviewStars } from '../StarRatings';
 
 export function LocationReviews({
   location,
@@ -31,7 +32,7 @@ export function LocationReviews({
             role="img"
             aria-label={`${review?.starRating}`}
           >
-            Stars
+            {ReviewStars(review.starRating)}
           </div>
           <h4 className="review-submission__title">Comments</h4>
           <p className="review-submission__review">{review?.text}</p>

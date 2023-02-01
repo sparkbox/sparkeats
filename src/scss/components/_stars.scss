@@ -1,4 +1,9 @@
-.filled-star,
+.full-star,
+.half-star,
 .empty-star {
   margin-right: 0.375rem;
+}
+
+.half-star {
+  transform: scale(0.6);
 }

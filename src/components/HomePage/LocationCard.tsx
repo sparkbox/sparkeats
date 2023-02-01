@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { getLocationURL } from '../../locations';
 import type { Location } from '../../types/sparkeats';
+import { LocationStars } from '../StarRatings';
 
 const LocationCardImage = ({ location }: { location: Location }) => {
   return (
@@ -59,20 +60,12 @@ const LocationAddress = ({ location }: { location: Location }) => {
   );
 };
 
-const LocationStarRating = () => {
-  return (
-    <div className="location-card__star-rating" aria-label="">
-      LocationStarRating
-    </div>
-  );
-};
-
 const LocationLink = ({ location }: { location: Location }) => {
   return (
     <a className="button__primary" href={getLocationURL(location.id)}>
-      {location.reviews.length > 1 || location.reviews.length === 0
-        ? `${location.reviews.length} Reviews`
-        : `${location.reviews.length} Review`}
+      {location.reviews.length === 1
+        ? `${location.reviews.length} Review`
+        : `${location.reviews.length} Reviews`}
     </a>
   );
 };
@@ -85,9 +78,13 @@ export function LocationCard({ location }: { location: Location }) {
         <LocationHeading location={location} />
         <div className="location-card__info">
           <LocationAddress location={location} />
-          <LocationStarRating />
-          <LocationLink location={location} />
+          {location.reviews.length && (
+            <div className="location-card__star-rating" aria-label="">
+              <LocationStars reviews={location.reviews} />
+            </div>
+          )}
         </div>
+        <LocationLink location={location} />
       </section>
     </li>
   );

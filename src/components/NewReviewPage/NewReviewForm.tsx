@@ -25,6 +25,15 @@ export function NewReviewForm({ location }: { location: Location }) {
     });
   };
 
+  const handleRatingChange = (
+    field: HTMLInputElement | HTMLTextAreaElement
+  ) => {
+    dispatch({
+      type: 'update_review',
+      data: { [field.name]: parseInt(field.value, 10) },
+    });
+  };
+
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
 
@@ -100,7 +109,7 @@ export function NewReviewForm({ location }: { location: Location }) {
                 type="radio"
                 name="starRating"
                 value="1"
-                onChange={(event) => handleChange(event.target)}
+                onChange={(event) => handleRatingChange(event.target)}
               />
               <span className="form__label--rating">1 Star</span>
             </label>
@@ -111,7 +120,7 @@ export function NewReviewForm({ location }: { location: Location }) {
                 type="radio"
                 name="starRating"
                 value="2"
-                onChange={(event) => handleChange(event.target)}
+                onChange={(event) => handleRatingChange(event.target)}
               />
               <span className="form__label--rating">2 Star</span>
             </label>
@@ -122,7 +131,7 @@ export function NewReviewForm({ location }: { location: Location }) {
                 type="radio"
                 name="starRating"
                 value="3"
-                onChange={(event) => handleChange(event.target)}
+                onChange={(event) => handleRatingChange(event.target)}
               />
               <span className="form__label--rating">3 Star</span>
             </label>
@@ -133,7 +142,7 @@ export function NewReviewForm({ location }: { location: Location }) {
                 type="radio"
                 name="starRating"
                 value="4"
-                onChange={(event) => handleChange(event.target)}
+                onChange={(event) => handleRatingChange(event.target)}
               />
               <span className="form__label--rating">4 Star</span>
             </label>
@@ -144,7 +153,7 @@ export function NewReviewForm({ location }: { location: Location }) {
                 type="radio"
                 name="starRating"
                 value="5"
-                onChange={(event) => handleChange(event.target)}
+                onChange={(event) => handleRatingChange(event.target)}
               />
               <span className="form__label--rating">5 Star</span>
             </label>

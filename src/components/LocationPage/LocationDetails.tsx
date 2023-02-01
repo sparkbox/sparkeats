@@ -1,4 +1,5 @@
-import { Location } from '../../types/sparkeats';
+import { LocationStars } from '../StarRatings';
+import type { Location } from '../../types/sparkeats';
 
 function LocationAddress({ location }: { location: Location }) {
   return (
@@ -28,8 +29,13 @@ export function LocationDetails({ location }: { location: Location }) {
   return (
     <section className="review-details">
       <header>
-        <h1 className="review-details__title">{location.reviewCountText}</h1>
-        <div className="review-details__stars">Average Stars</div>
+        <h1 className="review-details__title">
+          {location.reviews?.length}
+          {location.reviews?.length === 1 ? ' Review' : ' Reviews'}
+        </h1>
+        <div className="review-details__stars">
+          <LocationStars reviews={location.reviews} />
+        </div>
       </header>
       <LocationAddress location={location} />
     </section>
