@@ -1,5 +1,6 @@
 import { useContext } from 'react';
-import firebase, { FirestoreContext } from './firebase';
+import firebase from './firebase';
+import { FirestoreContext } from './firebase-react';
 
 export const usePersistence = () => useContext(FirestoreContext);
 

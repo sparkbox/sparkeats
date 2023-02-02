@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import { getLocationURL } from '../../locations';
 import type { Location } from '../../types/sparkeats';
 import { LocationStars } from '../StarRatings';
+
+const getLocationURL = (id: number) => `locations/${id}`;
 
 const LocationCardImage = ({ location }: { location: Location }) => {
   return (

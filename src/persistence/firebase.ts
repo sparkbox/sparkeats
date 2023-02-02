@@ -1,4 +1,3 @@
-import React, { useContext } from 'react';
 // Firebase
 import { initializeApp } from 'firebase/app';
 import {
@@ -8,6 +7,7 @@ import {
   getDoc,
   getDocs,
   setDoc,
+  writeBatch,
 } from 'firebase/firestore';
 // import { getAnalytics } from "firebase/analytics";
 
@@ -32,16 +32,23 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+
+export const db = getFirestore(app);
 // const analytics = getAnalytics(app);
-
-export const FirestoreContext = React.createContext(db);
-
-export const FirestoreProvider = FirestoreContext.Provider;
 
 export default {
   setDoc: async (db: any, collection: string, id: string, payload: any) => {
     await setDoc(doc(db, collection, id), payload, { merge: true });
+  },
+  setDocs: async (db: any, collectionName: string, items: any) => {
+    const batch = writeBatch(db);
+
+    items.forEach((item: any) => {
+      const docRef = doc(db, collectionName, item.id.toString());
+      batch.set(docRef, item);
+    });
+
+    await batch.commit();
   },
   getDoc: async (db: any, collection: string, id: string) => {
     const snapshot = await getDoc(doc(db, collection, id));

@@ -2,7 +2,6 @@ import { useEffect, useReducer } from 'react';
 import HomeHeader from '../HomeHeader';
 import { LocationCards } from './LocationCards';
 import { readAll, usePersistence } from '../../persistence';
-import type { Location } from '../../types/sparkeats';
 import { reducer } from '../../state';
 
 export function HomePage() {

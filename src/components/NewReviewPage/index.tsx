@@ -1,6 +1,5 @@
 import { useEffect, useReducer } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useLocations } from '../../locations';
 import { NewReviewForm } from './NewReviewForm';
 import { ReviewHeader } from './ReviewHeader';
 import { Location } from '../../types/sparkeats';
