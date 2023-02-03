@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Location, Review } from '../../types/sparkeats';
 import { ReviewStars } from '../StarRatings';
+import { useAuth } from '../../auth';
 
 export function LocationReviews({
   location,
@@ -9,15 +10,19 @@ export function LocationReviews({
   location: Location;
   reviews: Review[];
 }) {
+  const auth = useAuth();
+
   return (
     <div className="review-container">
-      <Link
-        className="button__full-width"
-        to={'/reviews/new'}
-        state={{ location }}
-      >
-        Add a review
-      </Link>
+      {auth.signedIn && (
+        <Link
+          className="button__full-width"
+          to={'/reviews/new'}
+          state={{ location }}
+        >
+          Add a review
+        </Link>
+      )}
 
       {reviews.map((review: Review) => (
         <article key={review?.id} className="review-submission">

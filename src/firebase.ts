@@ -1,5 +1,6 @@
-// Firebase
+import { createContext, useContext } from 'react';
 import { initializeApp } from 'firebase/app';
+import 'firebase/compat/auth';
 import {
   collection,
   doc,
@@ -8,8 +9,9 @@ import {
   getDocs,
   setDoc,
   writeBatch,
+  Firestore,
 } from 'firebase/firestore';
-// import { getAnalytics } from "firebase/analytics";
+import { Location, Review } from './types/sparkeats';
 
 const {
   VITE_API_KEY: apiKey,
@@ -31,30 +33,38 @@ const firebaseConfig = {
   measurementId,
 };
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
-// const analytics = getAnalytics(app);
+
+export const FirestoreContext = createContext(db);
+
+export const useFirestore = () => useContext(FirestoreContext);
 
 export default {
-  setDoc: async (db: any, collection: string, id: string, payload: any) => {
+  setDoc: async (
+    db: Firestore,
+    collection: string,
+    id: string,
+    payload: Location | { reviews: Review[] }
+  ) => {
     await setDoc(doc(db, collection, id), payload, { merge: true });
   },
-  setDocs: async (db: any, collectionName: string, items: any) => {
+  setDocs: async (db: Firestore, collectionName: string, items: Location[]) => {
     const batch = writeBatch(db);
 
-    items.forEach((item: any) => {
+    items.forEach((item: Location) => {
       const docRef = doc(db, collectionName, item.id.toString());
       batch.set(docRef, item);
     });
 
     await batch.commit();
   },
-  getDoc: async (db: any, collection: string, id: string) => {
+  getDoc: async (db: Firestore, collection: string, id: string) => {
     const snapshot = await getDoc(doc(db, collection, id));
     return snapshot.data();
   },
-  getDocs: async (db: any, coll: string) => {
+  getDocs: async (db: Firestore, coll: string) => {
     const snapshot = await getDocs(collection(db, coll));
     const payload = snapshot.docs.map((doc) => doc.data());
 

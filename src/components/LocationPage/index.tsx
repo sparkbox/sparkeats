@@ -4,8 +4,8 @@ import { LocationHeader } from './LocationHeader';
 import { LocationDetails } from './LocationDetails';
 import { LocationReviews } from './LocationReviews';
 import { Location } from '../../types/sparkeats';
-import { read, usePersistence } from '../../persistence';
 import { reducer } from '../../state';
+import firebase, { useFirestore } from '../../firebase';
 
 type LocationState = {
   state: {
@@ -17,7 +17,7 @@ export function LocationPage() {
   const [{ location }, dispatch] = useReducer(reducer, {
     location: {},
   });
-  const db = usePersistence();
+  const db = useFirestore();
   const { state: locationState }: LocationState = useLocation();
 
   useEffect(() => {
@@ -27,11 +27,7 @@ export function LocationPage() {
     async function setLocation() {
       const location = isNewLocation
         ? locationState.location
-        : await read({
-            db,
-            collection: 'locations',
-            id,
-          });
+        : await firebase.getDoc(db, 'locations', id);
 
       dispatch({
         type: 'set_location',

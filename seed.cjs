@@ -130,6 +130,3 @@ async function seedLocations(locations) {
 }
 
 seedLocations(locations);
-
-
-

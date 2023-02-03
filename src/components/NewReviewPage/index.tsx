@@ -1,10 +1,12 @@
 import { useEffect, useReducer } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { NewReviewForm } from './NewReviewForm';
 import { ReviewHeader } from './ReviewHeader';
 import { Location } from '../../types/sparkeats';
-import { usePersistence, read } from '../../persistence';
+import { useFirestore } from '../../firebase';
 import { reducer } from '../../state';
+import { useAuth } from '../../auth';
+import firebase from '../../firebase';
 
 type LocationState = {
   state: {
@@ -13,11 +15,20 @@ type LocationState = {
 };
 
 export function NewReviewPage() {
+  const auth = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!auth.signedIn) {
+      navigate('/');
+    }
+  });
+
   const [{ location }, dispatch] = useReducer(reducer, {
     location: {},
   });
 
-  const db = usePersistence();
+  const db = useFirestore();
   const { state: locationState }: LocationState = useLocation();
 
   useEffect(() => {
@@ -27,11 +38,7 @@ export function NewReviewPage() {
     async function setLocation() {
       const location = isNewLocation
         ? locationState.location
-        : await read({
-            db,
-            collection: 'locations',
-            id,
-          });
+        : await firebase.getDoc(db, 'locations', id);
 
       dispatch({
         type: 'set_location',

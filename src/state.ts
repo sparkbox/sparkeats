@@ -5,7 +5,6 @@ const selectLocations = (city: string, locations?: Location[]) =>
     ? locations
     : locations?.filter((location) => location.city === city);
 
-// Fix problem with separate state trees and optional properties
 export function reducer(
   state: {
     location?: Location;

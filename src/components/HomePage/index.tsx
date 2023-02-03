@@ -1,8 +1,8 @@
 import { useEffect, useReducer } from 'react';
 import HomeHeader from '../HomeHeader';
 import { LocationCards } from './LocationCards';
-import { readAll, usePersistence } from '../../persistence';
 import { reducer } from '../../state';
+import firebase, { useFirestore } from '../../firebase';
 
 export function HomePage() {
   const [{ city, locations, selectedLocations }, dispatch] = useReducer(
@@ -14,14 +14,11 @@ export function HomePage() {
       locations: [],
     } as any
   );
-  const db = usePersistence();
+  const db = useFirestore();
 
   useEffect(() => {
     async function setLocations() {
-      const locations = await readAll({
-        db,
-        collection: 'locations',
-      });
+      const locations = await firebase.getDocs(db, 'locations');
 
       dispatch({
         type: 'set_locations',

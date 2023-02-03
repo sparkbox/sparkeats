@@ -150,6 +150,25 @@
     resize: vertical;
   }
 
+  &__input--refresh {
+    font-family: $roboto-stack;
+    font-size: 1rem;
+    line-height: 1.3125rem;
+    letter-spacing: 0.04rem;
+    color: $primary-color;
+    text-decoration: none;
+    min-width: 8rem;
+    margin-right: 0.5rem;
+
+    &:active {
+      color: $primary-color;
+    }
+
+    &:visited {
+      color: $primary-color;
+    }
+  }
+
   &__input,
   &__input--short,
   &__text-area,

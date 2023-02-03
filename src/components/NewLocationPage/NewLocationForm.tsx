@@ -2,11 +2,12 @@ import { SyntheticEvent, useReducer } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { reducer } from '../../state';
-import { write, usePersistence } from '../../persistence';
+import { useFirestore } from '../../firebase';
+import firebase from '../../firebase';
 
 export function NewLocationForm() {
   const navigate = useNavigate();
-  const db = usePersistence();
+  const db = useFirestore();
   const [{ location }, dispatch] = useReducer(reducer, {
     location: {
       name: '',
@@ -35,12 +36,7 @@ export function NewLocationForm() {
 
     const newLocation = { ...location, reviews: [], id };
 
-    await write({
-      db,
-      collection: 'locations',
-      id,
-      payload: newLocation,
-    });
+    await firebase.setDoc(db, 'locations', id, newLocation);
 
     navigate(`/locations/${newLocation.id}`, {
       replace: true,
