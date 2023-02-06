@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react';
-import { auth as firebaseuiAuth } from 'firebaseui';
+import { getAuth, signOut as firebaseAuthSignOut } from 'firebase/auth';
 
 const AuthContext = createContext({} as any);
 
@@ -12,6 +12,7 @@ function getSignedIn(): boolean {
 }
 
 export function useProvideAuth() {
+  const firebaseAuth = getAuth();
   const [signedIn, setSignedIn] = useState(getSignedIn());
 
   const signIn = () => {
@@ -21,7 +22,7 @@ export function useProvideAuth() {
 
   const signOut = () => {
     setSignedIn(false);
-    firebaseuiAuth.AuthUI.getInstance()?.reset();
+    firebaseAuthSignOut(firebaseAuth);
     localStorage.removeItem('signedIn');
   };
 

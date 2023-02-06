@@ -1,4 +1,4 @@
-import { getAuth, isSignInWithEmailLink } from 'firebase/auth';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import { FirebaseAuthUI } from './FirebaseAuthUI';
@@ -31,9 +31,9 @@ export const SiteHeader = () => {
 
   useEffect(() => {
     const firebaseAuth = getAuth();
-    if (isSignInWithEmailLink(firebaseAuth, window.location.href)) {
-      auth.signIn();
-    }
+    onAuthStateChanged(firebaseAuth, (user) => {
+      user ? auth.signIn() : auth.signOut();
+    });
   }, [auth]);
 
   return (
@@ -63,7 +63,12 @@ export const SiteHeader = () => {
         style={modalStyles}
         contentLabel="Sign in with email"
       >
-        <button onClick={closeModal}>Close</button>
+        <button
+          className="button--close mdl-button mdl-button--primary"
+          onClick={closeModal}
+        >
+          Close
+        </button>
         <FirebaseAuthUI className="firebase-auth-ui" />
       </Modal>
     </header>

@@ -6,10 +6,12 @@ import 'firebaseui/dist/firebaseui.css';
 export const FirebaseAuthUI = ({ className }: { className: string }) => {
   const firebaseAuth = getAuth();
   const uiConfig = {
+    signInSuccessUrl: import.meta.env['BASE_URL'],
     signInOptions: [
       {
         provider: EmailAuthProvider.PROVIDER_ID,
-        signInMethod: EmailAuthProvider.EMAIL_LINK_SIGN_IN_METHOD,
+        signInMethod: EmailAuthProvider.EMAIL_PASSWORD_SIGN_IN_METHOD,
+        requireDisplayName: false,
       },
     ],
   };
