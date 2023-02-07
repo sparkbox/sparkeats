@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation } from 'react-router-dom';
 import { NewReviewForm } from './NewReviewForm';
 import { ReviewHeader } from './ReviewHeader';
 import { Location } from '../../types/sparkeats';
@@ -16,13 +16,10 @@ type LocationState = {
 
 export function NewReviewPage() {
   const auth = useAuth();
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!auth.signedIn) {
-      navigate('/');
-    }
-  });
+  if (!auth.signedIn) {
+    return <Navigate replace to="/" />;
+  }
 
   const [{ location }, dispatch] = useReducer(reducer, {
     location: {},

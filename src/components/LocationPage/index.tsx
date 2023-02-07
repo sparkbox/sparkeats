@@ -1,11 +1,12 @@
 import { useEffect, useReducer } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, Navigate } from 'react-router-dom';
 import { LocationHeader } from './LocationHeader';
 import { LocationDetails } from './LocationDetails';
 import { LocationReviews } from './LocationReviews';
 import { Location } from '../../types/sparkeats';
 import { reducer } from '../../state';
 import firebase, { useFirestore } from '../../firebase';
+import { Loading, useLoading } from '../Loading';
 
 type LocationState = {
   state: {
@@ -14,11 +15,10 @@ type LocationState = {
 };
 
 export function LocationPage() {
-  const [{ location }, dispatch] = useReducer(reducer, {
-    location: {},
-  });
+  const [{ location }, dispatch] = useReducer(reducer, { location: {} });
   const db = useFirestore();
   const { state: locationState }: LocationState = useLocation();
+  const [isLoading, setLoading] = useLoading(true);
 
   useEffect(() => {
     const id = window.location.pathname.split('/').pop() as string;
@@ -29,6 +29,8 @@ export function LocationPage() {
         ? locationState.location
         : await firebase.getDoc(db, 'locations', id);
 
+      setLoading(false);
+
       dispatch({
         type: 'set_location',
         data: location,
@@ -37,6 +39,14 @@ export function LocationPage() {
 
     setLocation();
   }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (!location) {
+    return <Navigate replace to="/" />;
+  }
 
   return (
     <main className="review-page">
