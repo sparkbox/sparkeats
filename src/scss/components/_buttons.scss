@@ -11,12 +11,6 @@
     margin: 0;
   }
 
-  &__full-width {
-    @include primary-button;
-
-    margin: 2.5rem 0;
-  }
-
   &__secondary {
     font-family: $roboto-stack;
     font-weight: 900;

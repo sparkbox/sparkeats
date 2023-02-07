@@ -7,6 +7,7 @@ import { Location } from '../../types/sparkeats';
 import { reducer } from '../../state';
 import firebase, { useFirestore } from '../../firebase';
 import { Loading, useLoading } from '../Loading';
+import { useAuth } from '../../auth';
 
 type LocationState = {
   state: {
@@ -15,6 +16,7 @@ type LocationState = {
 };
 
 export function LocationPage() {
+  const auth = useAuth();
   const [{ location }, dispatch] = useReducer(reducer, { location: {} });
   const db = useFirestore();
   const { state: locationState }: LocationState = useLocation();
@@ -57,8 +59,17 @@ export function LocationPage() {
         </Link>
       </div>
       <LocationHeader location={location} />
-      <LocationReviews location={location} reviews={location.reviews} />
+      {auth.signedIn && (
+        <Link
+          className="review-button button__primary"
+          to={'/reviews/new'}
+          state={{ location }}
+        >
+          Add a review
+        </Link>
+      )}
       <LocationDetails location={location} />
+      <LocationReviews location={location} reviews={location.reviews} />
     </main>
   );
 }

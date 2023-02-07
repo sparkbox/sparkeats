@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 import HomeHeader from '../HomeHeader';
 import { LocationCards } from './LocationCards';
 import { reducer } from '../../state';
