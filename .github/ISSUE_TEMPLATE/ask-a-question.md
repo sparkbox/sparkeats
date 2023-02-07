@@ -1,6 +1,6 @@
 ---
 name: Ask a question
-about: Ask a question about Sparkeats 
+about: Ask a question about Sparkeats.
 labels: 'issue: question, needs triage'
 ---
 
