@@ -15,7 +15,7 @@
     "test:e2e": "yarn cypress open",
     "test:e2e:ci": "yarn cypress run",
     "migrate": "nbb -m migrate-sparkeats place placeImage review reviewImage",
-    "seed": "node --experimental-json-modules seed.cjs",
+    "seed": "node --experimental-json-modules data/seed.cjs",
     "postinstall": "husky install"
   },
   "dependencies": {

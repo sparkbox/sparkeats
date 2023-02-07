@@ -4,6 +4,10 @@ import { LocationStars } from '../StarRatings';
 
 const getLocationURL = (id: number) => `locations/${id}`;
 
+const backgroundFallback = `${
+  import.meta.env['BASE_URL']
+}img/background-fallback.svg`;
+
 const LocationCardImage = ({ location }: { location: Location }) => {
   return (
     <header className="location-card__header">
@@ -13,7 +17,7 @@ const LocationCardImage = ({ location }: { location: Location }) => {
       >
         <img
           className="location-card__image"
-          src={location.imageURL}
+          src={location.imageURL || backgroundFallback}
           alt={location.imageDescription}
         />
       </Link>

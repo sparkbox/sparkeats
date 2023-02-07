@@ -11,7 +11,6 @@ export type Location = {
   imageURL: string;
   imageDescription: string;
   reviews: Review[];
-  reviewCountText: string;
 };
 
 export type Review = {

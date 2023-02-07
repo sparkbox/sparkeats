@@ -1,6 +1,10 @@
 import { Location } from '../../types/sparkeats';
 
 export function ReviewHeader({ location }: { location: Location }) {
+  const backgroundFallback = `${
+    import.meta.env['BASE_URL']
+  }img/background-fallback.svg`;
+
   return (
     <div className="review-header">
       <div className="review-header__title">
@@ -10,13 +14,11 @@ export function ReviewHeader({ location }: { location: Location }) {
         </p>
       </div>
       <div className="review-header__backdrop">
-        {location.imageURL && (
-          <img
-            className="review-header__backdrop-image"
-            src={location?.imageURL}
-            alt={location?.imageDescription}
-          />
-        )}
+        <img
+          className="review-header__backdrop-image"
+          src={location.imageURL || backgroundFallback}
+          alt={location.imageDescription}
+        />
       </div>
     </div>
   );
